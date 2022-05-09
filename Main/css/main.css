@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* 스타일을 주기위해서 초기화(처음으로 되돌리는 작업) */
+  font-weight: normal;
+  font-size: inherit;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  border: none;
+  vertical-align: middle;
+} /* 수직정렬 가운데로 */
+
+.clear::after {
+  /* 가상으로 요소를 만들고 걔를 clear시켜 다음것부터는 정상적으로 배치되도록 해줌 */
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---------------------- 헤더 시작 ---------------------- */
+header {
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  background: none;
+  z-index: 100;
+}
+
+.header_area > .header_cont > .top_bar > .left_topbar {
+  float: left;
+}
+
+.header_area > .header_cont > .top_bar > .right_topbar {
+  float: right;
+}
+.header_area .header_cont .top_bar .right_topbar li:nth-child(-n + 3)::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 10px;
+  color: white;
+  line-height: 1;
+}
+.top_bar {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  line-height: 50px; /* height와 line-height에 똑같은 값을 주면 세로 중앙 정렬 됨! */
+  font-size: 12px;
+  color: #bbb;
+}
+.top_bar > div > li {
+  display: inline-block; /* 텍스트 내용들 한줄에 배치됨! */
+}
+.top_bar > div > li > a {
+  color: white;
+}
+.left_topbar > li > a {
+  margin: 0;
+  padding: 15px;
+}
+.left_topbar {
+  padding-left: 50px;
+}
+.right_topbar {
+  padding-right: 50px;
+}
+.gnb {
+  position: relative;
+  background: transparent;
+  padding: 30px 50px;
+  height: 100px;
+  display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
+}
+
+.dropdown {
+  margin-left: 50px;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.logo {
+  display: block;
+  left: 50px;
+  top: 30px;
+  width: 118px;
+  height: 42px;
+  text-indent: -9999px;
+  background: url(../images/bg_logo_grand.png) no-repeat 0 -42px;
+}
+.reservation:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  margin-top: 6px;
+  margin-left: 8px;
+  background: url(../images/ico_rsv.png) no-repeat 0 -10px;
+}
+.reservation {
+  margin-left: 50px;
+}
+
+.gnb > p {
+  padding-left: 85px;
+  padding-right: 2px;
+  margin-top: 11px;
+  font-size: 11px;
+}
+
+.dropdown:nth-child(n + 2) {
+  padding-left: 2px;
+}
+/* .dd {
+    margin-right: 100px;
+  } */
+.header > .header_area > .header_cont > nav > ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+/* .dropdown {
+    position: relative;
+  }  네비게이션바 세부메뉴 가로 배치 -> 세로배치 됨 */
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content {
+  display: none;
+}
+.dropdown-menu:hover {
+  /* 마우스 올리면 색상변경 */
+  color: burlywood;
+}
+.dropdown:hover .dropdown-content {
+  /* 네비게이션 바 메뉴에 마우스 올리면 안의 세부 내용들 보여줌 */
+  display: block;
+  width: 100%;
+  left: 0;
+}
+.dropdown-content a:hover {
+  /* 네비게이션 바 세부 메뉴에 마우스 올리면 색상 변경 */
+  background-color: #f1f1f1;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  background-color: black;
+  color: white;
+}
