@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>비회원 로그인</title>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="header">
+                  <!-- 헤더 -->
+            </div>
+            <!-- 내용 -->
+            <div id="container" class="container login">
+                  <h1 class="hidden">
+                        "Sign In"
+                  </h1>
+                  <div class="topArea">
+                        <div class="topInner">
+                              <h2 class="titDep1">Login</h2>
+                              <p class="pageGuide">머무는 모든 순간이 특별해집니다.</p>
+                        </div>
+                  </div>
+                  <!-- 아이디 로그인 | 비회원 예약확인 선택 부분 -->
+                  <div class="inner">
+                        <ul class="tabType01 tabType02">
+                              <li>
+                                    <a href="#" onclick="">아이디 로그인</a>
+                                    ::after
+                              </li>
+                              <li class="on">
+                                    <a href="#">비회원 예약확인</a>
+                              </li>
+                        </ul>
+                        <!-- 비회원 예약확인 영역 -->
+                        <div id="tab02" class="tabCont" style="display: block;">
+                        <h3 class="hidden">비회원 예약확인</h3>
+                        <div class="loginBox">
+                              <div class="nonMembersLogin">
+                                    <form id="noMbrLoginForm" name="noMbrLoginForm">
+
+                                          <!-- 객실 , 다이닝, 액티비티 선택 영역 -->
+                                          <p class="loginFrm2">
+                                                <!-- 필수입력서식에 미입력 발생 시, error 클래스 추가 alertMessage2 노출, 포커스가 가면 error클래스 제거 -->
+                                                <span class="frm" aria-required="true">
+                                                      <!-- aria-required = true =>  -->
+                                                      <!-- 객실 (기본 체크됨)-->
+                                                      <input type="radio" name="resveType" id="resveType01" value="R" checked>
+                                                      <label for="resveType01">
+                                                            ::before
+                                                            "객실"
+                                                      </label>
+                                                      <input type="radio" name="resveType" id="resveType02" value="D" >
+                                                      <label for="resveType02">
+                                                            ::before
+                                                            "다이닝"
+                                                      </label>
+                                                      <input type="radio" name="resveType" id="resveType03" value="A" >
+                                                      <label for="resveType03">
+                                                            ::before
+                                                            "액티비티"
+                                                      </label>
+                                                </span>
+                                                <!-- 화면에 나타나지 X 접근성 위한 -->
+                                                <span class="alterMessage2">예약타입을 선택해주세요.</span>
+                                          </p>
+                                          <!-- 호텔 선택 -->
+                                          <div class="selectWrap">
+                                                <p class="loginFrm" first = "true">
+                                                      <select data-height="150px" name="hotlCode" id="hotlDode" data-msg="호텔선택" style="display: none;"">
+                                                            <option value hidden selected>호텔선택</option>
+                                                            <option value="GJJ">그랜드 조선 제주</option>
+                                                            <option value="GJB">그랜드 조선 부산</option>
+                                                      </select>
+                                                      
+                                                      <button tabindex="0" id="hotlCode-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="hotlCode-menu" aria-haspopup="true" class="ui-selectmenu-button ui-button ui-widget ui-selectmenu-button-closed ui-corner-all" type="button" aria-activedescendant="ui-id-2" aria-labelledby="ui-id-1" aria-disabled="false">
+                                                            <span class="ui-selectmenu-text">호텔선택</span>
+                                                            ::after
+                                                      </button>                                                      
+                                                      <span class="alertMessage">호텔을 선택해주세요.</span>
+                                                      <div class="ui-selectmenu-menu ui-front" style="top: 60px; left: 0px; overflow-y: hidden;">
+                                                      <div class="tweenDiv" style="margin-top: 0px;">
+                                                            <!-- 호텔선택 열리는 박스 영역 -->
+                                                            <ul aria-hidden="true" aria-labelledby="hotlCode-button" id="hotlCode-menu" role="listbox" tabindex="0" class="ui-menu ui-corner-bottom ui-widget ui-widget-content" style="max-height: 150px;" aria-activedescendant="ui-id-1" aria-disabled="false">
+                                                                  <li class="ui-menu-item" style="display: none;">
+                                                                        <a id="ui-id-1" role="option" class="ui-menu-item-wrapper" aria-selected="true">
+                                                                              호텔선택
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="ui-menu-item">
+                                                                        <a id="ui-id-2" role="option" class="ui-menu-item-wrapper ui-state-active">
+                                                                              그랜드 조선 제주
+                                                                        </a>
+                                                                  </li>
+                                                                  <li class="ui-menu-item">
+                                                                        <a id="ui-id-3" role="option" class="ui-menu-item-wrapper">
+                                                                              그랜드 조선 부산
+                                                                        </a>
+                                                                  </li>
+                                                                  ::after
+                                                            </ul>
+                                                      </div>
+                                                </div>
+                                                </p>
+                                          </div>
+                                          <!-- 로그인 -->
+                                    </form>
+
+                              </div>
+                        </div>
+                        </div>
+
+
+                  </div>
+            </div>
+
+      </div>
+</body>
+</html>

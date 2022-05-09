@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>join Agree</title>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="header">
+                  <!-- header -->
+            </div>
+            <div id="container" class="container join">
+                  <h1 class="hidden">회원가입</h1>
+                  <div class="topArea">
+                        <!-- 제목 -->
+                        <div class="topInner">
+                              <h2 class="titDep1">Join Now</h2>
+                              <div class="stepWrap">
+                                    <ol>
+                                          <li class="prev">
+                                                <em>본인 인증</em>
+                                          </li>
+                                          <li class="on">
+                                                <span class="hidden">현재단계</span><em>약관동의 및 회원정보 입력</em>
+                                                ::after
+                                          </li>
+                                    </ol>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- //제목(topArea) -->
+                  <div class="inner">
+                        <!-- 내용 -->
+                        <!-- 회원가입 약관 -->
+                        <h2 class="titDep2">회원가입 약관</h2>
+                        <p class="pageGuide tleft">
+                              조선호텔앤리조트는 체계적인 회원 정보 관리를 위하여 아래와 같이 개인정보를 수집·이용 및 제공하고자 합니다.
+                              <br>
+                              내용을 자세히 읽으신 후 동의여부를 결정하여 주시기 바랍니다.
+                        </p>
+                        <div class="agreeBox">
+                              <div class="nonToggle">
+                                    <!-- 전체동의 -->
+                                    <span class="frm frmAll">
+                                          <input type="checkbox" id="frmChk00">
+                                          <label for="frmChk00">
+                                                ::before
+                                                전체동의
+                                          </label>
+                                    </span>
+                                    <ul class="listInfo">
+                                          <li>아래 동의 항목을 개별 확인 후 각 항목마다 개별적으로 동의하실 수 있습니다.</li>
+                                          <li>전체 동의 시 체크되는 동의 항목에는 선택동의 항목이 포함되어 있습니다.</li>
+                                    </ul>
+                                    <!-- //전체동의 -->
+                              </div>
+                              <ul class="toggleList agreeCont">
+                                    <li> <!-- [필수] 클럽조선 리워드 이용 약관 -->
+                                          <span class="frm type02">
+                                                <input type="checkbox" id="frmChk01" name="mberAgreChk" value="T0001">
+                                                <label for="frmChk01">
+                                                      ::before
+                                                      [필수] 클럽조선 리워드 이용 약관
+                                                </label>
+                                          </span>
+                                          <button type="button" class="btnToggle">
+                                                <!-- 버튼 -->
+                                                ::before
+                                                <span class="hidden">상세내용 닫기</span>
+                                          </button>
+                                          <!-- 버튼 클릭시 li에 toggleOn클래스 추가되면서 toggleCont 펼쳐짐 -->
+                                          <div class="toggleCont" style="display: block;">                                                
+                                    </li>
+                                    <li>
+                                          <span class="frm type02">
+								<input type="checkbox" id="frmChk02" name="mberAgreChk" value="A0001">
+                                                <label for="frmChk02">[필수] 개인정보수집 및 이용에 대한 동의</label>
+							</span>
+                                          <button type="button" class="btnToggle">
+                                                <span class="hidden">상세내용 닫기</span>
+                                          </button>
+                                    </li>
+                                    </div>
+                              </ul>
+                        </div>
+                  </div>
+                  <!-- 내용 -->
+            </div>
+            <!-- //container -->
+            <div class="footer">
+                  <!-- footer -->
+            </div>
+      </div>
+      <!-- //wrapper -->
+</body>
+</html>
