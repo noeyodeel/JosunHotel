@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-style: normal;
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  list-style: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+.topView {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/josonJuniorForKids02DetailTopView.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.topView > .textArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.topView > .textArea > .sort {
+  letter-spacing: 3px;
+}
+.topView > .textArea > .title {
+  letter-spacing: -1px;
+  font-weight: 400;
+  font-size: 80px;
+}
+.topView > .textArea > .contentGuide {
+  margin-top: 35px;
+  font-size: 20px;
+}
+.topView > .btn {
+  width: 65px;
+  height: 45px;
+  position: absolute;
+  left: 50%;
+  bottom: 75px;
+  background: url("../images/btn_view_more.png");
+  background-repeat: no-repeat;
+}
+.topView > .btn > p {
+  font-size: 0;
+  font-weight: 0;
+  width: 0;
+  height: 0;
+}
+.reservationArea {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 90px;
+  background-color: #f9f9f9;
+}
+.reservationArea > .inner {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.reservationArea > .inner > .reservationText {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-weight: 500;
+  font-size: 22px;
+}
+.reservationArea > .inner > .btnArea {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+.reservationArea > .inner > .btnArea > a {
+  width: 190px;
+  height: 60px;
+  margin: 0 10px;
+  padding: 0 25px;
+  display: inline-block;
+  border: solid 1px #ccc;
+  letter-spacing: -0.01em;
+  font-size: 17px;
+  line-height: 58px;
+}
+.reservationArea > .inner > .btnArea > .reservationBtn {
+  border-color: #000;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  overflow: hidden;
+}
+.reservationArea > .inner > .btnArea > .reservationBtn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #000;
+}
+.reservationArea > .inner > .btnArea > .reservationBtn::before {
+  content: "";
+  width: 130%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -150%;
+  z-index: -1;
+  background-color: #fff;
+  transform: skewX(-16deg);
+  transition: 0.5s ease-in-out;
+}
+.reservationArea > .inner > .btnArea > .reservationBtn:hover {
+  color: black;
+}
+.reservationArea > .inner > .btnArea > .reservationBtn:hover:before {
+  left: -10%;
+}
+.contentArea {
+  width: 1400px;
+  margin: 0 auto;
+}
+.contentArea > .contentInfo {
+  margin-bottom: 92px;
+}
+.contentArea > .contentInfo > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.contentArea > .contentInfo > ul > li {
+  width: 33.33%;
+}
+.contentArea > .contentInfo > ul > li:nth-child(n + 4) {
+  margin-top: 59.98px;
+}
+.contentArea > .contentInfo > ul > li dt {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.contentArea > .contentInfo > ul > li dd {
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.contentArea > .contentTime {
+  margin-bottom: 92px;
+}
+.contentArea > .contentTime > h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+.contentArea > .contentTime > p {
+  margin: 15px 0 11px;
+  font-size: 18px;
+}
+.contentArea > .contentTime > table {
+  width: 100%;
+  border-top: solid 1px #000;
+  color: #333;
+  font-size: 17px;
+  vertical-align: middle;
+  text-align: center;
+}
+.contentArea > .contentTime > table th {
+  width: 486px;
+  padding: 15px 20px;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+.contentArea > .contentTime > table td {
+  padding: 15px 20px;
+  border-bottom: solid 1px #ccc;
+}
+.contentArea > .swipeWrap {
+  width: 1400px;
+  height: 970px;
+}
+.contentArea > .cautionArea {
+  width: 1400px;
+  margin-top: 120px;
+  padding: 34px 40px;
+  border: solid 1px #eee;
+}
+.contentArea > .cautionArea > .title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.contentArea > .cautionArea .cautionContent {
+  color: #666;
+  font-size: 16px;
+  padding-left: 12px;
+}
+.contentArea > .cautionArea .cautionContent::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  background-color: #666;
+}
+.contentArea > .btnArea {
+  margin-top: 80px;
+  text-align: center;
+}
+.contentArea > .btnArea > .btn {
+  width: 190px;
+  height: 60px;
+  margin: 0 10px;
+  padding: 0 25px;
+  display: inline-block;
+  border: solid 1px #000;
+  letter-spacing: -0.01em;
+  line-height: 58px;
+}
+.otherContents {
+  width: 1400px;
+  margin: auto;
+  margin-top: 170px;
+}
+.otherContents > h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 30px;
+}
