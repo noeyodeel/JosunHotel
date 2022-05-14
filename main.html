@@ -5,239 +5,250 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/headerfooter.js"></script>
   </head>
   <body>
-    <div id="container">
-      <!-- Home 부분 -->
-      <div class="Home_area">
-        <div class="res_bar">
-          <select name="type_box">
-            <option value="">ROOM</option>
-            <option value="ROOM">ROOM</option>
-            <option value="DINING">DINING</option>
-            <option value="MEMBERSHIP">MEMBERSHIP</option>
-          </select>
-          <!-- <form name="res_date" action="값을 보낼 주소" method="post"> -->
-          <input type="date" name="res_date" value="2022-05-20" />
-          <div class="people_btn">
-            <a href="#">
-              <img src="room/adult/children" alt="인원" />
-            </a>
-          </div>
-          <button class="search_btn"></button>
-        </div>
-        <div class="promotion_btn_area">
-          <button class="promotion_btn">+ 프로모션 코드</button>
-        </div>
-        <div class="video_btn_area">
-          <div class="video_btn">
-            <a href="#">
-              <img src="" alt="멈춤" />
-            </a>
-            <a href="#">
-              <img src="" alt="재생" />
-            </a>
-          </div>
-          <div class="sound_btn">
-            <a href="#">
-              <img src="" alt="음소거" />
-            </a>
-            <a href="#">
-              <img src="" alt="사운드재생" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Room 부분 -->
-      <div class="room_area">
-        <!-- 롤링 이미지 목록 -->
-        <div class="room_roll">
-          <ul class="viewRoomList">
-            <li class="RoomList1">
-              <img src="슬라이딩 룸 1 사진" />
-            </li>
-            <li class="RoomList2">
-              <img src="슬라이딩 룸 2 사진" />
-            </li>
-            <li class="RoomList3">
-              <img src="슬라이딩 룸 3 사진" />
-            </li>
-            <li class="RoomList4">
-              <img src="슬라이딩 룸 4 사진" />
-            </li>
-            <li class="RoomList5">
-              <img src="슬라이딩 룸 5 사진" />
-            </li>
-            <li class="RoomList6">
-              <img src="슬라이딩 룸 6 사진" />
-            </li>
-            <li class="RoomList7">
-              <img src="슬라이딩 룸 7 사진" />
-            </li>
-            <li class="RoomList8">
-              <img src="슬라이딩 룸 8 사진" />
-            </li>
-            <li class="RoomList9">
-              <img src="슬라이딩 룸 9 사진" />
-            </li>
-            <li class="RoomList10">
-              <img src="슬라이딩 룸 10 사진" />
-            </li>
-          </ul>
-        </div>
-        <!-- 롤링 버튼 -->
-        <div class="roll_btn_Area">
-          <ul class="rolling_btn">
-            <li>
+    <div id="wrap">
+      <header w3-include-html="header.html"></header>
+      <div w3-include-html="header_scroll.html"></div>
+      <div id="container">
+        <!-- Home 부분 -->
+        <div class="Home_area">
+          <div class="res_bar">
+            <select name="type_box">
+              <option value="">ROOM</option>
+              <option value="ROOM">ROOM</option>
+              <option value="DINING">DINING</option>
+              <option value="MEMBERSHIP">MEMBERSHIP</option>
+            </select>
+            <!-- <form name="res_date" action="값을 보낼 주소" method="post"> -->
+            <input type="date" name="res_date" value="2022-05-20" />
+            <div class="people_btn">
               <a href="#">
-                <img src="왼쪽 이미지 이동버튼" alt="<" />
+                <img src="room/adult/children" alt="인원" />
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="오른쪽 이미지 이동버튼" alt=">" />
-              </a>
-            </li>
-            <li class="stop">
+            </div>
+            <button class="search_btn"></button>
+          </div>
+          <div class="promotion_btn_area">
+            <button class="promotion_btn">+ 프로모션 코드</button>
+          </div>
+          <div class="video_btn_area">
+            <div class="video_btn">
               <a href="#">
                 <img src="" alt="멈춤" />
               </a>
-            </li>
-            <li class="play">
               <a href="#">
                 <img src="" alt="재생" />
               </a>
-            </li>
-          </ul>
+            </div>
+            <div class="sound_btn">
+              <a href="#">
+                <img src="" alt="음소거" />
+              </a>
+              <a href="#">
+                <img src="" alt="사운드재생" />
+              </a>
+            </div>
+          </div>
         </div>
-        <!-- room 설명 -->
+        <!-- Room 부분 -->
         <div class="room_area">
-          <div class="room_txt">
-            <h3>INVITE NATURE TO YOUR JOURNEY</h3>
-            <h5>
-              에메랄드 빛 바다와 천혜의 자연이 만들어내는 특별한 여행을 위한
-              공간
-            </h5>
-            <h6>GRAND JOSUN JEJU /<br />GRAND JOSUN HILL SUITE</h6>
-            <div class="arrow_btn">
-              <a href="#">
-                <img src="화살표(마우스 안올렸을 때)" alt="" />
-              </a>
-              <a href="#">
-                <img src="화살표(마우스 올렸을 때)" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="room_event">
-            <span>SEASONAL PROMOTION</span>
-            <span class="txt">SPRING VOYAGE</span>
-            <span class="date">2022.01.20 - 2022.05.31</span>
-            <img src="SPRING VOYAGE 사진" />
-          </div>
-        </div>
-      </div>
-      <!-- Dining 부분 -->
-      <div class="dining_area">
-        <div class="dining_txt">
-          <h3>Enriched Gourmet Greeting</h3>
-          <h5>다채로운 미식의 세계로의 초대</h5>
-          <h6>BUFFET / LOUNGE&BAR / ROOFTOP</h6>
-          <div class="arrow_btn">
-            <a href="#">
-              <img src="화살표(마우스 안올렸을 때)" alt="" />
-            </a>
-            <a href="#">
-              <img src="화살표(마우스 올렸을 때)" alt="" />
-            </a>
-          </div>
-        </div>
-        <div class="dinging_event">
-          <span>Lounge&Bar</span>
-          <span class="txt">제주 한라봉 빙수</span>
-          <span class="date">2022.02.01 - 2022.04.30</span>
-          <img src="한라봉 빙수 사진" />
-        </div>
-      </div>
-      <!-- Facility 부분 -->
-      <div class="facility_area">
-        <div class="facility_cast">
-          <div class="facility_txt">
-            <h3>Iconic Facilities</h3>
-            <h6>POOL / GX ROOM / KIDS CLUB</h6>
-            <div class="arrow_btn">
-              <a href="#">
-                <img src="화살표(마우스 안올렸을 때)" alt="" />
-              </a>
-              <a href="#">
-                <img src="화살표(마우스 올렸을 때)" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="facility_img">
-            <ul class="facility_type">
-              <li class="pool">
-                <img src="POOL사진" />
-                <h5>GRAND JOSUN HILL SUITE</h5>
-                <h6>HEAVENLY POOL</h6>
+          <!-- 롤링 이미지 목록 -->
+          <div class="room_roll">
+            <ul class="viewRoomList">
+              <li class="RoomList1">
+                <img src="슬라이딩 룸 1 사진" />
               </li>
-              <li class="gx_room">
-                <img src="gxroom사진" />
-                <h5>GRAND JOSUN HILL SUITE</h5>
-                <h6>GX ROOM</h6>
+              <li class="RoomList2">
+                <img src="슬라이딩 룸 2 사진" />
               </li>
-              <li class="kids_club">
-                <img src="kids_club 사진" />
-                <h5>GRAND JOSUN JEJU</h5>
-                <h6>KIDS CLUB</h6>
+              <li class="RoomList3">
+                <img src="슬라이딩 룸 3 사진" />
+              </li>
+              <li class="RoomList4">
+                <img src="슬라이딩 룸 4 사진" />
+              </li>
+              <li class="RoomList5">
+                <img src="슬라이딩 룸 5 사진" />
+              </li>
+              <li class="RoomList6">
+                <img src="슬라이딩 룸 6 사진" />
+              </li>
+              <li class="RoomList7">
+                <img src="슬라이딩 룸 7 사진" />
+              </li>
+              <li class="RoomList8">
+                <img src="슬라이딩 룸 8 사진" />
+              </li>
+              <li class="RoomList9">
+                <img src="슬라이딩 룸 9 사진" />
+              </li>
+              <li class="RoomList10">
+                <img src="슬라이딩 룸 10 사진" />
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-      <!-- activity 부분 -->
-      <div class="activity_area">
-        <div class="activity_txt">
-          <h3>GET ACTIVE</h3>
-          <br />
-          <h5>몸과 마음에 활력을 더해 줄 다채로운 액티비티</h5>
-          <br />
-          <h6><b>JOSUN JUNIOR / GRAN JOE</b></h6>
-          <br />
-          <div class="arrow_btn">
-            <a href="#">
-              <img src="화살표(마우스 안올렸을 때)" alt="" />
-            </a>
-            <a href="#">
-              <img src="화살표(마우스 올렸을 때)" alt="" />
-            </a>
+          <!-- 롤링 버튼 -->
+          <div class="roll_btn_Area">
+            <ul class="rolling_btn">
+              <li>
+                <a href="#">
+                  <img src="왼쪽 이미지 이동버튼" alt="<" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="오른쪽 이미지 이동버튼" alt=">" />
+                </a>
+              </li>
+              <li class="stop">
+                <a href="#">
+                  <img src="" alt="멈춤" />
+                </a>
+              </li>
+              <li class="play">
+                <a href="#">
+                  <img src="" alt="재생" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- room 설명 -->
+          <div class="room_area">
+            <div class="room_txt">
+              <h3>INVITE NATURE TO YOUR JOURNEY</h3>
+              <h5>
+                에메랄드 빛 바다와 천혜의 자연이 만들어내는 특별한 여행을 위한
+                공간
+              </h5>
+              <h6>GRAND JOSUN JEJU /<br />GRAND JOSUN HILL SUITE</h6>
+              <div class="arrow_btn">
+                <a href="#">
+                  <img src="화살표(마우스 안올렸을 때)" alt="" />
+                </a>
+                <a href="#">
+                  <img src="화살표(마우스 올렸을 때)" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="room_event">
+              <span>SEASONAL PROMOTION</span>
+              <span class="txt">SPRING VOYAGE</span>
+              <span class="date">2022.01.20 - 2022.05.31</span>
+              <img src="SPRING VOYAGE 사진" />
+            </div>
           </div>
         </div>
-        <div activity_box>
-          <h2>ON GOING</h2>
+        <!-- Dining 부분 -->
+        <div class="dining_area">
+          <div class="dining_txt">
+            <h3>Enriched Gourmet Greeting</h3>
+            <h5>다채로운 미식의 세계로의 초대</h5>
+            <h6>BUFFET / LOUNGE&BAR / ROOFTOP</h6>
+            <div class="arrow_btn">
+              <a href="#">
+                <img src="화살표(마우스 안올렸을 때)" alt="" />
+              </a>
+              <a href="#">
+                <img src="화살표(마우스 올렸을 때)" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="dinging_event">
+            <span>Lounge&Bar</span>
+            <span class="txt">제주 한라봉 빙수</span>
+            <span class="date">2022.02.01 - 2022.04.30</span>
+            <img src="한라봉 빙수 사진" />
+          </div>
         </div>
-      </div>
-      <!-- membership 부분 -->
-      <div class="membership_area">
-        <div class="membership_txt">
-          <h3>CLUB JOSUN</h3>
-          <h6>JOSUN HOTELS & RESORTS MEMBERSHIP PROGRAM</h6>
+        <!-- Facility 부분 -->
+        <div class="facility_area">
+          <div class="facility_cast">
+            <div class="facility_txt">
+              <h3>Iconic Facilities</h3>
+              <h6>POOL / GX ROOM / KIDS CLUB</h6>
+              <div class="arrow_btn">
+                <a href="#">
+                  <img src="화살표(마우스 안올렸을 때)" alt="" />
+                </a>
+                <a href="#">
+                  <img src="화살표(마우스 올렸을 때)" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="facility_img">
+              <ul class="facility_type">
+                <li class="pool">
+                  <img src="POOL사진" />
+                  <h5>GRAND JOSUN HILL SUITE</h5>
+                  <h6>HEAVENLY POOL</h6>
+                </li>
+                <li class="gx_room">
+                  <img src="gxroom사진" />
+                  <h5>GRAND JOSUN HILL SUITE</h5>
+                  <h6>GX ROOM</h6>
+                </li>
+                <li class="kids_club">
+                  <img src="kids_club 사진" />
+                  <h5>GRAND JOSUN JEJU</h5>
+                  <h6>KIDS CLUB</h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- activity 부분 -->
+        <div class="activity_area">
+          <div class="activity_txt">
+            <h3>GET ACTIVE</h3>
+            <br />
+            <h5>몸과 마음에 활력을 더해 줄 다채로운 액티비티</h5>
+            <br />
+            <h6><b>JOSUN JUNIOR / GRAN JOE</b></h6>
+            <br />
+            <div class="arrow_btn">
+              <a href="#">
+                <img src="화살표(마우스 안올렸을 때)" alt="" />
+              </a>
+              <a href="#">
+                <img src="화살표(마우스 올렸을 때)" alt="" />
+              </a>
+            </div>
+          </div>
+          <div activity_box>
+            <h2>ON GOING</h2>
+          </div>
+        </div>
+        <!-- membership 부분 -->
+        <div class="membership_area">
+          <div class="membership_txt">
+            <h3>CLUB JOSUN</h3>
+            <h6>JOSUN HOTELS & RESORTS MEMBERSHIP PROGRAM</h6>
+            <h5>
+              조선호텔앤리조트의 멤버십 프로그램 클럽조선은 품격있는
+              라이프스타일과 특별한 경험을 제안합니다.<br />클럽조선 회원이
+              되셔서 다채로운 혜택과 최상의 서비스를 누려보세요.
+            </h5>
+            <button class="membership_btn">VIEW MORE & JOIN</button>
+          </div>
+        </div>
+        <!-- meeting 부분 -->
+        <div class="meeting_area">
+          <h3>THE PERFECT VENUE FOR YOUR SPECIAL EVENT</h3>
           <h5>
-            조선호텔앤리조트의 멤버십 프로그램 클럽조선은 품격있는
-            라이프스타일과 특별한 경험을 제안합니다.<br />클럽조선 회원이 되셔서
-            다채로운 혜택과 최상의 서비스를 누려보세요.
+            인생의 특별한 순간을 위한 이벤트와 컨퍼런스를<br />그랜드 조선
+            제주에서 준비해보세요.
           </h5>
-          <button class="membership_btn">VIEW MORE & JOIN</button>
+          <button class="meeting_btn">미팅 자세히보기</button>
         </div>
       </div>
-      <!-- meeting 부분 -->
-      <div class="meeting_area">
-        <h3>THE PERFECT VENUE FOR YOUR SPECIAL EVENT</h3>
-        <h5>
-          인생의 특별한 순간을 위한 이벤트와 컨퍼런스를<br />그랜드 조선
-          제주에서 준비해보세요.
-        </h5>
-        <button class="meeting_btn">미팅 자세히보기</button>
-      </div>
+      <footer w3-include-html="footer.html"></footer>
     </div>
   </body>
+  <script>
+    w3.includeHTML();
+  </script>
 </html>
