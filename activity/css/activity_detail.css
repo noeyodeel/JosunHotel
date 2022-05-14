@@ -13,6 +13,7 @@
   font-size: 18px;
   line-height: 1.8;
   list-style: none;
+  z-index: 0;
 }
 a,
 button {
@@ -65,6 +66,7 @@ button {
   height: 120px;
   margin-bottom: 90px;
   background-color: #f9f9f9;
+  z-index: 10;
 }
 .reservationArea > .inner {
   width: 1400px;
@@ -82,7 +84,7 @@ button {
 }
 .reservationArea > .inner > .btnArea {
   position: absolute;
-  right: 0;
+  right: 200px;
   top: 50%;
   transform: translate(0, -50%);
   text-align: center;
@@ -135,6 +137,15 @@ button {
 .reservationArea > .inner > .btnArea > .reservationBtn:hover:before {
   left: -10%;
 }
+/* eservationArea fix effect start */
+.fixed {
+  position: fixed;
+  top: 0;
+}
+.marginForFixed {
+  margin-top: 210px !important;
+}
+/* eservationArea fix effect end */
 .contentArea {
   width: 1400px;
   margin: 0 auto;
@@ -194,6 +205,22 @@ button {
   width: 1400px;
   height: 970px;
 }
+.contentArea > .swipeWrap button {
+  width: 40px;
+  height: 40px;
+  left: 40px;
+  z-index: 1;
+  opacity: 1;
+  background-image: url("../images/btn_swipe_40x40.png");
+}
+.contentArea > .swipeWrap button:before {
+  content: none;
+}
+.contentArea > .swipeWrap button:last-child {
+  left: initial;
+  right: 40px;
+  background-position: right;
+}
 .contentArea > .cautionArea {
   width: 1400px;
   margin-top: 120px;
@@ -239,9 +266,90 @@ button {
   width: 1400px;
   margin: auto;
   margin-top: 170px;
+  padding-bottom: 180px;
 }
 .otherContents > h2 {
   margin-bottom: 15px;
   font-weight: 500;
   font-size: 30px;
+}
+.otherContents .swipItems {
+  width: 1460px;
+}
+.otherContents img {
+  width: 426px;
+  height: 295px;
+}
+.otherContents .textContents {
+  width: 426px;
+  color: #000;
+}
+.otherContents .textContents > .sort {
+  margin-top: 19px;
+}
+.otherContents .textContents > .sort > P {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 3px 10px 4px;
+  border: solid 1px black;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.otherContents .textContents > .title > P {
+  margin-top: 17px;
+  font-size: 28px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.otherContents .textContents > .date > P {
+  margin-top: 27px;
+  font-size: 14px;
+  color: #333;
+}
+.otherContents .textContents > .info > p {
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.otherContents > .swipeWrap > .swipItems > button {
+  width: 18px;
+  height: 18px;
+  z-index: 1;
+  opacity: 1;
+  background-image: url("../images/btn_swipe_18x18.png");
+  top: -44px;
+  left: initial;
+  /* 버튼 위치 = 487-426+40-3 */
+  right: 98px;
+}
+.otherContents > .swipeWrap > .swipItems > button:before {
+  content: none;
+}
+.otherContents > .swipeWrap > .swipItems > :nth-child(3) {
+  background-position: right;
+  right: 58px;
+}
+.otherContents > .swipeWrap > .swipItems > :nth-child(3)::before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #ccc;
+  display: block;
+  position: absolute;
+  left: -12px;
+  top: 0;
+}
+.otherContents > .swipeWrap > .swipItems > ul {
+  margin-top: 60px;
+  position: relative;
+}
+.otherContents > .swipeWrap > .swipItems > ul > li {
+  margin: 0;
+}
+.otherContents > .swipeWrap > .swipItems > ul > li > button:before {
+  font-size: 12px;
 }
