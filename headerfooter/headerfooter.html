@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>헤더 푸터</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/headerfooter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/headerfooter.js"></script>
   </head>
   <body>
-    <div id="wrap">
+    <div id="wrap" style="white-space: nowrap;">
       <!-- header 시작 -->
+      <!-- 스크롤 하기 전 메인 헤더 -->
       <header>
         <div class="header_area box_inner clear">
           <div class="header_cont">
             <ul class="top_bar clear">
                 <div class="left_topbar">
                     <li><a href="https://josunhotel.com/intro.do">JOSUN HOTELS & RESORTS</a></li>
-                    <li><a href="호텔찾기 팝업실행">호텔찾기</a></li>
-                    <li><a href="언어 선택">KR</a></li>
+                    <li><a class="hotel_search" href="호텔찾기 팝업실행">호텔찾기</a></li>
+                    <li><a class="language_select" href="언어 선택">KR</a></li>
                 </div>
                 <div class="right_topbar">
                     <li><a href="로그인 링크">로그인</a></li>
@@ -28,33 +31,42 @@
             </ul>
             <!-- 네비게이션 바 -->
             <nav>
-              <ul class="gnb clear">
+              <ul class="gnb clear gnb1">
                 <li class="logo">
                   <a href="./index.html">그랜드조선 로고</a>
                 </li>
                   <!-- RESERVATION -->
-                <li class="dropdown">
+                <li class="dropdown res">
                   <div class="reservation">
                     <a href="#" class="dropdown-menu"><b>RESERVATION</b></a>
                   </div>
                   <ul class="dropdown-content">
-                    <li><a href="#">ROOM</a></li>
-                    <li><a href="#">DINING</a></li>
-                    <li><a href="#">MEMBERSHIP</a></li>
+                    <div class="nav_list">
+                      <strong>RESERVATIONS</strong>
+                    </div>
+                    <div class="reservation_list">
+                      <li><a href="#">ROOM</a></li>
+                      <li><a href="#">DINING</a></li>
+                      <li><a href="#">MEMBERSHIP</a></li>
+                    </div>
                   </ul>
                 </li>
                 <p>|</p>
+
                 <!-- ROOMS -->
                 <li class="dropdown">
-                  <a href="#" class="dropdown-menu"><b>ROOMS</b></a>
+                  <div class="rooms">
+                    <a href="#" class="dropdown-menu"><b>ROOMS</b></a>
+                  </div>
                     <ul class="dropdown-content">
                       <div class="nav_list">
-                        <strong>ROOMS</strong>  
-                        <a href="한눈에보기 링크">한눈에 보기</a>
+                        <strong>ROOMS</strong>
+                        <a href="한눈에보기 링크"><span>한눈에 보기</span></a>
                       </div>
+                      <div class="mainbuilding_list">
                         <li>
                             <a href="main building 링크">MAIN BUILDING</a>
-                            <ul>
+                            <ul class="main_roomlist">
                                 <li>
                                     <li><a href="#">DELUXE</a></li>
                                     <li><a href="#">KIDS DELUXE</a></li> 
@@ -67,9 +79,11 @@
                                 </li>
                             </ul>
                         </li>
+                      </div>
+                      <div class="hillbuilding_list">
                         <li>
                             <a href="hill suite building 링크">HILL SUITE BUILDING</a>
-                            <ul>
+                            <ul class="hill_roomlist">
                                 <li>
                                     <li><a href="#">HILL STUDIO SUITE</a></li>
                                     <li><a href="#">HILL SUITE</a></li> 
@@ -77,64 +91,84 @@
                                 </li>
                             </ul>
                         </li>
+                      </div>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <!-- DINING -->
-                  <a href="#" class="dropdown-menu"><b>DINING</b></a>
-                    <ul class="dropdown-content">
+                  <div class="dining__">
+                    <a href="#" class="dropdown-menu"><b>DINING</b></a>
+                  </div>
+                    <ul class="dropdown-content dining">
                       <div class="nav_list">
                           <strong>DINING</strong>  
-                          <a href="한눈에보기 링크">한눈에 보기</a>
+                          <a href="한눈에보기 링크"><span>한눈에 보기</span></a>
                       </div>
-                      <li><a href="#">ARIA</a></li>
-                      <li><a href="#">RUBRICA</a></li>
-                      <li><a href="#">LOUNGE & BAR</a></li>
-                      <li><a href="#">PEAK.</a></li>
-                      <li><a href="#">JOSUN DELI</a></li>
-                      <li><a href="#">EAT 20</a></li>
-                      <li><a href="#">GRAN J</a></li>
-                      <li><a href="#">HEAVENLY LOUNGE</a></li>
+                      <div class="dining_list one">
+                        <li><a href="#">ARIA</a></li>
+                        <li><a href="#">RUBRICA</a></li>
+                        <li><a href="#">LOUNGE & BAR</a></li>
+                        <li><a href="#">PEAK.</a></li>
+                        <li><a href="#">JOSUN DELI</a></li>
+                      </div>
+                      <div class="dining_list two">
+                        <li><a href="#">EAT 20</a></li>
+                        <li><a href="#">GRAN J</a></li>
+                        <li><a href="#">HEAVENLY LOUNGE</a></li>
+                      </div>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <!-- OFFERS -->
-                  <a href="#" class="dropdown-menu"><b>OFFERS</b></a>
+                  <div class="offers">
+                    <a href="#" class="dropdown-menu"><b>OFFERS</b></a>
+                  </div>
                     <ul class="dropdown-content">
                       <div class="nav_list">
                         <strong>OFFERS</strong> 
                       </div>
-                      <li><a href="#">PACKAGE</a></li>
-                      <li><a href="#">EVENT</a></li>
+                      <div class="offers_list">
+                        <li><a href="#">PACKAGE</a></li>
+                        <li><a href="#">EVENT</a></li>
+                      </div>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <!-- MEETING & WEDDING -->
-                  <a href="#" class="dropdown-menu"><b>MEETING & WEDDING</b></a>
+                  <div class="mw">
+                    <a href="#" class="dropdown-menu"><b>MEETING & WEDDING</b></a>
+                  </div>
                     <ul class="dropdown-content">
                       <div class="nav_list">
-                          <strong>MEETING & WEDDING</strong>  
-                          <a href="한눈에보기 링크">한눈에 보기</a>
+                          <strong>MEETING & WEDDING</strong>
+                          <a href="한눈에보기 링크"><span>한눈에 보기</span></a>
                       </div>
-                      <li><a href="#">MEETING</a></li>
-                      <li><a href="#">WEDDING</a></li>
+                      <div class="MW_list">
+                        <li><a href="#">MEETING</a></li>
+                        <li><a href="#">WEDDING</a></li>
+                      </div>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <!-- ACTIVITY -->
-                  <a href="#" class="dropdown-menu"><b>ACTIVITY</b></a>
+                  <div class="activity">
+                    <a href="#" class="dropdown-menu"><b>ACTIVITY</b></a>
+                  </div>
                 </li>
                 <li class="dropdown">
                   <!-- FACILITIES -->
-                  <a href="#" class="dropdown-menu"><b>FACILITIES</b></a>
+                  <div class="facilities">
+                    <a href="#" class="dropdown-menu"><b>FACILITIES</b></a>
+                  </div>
                     <ul class="dropdown-content">
                       <div class="nav_list">
                           <strong>FACILITIES</strong>
-                          <a href="한눈에보기 링크">한눈에 보기</a>
+                          <a href="한눈에보기 링크"><span>한눈에 보기</span></a>
                       </div>
+                      <div class="fmb_list">
                         <li>
                             <a href="main building 링크">MAIN BUILDING</a>
-                            <ul>
+                            <ul class="main_roomlist">
                                 <li>
                                     <li><a href="#">GARDEN POOL & CABANA</a></li>
                                     <li><a href="#">PEAK. POOL & CABANA</a></li> 
@@ -146,28 +180,35 @@
                                 </li>
                             </ul>
                         </li>
+                      </div>
+                      <div class="fhb_list">
                         <li>
                             <a href="hill suite building 링크">HILL SUITE BUILDING</a>
-                            <ul>
+                            <ul class="hill_roomlist">
                                 <li>
                                     <li><a href="#">HEAVENLY POOL</a></li>
                                     <li><a href="#">GX ROOM & SAUNA</a></li> 
                                 </li>
                             </ul>
                         </li>
+                      </div>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <!-- ABOUT -->
-                  <a href="#" class="dropdown-menu"><b>ABOUT</b></a>
+                  <div class="about">
+                    <a href="#" class="dropdown-menu"><b>ABOUT</b></a>
+                  </div>
                     <ul class="dropdown-content">
                       <div class="nav_list">
                         <strong>ABOUT</strong>
                       </div>
-                      <li><a href="#">ABOUT US</a></li>
-                      <li><a href="#">JOSUN JUNIOR</a></li>
-                      <li><a href="#">FAQ</a></li>
-                      <li><a href="#">Q & A</a></li>
+                      <div class="about_list">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">JOSUN JUNIOR</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Q & A</a></li>
+                      </div>
                     </ul>
                   </div>
                 </li>
@@ -176,32 +217,196 @@
           </div>
         </div>
       </header>
+      <!--------------------------- 스크롤 하면 나타나는 헤더 ----------------------------->
+        <div class="header_area box_inner clear" id="nav_bar" style="white-space: nowrap;">
+          <div class="header_cont">
+            <!-- 네비게이션 바 -->
+            <nav>
+              <ul class="gnb clear gnb_new gnb2">
+                <li class="logo_">
+                  <a href="./index.html"><b>GRAND JOSUN JEJU</b></a>
+                </li>
+                  <!-- RESERVATION -->
+                <li class="dropdown res dropdown_new">
+                  <div class="reservation_">
+                    <a href="#" class="dm-new"><b>RESERVATION</b></a>
+                  </div>
+                  <ul class="dropdown-content dc_new">
+                    <div class="reservation_list">
+                      <li><a href="#">ROOM</a></li>
+                      <li><a href="#">DINING</a></li>
+                      <li><a href="#">MEMBERSHIP</a></li>
+                    </div>
+                  </ul>
+                </li>
+                <p>|</p>
+                <!-- ROOMS -->
+                <li class="dropdown dropdown_new">
+                  <div class="rooms_">
+                    <a href="" class="dm-new"><b>ROOMS</b></a>
+                  </div>
+                    <ul class="dropdown-content dc_new">
+                      <div class="mainbuilding_list_">
+                        <li>
+                            <button>MAIN BUILDING</button>
+                            <ul class="main_roomlist_">
+                                <li>
+                                    <li><a href="#">DELUXE</a></li>
+                                    <li><a href="#">KIDS DELUXE</a></li> 
+                                    <li><a href="#">KIDS PREMIER SUITE</a></li> 
+                                    <li><a href="#">STUDIO SUITE</a></li> 
+                                    <li><a href="#">PREMIER SUITE</a></li> 
+                                    <li><a href="#">LUXURY SUITE</a></li> 
+                                    <li><a href="#">ROYAL SUITE</a></li> 
+                                    <li><a href="#">THE SUITE</a></li> 
+                                </li>
+                            </ul>
+                        </li>
+                      </div>
+                      <div class="hillbuilding_list_">
+                        <li>
+                            <button>HILL SUITE BUILDING</button>
+                            <ul class="hill_roomlist_">
+                                <li>
+                                    <li><a href="#">HILL STUDIO SUITE</a></li>
+                                    <li><a href="#">HILL SUITE</a></li> 
+                                    <li><a href="#">PRESTIGE HILL SUITE</a></li> 
+                                </li>
+                            </ul>
+                        </li>
+                      </div>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- DINING -->
+                  <div class="dining__-">
+                    <a href="#" class="dm-new"><b>DINING</b></a>
+                  </div>
+                    <ul class="dropdown-content dining dc_new">
+                      <div class="dining_list one">
+                        <li><a href="#">ARIA</a></li>
+                        <li><a href="#">RUBRICA</a></li>
+                        <li><a href="#">LOUNGE & BAR</a></li>
+                        <li><a href="#">PEAK.</a></li>
+                        <li><a href="#">JOSUN DELI</a></li>
+                      </div>
+                      <div class="dining_list two two_new">
+                        <li><a href="#">EAT 20</a></li>
+                        <li><a href="#">GRAN J</a></li>
+                        <li><a href="#">HEAVENLY LOUNGE</a></li>
+                      </div>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- OFFERS -->
+                  <div class="offers_">
+                    <a href="#" class="dm-new"><b>OFFERS</b></a>
+                  </div>
+                    <ul class="dropdown-content dc_new">
+                      <div class="offers_list">
+                        <li><a href="#">PACKAGE</a></li>
+                        <li><a href="#">EVENT</a></li>
+                      </div>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- MEETING & WEDDING -->
+                  <div class="mw_">
+                    <a href="#" class="dm-new"><b>MEETING & WEDDING</b></a>
+                  </div>
+                    <ul class="dropdown-content dc_new">
+                      <div class="MW_list">
+                        <li><a href="#">MEETING</a></li>
+                        <li><a href="#">WEDDING</a></li>
+                      </div>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- ACTIVITY -->
+                  <div class="activity_">
+                    <a href="#" class="dm-new"><b>ACTIVITY</b></a>
+                  </div>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- FACILITIES -->
+                  <div class="facilities_">
+                    <a href="#" class="dm-new"><b>FACILITIES</b></a>
+                  </div>
+                    <ul class="dropdown-content dc_new">
+                      <div class="mainbuilding_list_">
+                        <li>
+                            <button>MAIN BUILDING</button>
+                            <ul class="main_roomlist_">
+                                <li>
+                                    <li><a href="#">GARDEN POOL & CABANA</a></li>
+                                    <li><a href="#">PEAK. POOL & CABANA</a></li> 
+                                    <li><a href="#">FITNESS CENTER & SAUNA</a></li> 
+                                    <li><a href="#">LENDING LIBRARY</a></li> 
+                                    <li><a href="#">ENTERTAINMENT</a></li> 
+                                    <li><a href="#">AQUA SHOP</a></li> 
+                                    <li><a href="#">JOSUN JUNIOR KIDS CLUB</a></li> 
+                                </li>
+                            </ul>
+                        </li>
+                      </div>
+                      <div class="hillbuilding_list_">
+                        <li>
+                            <button>HILL SUITE BUILDING</button>
+                            <ul class="hill_roomlist_">
+                                <li>
+                                    <li><a href="#">HEAVENLY POOL</a></li>
+                                    <li><a href="#">GX ROOM & SAUNA</a></li> 
+                                </li>
+                            </ul>
+                        </li>
+                      </div>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown_new">
+                  <!-- ABOUT -->
+                  <div class="about_">
+                    <a href="#" class="dm-new"><b>ABOUT</b></a>
+                  </div>
+                    <ul class="dropdown-content dc_new">
+                      <div class="about_list">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">JOSUN JUNIOR</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Q & A</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       <!--header 끝 -->
       <!-- container 시작 -->
       <div id="container"></div>
       <!-- container 끝 -->
       <!-- footer 시작 -->
-      <footer>
+      <footer style="white-space: nowrap;">
         <div class="foot_area box_inner">
-          <div class="버튼들">
+          <div class="external_site1">
             <ul class="foot_list1 clear">
-              <li><a href="https://jpg.josunhotel.com/main.do">JOSUN PALACE</a></li>
-              <li><a href="https://www.marriott.co.kr/hotels/travel/selwi-the-westin-josun-seoul/">THE WESTIN JOSUN SEOUL</a></li>
-              <li><a href="https://www.marriott.co.kr/hotels/travel/puswi-the-westin-josun-busan/">THE WESTIN JOSUN BUSAN</a></li>
-              <li><a href="https://gjb.josunhotel.com/main.do">GRAND JOSUN BUSAN</a></li>
-              <li><a href="https://gjj.josunhotel.com/main.do">GRAND JOSUN JEJU</a></li>
-              <li><a href="https://lescapehotel.com/main">L'ESCAPE</a></li>
-              <li><a href="https://grp.josunhotel.com/main.do">GRAVITY</a></li>
-              <li><a href="https://www.marriott.co.kr/hotels/travel/selfp-four-points-josun-seoul-station/">FOUR POINTS SEOUL STATION</a></li>
-              <li><a href="https://www.marriott.co.kr/hotels/travel/selfd-four-points-josun-seoul-myeongdong/">FOUR POINTS MYEONGDONG</a></li>
+              <li><a href="https://jpg.josunhotel.com/main.do"><img src="./images/logo_josunpalace.png" alt="JOSUN PALACE"></a></li>
+              <li><a href="https://www.marriott.co.kr/hotels/travel/selwi-the-westin-josun-seoul/"><img src="./images/logo_wchosunseoul.png" alt="THE WESTIN JOSUN SEOUL"></a></li>
+              <li><a href="https://www.marriott.co.kr/hotels/travel/puswi-the-westin-josun-busan/"><img src="./images/logo_wchosunbusan.png" alt="THE WESTIN JOSUN BUSAN"></a></li>
+              <li><a href="https://gjb.josunhotel.com/main.do"><img src="./images/logo_grandjosun.png" alt="GRAND JOSUN BUSAN"></a></li>
+              <li><a href="https://gjj.josunhotel.com/main.do"><img src="./images/logo_grandjosun02.png" alt="GRAND JOSUN JEJU"></a></li>
+              <li><a href="https://lescapehotel.com/main"><img src="./images/logo_lescape.png" alt="L'ESCAPE"></a></li>
+              <li><a href="https://grp.josunhotel.com/main.do"><img src="./images/logo_gravity.png" alt="GRAVITY"></a></li>
+              <li><a href="https://www.marriott.co.kr/hotels/travel/selfp-four-points-josun-seoul-station/"><img src="./images/logo_fourpoints.png" alt="FOUR POINTS SEOUL STATION"></a></li>
+              <li><a href="https://www.marriott.co.kr/hotels/travel/selfd-four-points-josun-seoul-myeongdong/"><img src="./images/logo_fourpoints02.png" alt="FOUR POINTS MYEONGDONG"></a></li>
             </ul>
           </div>
-          <div class="나머지">
-            <div>
+          <div class="foot_bottom">
+            <div class="official_website">
               <!-- 공홈 이동 이미지 버튼 -->
               <a href="#">JOSUN HOTEL & RESORTS</a>
             </div>
-            <div>
+            <div class="policy">
               <!-- 중간 부분 -->
               <ul class="foot_list2 clear">
                 <li><a href="#">고객센터</a></li>
@@ -209,26 +414,24 @@
                 <li><a href="#">이메일무단수집금지</a></li>
                 <li><a href="#">영상정보처리기기운영관리방침</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">호텔정책</a></li>
+                <li><a href="#">호텔 정책</a></li>
               </ul>
-              <p>
+              <p class="info">
                 <span>서울시 중구 소공로 106</span>
                 <span>대표이사 한채양</span>
                 <span>T. 064-738-6600</span>
               </p>
-              <p>
+              <p class="info">
                 <span>통신판매신고번호 중구 0623호</span>
               </p>
-              <p>
-                <span
-                  >Copyright &copy; 2020 JOSUN HOTELS & RESORTS Co. All rights
-                  reserved.</span>
+              <p class="info">
+                <span>Copyright &copy; 2020 JOSUN HOTELS & RESORTS Co. All rights reserved.</span>
               </p>
             </div>
-            <div>
+            <div class="external_site2">
               <!-- 오른쪽 부분 -->
               <select name="footer_select" onchange="window.open(value, '_blank');">
-                <option value="">FAMILY</option>
+                <option value="">FAMILY SITES</option>
                 <option value="https://www.shinsegaegroupnewsroom.com/">신세계 그룹 인사이드</option>
                 <option value="https://www.ssg.com/">SSG.COM</option>
                 <option value="https://tv.ssg.com/">신세계 TV 쇼핑</option>
@@ -248,10 +451,13 @@
                 <option value="http://www.shinsegaeproperty.com/ko/index.do">신세계 프라퍼티</option>
                 <option value="http://www.shinsegaecentralcity.com/">신세계 센트럴시티</option>
               </select>
-              <li><a href="https://www.josunhotel.com/appDownload.do">GRAND JOSUN</a></li>
-              <li><a href="https://pf.kakao.com/_EnFPj">KAKAOTALK</a></li>
-              <li><a href="https://www.instagram.com/grandjosun_jeju/?hl=ko">INSTAGRAM</a></li>
-              <li><a href="https://www.youtube.com/channel/UC7ZZk3mnc0DzJqPTdjD6tOw">YOUTUBE</a></li>
+              <ul class="social">
+                <li><a href="https://www.josunhotel.com/appDownload.do"><img src="./images/ico_sns_josun.png" alt="JOSUN"></a></li>
+                <li><a href="https://pf.kakao.com/_EnFPj"><img src="./images/ico_sns_kakao.png" alt="KAKAOTALK"></a></li>
+                <li><a href="https://www.instagram.com/grandjosun_jeju/?hl=ko"><img src="./images/ico_sns_insta.png" alt="INSTAGRAM"></a></li>
+                <li><a href="https://www.youtube.com/channel/UC7ZZk3mnc0DzJqPTdjD6tOw"><img src="./images/ico_sns_youtube.png" alt="YOUTUBE"></a></li>
+              </ul>
+              
             </div>
           </div>
         </div>
