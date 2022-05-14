@@ -104,7 +104,7 @@ header {
   width: 118px;
   height: 42px;
   text-indent: -9999px;
-  background: url(../images/bg_logo_grand.png) no-repeat 0 -42px;
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 -42px;
 }
 .reservation:after {
   content: "";
@@ -114,7 +114,7 @@ header {
   height: 10px;
   margin-top: 6px;
   margin-left: 8px;
-  background: url(../images/ico_rsv.png) no-repeat 0 -10px;
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 -10px;
 }
 .reservation {
   margin-left: 50px;

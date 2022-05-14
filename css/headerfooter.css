@@ -87,7 +87,7 @@ header {
   width: 11px;
   height: 11px;
   margin-left: 5px;
-  background: url(../images/ico_search_11x11.png) no-repeat 0 0;
+  background: url(../images/main_img/ico_search_11x11.png) no-repeat 0 0;
 }
 .language_select:after {
   content: "";
@@ -95,7 +95,7 @@ header {
   margin-left: 10px;
   width: 4px;
   height: 8px;
-  background: url(../images/ico_lang.png) no-repeat 0 0;
+  background: url(../images/main_img/ico_lang.png) no-repeat 0 0;
 }
 
 .left_topbar {
@@ -149,7 +149,7 @@ header {
   width: 118px;
   height: 42px;
   text-indent: -9999px;
-  background: url(../images/bg_logo_grand.png) no-repeat 0 -42px;
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 -42px;
 }
 .logo > a::after {
   background-position: 0 0;
@@ -162,7 +162,7 @@ header {
   height: 10px;
   margin-top: 6px;
   margin-left: 8px;
-  background: url(../images/ico_rsv.png) no-repeat 0 -10px;
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 -10px;
   cursor: pointer;
 }
 /* reservation로고 색 변환 */
@@ -481,7 +481,7 @@ footer {
   overflow: hidden;
   width: 150px;
   height: 70px;
-  background: url(../images/bg_logo_footer.png) no-repeat 0 0px;
+  background: url(../images/main_img/bg_logo_footer.png) no-repeat 0 0px;
   margin-left: 130px;
   margin-top: 30px;
 }
