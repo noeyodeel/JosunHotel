@@ -58,6 +58,13 @@ html,
 body {
   height: 100%;
 }
+body {
+  color: #000;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
 .box1:nth-child(odd) {
   background: #164438;
 }
@@ -97,9 +104,9 @@ a {
   padding: 90px 0 0;
 }
 .rooms {
-  font-size: 60px;
-  font-weight: 500;
   margin: 0;
+  font: 500 60px playfair;
+  font-feature-settings: "lnum", "pnum";
 }
 .rooms_content {
   font-size: 20px;
@@ -130,6 +137,9 @@ a {
   color: #fff;
   margin: 10px 0 0;
   display: block;
+  font-family: playfair;
+  font-weight: 500;
+  font-feature-settings: "lnum", "pnum";
 }
 .txtCont > .txt {
   font-size: 18px;
@@ -174,14 +184,14 @@ a {
 }
 .love_inner::before {
   content: "";
-  background: url(./rooms_img/ico_bookmark.png) no-repeat -48px 12px;
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat -48px 12px;
   width: 24px;
   height: 40px;
   position: absolute;
   left: 12px;
 }
 .box1:nth-child(even) .love_inner::before {
-  background: url(./rooms_img/ico_bookmark.png) no-repeat 0px 12px;
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat 0px 12px;
 }
 .rooms_list li + li::before {
   content: "";
