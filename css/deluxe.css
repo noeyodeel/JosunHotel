@@ -1,3 +1,59 @@
+@font-face {
+  font-family: "NotoKrL";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(../fonts/NotoSans-Light.eot);
+  src: url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../fonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.eot);
+  src: url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../fonts/NotoSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrM";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(../fonts/NotoSans-Medium.eot);
+  src: url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../fonts/NotoSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "gothamL";
+  src: local(※), url("../fonts/Gotham-Light.otf") format("opentype"),
+    url("../fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: gothamB;
+  font-weight: normal;
+  src: url("../fonts/GothamBook.ttf") format("truetype");
+}
+@font-face {
+  font-family: gothamM;
+  font-weight: normal;
+  src: url("../fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: playfair;
+  font-weight: normal;
+  src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,11 +62,12 @@ body {
   line-height: 1.8;
 }
 .wrap {
-  width: 1400px;
   margin: 0 auto;
+  width: 1200px;
 }
 a {
   text-decoration: none;
+  color: black;
 }
 li {
   list-style: none;
@@ -31,7 +88,6 @@ li {
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
-  width: 1400px;
 }
 .topViewCont .txtCont .category span {
   color: #fff;
@@ -53,7 +109,7 @@ li {
   bottom: 75px;
   left: 50%;
   margin-left: -32px;
-  background: url(./deluxe_img/btn_view_more.png) no-repeat 0 0;
+  background: url(../images/deluxe_img/btn_view_more.png) no-repeat 0 0;
   width: 65px;
   height: 45px;
   border: none;
@@ -88,7 +144,7 @@ li {
 }
 .btnArea .btn-box:nth-child(1) span::before {
   content: "";
-  background: url(./deluxe_img/ico_btns.png) no-repeat;
+  background: url(../images/deluxe_img/ico_btns.png) no-repeat;
   width: 24px;
   height: 25px;
   display: block;
@@ -100,7 +156,7 @@ li {
 .btnArea > .btn-box:nth-child(2) > .love_img {
   width: 24px;
   height: 50px;
-  background: url(./rooms_img/ico_bookmark.png) no-repeat;
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat;
   position: absolute;
   top: 17px;
   left: 27px;
@@ -114,6 +170,7 @@ li {
 }
 .info {
   padding-left: 50px;
+  height: 300px;
 }
 .info li {
   width: 33.33%;
@@ -351,13 +408,13 @@ a[href="#scroll"] {
   margin: 0 auto 10px;
 }
 .modal__content li:nth-child(1) a::before {
-  background: url(./deluxe_img/ico_share.png) no-repeat;
+  background: url(../images/deluxe_img/ico_share.png) no-repeat;
 }
 .modal__content li:nth-child(2) a::before {
-  background: url(./deluxe_img/ico_share.png) no-repeat 50%;
+  background: url(../images/deluxe_img/ico_share.png) no-repeat 50%;
 }
 .modal__content li:nth-child(3) a::before {
-  background: url(./deluxe_img/ico_share.png) no-repeat 100%;
+  background: url(../images/deluxe_img/ico_share.png) no-repeat 100%;
 }
 .modal__content > h2 {
   margin-top: 50px;
@@ -368,7 +425,7 @@ a[href="#scroll"] {
   padding-left: 0;
 }
 .modal_closeBtn {
-  background: url(./deluxe_img/btn_close_25x25.png) no-repeat;
+  background: url(../images/deluxe_img/btn_close_25x25.png) no-repeat;
   width: 50px;
   height: 50px;
   display: block;
@@ -385,6 +442,7 @@ a[href="#scroll"] {
   float: none;
   padding-left: 12px;
   position: relative;
+  color: rgb(136, 136, 136);
 }
 .noticeArea > ul > li::before {
   content: "";
@@ -404,6 +462,28 @@ a[href="#scroll"] {
   margin-top: 30px;
   padding-top: 30px;
 }
+.ask_number h3 {
+  display: inline-block;
+}
+.ask_number span,
+.ask_number span a {
+  color: rgb(136, 136, 136);
+}
+.ask_number span a {
+  padding-left: 7px;
+}
+.ask_number span:nth-child(2) {
+  padding-left: 10px;
+}
+.ask_number span:nth-child(2)::after {
+  content: "|";
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
 #love_btn {
   position: relative;
+}
+img[src="./images/rooms_img/01_Deluxe.jpeg"] {
+  width: 100%;
 }
