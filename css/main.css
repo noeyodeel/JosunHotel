@@ -53,194 +53,765 @@
   font-weight: normal;
   src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
 }
-
-* {
-  margin: 0;
-  padding: 0;
+html {
+  overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* 스타일을 주기위해서 초기화(처음으로 되돌리는 작업) */
-  font-weight: normal;
-  font-size: inherit;
-}
-ul,
-ol,
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: black;
-}
-img {
-  border: none;
-  vertical-align: middle;
-} /* 수직정렬 가운데로 */
-
-.clear::after {
-  /* 가상으로 요소를 만들고 걔를 clear시켜 다음것부터는 정상적으로 배치되도록 해줌 */
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ---------------------- 헤더 시작 ---------------------- */
-header {
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
+html,
+body {
   width: 100%;
-  background: none;
-  z-index: 100;
+  height: 100%;
 }
 
-.header_area > .header_cont > .top_bar > .left_topbar {
-  float: left;
-}
-
-.header_area > .header_cont > .top_bar > .right_topbar {
-  float: right;
-}
-.header_area .header_cont .top_bar .right_topbar li:nth-child(-n + 3)::after {
-  content: "|";
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 10px;
-  color: white;
-  line-height: 1;
-}
-.top_bar {
-  background-color: black;
+.content {
   width: 100%;
-  height: 50px;
-  line-height: 50px; /* height와 line-height에 똑같은 값을 주면 세로 중앙 정렬 됨! */
-  font-size: 12px;
-  color: #bbb;
-}
-.top_bar > div > li {
-  display: inline-block; /* 텍스트 내용들 한줄에 배치됨! */
-}
-.top_bar > div > li > a {
-  color: white;
-}
-.left_topbar > li > a {
-  margin: 0;
-  padding: 15px;
-}
-.left_topbar {
-  padding-left: 50px;
-}
-.right_topbar {
-  padding-right: 50px;
-}
-.gnb {
+  height: 100vh; /* 페이지별로 화면 꽉차게 조정해야 함 */
   position: relative;
-  background: transparent;
-  padding: 30px 50px;
-  height: 100px;
-  display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
 }
-
-.dropdown {
-  margin-left: 50px;
-  margin-top: 8px;
-  font-size: 15px;
-}
-
-.logo {
-  display: block;
-  left: 50px;
-  top: 30px;
-  width: 118px;
-  height: 42px;
-  text-indent: -9999px;
-  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 -42px;
-}
-.reservation:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 16px;
-  height: 10px;
-  margin-top: 6px;
-  margin-left: 8px;
-  background: url(../images/main_img/ico_rsv.png) no-repeat 0 -10px;
-}
-.reservation {
-  margin-left: 50px;
-}
-
-.gnb > p {
-  padding-left: 85px;
-  padding-right: 2px;
-  margin-top: 11px;
-  font-size: 11px;
-}
-
-.dropdown:nth-child(n + 2) {
-  padding-left: 2px;
-}
-/* .dd {
-    margin-right: 100px;
-  } */
-.header > .header_area > .header_cont > nav > ul {
+video {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
+  object-fit: cover;
 }
 
-nav ul li {
-  display: inline-block;
+.selectWrap {
+  border-right: 1px solid #ccc;
+  display: flex;
+  cursor: pointer;
 }
 
-/* .dropdown {
-    position: relative;
-  }  네비게이션바 세부메뉴 가로 배치 -> 세로배치 됨 */
-
-.dropdown-content {
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+.res_bar {
+  position: fixed;
+  width: 1400px;
+  height: 64px;
+  top: 58%;
+  left: 12%;
+  display: flex;
+  background-color: white;
 }
-
-.dropdown-content a {
+/* 216 652 364 168 */
+.chkInout {
+  width: 621px;
+  height: 64px;
+  line-height: 64px;
+  padding-left: 30px;
+  border-right: 1px solid #ccc;
+}
+.date {
   color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  font-size: 20px;
 }
-.dropdown-content {
+
+.mainResveForm {
+  display: flex;
+}
+
+.tit {
+  color: #888888;
+  font-size: 14px;
+}
+
+.date > span:before {
+  content: "|";
+  padding: 0 10px;
+  color: gray;
+  font-weight: normal;
+}
+
+#type_box {
+  margin: 0px;
+  width: 216px;
+  border: none;
+  height: 64px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  line-height: 64px;
+  color: #333333;
+  appearance: none;
+  cursor: pointer;
+}
+
+#arrow__ {
+  width: 11px;
+  height: 7px;
+  background: url(../images/spr_form.png) no-repeat 0 -39px;
+  border: none;
+  margin-top: 31px;
+  margin-right: 20px;
+}
+
+#calendar {
   display: none;
 }
-.dropdown-menu:hover {
-  /* 마우스 올리면 색상변경 */
-  color: burlywood;
+
+.selectRoom {
+  display: flex;
 }
-.dropdown:hover .dropdown-content {
-  /* 네비게이션 바 메뉴에 마우스 올리면 안의 세부 내용들 보여줌 */
-  display: block;
-  width: 100%;
-  left: 0;
+dl {
+  display: flex;
+  color: #888888;
+  line-height: 64px;
+  font-size: 14px;
 }
-.dropdown-content a:hover {
-  /* 네비게이션 바 세부 메뉴에 마우스 올리면 색상 변경 */
-  background-color: #f1f1f1;
+#roomCntText {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 15px 0 5px;
+}
+#adultCntText {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 15px 0 5px;
+}
+#childCntText {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 15px 0 5px;
+}
+.roomWrap {
+  width: 334px;
+  border: solid #ccc;
+  border-width: 0 1px 0 1px;
+  padding-left: 30px;
+  height: 64px;
+}
+.mainRoom {
+  display: none;
+}
+.btnSearch {
+  width: 168px;
+  height: 64px;
+  font: 500 20px gothamB;
+  background: #000 !important;
+  color: #fff !important;
+  border: none;
+}
+.promInt {
+  display: none;
+}
+.promCode {
+  float: right;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  background-color: black;
+.btnPromo {
+  border: none;
+  background: none;
+  font-size: 16px;
   color: white;
+  margin-top: 10px;
+}
+
+.video_btn_area {
+  width: 50px;
+  height: 130px;
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  z-index: 200;
+}
+
+#btn-play {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(../images/spr_controls.png);
+  background-repeat: no-repeat;
+  background-position: -27px 0;
+  background-size: auto;
+  background-color: transparent;
+  z-index: 10;
+  width: 26px;
+  height: 31px;
+  transform: translate(-40%, -50%);
+  border: none;
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+#btn-sound {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 44px;
+  height: 44px;
+  background-image: url(../images/spr_controls.png);
+  background-position: -44px -32px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  border: none;
+  cursor: pointer;
+}
+
+/*----------------------------------- room 페이지 -----------------------------------*/
+.room_area {
+  background: linear-gradient(90deg, #f0eeed 50%, #fff 50%);
+  inset: auto;
+  margin: 0px;
+  display: block;
+  position: relative;
+  box-sizing: content-box;
+  min-height: 925px;
+  /* object-fit: cover; */
+}
+
+.room_roll {
+  position: absolute;
+  width: 1050px;
+  height: 760px;
+}
+
+.room__ {
+  position: absolute;
+  top: 16%;
+  right: 10%;
+  /* float: right; */
+  /* display: table-cell; */
+  /* position: relative; */
+  /* vertical-align: top; */
+  width: 300px;
+  height: 760px;
+  padding-left: 60px;
+}
+
+.room_event {
+  margin-top: 70px;
+}
+.room_event > p:first-child {
+  width: 59%;
+  font: 14px gothamL;
+  border: 1px solid #000;
+  padding: 5px 10px 6px;
+}
+.room_event > img {
+  width: 290px;
+  height: 150px;
+}
+
+.room_txt > h3,
+.dining_txt > h3,
+.facility_txt > h3 {
+  font: 500 40px playfair;
+  margin-bottom: 8px;
+}
+.room_txt > h5,
+.dining_txt > h5 {
+  color: #000;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.room_txt > h6,
+.dining_txt > h6,
+.facility_txt > h6 {
+  margin-top: 20px;
+  font: 500 14px / 1.8 gothamM;
+  color: #ba998c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.txt {
+  padding-top: 18px;
+  margin-bottom: 8px;
+}
+.date {
+  margin-bottom: 17px;
+}
+.arrow_btn {
+  display: block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  text-indent: -9999px;
+  background: url(../images/btn_view.png) no-repeat 0 0;
+  margin-top: 35px;
+}
+.arrow_btn:hover {
+  background-position: -42px 0;
+  cursor: pointer;
+}
+
+#left_swipe {
+  position: absolute;
+  width: 10px;
+  height: 18px;
+  background: url(../images/btn_swipe_10x18.png) no-repeat;
+  background-position: 0 0;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+#right_swipe {
+  position: absolute;
+  width: 10px;
+  height: 18px;
+  background: url(../images/btn_swipe_10x18.png) no-repeat;
+  background-position: -10px 0;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+#img_play_btn {
+  display: inline-block;
+  width: 12px;
+  height: 21px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../images/btn_auto2.png) no-repeat;
+  background-position: -12px 0;
+  border: none;
+  cursor: pointer;
+}
+.room_area {
+  display: flex;
+}
+
+#room_slide {
+  width: 1050px;
+  height: 760px;
+}
+.swiper-wrapper {
+  /* 메인2페이지 슬라이드 이미지 담겨있는 div */
+  width: 1050px;
+  top: 16%;
+  left: 16%;
+  /* float: left; */
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-wrapper > li {
+  float: left;
+}
+.roll_btn_Area {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  bottom: 6%;
+  right: 37%;
+  z-index: 200;
+}
+
+.rolling_btn {
+  display: flex;
+}
+
+.rolling_btn > li > button {
+  margin-right: 10px;
+}
+
+#img_play_btn {
+  margin-left: 20px;
+}
+
+/*------------------ dining 페이지 ----------------*/
+.dining_area {
+  /* position: relative; */
+  /* position: absolute; */
+  width: 1900px;
+  height: 100vh;
+  background: url(../images/bg_dining.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: -1000000;
+  overflow: hidden;
+}
+
+.dining_txt {
+  /* position: absolute; */
+  display: block;
+  float: right;
+  z-index: 100;
+  width: 600px;
+  height: 100%;
+  right: 0;
+  margin-left: 300px;
+  background-color: white;
+}
+.dining_txt > h3 {
+  margin-top: 21%;
+  margin-left: 10%;
+}
+.dining_txt > h5 {
+  margin-top: 1.5%;
+  margin-left: 10%;
+}
+.dining_txt > h6 {
+  margin-top: 3%;
+  margin-left: 10%;
+}
+.dining_txt > .arrow_btn {
+  margin-left: 10%;
+}
+/*-------------------------- facility 페이지 ----------------------------- */
+.facility_area {
+  position: relative;
+  height: 100vh;
+  width: 1500px;
+  overflow: hidden;
+}
+.facility_type {
+  position: relative;
+}
+.facility_img {
+  width: 1400px;
+}
+
+.facility_txt {
+  /* float: left; */
+  margin-top: 8%;
+  margin-left: 10%;
+  display: flex;
+  margin-bottom: 1%;
+}
+.facility_txt > h3 {
+  margin-right: 15px;
+  font: 500 40px playfair;
+}
+
+.facility_txt > h5 {
+  margin-top: 10px;
+  font: 500 14px / 1.8 gothamM;
+  color: #ba998c;
+  font-weight: bold;
+}
+.facility_txt > .arrow_btn {
+  position: absolute;
+  right: 8%;
+  margin-top: 1%;
+}
+.img_hover {
+  display: flex;
+  position: absolute;
+}
+.img_hover > img {
+  display: block;
+  width: 700px;
+  height: 640px;
+}
+.pool {
+  margin-left: 10%;
+  z-index: 5;
+}
+.gx_room {
+  margin-left: 60%;
+  left: 10%;
+  z-index: 10;
+}
+.kids_club {
+  margin-left: 80%;
+  left: 20%;
+  z-index: 15;
+}
+
+/* .pool:hover {
+} */
+.gx_room:hover {
+  transform: translate(-300px, 0);
+  transition: 1s;
+  animation-fill-mode: forwards;
+}
+.kids_club:hover {
+  transform: translate(-300px, 0);
+  transition: 1s;
+}
+
+.pool > div > h5,
+.pool > div > h6 {
+  position: absolute;
+  right: 12%;
+  bottom: 9%;
+  opacity: 0;
+  color: white;
+}
+.pool > div > h6 {
+  bottom: 5%;
+}
+
+.gx_room > div > h5,
+.gx_room > div > h6 {
+  position: absolute;
+  right: 20%;
+  bottom: 9%;
+  opacity: 0;
+  color: white;
+}
+.gx_room > div > h6 {
+  bottom: 5%;
+}
+
+.kids_club > div > h5,
+.kids_club > div > h6 {
+  position: absolute;
+  right: 12%;
+  bottom: 9%;
+  opacity: 0;
+  color: white;
+}
+.kids_club > div > h6 {
+  bottom: 5%;
+}
+.facility_type > li > div > h5 {
+  font: 400 18px/1 gothamM;
+  font-size: 14px;
+}
+.facility_type > li > div > h6 {
+  font: 400 18px/1 gothamM;
+  font-size: 18px;
+}
+
+.pool:hover .img_explain {
+  opacity: 1;
+}
+
+.gx_room:hover .img_explain {
+  opacity: 1;
+}
+
+.kids_club:hover .img_explain {
+  opacity: 1;
+}
+/* ----------------------------activity 페이지-------------------------- */
+.activity_area {
+  position: relative;
+  background: url(../images/bg_activity.jpg) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+.white_area {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 50;
+  background-color: white;
+}
+
+.activity_txt {
+  position: absolute;
+  top: 17%;
+  left: 14%;
+}
+.activity_txt > h3 {
+  font: 500 40px playfair;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.activity_txt > h5 {
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.activity_txt > h6 {
+  font: 500 14px/1.8 gothamM;
+  text-transform: uppercase;
+  color: #fff;
+}
+.activity_box {
+  position: absolute;
+  top: 19%;
+  right: 13%;
+  display: block;
+  float: right;
+  z-index: 100;
+  width: 270px;
+  height: 522px;
+  background-color: white;
+  padding: 58px 40px 60px;
+}
+.activity_box > h4 {
+  font: 400 22px gothamM;
+}
+.activity_txt > .arrow_btn {
+  display: block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  text-indent: -9999px;
+  background: url(../images/btn_view.png) no-repeat 0 0;
+  background-position: -84px 0;
+  margin-top: 35px;
+}
+.activity_txt > .arrow_btn:hover {
+  background-position: -126px 0;
+  cursor: pointer;
+}
+/* -------------------------membership 페이지------------------------ */
+.membership_area {
+  position: relative;
+  background: url(../images/bg_membership.jpg) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+.membership_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1400px;
+  margin: -305px 0 0 -700px;
+  z-index: 1;
+  background: #fff;
+  height: 610px;
+}
+.text_area {
+  margin-top: 85px;
+  width: 1240px;
+  height: 360px;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  position: relative;
+  padding: 50px 60px 0 100px;
+}
+.text_area > h3 {
+  font: 500 40px playfair;
+  color: black;
+}
+.text_area > h6 {
+  margin: 10px 0 25px;
+  font: 500 14px/1.8 gothamM;
+  color: #ba998c;
+}
+.text_area > h5 {
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
+}
+
+.membership_btn {
+  margin-top: 58px;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  overflow: hidden;
+  min-width: 162px;
+  height: 50px;
+  padding: 0 25px;
+  line-height: 48px;
+  font-size: 17px;
+}
+.membership_btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #000;
+}
+.membership_btn::before {
+  content: "";
+  width: 130%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -150%;
+  z-index: -1;
+  background-color: #fff;
+  transform: skewX(-16deg);
+  transition: 0.5s ease-in-out;
+}
+.membership_btn:hover {
+  color: black;
+}
+.membership_btn:hover:before {
+  left: -10%;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+.meeting_area {
+  position: relative;
+  background: url(../images/bg_wedding.jpg) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+.meeting_area > h3 {
+  position: absolute;
+  top: 32%;
+  display: block;
+  margin: 0 0 8px !important;
+  font: 500 40px playfair;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 53px;
+}
+.meeting_area > p {
+  position: absolute;
+  top: 40%;
+  display: block;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.meeting_btn {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  border: 1px solid white;
+  overflow: hidden;
+  height: 50px;
+  padding: 0 25px;
+  line-height: 48px;
+  font-size: 17px;
+  font-family: gothamL, notokrL;
+}
+.meeting_btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  box-sizing: border-box;
+  position: absolute;
+}
+.meeting_btn::before {
+  content: "";
+  width: 130%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -150%;
+  z-index: -1;
+  background-color: #fff;
+  transform: skewX(-16deg);
+  transition: 0.5s ease-in-out;
+}
+.meeting_btn:hover {
+  color: black;
+}
+.meeting_btn:hover:before {
+  left: -10%;
 }
