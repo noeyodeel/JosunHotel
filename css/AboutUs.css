@@ -206,6 +206,9 @@ img, fieldset, iframe {
 	width: 100%;
 	height: 100%
 }
+strong, b {
+      font-weight: 500;
+}
 
 /*.visualBox + .inner.tabArea{margin-top:100px}*/
 /* About(.propertyIntro.type02 소개) */
@@ -297,6 +300,11 @@ img, fieldset, iframe {
 	text-transform: uppercase;
 	letter-spacing: -0.01em;
 }
+.propertyIntro .txt {
+      font: 400 18px/1.8 gothamL,notokrL;
+      letter-spacing: -.025em;
+      
+}
 
 /* --------type 03--------------- */
 .businessRoomList.type03 > li:first-child .info::before {
@@ -313,6 +321,16 @@ img, fieldset, iframe {
 	padding: 120px 0;
 }
 /* type 03 타이틀, 설명 */
+.aboutHotel .businessRoomList {
+      margin: 0 auto;
+}
+.businessRoomList {
+      width: 1400px;
+      margin: 80px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+}
 .businessRoomList.type03 > li:first-child .info {
 	position: relative;
 	padding: 0 180px;
@@ -322,7 +340,7 @@ img, fieldset, iframe {
 }
 /* 첫번째 사진 */
 .businessRoomList.type03>li:nth-child(odd) .info {
-	padding-left: 45px;
+	padding-left: 55px;
 	padding-right: 0;
 }
 .businessRoomList.type03 > li:nth-child(even) .info {
@@ -340,4 +358,80 @@ img, fieldset, iframe {
 	display: block;
 	position: relative;
 	width: 700px;
+}
+.businessRoomList.type03 .tit {
+      font-size: 30px;
+}
+.businessRoomList.type03 p.txt{
+      font-weight: 600 ;
+}
+.businessRoomList > li{
+      float: left;
+      width: 100%;
+      flex: 1 1 50%;
+}
+.businessRoomList.type03> li.info{
+      display: block;
+      position: relative;
+      width: 700px;
+}
+
+.businessRoomList > li:nth-child(even) .info {
+      padding-left: 20px;
+}
+.businessRoomList > li .txt {
+      display: block;
+      padding-top: 18px;
+      font-family: gothamL,notokrL;
+      margin: 0;
+}
+
+.thum{
+      display:flex;
+      flex-wrap:nowrap;
+      align-items:flex-end;
+      margin:30px 0;
+}
+.thum > img:first-child{
+      margin-right: 90px;
+}
+
+/* 위치 */
+
+.topInner.type02 .infoTxt {
+      float: left;
+      font-size: 20px;
+      font-family: gothamL;
+      padding: 3px 0 0 28px;
+      letter-spacing: -0.5px;
+      line-height: 1.6;
+	margin-top: 0;
+      
+}
+.topInner.type02 {
+      padding: 120px 0 50px;
+      
+}
+
+.topArea .topInner {
+      padding: 97px 0 82px !important;
+      
+}
+.topInner.type02 .titDep1 {
+      font-size: 30px;
+      font-family: gothamM;
+      float: left;
+}
+
+em,address {
+      font-style: normal;
+}
+.topInner.type02 .infoTxt span:before {
+      content: '';
+      display: inline-block;
+      vertical-align: -2px;
+      width: 1px;
+      height: 18px;
+      background: #aaa;
+      margin: 0 19px 0 13px;
 }

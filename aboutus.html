@@ -7,13 +7,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>About Us</title>
       <link rel="stylesheet" href="./css/AboutUs.css">
+      <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=12yxeucw6u"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.w3schools.com/lib/w3.js"></script>
+      <script src="./js/headerfooter.js"></script>
 </head>
 
 <body>
+      
       <div class="wrapper">
-            <div class="header">
-                  <!-- 헤더부분 -->
-            </div>
+            <header w3-include-html="header.html"></header>
+            <div w3-include-html="header_scroll.html"></div>
             <div id="container" class="container about">
                   <h1 class="hidden">호텔 소개</h1>
                   <div class="topArea">
@@ -35,7 +39,7 @@
                         </div>             
                   </div>
                   <!-- //사진(visualbox) -->
-                  <div class="inner abHotelInner" >
+                  <div class="inner abHotelInner" style="padding-bottom: 117px;" >
                         <!-- 제주 호텔 소개 영역 -->
                         <div class="propertyIntro type02">
                               <em class="tit">
@@ -98,15 +102,18 @@
                                           </li>
                                           <li>
                                                 <div class="info">
-                                                      <span class="thum">
-                                                            <img src="./images/Info01.jpg"alt=""></span>
+                                                      <div class="thum">
+                                                            <img src="./images/Info01.jpg"alt="">
+                                                            <img src="./images/Info02.jpg"alt="">
+                                                      </div>
+                                                                  
                                                 </div>
                                           </li>
                                           <li>
                                                 <div class="info">
-                                                      <span class="thum">
+                                                      <!-- <span class="thum">
                                                             <img src="./images/Info02.jpg"alt="">
-                                                            </span>
+                                                            </span> -->
                                                 </div>
                                           </li>
                                     </ul>
@@ -115,7 +122,7 @@
                   <div class="inner">
                         <!-- 지도 영역 -->
                         <div class="topArea">
-                              <div class="topInner type02" style="padding: 113px 0 44px !important;">
+                              <div class="topInner type02" style="padding: 113px 0 44px  !important;">
                                     <h2 class="titDep1">LOCATION</h2>
                                     <p class="infoTxt">
                                           제주특별자치도 서귀포시 중문관광로 72번길 60
@@ -126,18 +133,35 @@
                                                 <em class="hidden">교통편</em>제주공항 5번 게이트 앞 600번 공항리무진 탑승(15~20분 간격
                                           </span>
                                     </p>
+                                    <div class="map" id="map" style="width: 1400px; height:560px; position: relative; overflow: hidden;
+                                          /* **background 넣기** */
+                                          "></div>
+                                          <!-- <div id="map" style="width:100%;height:400px;"></div> -->
+                                    </div>
                               </div>
-                              <div class="mapArea" id="map" style="width: 1400px; height:560px; position: relative; overflow: hidden;
-                              /* **background 넣기** */
-                              "></div>
-                        </div>
+                              
                         
                   </div>
             </div><!-- //container -->
-            <div class="footer">
-                  <!-- 푸터 -->
-            </div>
+            <!-- <div id="map" style="width:100%;height:400px;"></div> -->
       </div><!-- //wrapper -->
+      <footer w3-include-html="footer.html"></footer>
+
+      <script>
+            var map = new naver.maps.Map('map',{
+                  center: new naver.maps.LatLng(33.252196146585774,126.4080833258439),
+                  zoom: 15
+            });
+            var marker = new naver.maps.Marker({
+                  position: new naver.maps.LatLng(33.252196146585774,126.4080833258439),
+                  map:map
+            });
+
+            var map = new naver.maps.Map('map', mapOptions);
+      </script>
+      <script>
+            w3.includeHTML();
+      </script>
 </body>
 
 </html>
