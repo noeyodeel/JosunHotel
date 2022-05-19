@@ -272,6 +272,7 @@ nav ul li {
   display: none;
   background-color: white;
   min-width: 160px;
+  z-index: 100;
 }
 
 .dropdown-content a {
