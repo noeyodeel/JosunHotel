@@ -22,7 +22,7 @@ const reservationAreaFix = function () {
   };
 
   const _checkPosition = function () {
-    let nowlocation = document.documentElement.scrollTop;
+    let nowlocation = document.documentElement.scrollTop; // 현재 위치
     let contentArea = document.getElementById("contentArea");
     if (nowlocation >= winH) {
       reservationArea.classList.add("fixed"); // 조건 만족시 fixed

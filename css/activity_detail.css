@@ -1,3 +1,58 @@
+@font-face {
+  font-family: "NotoKrL";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(../fonts/NotoSans-Light.eot);
+  src: url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../fonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.eot);
+  src: url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../fonts/NotoSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrM";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(../fonts/NotoSans-Medium.eot);
+  src: url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../fonts/NotoSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "gothamL";
+  src: local(※), url("../fonts/Gotham-Light.otf") format("opentype"),
+    url("../fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: gothamB;
+  font-weight: normal;
+  src: url("../fonts/GothamBook.ttf") format("truetype");
+}
+@font-face {
+  font-family: gothamM;
+  font-weight: normal;
+  src: url("../fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: playfair;
+  font-weight: normal;
+  src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +69,7 @@
   line-height: 1.8;
   list-style: none;
   z-index: 0;
+  font-family: notokrL, gothamL, playfair;
 }
 a,
 button {
@@ -36,15 +92,16 @@ button {
 }
 .topView > .textArea > .sort {
   letter-spacing: 3px;
+  font-family: gothamL, notokrL;
 }
 .topView > .textArea > .title {
   letter-spacing: -1px;
-  font-weight: 400;
-  font-size: 80px;
+  font: 400 80px playfair, notokrR;
 }
 .topView > .textArea > .contentGuide {
   margin-top: 35px;
   font-size: 20px;
+  font-family: gothamL, notokrL;
 }
 .topView > .btn {
   width: 65px;
@@ -81,6 +138,7 @@ button {
   transform: translate(0, -50%);
   font-weight: 500;
   font-size: 22px;
+  font-family: gothamM, notokrM;
 }
 .reservationArea > .inner > .btnArea {
   position: absolute;
@@ -99,6 +157,20 @@ button {
   letter-spacing: -0.01em;
   font-size: 17px;
   line-height: 58px;
+  font-family: gothamL, notokrL;
+}
+.reservationArea > .inner > .btnArea > .shareBtn > span {
+  padding-left: 34px;
+}
+.reservationArea > .inner > .btnArea > .shareBtn > span::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/ico_btns.png");
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
 }
 .reservationArea > .inner > .btnArea > .reservationBtn {
   border-color: #000;
@@ -167,21 +239,24 @@ button {
 .contentArea > .contentInfo > ul > li dt {
   margin-bottom: 5px;
   font-size: 14px;
+  font-family: gothamM, notokrM;
 }
 .contentArea > .contentInfo > ul > li dd {
   font-size: 18px;
   letter-spacing: -0.01em;
+  font-family: gothamL, notokrL;
 }
 .contentArea > .contentTime {
   margin-bottom: 92px;
 }
 .contentArea > .contentTime > h2 {
   font-weight: 500;
-  font-size: 30px;
+  font: 500 30px gothamB, notokrR;
 }
 .contentArea > .contentTime > p {
   margin: 15px 0 11px;
   font-size: 18px;
+  font-family: gothamL, notokrL;
 }
 .contentArea > .contentTime > table {
   width: 100%;
@@ -196,10 +271,12 @@ button {
   padding: 15px 20px;
   border-right: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
+  font-family: gothamM, notokrM;
 }
 .contentArea > .contentTime > table td {
   padding: 15px 20px;
   border-bottom: solid 1px #ccc;
+  font-family: gothamL, notokrL;
 }
 .contentArea > .swipeWrap {
   width: 1400px;
@@ -232,6 +309,7 @@ button {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: -0.01em;
+  font: 500 20px/1 notokrR;
 }
 .contentArea > .cautionArea .cautionContent {
   color: #666;
@@ -261,6 +339,7 @@ button {
   border: solid 1px #000;
   letter-spacing: -0.01em;
   line-height: 58px;
+  font-family: gothamL, notokrL;
 }
 .otherContents {
   width: 1400px;
@@ -272,6 +351,7 @@ button {
   margin-bottom: 15px;
   font-weight: 500;
   font-size: 30px;
+  font: 500 30px gothamB, notokrR;
 }
 .otherContents .swipItems {
   width: 1460px;
@@ -292,9 +372,7 @@ button {
   margin: 0 5px 5px 0;
   padding: 3px 10px 4px;
   border: solid 1px black;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
+  font: 400 14px/1.5 gothamL, notokrL;
 }
 .otherContents .textContents > .title > P {
   margin-top: 17px;
@@ -303,11 +381,13 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: playfair, notokrR;
 }
 .otherContents .textContents > .date > P {
   margin-top: 27px;
   font-size: 14px;
   color: #333;
+  font-family: gothamL, notokrL;
 }
 .otherContents .textContents > .info > p {
   margin-top: 1px;

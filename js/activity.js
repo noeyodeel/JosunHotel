@@ -50,7 +50,7 @@ const inputLists = function (list) {
       `<img src="${list[i].img}" alt='activity_picture' />` +
       "<div class='hoverContents'>" +
       "<div class='btnContents'>" +
-      "<a href='#자세히보기' class='btn'>자세히 보기</a>" +
+      "<a href='./activity_detail.html' class='btn'>자세히 보기</a>" +
       "<a onclick='onlineReservation()' class='btn'>온라인 예약</a>" +
       "</div>" +
       "</div>" +
@@ -142,7 +142,7 @@ const clickMore = (list) => {
       `<img src="${list[i].img}" alt='activity_picture' />` +
       "<div class='hoverContents'>" +
       "<div class='btnContents'>" +
-      "<a href='#자세히보기' class='btn'>자세히 보기</a>" +
+      "<a href='./activity_detail.html' class='btn'>자세히 보기</a>" +
       "<a onclick='onlineReservation()' class='btn'>온라인 예약</a>" +
       "</div>" +
       "</div>" +
