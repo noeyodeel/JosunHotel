@@ -57,6 +57,10 @@
 
 html, body, .wrapper {
 	height: 100%;
+	overflow-x: hidden;
+}
+header, footer{
+	overflow: hidden;
 }
 
 body {
@@ -397,6 +401,7 @@ strong, b {
 }
 
 /* 위치 */
+
 
 .topInner.type02 .infoTxt {
       float: left;

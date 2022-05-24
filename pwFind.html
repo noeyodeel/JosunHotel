@@ -5,12 +5,14 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>pw Find</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.w3schools.com/lib/w3.js"></script>
+      <script src="./js/headerfooter.js"></script>
 </head>
 <body>
       <div class="wrapper">
-            <div class="header">
-                  <!-- 헤더 -->
-            </div>
+                  <header w3-include-html="header.html"></header>
+                  <div w3-include-html="header_scroll.html"></div>
             <div id="container" class="container findingBox">
                   <h1 class="hidden">아이디 찾기</h1>
                   <div class="topArea">
@@ -86,9 +88,11 @@
                         <!-- //비밀번호 찾기 -->
                   </div>
             </div>
-            <div class="footer">
-                  <!-- footer -->
-            </div>
       </div>
+      <footer w3-include-html="footer.html"></footer>
+
 </body>
+<script>
+      w3.includeHTML();
+</script>
 </html>

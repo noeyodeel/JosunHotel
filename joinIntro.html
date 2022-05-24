@@ -5,12 +5,14 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>join Intro</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.w3schools.com/lib/w3.js"></script>
+      <script src="./js/headerfooter.js"></script>
 </head>
 <body>
       <div class="wrapper">
-            <div class="header">
-                  <!-- header -->
-            </div>
+            <header w3-include-html="header.html"></header>
+            <div w3-include-html="header_scroll.html"></div>
             <div id="container" class="container join">
 			<h1 class="hidden">회원가입</h1>
 			<div class="topArea">
@@ -55,6 +57,10 @@
                   <!-- footer -->
             </div>
       </div>
-      <!-- //wrapper -->
+      <footer w3-include-html="footer.html"></footer>
+
 </body>
+<script>
+      w3.includeHTML();
+</script>
 </html>
