@@ -379,6 +379,10 @@ nav ul li {
   top: -1000000px; /* 이거 써야 맨처음에 안보임 */
   width: 100%;
   display: block;
+  z-index: 100;
+}
+.gnb2 {
+  height: 80px;
 }
 .logo_ {
   margin-right: 20px;

@@ -25,6 +25,18 @@ function scrollFunction2() {
 }
 
 $(document).ready(function () {
+  //스크롤 마지막인식해서 푸터 뜨게함
+  $(".wrapper").scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    var innerHeight = $(this).innerHeight();
+    var scrollHeight = $(this).prop("scrollHeight");
+
+    if (scrollTop + innerHeight >= scrollHeight) {
+      $("footer").attr("disabled", false);
+    } else {
+      $("footer").attr("disabled", true);
+    }
+  });
   //메뉴 슬라이드
   $(".mainbuilding_list_ > li > button").click(function (e) {
     e.stopPropagation();

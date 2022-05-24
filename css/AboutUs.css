@@ -1,442 +1,477 @@
 @charset "utf-8";
 
 @font-face {
-	font-family: 'NotoKrL';
-	font-style: normal;
-	font-weight: 100;
-	src: local('Noto Sans Light'), local('NotoSans-Light'), url(../fonts/NotoSans-Light.eot);
-	src: url(../fonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
-	url(../fonts/NotoSans-Light.woff2) format('woff2'),
-	url(../fonts/NotoSans-Light.woff) format('woff');
-	}
-
-@font-face {
-	font-family: 'NotoKrR';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(../fonts/NotoSans-Regular.eot);
-	src: url(../fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
-	url(../fonts/NotoSans-Regular.woff2) format('woff2'),
-	url(../fonts/NotoSans-Regular.woff) format('woff');
-	}
-
-@font-face {
-	font-family: 'NotoKrM';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(../fonts/NotoSans-Medium.eot);
-	src: url(../fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
-		url(../fonts/NotoSans-Medium.woff2) format('woff2'),
-		url(../fonts/NotoSans-Medium.woff) format('woff');
-	}
-
-@font-face {
-	font-family: 'gothamL';
-	src :	local(※),
-			url('../fonts/Gotham-Light.otf') format('opentype'),
-			url('../fonts/GothamLight.ttf') format('truetype');
-	font-weight:normal;
-} 
-@font-face {
-	font-family: gothamB;
-	font-weight: normal;
-	src: url('../fonts/GothamBook.ttf') format("truetype");
-}
-@font-face {
-	font-family: gothamM;
-	font-weight: normal;
-	src: url('../fonts/GothamMedium.ttf') format("truetype");
+  font-family: "NotoKrL";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(../fonts/NotoSans-Light.eot);
+  src: url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../fonts/NotoSans-Light.woff) format("woff");
 }
 
 @font-face {
-	font-family: playfair;
-	font-weight: normal;
-	src: url('../fonts/PlayfairDisplaySC-Regular.otf') format("opentype");
+  font-family: "NotoKrR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.eot);
+  src: url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../fonts/NotoSans-Regular.woff) format("woff");
 }
 
-
-html, body, .wrapper {
-	height: 100%;
-	overflow-x: hidden;
+@font-face {
+  font-family: "NotoKrM";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(../fonts/NotoSans-Medium.eot);
+  src: url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../fonts/NotoSans-Medium.woff) format("woff");
 }
-header, footer{
-	overflow: hidden;
+
+@font-face {
+  font-family: "gothamL";
+  src: local(※), url("../fonts/Gotham-Light.otf") format("opentype"),
+    url("../fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: gothamB;
+  font-weight: normal;
+  src: url("../fonts/GothamBook.ttf") format("truetype");
+}
+@font-face {
+  font-family: gothamM;
+  font-weight: normal;
+  src: url("../fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: playfair;
+  font-weight: normal;
+  src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
 }
 
 body {
-	display: block;
-	margin: 8px;
+  display: block;
+  margin: 8px;
 }
-body > .wrapper{
-	height: auto;
-	min-height: 100%;
+body > .wrapper {
+  height: auto;
+  min-height: 100%;
 }
-.wrapper{
-	min-height: 100%;
-	position: relative;
-	padding-bottom: 370px;
-	min-width: 1500px;
-	overflow-x:auto;
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 370px;
+  min-width: 1500px;
 }
-.inner{
-	position: relative;
-	width: 1400px;
-	margin: 0 auto;
-	padding-bottom: 180px;
+.inner {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 180px;
 }
 .topArea {
-	display: table;
-	position: relative;
-	width: 1400px;
-	margin: 0 auto
+  display: table;
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
 }
 
 .topArea .topInner {
-	display: table-cell;
-	padding: 97px 0 90px
+  display: table-cell;
+  padding: 97px 0 90px;
 }
 .container {
-	padding-top: 150px;
+  padding-top: 150px;
 }
-body, input, textarea, select, button, table, th, td, pre {
-	color: #000;
-	font-family: notokrL, gothamL, playfair;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.8;
+body,
+input,
+textarea,
+select,
+button,
+table,
+th,
+td,
+pre {
+  color: #000;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
 }
-body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, form, fieldset, legend, input, textarea, button, select, div{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	word-break: keep-all;
-	word-wrap: break-word;
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2;
 }
 
 p {
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-h1{
-	display: block;
-	font-size: 2em;
-	margin-block-start: 0.67em;
-	margin-block-start: 0.67;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-	font-size: bold;
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-start: 0.67;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: bold;
 }
 .titDep1 {
-	font: 500 60px playfair;
-	font-feature-settings: 'lnum', 'pnum';
+  font: 500 60px playfair;
+  font-feature-settings: "lnum", "pnum";
 }
-.hidden{
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	position: absolute;
-	font: 0/0 notokrL;;
-	/* ↑ font-size : 0 /line height : 0 font-family 가지고있으면 없어짐 */
+.hidden {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  font: 0/0 notokrL;
+  /* ↑ font-size : 0 /line height : 0 font-family 가지고있으면 없어짐 */
 }
-ul, ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-ul:after, ol:after {
-	content: '';
-	display: block;
-	clear: both;
+ul:after,
+ol:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 /* 제목 */
 
 .pageGuide {
-	margin-top: 18px;
-	font-size: 20px;
-	letter-spacing: -.01em;
+  margin-top: 18px;
+  font-size: 20px;
+  letter-spacing: -0.01em;
 }
-.about .pageGuide{
-	font-family: gothamL, notokrL;
+.about .pageGuide {
+  font-family: gothamL, notokrL;
 }
-.propertyIntro .tit{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	font: 500 30px/1.5 gothamB,notokrM;
-	letter-spacing: -.025em;
+.propertyIntro .tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  font: 500 30px/1.5 gothamB, notokrM;
+  letter-spacing: -0.025em;
 }
-.propertyIntro{
-	position: relative;
-	display: block;
-	padding-left: 715px;
+.propertyIntro {
+  position: relative;
+  display: block;
+  padding-left: 715px;
 }
-.em, adress{
-	font-style: normal;
+.em,
+adress {
+  font-style: normal;
 }
-img, fieldset, iframe {
-	border: 0;
-	vertical-align: top;
+img,
+fieldset,
+iframe {
+  border: 0;
+  vertical-align: top;
 }
 
 /* ----------------------------------------------------------------------- */
 
 /* About(공통) */
 .about .pageGuide {
-	font-family: gothamL, notokrL
+  font-family: gothamL, notokrL;
 }
 
 .visualBox {
-	position: relative;
-	margin-bottom: 90px;
-	overflow: hidden
+  position: relative;
+  margin-bottom: 90px;
+  overflow: hidden;
 }
 
 .visualBox .inner {
-	padding-bottom: 0
+  padding-bottom: 0;
 }
 
 .visualBox .bg {
-	position: absolute;
-	left: 15%;
-	z-index: -1;
-	width: 100%;
-	height: 100%
+  position: absolute;
+  left: 15%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
-strong, b {
-      font-weight: 500;
+strong,
+b {
+  font-weight: 500;
 }
 
 /*.visualBox + .inner.tabArea{margin-top:100px}*/
 /* About(.propertyIntro.type02 소개) */
 .abHotelInner {
-	padding-bottom: 120px;
+  padding-bottom: 120px;
 }
 .propertyIntro.type02 {
-	padding-left: 745px
+  padding-left: 745px;
 }
 
 .propertyIntro.type02 .txt {
-	display: table;
-	table-layout: fixed;
-	width: 100%
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .propertyIntro.type02 .txt dl {
-	display: table-cell;
-	position: relative
+  display: table-cell;
+  position: relative;
 }
 
 .propertyIntro.type02 .txt dl:first-of-type {
-	width: 230px
+  width: 230px;
 }
 
 .propertyIntro.type02 .txt dl:nth-of-type(2) {
-	width: 180px
+  width: 180px;
 }
 
 .propertyIntro.type02 .txt dt {
-	position: absolute;
-	bottom: 0;
-	color: #666;
-	font: 400 16px/1.5 notokrL;
-	letter-spacing: -.01em
+  position: absolute;
+  bottom: 0;
+  color: #666;
+  font: 400 16px/1.5 notokrL;
+  letter-spacing: -0.01em;
 }
 
 .propertyIntro.type02 .txt dd {
-	padding-bottom: 30px;
-	font: 36px/1.5 playfair, gothamM, notokrL;
-	font-feature-settings: 'lnum', 'pnum';
-	letter-spacing: .075em
+  padding-bottom: 30px;
+  font: 36px/1.5 playfair, gothamM, notokrL;
+  font-feature-settings: "lnum", "pnum";
+  letter-spacing: 0.075em;
 }
 
 .propertyIntro.type02 .txt dd .unit {
-	font-weight: 600
+  font-weight: 600;
 }
 
 /* About(.businessRoomList 소개/ci) */
 .businessRoomList.type02 {
-	margin-top: 135px
+  margin-top: 135px;
 }
 
-.businessRoomList.type02>li:nth-child(odd) .info {
-	padding-right: 45px
+.businessRoomList.type02 > li:nth-child(odd) .info {
+  padding-right: 45px;
 }
 
-.businessRoomList.type02>li:nth-child(even) .info {
-	padding-left: 45px
+.businessRoomList.type02 > li:nth-child(even) .info {
+  padding-left: 45px;
 }
 
 .businessRoomList.type02 .tit {
-	font-size: 30px
+  font-size: 30px;
 }
 
 .businessRoomList.type02 .ciImg {
-	display: table-cell;
-	width: 655px;
-	height: 250px;
-	background: #f9f9f9;
-	text-align: center;
-	vertical-align: middle
+  display: table-cell;
+  width: 655px;
+  height: 250px;
+  background: #f9f9f9;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .ciTit {
-	margin: 95px 0 23px;
-	font: 500 26px gothamB;
-	text-transform: uppercase
+  margin: 95px 0 23px;
+  font: 500 26px gothamB;
+  text-transform: uppercase;
 }
 
-.ciTit+.businessRoomList.type02 {
-	margin-top: 0
+.ciTit + .businessRoomList.type02 {
+  margin-top: 0;
 }
 .businessRoomList > li .tit {
-	display: block;
-	font-size: 24px;
-	padding-top: 21px;
-	font-family: gothamM,notokrR;
-	text-transform: uppercase;
-	letter-spacing: -0.01em;
+  display: block;
+  font-size: 24px;
+  padding-top: 21px;
+  font-family: gothamM, notokrR;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 .propertyIntro .txt {
-      font: 400 18px/1.8 gothamL,notokrL;
-      letter-spacing: -.025em;
-      
+  font: 400 18px/1.8 gothamL, notokrL;
+  letter-spacing: -0.025em;
 }
 
 /* --------type 03--------------- */
 .businessRoomList.type03 > li:first-child .info::before {
-	/* type02 - 03 사이의 구분선 */
-	content: '';
-	display: block;
-	width: 1px;
-	height: 100px;
-	margin: -10px auto 40px;
-	background: #000;
+  /* type02 - 03 사이의 구분선 */
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100px;
+  margin: -10px auto 40px;
+  background: #000;
 }
 .aboutHotel {
-	background: #f9f9f9;
-	padding: 120px 0;
+  background: #f9f9f9;
+  padding: 120px 0;
 }
 /* type 03 타이틀, 설명 */
 .aboutHotel .businessRoomList {
-      margin: 0 auto;
+  margin: 0 auto;
 }
 .businessRoomList {
-      width: 1400px;
-      margin: 80px 0 0;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+  width: 1400px;
+  margin: 80px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .businessRoomList.type03 > li:first-child .info {
-	position: relative;
-	padding: 0 180px;
-	text-align: center;
-	margin: 0 auto;
-	width: auto;
+  position: relative;
+  padding: 0 180px;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
 }
 /* 첫번째 사진 */
-.businessRoomList.type03>li:nth-child(odd) .info {
-	padding-left: 55px;
-	padding-right: 0;
+.businessRoomList.type03 > li:nth-child(odd) .info {
+  padding-left: 55px;
+  padding-right: 0;
 }
 .businessRoomList.type03 > li:nth-child(even) .info {
-	padding-right: 45px;
-	padding-left: 0;
+  padding-right: 45px;
+  padding-left: 0;
 }
 /* 두번째 사진 */
-.businessRoomList>li:nth-child(odd) .info {
-	padding-right: 20px;
+.businessRoomList > li:nth-child(odd) .info {
+  padding-right: 20px;
 }
 .businessRoomList > li:nth-child(even) .info {
-	padding-left: 20px;
+  padding-left: 20px;
 }
-.businessRoomList>li .info {
-	display: block;
-	position: relative;
-	width: 700px;
+.businessRoomList > li .info {
+  display: block;
+  position: relative;
+  width: 700px;
 }
 .businessRoomList.type03 .tit {
-      font-size: 30px;
+  font-size: 30px;
 }
-.businessRoomList.type03 p.txt{
-      font-weight: 600 ;
+.businessRoomList.type03 p.txt {
+  font-weight: 600;
 }
-.businessRoomList > li{
-      float: left;
-      width: 100%;
-      flex: 1 1 50%;
+.businessRoomList > li {
+  float: left;
+  width: 100%;
+  flex: 1 1 50%;
 }
-.businessRoomList.type03> li.info{
-      display: block;
-      position: relative;
-      width: 700px;
+.businessRoomList.type03 > li.info {
+  display: block;
+  position: relative;
+  width: 700px;
 }
 
 .businessRoomList > li:nth-child(even) .info {
-      padding-left: 20px;
+  padding-left: 20px;
 }
 .businessRoomList > li .txt {
-      display: block;
-      padding-top: 18px;
-      font-family: gothamL,notokrL;
-      margin: 0;
+  display: block;
+  padding-top: 18px;
+  font-family: gothamL, notokrL;
+  margin: 0;
 }
 
-.thum{
-      display:flex;
-      flex-wrap:nowrap;
-      align-items:flex-end;
-      margin:30px 0;
+.thum {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin: 30px 0;
 }
-.thum > img:first-child{
-      margin-right: 90px;
+.thum > img:first-child {
+  margin-right: 90px;
 }
 
 /* 위치 */
 
-
 .topInner.type02 .infoTxt {
-      float: left;
-      font-size: 20px;
-      font-family: gothamL;
-      padding: 3px 0 0 28px;
-      letter-spacing: -0.5px;
-      line-height: 1.6;
-	margin-top: 0;
-      
+  float: left;
+  font-size: 20px;
+  font-family: gothamL;
+  padding: 3px 0 0 28px;
+  letter-spacing: -0.5px;
+  line-height: 1.6;
+  margin-top: 0;
 }
 .topInner.type02 {
-      padding: 120px 0 50px;
-      
+  padding: 120px 0 50px;
 }
 
 .topArea .topInner {
-      padding: 97px 0 82px !important;
-      
+  padding: 97px 0 82px !important;
 }
 .topInner.type02 .titDep1 {
-      font-size: 30px;
-      font-family: gothamM;
-      float: left;
+  font-size: 30px;
+  font-family: gothamM;
+  float: left;
 }
 
-em,address {
-      font-style: normal;
+em,
+address {
+  font-style: normal;
 }
 .topInner.type02 .infoTxt span:before {
-      content: '';
-      display: inline-block;
-      vertical-align: -2px;
-      width: 1px;
-      height: 18px;
-      background: #aaa;
-      margin: 0 19px 0 13px;
+  content: "";
+  display: inline-block;
+  vertical-align: -2px;
+  width: 1px;
+  height: 18px;
+  background: #aaa;
+  margin: 0 19px 0 13px;
 }
