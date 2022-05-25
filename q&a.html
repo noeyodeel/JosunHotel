@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q&A</title>
+    <link rel="stylesheet" href="./css/q&a.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header w3-include-html="header.html"></header>
+      <div w3-include-html="header_scroll.html"></div>
+
+      <div id="container">
+        <div class="qa_txt">
+          <h1>CUSTOMER SERVICE</h1>
+          <h3>
+            조선호텔앤리조트는 언제나 고객의 목소리에 귀기울이고 있습니다.
+          </h3>
+          <h3>
+            소중한 충고와 격려, 또는 제안의 말씀을 남겨 주시면 최대한 반영하여
+            더 나은 서비스로 보답하겠습니다.
+          </h3>
+        </div>
+        <div class="left_list">
+          <a href="">Q&A</a>
+          <a href="">FAQ</a>
+          <a href="">GIFT CARD</a>
+        </div>
+        <div class="qa_form_area">
+          <h2>Q&A</h2>
+          <div class="gray_area">
+            <h4>조선호텔앤리조트 회원이신가요?</h4>
+            <a href="로그인 링크">로그인 하기</a>
+          </div>
+          <form action="#" class="appForm" method="post">
+            <fieldset>
+              <ul class="app_list">
+                <!-- category -->
+                <li class="clear">
+                  <label for="category_lbl" class="tit_lbl pilsoo"
+                    >CATEGORY</label
+                  >
+                  <div class="app_content radio_area_category">
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="category"
+                        id="good_lbl"
+                        class="css-radio"
+                        value="칭찬"
+                      />
+                      <label for="good_lbl">칭찬</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="category"
+                        id="bad_lbl"
+                        class="css-radio"
+                        value="불만"
+                      />
+                      <label for="bad_lbl">불만</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="category"
+                        id="proposal_lbl"
+                        class="css-radio"
+                        value="제안"
+                      />
+                      <label for="proposal_lbl">제안</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="category"
+                        id="question_lbl"
+                        class="css-radio"
+                        value="질문"
+                      />
+                      <label for="question_lbl">질문</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="category"
+                        id="membership_lbl"
+                        class="css-radio"
+                        value="멤버쉽"
+                      />
+                      <label for="membership_lbl">멤버쉽</label>
+                    </span>
+                  </div>
+                </li>
+                <!-- PROPERTY -->
+                <li class="clear">
+                  <label for="property_lbl" class="tit_lbl pilsoo"
+                    >PROPERTY</label
+                  >
+                  <div class="app_content property_area">
+                    <div class="select_hotel">
+                      <select title="호텔 선택">
+                        <option value="">호텔 선택</option>
+                        <option value="wes_s">웨스틴 조선 서울</option>
+                        <option value="wes_b">웨스틴 조선 부산</option>
+                        <option value="popo_s">
+                          포포인츠 바이 쉐라톤 서울역
+                        </option>
+                        <option value="grand_b">그랜드 조선 부산</option>
+                        <option value="popo_m">
+                          포포인츠 바이 쉐라톤 명동
+                        </option>
+                        <option value="R&S">Retail & Service</option>
+                        <option value="graviity_s">그래비티 서울 판교</option>
+                        <option value="grand_j">그랜드 조선 제주</option>
+                        <option value="rescape">레스케이프</option>
+                        <option value="josun_g">조선 팰리스 강남</option>
+                        <option value="clubjosun_m">클럽조선 멤버쉽</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+                <!-- TITLE -->
+                <li class="clear">
+                  <label for="title_lbl" class="tit_lbl pilsoo">TITLE</label>
+                  <div class="app_content title_area">
+                    <input type="text" class="title_txt" title="문의 제목" />
+                  </div>
+                </li>
+                <!-- CONTENT -->
+                <li class="clear">
+                  <label for="content_lbl" class="tit_lbl pilsoo"
+                    >CONTENT</label
+                  >
+                  <div class="app_content content_area">
+                    <textarea
+                      type="text"
+                      class="cont_txt"
+                      title="문의 내용"
+                      placeholder="불건전한 내용(예: 개인정보보안, 불충분한 증거/귀책 사유에 대한 개인 음해성/음란성 비방 등) 또는 광고성 게시물은 사전 통보없이 삭제 처리될 수 있으며, 등록된 의견은 수정이 불가하오니 이 점 양지하여 주시기 바랍니다."
+                    ></textarea>
+                    <p>
+                      문의 내용을 상세히 기재해 주시면 정확한 답변에 도움이
+                      됩니다.
+                    </p>
+                  </div>
+                </li>
+                <!-- GUEST NAME -->
+                <li class="clear">
+                  <label for="name_lbl" class="tit_lbl pilsoo"
+                    >GUEST NAME</label
+                  >
+                  <div class="app_content name_area">
+                    <input
+                      type="text"
+                      class="name_txt"
+                      title="국문 이름"
+                      placeholder="국문 이름을 입력하세요."
+                    />
+                  </div>
+                </li>
+                <!-- MOBILE -->
+                <li class="clear">
+                  <label for="phone_lbl" class="tit_lbl pilsoo_item"
+                    >MOBILE</label
+                  >
+                  <div class="tel_list app_content">
+                    <input type="tel" class="w50p phone_lbl" />
+                    <span class="ico_space">ㅡ</span>
+                    <input type="tel" class="w50p phone_lbl" />
+                    <span class="ico_space">ㅡ</span>
+                    <input type="tel" class="w50p phone_lbl" />
+                  </div>
+                </li>
+                <!-- EMAIL -->
+                <li class="clear">
+                  <label for="email_lbl" class="tit_lbl pilsoo_item"
+                    >E-MAIL</label
+                  >
+                  <div class="app_content email_area">
+                    <input
+                      type="text"
+                      class="w160"
+                      id="email_lbl"
+                      title="이메일 주소"
+                    />
+                    <span class="ico_space">@</span>
+                    <input type="text" class="w160" title="이메일 제공업체" />
+                    <div class="select_common">
+                      <select title="이메일 제공업체">
+                        <option value="">직접입력</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                        <option value="gmail">gmail.com</option>
+                        <option value="nate">nate.com</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+                <!-- REPLY BY -->
+                <li class="clear">
+                  <label for="reply_lbl" class="tit_lbl">REPLY BY</label>
+                  <div class="app_content radio_area_reply">
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="sel_type"
+                        id="email_lbl"
+                        class="css-radio"
+                        value="이메일"
+                      />
+                      <label for="mmm_lbl">이메일</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="sel_type"
+                        id="phone_lbl"
+                        class="css-radio"
+                        value="전화"
+                      />
+                      <label for="www_lbl">전화</label>
+                    </span>
+                    <span class="radio_list">
+                      <input
+                        type="radio"
+                        name="sel_type"
+                        id="sms_lbl"
+                        class="css-radio"
+                        value="SMS"
+                      />
+                      <label for="www_lbl">SMS</label>
+                    </span>
+                  </div>
+                </li>
+                <!-- ATTACHED FILE -->
+                <li class="clear">
+                  <label for="af_lbl" class="tit_lbl">ATTACHED FILE</label>
+                  <div class="app_content">
+                    <div class="fileUpload">
+                      <div class="intDel">
+                        <input
+                          type="text"
+                          id="nmFile1"
+                          class="fileName"
+                          style="width: 554px"
+                          readonly=""
+                        />
+                        <button
+                          type="button"
+                          class="btnDel"
+                          style="display: none"
+                        >
+                          삭제
+                        </button>
+                      </div>
+                      <label for="uploadFile1" class="btnSC btnM"
+                        >파일선택</label
+                      >
+                      <input
+                        type="file"
+                        id="uploadFile1"
+                        name="uploadFile1"
+                        class="uploadBtn"
+                      />
+                    </div>
+                    <div class="fileUpload">
+                      <div class="intDel">
+                        <input
+                          type="text"
+                          id="nmFile2"
+                          class="fileName"
+                          style="width: 554px"
+                          readonly=""
+                        />
+                        <button type="button" class="btnDel">삭제</button>
+                      </div>
+                      <label for="uploadFile2" class="btnSC btnM"
+                        >파일선택</label
+                      >
+                      <input
+                        type="file"
+                        id="uploadFile2"
+                        name="uploadFile2"
+                        class="uploadBtn"
+                      />
+                    </div>
+                    <div class="fileUpload">
+                      <div class="intDel">
+                        <input
+                          type="text"
+                          id="nmFile3"
+                          class="fileName"
+                          style="width: 554px"
+                          readonly=""
+                        />
+                        <button type="button" class="btnDel">삭제</button>
+                      </div>
+                      <label for="uploadFile3" class="btnSC btnM"
+                        >파일선택</label
+                      >
+                      <input
+                        type="file"
+                        id="uploadFile3"
+                        name="uploadFile3"
+                        class="uploadBtn"
+                      />
+                    </div>
+                  </div>
+                  <p class="txtGuide">
+                    첨부가능 파일종류 : jpg, png, bmp, gif, jpeg, doc, docx,
+                    xls, xlsx, ppt, pptx, hwp, pdf, eml (용량 5MB)
+                  </p>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+          <!-- 개인정보 수집 동의 -->
+          <h4 class="agree">개인정보 수집 및 이용에 관한 동의</h4>
+          <ul class="toggleList rsvList">
+            <li class="">
+              <span class="frm type02">
+                <input type="checkbox" id="privacyAgree" value="Y" /><label
+                  for="privacyAgree"
+                  >[필수]개인정보 수집 · 이용 동의</label
+                >
+              </span>
+              <button type="button" class="btnToggle">
+                <span class="hidden">상세내용 보기</span></button
+              ><!-- 버튼 클릭 시 li에 toggleOn 클래스 추가되면서 toggleCont 펼쳐짐 -->
+              <div class="toggleCont">
+                <div class="toggleInner">
+                  <!-- 마케팅 홍보 약관 -->
+                  <div class="nonSrollWrap">
+                    <table class="tblH">
+                      <caption>
+                        수집 항목, 수집 목적, 보유 기간으로 구성된 개인정보 수집
+                        이용 동의 항목
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col"><span>수집 항목</span></th>
+                          <th scope="col"><span>수집 목적</span></th>
+                          <th scope="col"><span>보유 기간</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>이름</td>
+                          <td>서비스 이용자 식별</td>
+                          <td rowspan="2" class="boldTxt">
+                            상담신청 접수 후 3년
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>휴대폰번호, 이메일주소</td>
+                          <td>
+                            서비스 이행을 위한 연락 및 안내, 고지사항 전달,
+                            불만처리 등의 의사소통
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="txtGuide">
+                      위의 개인정보 수집 및 이용에 대한 동의를 거부할 권리가
+                      있으나 동의를 거부하실 경우 서비스 이용이 불가합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="btnArea">
+            <button type="button" class="active">저장</button>
+          </div>
+          <!-- 개인정보 수집 동의 -->
+        </div>
+      </div>
+
+      <footer w3-include-html="footer.html"></footer>
+    </div>
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
+</html>
