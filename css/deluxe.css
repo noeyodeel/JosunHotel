@@ -59,11 +59,11 @@ html {
 }
 body {
   margin: 0;
-  line-height: 1.8;
+  /* line-height: 1.8; */
 }
 .wrap {
   margin: 0 auto;
-  width: 1200px;
+  width: 1400px;
 }
 a {
   text-decoration: none;
@@ -135,6 +135,7 @@ li {
 .btnArea {
   text-align: center;
   padding: 30px 0;
+  background: #f9f9f9;
 }
 .btnArea .btn-box span {
   color: black;
@@ -168,15 +169,14 @@ li {
   padding-left: 0;
   color: white;
 }
-.info {
-  padding-left: 50px;
+.info_list {
   height: 300px;
 }
-.info li {
+.info_list li {
   width: 33.33%;
   float: left;
 }
-.info li dl {
+.info_list li dl {
   padding-top: 52px;
 }
 dd {
@@ -220,6 +220,7 @@ dt {
   height: 60px;
   text-align: center;
   line-height: 60px;
+  float: left;
 }
 .middle_btn > li > a {
   font-size: 20px;

@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/mypage.css" />
     <title>MyPage</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/headerfooter.js"></script>
   </head>
   <body>
+    <header w3-include-html="header.html"></header>
+    <div w3-include-html="header_scroll.html"></div>
     <div class="topArea">
       <div class="topInner">
         <h2 class="titDep1">My Page</h2>
@@ -73,5 +78,9 @@
         </div>
       </div>
     </div>
+    <footer w3-include-html="footer.html"></footer>
   </body>
+  <script>
+    w3.includeHTML();
+  </script>
 </html>

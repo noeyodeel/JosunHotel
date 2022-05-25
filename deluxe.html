@@ -7,10 +7,15 @@
     <title>DELUXE</title>
     <link rel="stylesheet" href="./css/deluxe.css" />
     <link rel="stylesheet" href="./css/rooms.css" />
-    <link rel="shortcut icon" href="./images/deluxe_img/favicon.ico" />
+    <!-- <link rel="shortcut icon" href="./images/deluxe_img/favicon.ico" /> -->
     <script src="./js/deluxe.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/headerfooter.js"></script>
   </head>
   <body>
+    <header w3-include-html="header.html"></header>
+    <div w3-include-html="header_scroll.html"></div>
     <!-- 상단 이미지 시작 -->
     <div class="topViewCont">
       <div class="img_top">
@@ -78,7 +83,7 @@
     <!-- 전체 시작 -->
     <div class="wrap">
       <!-- 객실정보 목록 시작 -->
-      <ul class="info">
+      <ul class="info_list">
         <li>
           <dl>
             <dt>LOCATION</dt>
@@ -393,6 +398,10 @@
         </div>
       </div>
     </div>
+    <footer w3-include-html="footer.html"></footer>
     <!-- 전체 끝 -->
   </body>
+  <script>
+    w3.includeHTML();
+  </script>
 </html>
