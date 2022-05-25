@@ -160,14 +160,7 @@ header {
 .right_topbar {
   padding-right: 50px;
 }
-.gnb {
-  /* 스크롤시 나오는 헤더 */
-  position: relative;
-  background: transparent;
-  padding: 20px 50px;
-  height: 30px;
-  display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
-}
+
 .gnb1 {
   /* 메인 헤더 */
   position: relative;
@@ -288,8 +281,7 @@ nav ul li {
 .offers,
 .mw,
 .activity,
-.facilities,
-.about {
+.facilities {
   height: 50px;
 }
 
@@ -382,7 +374,8 @@ nav ul li {
   z-index: 100;
 }
 .gnb2 {
-  height: 80px;
+  height: 10%;
+  padding: 20px 50px;
 }
 .logo_ {
   margin-right: 20px;
