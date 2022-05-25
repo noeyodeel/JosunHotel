@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activity</title>
     <link rel="stylesheet" href="./css/activity.css" />
+    <link rel="stylesheet" href="./css/headerfooter.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/activityList.js"></script>
   </head>
-  <script src="./js/activityList.js"></script>
   <body>
+    <header w3-include-html="header.html"></header>
+    <div w3-include-html="header_scroll.html"></div>
+    ,
     <div class="wrapper">
       <!-- activity contents start -->
       <div class="container">
@@ -101,8 +107,13 @@
         </div>
       </div>
       <!-- activity contents end -->
+      <footer w3-include-html="footer.html"></footer>
     </div>
   </body>
+  <script src="./js/headerfooter.js"></script>
+  <script>
+    w3.includeHTML();
+  </script>
   <script src="./js/activity.js"></script>
   <script>
     window.onload = function () {
