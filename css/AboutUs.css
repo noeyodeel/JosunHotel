@@ -95,7 +95,7 @@ body > .wrapper {
 }
 .container {
   min-height: 100%;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 body,
 input,
@@ -228,7 +228,7 @@ iframe {
 /* ----------------------------------------------------------------------- */
 
 /* About(공통) */
-.about .pageGuide {
+.aboutus .pageGuide {
   font-family: gothamL, notokrL;
 }
 
