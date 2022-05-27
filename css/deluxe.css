@@ -592,3 +592,6 @@ dt {
   height: 100%;
   align-items: center;
 }
+.res_fullWidth {
+  width: 100%;
+}

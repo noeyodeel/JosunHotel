@@ -53,7 +53,7 @@
         <span>관심상품 담기</span>
       </a>
       <a href="#" class="btn-box btn menu_height" onclick="return false">
-        <span>예약하기</span>
+        <span class="res_fullWidth">예약하기</span>
       </a>
 
       <!-- 공유하기 버튼 모달창 시작 -->
@@ -126,21 +126,38 @@
       </ul>
       <!-- 객실정보 목록 끝 -->
 
-      <!-- 메인이미지 시작 -->
-      <div class="deluxe_01">
-        <img src="./images/rooms_img/01_Deluxe.jpeg" alt="" />
+      <!-- 이미지슬라이드 시작 -->
+      <div class="slide_wrapShow">
+        <ul class="deluxe_01">
+          <li class="deluxe_img1 common_deluxeImg">
+            <img src="./images/deluxe_img/01_Deluxe.jpeg" alt="" />
+          </li>
+          <li class="deluxe_img2 common_deluxeImg">
+            <img src="./images/deluxe_img/02_Deluxe.jpeg" alt="" />
+          </li>
+          <li class="deluxe_img3 common_deluxeImg">
+            <img src="./images/deluxe_img/03_Deluxe.jpeg" alt="" />
+          </li>
+          <li class="deluxe_img4 common_deluxeImg">
+            <img src="./images/deluxe_img/04_Deluxe.jpeg" alt="" />
+          </li>
+        </ul>
+
         <button class="btnSwipe btnPrev"></button>
-        <button class="btnSwipe btnNext"></button>
+        <button
+          class="btnSwipe btnNext"
+          style="background-position: right"
+        ></button>
         <p class="subTxt">
           상기 이미지는 이해를 돕기 위한 이미지컷으로, 실제와는 다소 차이가 있을
           수 있습니다.
         </p>
       </div>
-      <!-- 메인이미지 끝-->
+      <!-- 이미지슬라이드 끝-->
 
       <!-- 도면보기 버튼 시작 -->
       <div class="btn_area">
-        <a href="#" class="btn_see">도면보기</a>
+        <a href="#" class="btn_see" onclick="return false">도면보기</a>
       </div>
       <!-- 도면보기 버튼 끝 -->
 
