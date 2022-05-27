@@ -31,32 +31,34 @@
           전망에 따라 완벽한 제주의 비경을 감상하실 수 있습니다.
         </p>
       </div>
-      <button type="button" class="scroll_top">
+      <button type="button">
         <span class="scroll_hidden">
-          <a href="#">자세히 보기</a>
+          <a href="#scroll">자세히 보기</a>
         </span>
       </button>
     </div>
     <!-- 상단 이미지 끝 -->
 
     <!-- 공유,담기,예약 버튼 세가지 시작 -->
-    <div class="btnArea scroll menu_height">
-      <a href="#" class="btn-box btn share-btn" onclick="return false">
+    <div class="btnArea" id="scroll">
+      <a class="btn-box btn share-btn">
         <span>공유하기</span>
       </a>
-      <a href="#" class="btn-box btn" id="love_btn" onclick="return false">
+      <a class="btn-box btn" id="love_btn">
         <div class="love_img"></div>
         <span>관심상품 담기</span>
       </a>
-      <a class="btn-box btn" href="#" onclick="return false">예약하기</a>
+      <a class="btn-box btn" href="#">
+        <span>예약하기</span>
+      </a>
 
       <!-- 공유하기 버튼 모달창 시작 -->
       <div class="modal hidden">
         <div class="modal__overlay"></div>
         <div class="modal__content">
           <h2>공유하기</h2>
-          <div class="modal_div">
-            <ul class="modal_menulist">
+          <div>
+            <ul>
               <li>
                 <a href="#">카카오톡</a>
               </li>
@@ -68,7 +70,7 @@
               </li>
             </ul>
           </div>
-          <a href="#" class="modal_closeBtn" onclick="return false"></a>
+          <a class="modal_closeBtn"></a>
         </div>
         <button type="button">
           <span class="scroll_hidden">
@@ -91,23 +93,9 @@
           <span>예약하기</span>
         </a>
 
-      <!-- 이미지슬라이드 시작 -->
-      <div class="slide_wrapShow">
-        <ul class="deluxe_01">
-          <li class="deluxe_img1 common_deluxeImg">
-            <img src="./images/deluxe_img/01_Deluxe.jpeg" alt="" />
-          </li>
-          <li class="deluxe_img2 common_deluxeImg">
-            <img src="./images/deluxe_img/02_Deluxe.jpeg" alt="" />
-          </li>
-          <li class="deluxe_img3 common_deluxeImg">
-            <img src="./images/deluxe_img/03_Deluxe.jpeg" alt="" />
-          </li>
-          <li class="deluxe_img4 common_deluxeImg">
-            <img src="./images/deluxe_img/04_Deluxe.jpeg" alt="" />
-          </li>
-        </ul>
-
+      <!-- 메인이미지 시작 -->
+      <div class="deluxe_01">
+        <img src="./images/rooms_img/01_Deluxe.jpeg" alt="" />
         <button class="btnSwipe btnPrev"></button>
         <button class="btnSwipe btnNext"></button>
         <p class="subTxt">
@@ -115,11 +103,11 @@
           수 있습니다.
         </p>
       </div>
-      <!-- 이미지슬라이드 끝-->
+      <!-- 메인이미지 끝-->
 
       <!-- 도면보기 버튼 시작 -->
       <div class="btn_area">
-        <a href="#" class="btn_see" onclick="return false">도면보기</a>
+        <a href="#" class="btn_see">도면보기</a>
       </div>
       <!-- 도면보기 버튼 끝 -->
 
