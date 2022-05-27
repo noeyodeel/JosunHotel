@@ -8,6 +8,8 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://www.w3schools.com/lib/w3.js"></script>
       <script src="./js/headerfooter.js"></script>
+      <link rel="stylesheet" href="./css/AboutUs.css">
+      <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
       <div class="wrapper">
@@ -29,7 +31,6 @@
                         <ul class="tabType01 tabType02">
                               <li>
                                     <a href="#" onclick="">아이디 로그인</a>
-                                    ::after
                               </li>
                               <li class="on">
                                     <a href="#">비회원 예약확인</a>
@@ -50,22 +51,19 @@
                                                       <!-- 객실 (기본 체크됨)-->
                                                       <input type="radio" name="resveType" id="resveType01" value="R" checked>
                                                       <label for="resveType01">
-                                                            ::before
-                                                            "객실"
+                                                            객실
                                                       </label>
                                                       <input type="radio" name="resveType" id="resveType02" value="D" >
                                                       <label for="resveType02">
-                                                            ::before
-                                                            "다이닝"
+                                                            다이닝
                                                       </label>
                                                       <input type="radio" name="resveType" id="resveType03" value="A" >
                                                       <label for="resveType03">
-                                                            ::before
-                                                            "액티비티"
+                                                            액티비티
                                                       </label>
                                                 </span>
                                                 <!-- 화면에 나타나지 X 접근성 위한 -->
-                                                <span class="alterMessage2">예약타입을 선택해주세요.</span>
+                                                <span class="alertMessage2">예약타입을 선택해주세요.</span>
                                           </p>
                                           <!-- 호텔 선택 -->
                                           <div class="selectWrap">
@@ -78,7 +76,6 @@
                                                       
                                                       <button tabindex="0" id="hotlCode-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="hotlCode-menu" aria-haspopup="true" class="ui-selectmenu-button ui-button ui-widget ui-selectmenu-button-closed ui-corner-all" type="button" aria-activedescendant="ui-id-2" aria-labelledby="ui-id-1" aria-disabled="false">
                                                             <span class="ui-selectmenu-text">호텔선택</span>
-                                                            ::after
                                                       </button>                                                      
                                                       <span class="alertMessage">호텔을 선택해주세요.</span>
                                                       <div class="ui-selectmenu-menu ui-front" style="top: 60px; left: 0px; overflow-y: hidden;">
@@ -100,22 +97,58 @@
                                                                               그랜드 조선 부산
                                                                         </a>
                                                                   </li>
-                                                                  ::after
                                                             </ul>
                                                       </div>
                                                 </div>
                                                 </p>
                                           </div>
-                                          <!-- 로그인 -->
+                                          <!-- //로그인 -->
+                                          <!-- 이름 -->
+                                          <p class="loginFrm">
+                                                <span class="alertMessage">이름을 입력해주세요.</span>
+                                                <label class="hidden" for="frm_username">성명</label>
+                                                <span id="userNmArea">
+                                                      
+                                                            <input type="text" id="engLastName" name="engLastName" placeholder="Family Name (성)" aria-required="true" style="width:325px">
+                                                            <input type="text" id="engFirstName" name="engFirstName" title="이름" placeholder="First Name (이름)" aria-required="true" style="width:325px">
+                                                </span>
+                                          </p>
+                                          <!-- //이름 -->
+                                          <!-- 예약번호 -->
+                                          <p class="loginFrm"><!-- 필수입력서식에 미입력 발생 시, error 클래스 추가 alertMessage 노출, 포커스가 가면 error 클래스 제거 -->
+                                                <span class="alertMessage">예약번호를 입력해주세요.</span>
+                                                <label class="hidden" for="resveNo">예약번호</label>
+                                                <input type="text" id="resveNo" name="resveNo" placeholder="예약번호" aria-required="true">
+                                          </p>
+                                          <!-- //예약번호 -->
+                                          <!-- 로그인 버튼 -->
+                                          <button type="button" class="btnSC btnL active btnFull" onclick="fncResveConfirm();">예약확인</button>
+                                          <!-- //로그인 버튼 -->
+                                          <p class="loginGuide">CLUB JOSUN 회원이 되시면 더 많은 혜택이 있습니다.</p>
+                                          <a href="#" class="btnS icoArr">회원가입</a>
                                     </form>
 
                               </div>
                         </div>
                         </div>
 
-
+                        <ul class="txtGuide">
+                              <li>
+                                    이용자 비밀번호 5회 연속 오류시 계정이 잠기게 됩니다.
+                              </li>
+                              <li>
+                                    오프라인 회원의 경우 온라인 회원가입 후 계정연동 가능합니다..
+                              </li>
+                              <li>
+                                    메리어트 호텔에서 예약하신 경우, 메리어트 사이트에서만 예약 확인이 가능합니다.
+                              </li>
+                              <li>
+                                    카카오페이 간편가입 및 신세계 면세점 동시가입 회원은 '계정활성화' 버튼을 통해 서비스 이용이 가능합니다.
+                              </li>
+                        </ul>
                   </div>
             </div>
+            
 
       </div>
       <footer w3-include-html="footer.html"></footer>
