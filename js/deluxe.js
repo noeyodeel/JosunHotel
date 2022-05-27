@@ -33,13 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loveBtnWrap.addEventListener("click", changeBtn);
   // 하트 버튼 색 변경 끝
-  // 예약하기 버튼 호버시 background색 변경 시작
+
   document.querySelector(".scroll_top").addEventListener("click", function () {
     const location = document.querySelector(".scroll").offsetTop;
     const menuHeight = document.querySelector(".menu_height").offsetHeight;
     window.scrollTo({ top: location - menuHeight, behavior: "smooth" });
   });
-  // 예약하기 버튼 호버시 background색 변경 끝
 
   // 메인이미지 슬라이드 시작
   const slides = document.querySelector(".deluxe_01"); //전체 슬라이드 컨테이너

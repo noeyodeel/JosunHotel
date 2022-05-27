@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,24 +35,24 @@
           전망에 따라 완벽한 제주의 비경을 감상하실 수 있습니다.
         </p>
       </div>
-      <button type="button">
+      <button type="button" class="scroll_top">
         <span class="scroll_hidden">
-          <a href="#scroll">자세히 보기</a>
+          <a href="#">자세히 보기</a>
         </span>
       </button>
     </div>
     <!-- 상단 이미지 끝 -->
 
     <!-- 공유,담기,예약 버튼 세가지 시작 -->
-    <div class="btnArea" id="scroll">
-      <a class="btn-box btn share-btn">
+    <div class="btnArea scroll menu_height">
+      <a href="#" class="btn-box btn share-btn" onclick="return false">
         <span>공유하기</span>
       </a>
-      <a class="btn-box btn" id="love_btn">
+      <a href="#" class="btn-box btn" id="love_btn" onclick="return false">
         <div class="love_img"></div>
         <span>관심상품 담기</span>
       </a>
-      <a class="btn-box btn" href="#">
+      <a href="#" class="btn-box btn" onclick="return false">
         <span>예약하기</span>
       </a>
 
@@ -61,8 +61,8 @@
         <div class="modal__overlay"></div>
         <div class="modal__content">
           <h2>공유하기</h2>
-          <div>
-            <ul>
+          <div class="modal_inner_wrap">
+            <ul class="modal_inner">
               <li>
                 <a href="#">카카오톡</a>
               </li>
@@ -85,43 +85,44 @@
     <div class="wrap">
       <!-- 객실정보 목록 시작 -->
       <ul class="info">
-      <ul class="info_list">
-        <li>
-          <dl>
-            <dt>LOCATION</dt>
-            <dd>3층 - 6층</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>BEDS</dt>
-            <dd>킹, 트윈</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>SIZE</dt>
-            <dd>46.7M2</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>ROOM FEATURES</dt>
-            <dd>침실 1, 화장실 1, 발코니 1</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>VIEW</dt>
-            <dd>스탠다드뷰, 가든뷰, 풀사이드뷰</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>CHECK-IN/CHECK-OUT</dt>
-            <dd>15:00 / 12:00</dd>
-          </dl>
-        </li>
+        <ul class="info_list">
+          <li>
+            <dl>
+              <dt>LOCATION</dt>
+              <dd>3층 - 6층</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>BEDS</dt>
+              <dd>킹, 트윈</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>SIZE</dt>
+              <dd>46.7M2</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>ROOM FEATURES</dt>
+              <dd>침실 1, 화장실 1, 발코니 1</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>VIEW</dt>
+              <dd>스탠다드뷰, 가든뷰, 풀사이드뷰</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>CHECK-IN/CHECK-OUT</dt>
+              <dd>15:00 / 12:00</dd>
+            </dl>
+          </li>
+        </ul>
       </ul>
       <!-- 객실정보 목록 끝 -->
 
