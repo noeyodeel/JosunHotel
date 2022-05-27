@@ -112,6 +112,7 @@ li {
   width: 65px;
   height: 45px;
   border: none;
+  cursor: pointer;
 }
 .scroll_hidden {
   font-size: 0;
@@ -126,7 +127,7 @@ li {
 }
 .btn-box {
   border: 1px solid #ccc;
-  display: inline-block;
+  /* display: inline-block; */
   box-sizing: border-box;
   text-align: center;
   padding: 0;
@@ -135,12 +136,18 @@ li {
   text-align: center;
   padding: 30px 0;
   background: #f9f9f9;
+  display: flex;
+  justify-content: center;
 }
 .btnArea .btn-box span {
   color: black;
   position: relative;
   display: inline-block;
   padding-left: 34px;
+}
+.btnArea .btn-box {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .btnArea .btn-box:nth-child(1) span::before {
   content: "";
@@ -162,12 +169,49 @@ li {
   left: 27px;
 }
 .btnArea .btn-box:nth-child(3) {
-  background-color: black;
-}
-.btnArea .btn-box:nth-child(3) span {
+  position: relative;
   padding-left: 0;
   color: white;
+  min-width: 190px;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: black;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
 }
+.btnArea .btn-box:nth-child(3):hover {
+  color: black;
+}
+.btnArea .btn-box:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  /* top: 120%;
+  left: 30%;
+  background: red;
+  width: 20%;
+  height: 15%; */
+
+  top: 0;
+  left: -150%;
+  background: #fff;
+  width: 130%;
+  height: 100%;
+  -webkit-transform: skewX(-16deg);
+  -moz-transform: skewX(-16deg);
+  -o-transform: skewX(-16deg);
+  -ms-transform: skewX(-16deg);
+  transform: skewX(-16deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.btnArea .btn-box:nth-child(3):hover::before {
+  left: -10%;
+}
+/* .btnArea .btn-box:nth-child(3) span {
+  padding-left: 0;
+  color: white;
+} */
 .info_list {
   height: 300px;
 }
@@ -366,11 +410,11 @@ dt {
 .special_wrap > .special_list > dl > .pool_img > img {
   width: 385px;
 }
-a[href="#scroll"] {
+/* a[href="#scroll"] {
   display: block;
   width: 100%;
   height: 100%;
-}
+} */
 .modal {
   width: 100%;
   height: 100%;
@@ -380,6 +424,17 @@ a[href="#scroll"] {
   z-index: 3;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.modal_div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.modal_menulist {
+  width: 100%;
+  height: 100%;
   align-items: center;
 }
 .modal__overlay {
@@ -426,12 +481,13 @@ a[href="#scroll"] {
 }
 .modal_closeBtn {
   background: url(../images/deluxe_img/btn_close_25x25.png) no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: block;
   position: absolute;
   top: 20px;
-  right: 0;
+  right: 18px;
+  background-size: contain;
 }
 .noticeArea {
   border: 1px solid #eee;
@@ -486,4 +542,36 @@ a[href="#scroll"] {
 }
 img[src="./images/rooms_img/01_Deluxe.jpeg"] {
   width: 100%;
+}
+.slide_wrapShow > ul > li {
+  position: absolute;
+}
+.slide_wrapShow {
+  position: relative;
+  height: 970px;
+  width: 1400px;
+  overflow: hidden;
+}
+.deluxe_01 {
+  /* width: 5600px; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0.5s ease-out;
+}
+.deluxe_img1 {
+  transform: translate3d(0px, 0px, 0px);
+}
+.deluxe_img2 {
+  transform: translate3d(1400px, 0px, 0px);
+}
+.deluxe_img3 {
+  transform: translate3d(2800px, 0px, 0px);
+}
+.deluxe_img4 {
+  transform: translate3d(4200px, 0px, 0px);
+}
+.btnNext {
+  right: 40px;
+  background-position-x: right;
 }
