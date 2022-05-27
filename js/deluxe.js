@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".scroll_top").addEventListener("click", function () {
     const location = document.querySelector(".scroll").offsetTop;
     const menuHeight = document.querySelector(".menu_height").offsetHeight;
-    window.scrollTo({ top: location - menuHeight, behavior: "smooth" });
+    window.scrollTo({
+      top: location - menuHeight,
+      behavior: "smooth",
+    });
   });
 
   // 메인이미지 슬라이드 시작
