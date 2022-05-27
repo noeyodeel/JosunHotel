@@ -56,24 +56,23 @@
 * {
   margin: 0;
   padding: 0;
-  position: relative;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border: none;
   background: none;
   text-decoration: none;
   font-style: normal;
   word-wrap: break-word;
   word-break: keep-all;
-  font-weight: 400;
-  line-height: 1.8;
   list-style: none;
-  font-family: notokrL, gothamL, playfair;
 }
 a,
 button {
   cursor: pointer;
 }
-
+.wrapper {
+  line-height: 1.8;
+  font-family: notokrL, gothamL, playfair;
+}
 /* activity contents start */
 .container {
   width: 1400px;
@@ -97,7 +96,6 @@ button {
   height: 72px;
   margin-top: 6px;
   font-size: 20px;
-  letter-spacing: -0.1em;
 }
 /* activity top area end */
 .contentsArea .sortBtnArea {
@@ -119,7 +117,7 @@ button {
 .contentsArea .sortBtnArea .sortBtn {
   font-size: 20px;
   color: #ccc;
-  font-family: gothamB;
+  font-family: gothamM;
 }
 .contentsArea .activityLists {
   width: 100%;
@@ -139,6 +137,7 @@ button {
 .contentsArea .activityLists > li > .thum {
   width: 100%;
   height: 580px;
+  position: relative;
 }
 .contentsArea .activityLists > li > .thum > img {
   width: 100%;

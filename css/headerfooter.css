@@ -161,7 +161,7 @@ header {
   padding-right: 50px;
 }
 .gnb {
-  /* 스크롤시 나오는 헤더 */
+  /* 스크롤시 나오는 헤더, 그냥 헤더 */
   position: relative;
   background: transparent;
   padding: 20px 50px;
@@ -382,7 +382,7 @@ nav ul li {
   z-index: 100;
 }
 .gnb2 {
-  height: 80px;
+  height: 10%;
 }
 .logo_ {
   margin-right: 20px;
@@ -558,11 +558,11 @@ footer {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.info {
+.info__ {
   margin-left: 130px;
   padding-top: 5px;
 }
-.info > span {
+.info__ > span {
   font-size: 14px;
   color: gray;
 }
