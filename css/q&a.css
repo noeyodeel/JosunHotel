@@ -56,10 +56,18 @@
 * {
   margin: 0;
 }
-html,
-body {
+html {
   width: 100%;
   height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+}
+#wrap {
+  height: 100%;
+  position: relative;
 }
 body,
 input,
@@ -102,6 +110,7 @@ fieldset {
   width: 1500px;
   margin: auto;
   padding-top: 100px;
+  height: 100%;
 }
 
 .qa_txt {
@@ -182,7 +191,7 @@ fieldset {
       top: 50%; */
   width: 6px;
   height: 6px;
-  background: url(../images/ico_essential.png) no-repeat 0 0;
+  background: url(../images/q&a_img/ico_essential.png) no-repeat 0 0;
 }
 .radio_list > label {
   /* 얘네에 before로 이미지 걸기 */
@@ -265,10 +274,10 @@ fieldset {
 .select_common {
   margin-top: 20px;
 }
-.fileUpload {
+.filebox {
   display: flex;
 }
-.intDel > input {
+.filebox > input {
   outline: none;
 }
 .txtGuide {
@@ -287,4 +296,75 @@ fieldset {
 .agree {
   margin: 74px 0 24px;
   font: 500 24px gothamB, notokrR;
+}
+/* 민지 */
+.filebox .upload-name1,
+.upload-name2,
+.upload-name3 {
+  display: inline-block;
+  height: 43px;
+  padding: 8px 13px 8px 0;
+  width: 541px;
+  color: #000;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
+  vertical-align: middle;
+  font-size: 18px;
+  font-family: gothamL, notokrL;
+  margin-right: 10px;
+}
+.filebox label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+  transition: color 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+  min-width: 162px;
+  height: 50px;
+  padding: 0 25px;
+  line-height: 48px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.fileUpload label {
+  margin-left: 20px;
+}
+
+.fileUpload > .filebox {
+  position: absolute;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.radio_list > label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 26px;
+  height: 26px;
+  background: url(../images/q&a_img/spr_form.png) no-repeat;
+  background-position: -52px -13px;
+}
+
+.toggleCont {
+  position: absolute;
+  display: none;
+}
+.show {
+  display: block;
 }

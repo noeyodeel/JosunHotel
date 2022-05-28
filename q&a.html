@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q&A</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./css/q&a.css" />
+    <script src="./js/q&a.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/headerfooter.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -102,7 +106,7 @@
                   >
                   <div class="app_content property_area">
                     <div class="select_hotel">
-                      <select title="호텔 선택">
+                      <select title="호텔 선택" onchange="categoryChange(this)">
                         <option value="">호텔 선택</option>
                         <option value="wes_s">웨스틴 조선 서울</option>
                         <option value="wes_b">웨스틴 조선 부산</option>
@@ -119,6 +123,10 @@
                         <option value="rescape">레스케이프</option>
                         <option value="josun_g">조선 팰리스 강남</option>
                         <option value="clubjosun_m">클럽조선 멤버쉽</option>
+                      </select>
+
+                      <select id="place">
+                        <option value="">장소 선택</option>
                       </select>
                     </div>
                   </div>
@@ -188,14 +196,23 @@
                       title="이메일 주소"
                     />
                     <span class="ico_space">@</span>
-                    <input type="text" class="w160" title="이메일 제공업체" />
+                    <input
+                      type="text"
+                      class="w160"
+                      id="email2"
+                      title="이메일 제공업체"
+                    />
                     <div class="select_common">
-                      <select title="이메일 제공업체">
-                        <option value="">직접입력</option>
-                        <option value="naver">naver.com</option>
-                        <option value="daum">daum.net</option>
-                        <option value="gmail">gmail.com</option>
-                        <option value="nate">nate.com</option>
+                      <select
+                        title="이메일 제공업체"
+                        name="mailAddr"
+                        onchange="emailCheck(this.options[this.selectedIndex].value)"
+                      >
+                        <option value="email">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="nate.com">nate.com</option>
                       </select>
                     </div>
                   </div>
@@ -240,7 +257,25 @@
                 <li class="clear">
                   <label for="af_lbl" class="tit_lbl">ATTACHED FILE</label>
                   <div class="app_content">
-                    <div class="fileUpload">
+                    <div class="filebox">
+                      <input class="upload-name1" readonly="readonly" />
+                      <label for="file1">파일선택</label>
+                      <input type="file" id="file1" />
+                    </div>
+
+                    <div class="filebox">
+                      <input class="upload-name2" readonly="readonly" />
+                      <label for="file2">파일선택</label>
+                      <input type="file" id="file2" />
+                    </div>
+
+                    <div class="filebox">
+                      <input class="upload-name3" readonly="readonly" />
+                      <label for="file3">파일선택</label>
+                      <input type="file" id="file3" />
+                    </div>
+
+                    <!-- <div class="fileUpload">
                       <div class="intDel">
                         <input
                           type="text"
@@ -254,6 +289,9 @@
                           class="btnDel"
                           style="display: none"
                         >
+
+
+
                           삭제
                         </button>
                       </div>
@@ -266,8 +304,8 @@
                         name="uploadFile1"
                         class="uploadBtn"
                       />
-                    </div>
-                    <div class="fileUpload">
+                    </div> -->
+                    <!-- <div class="fileUpload">
                       <div class="intDel">
                         <input
                           type="text"
@@ -308,7 +346,7 @@
                         name="uploadFile3"
                         class="uploadBtn"
                       />
-                    </div>
+                    </div> -->
                   </div>
                   <p class="txtGuide">
                     첨부가능 파일종류 : jpg, png, bmp, gif, jpeg, doc, docx,
@@ -328,7 +366,7 @@
                   >[필수]개인정보 수집 · 이용 동의</label
                 >
               </span>
-              <button type="button" class="btnToggle">
+              <button type="button" class="btnToggle" onclick="dropdown()">
                 <span class="hidden">상세내용 보기</span></button
               ><!-- 버튼 클릭 시 li에 toggleOn 클래스 추가되면서 toggleCont 펼쳐짐 -->
               <div class="toggleCont">
@@ -379,9 +417,40 @@
           <!-- 개인정보 수집 동의 -->
         </div>
       </div>
-
-      <footer w3-include-html="footer.html"></footer>
+      <!-- <footer w3-include-html="footer.html"></footer> -->
     </div>
+    <script>
+      $("#file1").on("change", function () {
+        var fileName = $("#file1").val();
+        $(".upload-name1").val(fileName);
+      });
+      $("#file2").on("change", function () {
+        var fileName = $("#file2").val();
+        $(".upload-name2").val(fileName);
+      });
+      $("#file3").on("change", function () {
+        var fileName = $("#file3").val();
+        $(".upload-name3").val(fileName);
+      });
+
+      $("label[for = 'good_lbl']").click(function () {
+        // $(this).attr("-52px -13px", "-78px -13px");
+        $("label[for = 'good_lbl']").append(
+          "<style>.label[for = 'good_lbl']::before{background-position: -78px -13px}</style>"
+        );
+        // $("label[for = 'good_lbl']").style.backgroundPosition = "-78px -13px";
+      });
+
+      //$(document).ready(function(){ //이 코딩 필수
+      $("input").click(function () {
+        $(this).css("border-bottom", "solid 1px black");
+      });
+      $(document).click(function (e) {
+        if (!$(e.target).is("input")) {
+          $("input").css("border-bottom", "solid 1px #ccc");
+        }
+      });
+    </script>
     <script>
       w3.includeHTML();
     </script>
