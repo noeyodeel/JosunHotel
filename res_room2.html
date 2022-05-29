@@ -15,11 +15,7 @@
         width: 1400px;
         margin: 0 auto;
       }
-      h2 {
-        font-size: 60px;
-        font-weight: 500;
-        font-stretch: 100%;
-      }
+    
       .step {
         margin-top: 50px;
       }
@@ -41,6 +37,7 @@
         margin-right: 20px;
       }
       .step ol li::before {
+        counter-reset: section 1;
         content: counter(section);
         counter-increment: section;
         display: inline-block;
@@ -207,12 +204,11 @@
     <div id="wrap">
     <header w3-include-html="header.html"></header>
     <div w3-include-html="header_scroll.html"></div>
-    <div id="container">
-      <footer w3-include-html="footer.html"></footer>
-    </div>
     <div class="top">
       <div>
-        <h2>BOOKING</h2>
+        <h1 style="font-size: 40px;
+        font-weight: 500;
+        font-stretch: 100%;">BOOKING</h1>
       </div>
 
       <!-- 단계 -->
@@ -388,7 +384,7 @@
         <option value="breakfast">조식</option>
       </select>
     </div> -->
-    <footer w3-include-html="footer.html"></footer>
+  
   </body>
   <script>
     w3.includeHTML();
