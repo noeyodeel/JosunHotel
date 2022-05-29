@@ -1,0 +1,401 @@
+@font-face {
+  font-family: "NotoKrL";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(../fonts/NotoSans-Light.eot);
+  src: url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../fonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(../fonts/NotoSans-Regular.eot);
+  src: url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../fonts/NotoSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoKrM";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(../fonts/NotoSans-Medium.eot);
+  src: url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../fonts/NotoSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "gothamL";
+  src: local(※), url("../fonts/Gotham-Light.otf") format("opentype"),
+    url("../fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: gothamB;
+  font-weight: normal;
+  src: url("../fonts/GothamBook.ttf") format("truetype");
+}
+@font-face {
+  font-family: gothamM;
+  font-weight: normal;
+  src: url("../fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: playfair;
+  font-weight: normal;
+  src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
+}
+
+body,
+h2,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+body {
+  color: black;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+div {
+  display: block;
+}
+
+em {
+  font-style: normal; /*이탤릭체 해결*/
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul::after,
+ol::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+} */
+/*a:hover{text-decoration:underline}*/
+
+.container {
+  padding-top: 150px;
+}
+
+.top {
+  display: table;
+  position: relative;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.topInner {
+  padding-top: 97px;
+  padding-right: 0px;
+  padding-bottom: 82px;
+  padding-left: 0px;
+}
+
+.Innertitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  font-family: playfair;
+}
+
+/* step */
+.stepWrap {
+  margin-top: 50px;
+}
+
+.stepWrap * {
+  vertical-align: top;
+}
+
+.stepWrap ol {
+  /*이 부분 중요*/
+  counter-reset: section;
+}
+
+.stepWrap ol li * {
+  vertical-align: top;
+}
+
+.stepWrap ol li {
+  text-indent: -9999px; /*imp*/
+  position: relative;
+  display: inline-block;
+  padding: 0 0 1px 50px;
+  box-sizing: content-box;
+}
+
+.stepWrap ol li.on {
+  text-indent: 0; /*import*/
+  margin-right: 20px;
+  width: auto;
+}
+
+.stepWrap ol li::before {
+  content: counter(section);
+  counter-increment: section;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 37px;
+  color: gray;
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 40px;
+  text-align: center;
+  text-indent: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  background: white;
+  font-family: gothamL;
+}
+
+.stepWrap ol li.on::before {
+  background: black;
+  color: white;
+  background-color: black;
+}
+
+.stepWrap ol li em {
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-size: 22px;
+}
+
+.stepWrap ol li.on::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background: gray;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+/* result */
+.result {
+  background: #f9f9f9;
+  margin-bottom: 100px;
+}
+
+.Inner {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 180px;
+}
+
+.result .Inner {
+  padding: 42px 0;
+}
+
+.result .resultInfo {
+  position: relative;
+}
+
+.result .resultInfo dl {
+  float: left;
+}
+
+.result .resultInfo dl.dl01,
+.result .resultInfo dl.dl02 {
+  padding-right: 110px;
+}
+
+.result .resultInfo dl dt {
+  font-family: gothamM, notokrM;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.result .resultInfo dl dd {
+  font-family: gothamL, notokrL;
+  font-size: 20px;
+}
+
+.result .resultInfo dl.dl02 dt {
+  padding-bottom: 2px;
+}
+
+.result .resultInfo dl.dl02 dd span::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 1px;
+  height: 18px;
+  background: gray;
+  margin: 0 15px;
+}
+
+.result .resultInfo dl.dl03 {
+  text-align: center;
+  padding-right: 70px;
+}
+
+.result .resultInfo::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 다시 검색 버튼 */
+.result .btn {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 0 40px 0 20px;
+  background: transparent;
+  height: 50px;
+  line-height: 48px;
+  font-size: 17px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: black;
+  border: 1px solid black;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.result .btn::after {
+  right: 20px;
+  width: 7px;
+  height: 13px;
+  margin-top: -7px;
+  background-image: url(../img/arrow.png);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+
+/* main */
+.Innertitle2 {
+  position: relative;
+}
+
+.tab {
+  position: relative;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.tab li {
+  position: relative;
+  display: table-cell;
+  width: 234px;
+  border: solid gray;
+  border-width: 1px 0 0 1px;
+}
+
+.tab li:first-child {
+  border-left: 1px solid gray;
+  border-right: 0;
+}
+
+.tab::after,
+.tab li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.tab li.on {
+  z-index: 10;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+
+.tab li.on + li {
+  border-left: 0;
+}
+
+.tab li.on::after {
+  background: white;
+}
+
+.tab li:last-child {
+  border-right: 1px solid gray;
+}
+
+.tab li:first-child.on a {
+  margin-left: 0;
+}
+
+.tab li.on a {
+  color: black;
+}
+
+.tab li a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  color: #666;
+  text-align: center;
+  font-size: 20px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}

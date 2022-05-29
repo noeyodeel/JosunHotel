@@ -1,277 +1,96 @@
-<!-- #booking step1 page -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/room_1.css" />
+    <link rel="stylesheet" href="./css/headerfooter.css" />
     <title>res_room2</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
-    <style>
-      .top {
-        display: table;
-        width: 1400px;
-        margin: 0 auto;
-      }
-    
-      .step {
-        margin-top: 50px;
-      }
-      ul,
-      ol {
-        display: block;
-        list-style: none;
-      }
-      li {
-        float: left;
-      }
-      .step ol li {
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 1px;
-        padding-left: 50px;
-      }
-      .step ol li.on {
-        margin-right: 20px;
-      }
-      .step ol li::before {
-        counter-reset: section 1;
-        content: counter(section);
-        counter-increment: section;
-        display: inline-block;
-        line-height: 40px;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        border-radius: 40px;
-        color: gray;
-        border: 1px solid gray;
-        background-color: white;
-        text-align: center;
-        text-indent: 0;
-      }
-
-      .step ol li.on::before {
-        background-color: black;
-        color: white;
-        border-color: black;
-      }
-
-      .step ol li.on::after {
-        content: "";
-        display: inline-block;
-        width: 50px;
-        height: 1px;
-        background-color: gray;
-        margin-left: 20px;
-        vertical-align: middle;
-      }
-
-      .step ol li em {
-        font-size: 22px;
-      }
-
-      .choice {
-        background-color: #f9f9f9;
-        margin-bottom: 100px;
-      }
-      .inner {
-        width: 100%;
-        margin: 0 auto;
-        padding-bottom: 42px;
-        padding-top: 42px;
-      }
-      .choicearea dl {
-        float: left;
-      }
-      .choicearea dl dt {
-        font-size: 14px;
-        padding-bottom: 5px;
-      }
-      .choicearea dl dd {
-        font-size: 20px;
-      }
-      .dl1 {
-        padding-right: 110px;
-      }
-      .dl2 {
-        padding-right: 110px;
-      }
-      .dl2 dd span::before {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 18px;
-        background-color: gray;
-        margin: 0 15px;
-      }
-      .dl3 {
-        text-align: center;
-        padding-right: 70px;
-      }
-      .sorttype {
-        display: table;
-        width: 100%;
-      }
-      .sorttype li {
-        width: 234px;
-        border: solid gray;
-        border-width: 1px 1px 0 1px;
-      }
-      .sorttype li.on {
-        border: 1px solid black;
-        border-bottom: 0;
-      }
-      .sorttype li.on a {
-        color: black;
-      }
-      .sorttype li a {
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 20px;
-      }
-      .sorttype li.on::after {
-        background-color: white;
-      }
-      .sorttype li::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-      }
-      dd {
-        display: block;
-      }
-      .rooms {
-        padding-bottom: 20px;
-      }
-      .roomintro {
-        position: relative;
-        padding-left: 585px;
-      }
-      .roomlist li {
-        border-bottom: 1px solid gray;
-        padding: 71px 0 71px 0;
-      }
-      .roomname {
-        display: block;
-        font-size: 40px;
-        padding-top: 50px;
-        margin-bottom: 14px;
-        font-weight: 500;
-      }
-      .keyword span {
-        display: inline-block;
-        margin: 0 5px 5px 0;
-        padding: 3px 10px 4px 10px;
-        font-weight: 400;
-        font-size: 14px;
-        text-transform: uppercase;
-        border: 1px solid black;
-      }
-      .detail {
-        margin-top: 10px;
-      }
-      .detail a {
-        font-size: 14px;
-        padding: 0;
-        background-color: transparent;
-        border: 0;
-      }
-      .date {
-        left: 585px;
-        bottom: 78px;
-        font-size: 20px;
-      }
-      .pricewrap .price {
-        font-size: 40px;
-      }
-      .pricewrap .day {
-        font-size: 16px;
-      }
-      .image {
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    </style>
   </head>
   <body>
-    <div id="wrap">
     <header w3-include-html="header.html"></header>
     <div w3-include-html="header_scroll.html"></div>
-    <div class="top">
-      <div>
-        <h1 style="font-size: 40px;
-        font-weight: 500;
-        font-stretch: 100%;">BOOKING</h1>
-      </div>
-
-      <!-- 단계 -->
-      <div class="step">
-        <ol>
-          <li class="on">
-            <em>객실, 요금 선택</em>
-          </li>
-          <li>
-            <em>옵션 선택</em>
-          </li>
-          <li>
-            <em>예약자 정보 입력</em>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- choice -->
-    <div class="choice">
-      <div class="inner">
-        <div class="choicearea">
-          <dl class="dl1">
-            <dt>HOTEL</dt>
-            <dd>그랜드 조선 제주</dd>
-          </dl>
-          <dl class="dl2">
-            <dt>DATE</dt>
-            <dd>
-              2022.12.24&nbsp;토&nbsp;-&nbsp;2022.12.25&nbsp;일 <span>1박</span>
-            </dd>
-          </dl>
-          <dl class="dl3">
-            <dt>ROOMS</dt>
-            <dd>1</dd>
-          </dl>
-          <dl class="dl3">
-            <dt>ADULTS</dt>
-            <dd>2</dd>
-          </dl>
-          <dl class="dl3">
-            <dt>CHILDREN</dt>
-            <dd>0</dd>
-          </dl>
+    <div id="container" class="container">
+      <!-- toppage -->
+      <div class="top">
+        <div class="topInner">
+          <h2 class="Innertitle">Booking</h2>
+          <div class="stepWrap">
+            <ol>
+              <li class="on">
+                <em>객실, 요금 선택</em>
+              </li>
+              <li>
+                <em>옵션 선택</em>
+              </li>
+              <li>
+                <em>예약자 정보 입력</em>
+              </li>
+            </ol>
+          </div>
+          <!-- //stepwrap -->
         </div>
-        <a href="">객실 다시 검색</a>
+        <!-- //topInner -->
       </div>
-    </div>
+      <!-- //top -->
 
-    <!-- 객실 -->
-    <div class="inner">
-      <div class="roomsort"></div>
-      <ul class="sorttype">
-        <li class="on">
-          <a href="">상품으로 보기 3</a>
-        </li>
-        <li>
-          <a href="">객실로 보기 24</a>
-        </li>
-        <li>
-          <a href="">회원 전용 0</a>
-        </li>
-      </ul>
+      <div class="result">
+        <div class="Inner">
+          <div class="resultInfo">
+            <dl class="dl01">
+              <dt>HOTEL</dt>
+              <dd>그랜드 조선 제주</dd>
+            </dl>
+            <dl class="dl02">
+              <dt>DATE</dt>
+              <dd id="dateText">
+                2022.12.24&nbsp;토&nbsp;-&nbsp;2022.12.25&nbsp;일
+                <span>1&nbsp;박</span>
+              </dd>
+            </dl>
+            <dl class="dl03">
+              <dt>ROOMS</dt>
+              <dd>1</dd>
+            </dl>
+            <dl class="dl03">
+              <dt>ADULTS</dt>
+              <dd>2</dd>
+            </dl>
+            <dl class="dl03">
+              <dt>CHILDREN</dt>
+              <dd>0</dd>
+            </dl>
+          </div>
+          <!-- //resultinfo -->
+          <a href="#none" class="btn">객실 다시 검색</a>
+        </div>
+        <!-- //Inner -->
+      </div>
+      <!-- //result -->
+
+      <div class="Inner">
+        <div class="Innertitle2">
+          <ul class="tab">
+            <li id="tab01" class="on">
+              <a 상품으로 href="#none">상품으로 보기 3</a>
+            </li>
+            <li id="tab02">
+              <a 상품으로 href="#none">객실로 보기 24</a>
+            </li>
+            <li id="tab03">
+              <a 상품으로 href="#none">회원전용 0</a>
+            </li>
+          </ul>
+          <div class="sideoption"></div>
+        </div>
+        <div class="roomContainer1"></div>
+        <div class="roomContainer2"></div>
+        <div class="roomContainer3"></div>
+      </div>
     </div>
 
     <!-- 객실 보기 -->
@@ -384,7 +203,6 @@
         <option value="breakfast">조식</option>
       </select>
     </div> -->
-  
   </body>
   <script>
     w3.includeHTML();
