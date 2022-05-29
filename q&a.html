@@ -47,53 +47,59 @@
                     >CATEGORY</label
                   >
                   <div class="app_content radio_area_category">
-                    <span class="radio_list">
+                    <span class="radio_list1 radio_list">
                       <input
                         type="radio"
                         name="category"
                         id="good_lbl"
                         class="css-radio"
                         value="칭찬"
+                        style="display: none"
                       />
+                      <!-- display:none;으로 클릭시 맨위로 이동 방지 -->
                       <label for="good_lbl">칭찬</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list2 radio_list">
                       <input
                         type="radio"
                         name="category"
                         id="bad_lbl"
                         class="css-radio"
                         value="불만"
+                        style="display: none"
                       />
                       <label for="bad_lbl">불만</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list3 radio_list">
                       <input
                         type="radio"
                         name="category"
                         id="proposal_lbl"
                         class="css-radio"
                         value="제안"
+                        style="display: none"
                       />
                       <label for="proposal_lbl">제안</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list4 radio_list">
                       <input
                         type="radio"
                         name="category"
                         id="question_lbl"
                         class="css-radio"
                         value="질문"
+                        style="display: none"
                       />
                       <label for="question_lbl">질문</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list5 radio_list">
                       <input
                         type="radio"
                         name="category"
                         id="membership_lbl"
                         class="css-radio"
                         value="멤버쉽"
+                        style="display: none"
                       />
                       <label for="membership_lbl">멤버쉽</label>
                     </span>
@@ -221,35 +227,38 @@
                 <li class="clear">
                   <label for="reply_lbl" class="tit_lbl">REPLY BY</label>
                   <div class="app_content radio_area_reply">
-                    <span class="radio_list">
+                    <span class="radio_list6 radio_list">
                       <input
                         type="radio"
                         name="sel_type"
                         id="email_lbl"
                         class="css-radio"
                         value="이메일"
+                        style="display: none"
                       />
-                      <label for="mmm_lbl">이메일</label>
+                      <label for="email_lbl">이메일</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list7 radio_list">
                       <input
                         type="radio"
                         name="sel_type"
                         id="phone_lbl"
                         class="css-radio"
                         value="전화"
+                        style="display: none"
                       />
-                      <label for="www_lbl">전화</label>
+                      <label for="phone_lbl">전화</label>
                     </span>
-                    <span class="radio_list">
+                    <span class="radio_list8 radio_list">
                       <input
                         type="radio"
                         name="sel_type"
                         id="sms_lbl"
                         class="css-radio"
                         value="SMS"
+                        style="display: none"
                       />
-                      <label for="www_lbl">SMS</label>
+                      <label for="sms_lbl">SMS</label>
                     </span>
                   </div>
                 </li>
@@ -258,19 +267,35 @@
                   <label for="af_lbl" class="tit_lbl">ATTACHED FILE</label>
                   <div class="app_content">
                     <div class="filebox">
-                      <input class="upload-name1" readonly="readonly" />
+                      <div class="inbox">
+                        <input class="upload-name1" readonly="readonly" />
+                        <button
+                          type="button"
+                          class="btnDel"
+                          onclick="fileReset(this.form);"
+                        >
+                          삭제
+                        </button>
+                      </div>
                       <label for="file1">파일선택</label>
-                      <input type="file" id="file1" />
+                      <input type="file" id="file1" name="upload" />
                     </div>
-
                     <div class="filebox">
-                      <input class="upload-name2" readonly="readonly" />
+                      <div class="inbox">
+                        <input class="upload-name2" readonly="readonly" />
+                        <button type="button" class="btnDel" onclick="del__();">
+                          삭제
+                        </button>
+                      </div>
                       <label for="file2">파일선택</label>
                       <input type="file" id="file2" />
                     </div>
 
                     <div class="filebox">
-                      <input class="upload-name3" readonly="readonly" />
+                      <div class="inbox">
+                        <input class="upload-name3" readonly="readonly" />
+                        <button type="button" class="btnDel">삭제</button>
+                      </div>
                       <label for="file3">파일선택</label>
                       <input type="file" id="file3" />
                     </div>
@@ -356,12 +381,12 @@
               </ul>
             </fieldset>
           </form>
-          <!-- 개인정보 수집 동의 -->
+
           <h4 class="agree">개인정보 수집 및 이용에 관한 동의</h4>
           <ul class="toggleList rsvList">
             <li class="">
               <span class="frm type02">
-                <input type="checkbox" id="privacyAgree" value="Y" /><label
+                <input type="checkbox" id="privacyAgree" value="A0001" /><label
                   for="privacyAgree"
                   >[필수]개인정보 수집 · 이용 동의</label
                 >
@@ -417,7 +442,7 @@
           <!-- 개인정보 수집 동의 -->
         </div>
       </div>
-      <!-- <footer w3-include-html="footer.html"></footer> -->
+      <footer w3-include-html="footer.html"></footer>
     </div>
     <script>
       $("#file1").on("change", function () {
@@ -449,6 +474,77 @@
         if (!$(e.target).is("input")) {
           $("input").css("border-bottom", "solid 1px #ccc");
         }
+      });
+
+      // $(document).ready(function () {
+      //   var domEleArray = [$("#file1").clone()]; // 원본 복제
+      //   $(".btnDel").click(function () {
+      //     domEleArray[1] = domEleArray[0].clone(true); // 쌔거(0번) -> 복제본(1번)
+      //     $("#file1").replaceWith(domEleArray[1]);
+      //     $(".upload-name1").empty();
+      //   });
+      // });
+
+      //개인정보
+      $("#privacyAgree").click(function () {
+        $(".frm label").toggleClass("changed");
+      });
+
+      $(".btnToggle").click(function () {
+        $(".rsvList > li .btnToggle").toggleClass("changed2");
+      });
+
+      // category radio button
+      $("#good_lbl").click(function () {
+        $(".radio_list1 > label").addClass("change_radio");
+        $(".radio_list2 > label").removeClass("change_radio");
+        $(".radio_list3 > label").removeClass("change_radio");
+        $(".radio_list4 > label").removeClass("change_radio");
+        $(".radio_list5 > label").removeClass("change_radio");
+      });
+      $("#bad_lbl").click(function () {
+        $(".radio_list1 > label").removeClass("change_radio");
+        $(".radio_list2 > label").addClass("change_radio");
+        $(".radio_list3 > label").removeClass("change_radio");
+        $(".radio_list4 > label").removeClass("change_radio");
+        $(".radio_list5 > label").removeClass("change_radio");
+      });
+      $("#proposal_lbl").click(function () {
+        $(".radio_list1 > label").removeClass("change_radio");
+        $(".radio_list2 > label").removeClass("change_radio");
+        $(".radio_list3 > label").addClass("change_radio");
+        $(".radio_list4 > label").removeClass("change_radio");
+        $(".radio_list5 > label").removeClass("change_radio");
+      });
+      $("#question_lbl").click(function () {
+        $(".radio_list1 > label").removeClass("change_radio");
+        $(".radio_list2 > label").removeClass("change_radio");
+        $(".radio_list3 > label").removeClass("change_radio");
+        $(".radio_list4 > label").addClass("change_radio");
+        $(".radio_list5 > label").removeClass("change_radio");
+      });
+      $("#membership_lbl").click(function () {
+        $(".radio_list1 > label").removeClass("change_radio");
+        $(".radio_list2 > label").removeClass("change_radio");
+        $(".radio_list3 > label").removeClass("change_radio");
+        $(".radio_list4 > label").removeClass("change_radio");
+        $(".radio_list5 > label").addClass("change_radio");
+      });
+      //REPLY BY radio
+      $("#email_lbl").click(function () {
+        $(".radio_list6 > label").addClass("change_radio");
+        $(".radio_list7 > label").removeClass("change_radio");
+        $(".radio_list8 > label").removeClass("change_radio");
+      });
+      $("#phone_lbl").click(function () {
+        $(".radio_list6 > label").removeClass("change_radio");
+        $(".radio_list7 > label").addClass("change_radio");
+        $(".radio_list8 > label").removeClass("change_radio");
+      });
+      $("#sms_lbl").click(function () {
+        $(".radio_list6 > label").removeClass("change_radio");
+        $(".radio_list7 > label").removeClass("change_radio");
+        $(".radio_list8 > label").addClass("change_radio");
       });
     </script>
     <script>

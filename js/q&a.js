@@ -64,3 +64,31 @@ $(function () {
     $(".toggleCont").slideToggle("fast");
   });
 });
+
+//파일 삭제
+// function clear_file() {
+//   var file = $("#file1");
+//   file.replaceWith((file = file.clone(true)));
+// }
+
+// function del__() {
+//   // $("#file1").val("");
+//   file.replaceWith((file = file.clone(true)));
+// }
+
+// var agent = navigator.userAgent.toLowerCase(); //파일초기화
+
+//   if (
+//     (navigator.appName == "Netscape" &&
+//       navigator.userAgent.search("Trident") != -1) ||
+//     agent.indexOf("msie") != -1
+//   ) {
+//     $("#file1").replaceWith($("#file1").clone(true));
+//   } else {
+//     $("#file1").val("");
+//   }
+
+// function fileReset(form) {
+//   form.upload.select();
+//   document.selection.clear();
+// }

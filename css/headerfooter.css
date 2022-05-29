@@ -570,7 +570,7 @@ footer {
 .foot_list2 > li:nth-child(5n) > a {
   color: #989442;
 }
-select {
+.external_site2 > select {
   margin-top: 15px;
   margin-bottom: 25px;
   width: 230px;
