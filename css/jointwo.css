@@ -1,84 +1,184 @@
   /* 회원가입 2단계 */
-  .stepWrap * {
-      vertical-align: top;
-  }
+.stepWrap * {
+    vertical-align: top;
+}
   .stepWrap ol li * {
-      vertical-align: top;
-  }
-  .stepWrap ol li:last-child.on:after {
-      position: absolute;
-      left: -12px;
-      top: 18px;
-  }
-  .stepWrap ol li.on:after {
-      content: '';
-      display: inline-block;
-      width: 50px;
-      height: 1px;
-      background: #aaa;
-      margin-left: 20px;
-      vertical-align: middle;
-  }
-  .stepWrap ol li.prev:before {
-      border: none;
-      text-indent: -9999px;
-      background: url(../images/bg_step.png) no-repeat;
-  }
-  .stepWrap ol li:before {
-      counter-reset: section 1;
-      content: counter(section);
-      counter-increment: section;
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 40px;
-      height: 40px;
-      line-height: 37px;
-      color: #9b9fa8;
-      font-size: 20px;
-      border: 1px solid #9b9fa8;
-      border-radius: 40px;
-      text-align: center;
-      text-indent: 0;
-      box-sizing: border-box;
-      z-index: 2;
-      background: #fff;
-      font-family: gothamL;
-  }
-  .stepWrap {
-      margin-top: 50px;
-  }
-  .stepWrap ol li:last-child.on:before {
-      left: 80px;
-  }
-  .stepWrap ol li.on:before {
-      background: #000;
-      color: #fff;
-      border-color: #000;
-  }
-  .stepWrap ol li em {
-      text-indent: -9999px;
-      overflow: hidden;
-      white-space: nowrap;
-      word-wrap: normal;
-      font-size: 22px;
-      }
+    vertical-align: top;
+}
+.stepWrap ol li:last-child.on:after {
+    position: absolute;
+    left: -12px;
+    top: 18px;
+}
+.stepWrap ol li.on:after {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background: #aaa;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.stepWrap ol li.prev:before {
+    border: none;
+    text-indent: -9999px;
+    background: url(../images/bg_step.png) no-repeat;
+}
+.stepWrap ol li:before {
+    counter-reset: section 1;
+    content: counter(section);
+    counter-increment: section;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    color: #9b9fa8;
+    font-size: 20px;
+    border: 1px solid #9b9fa8;
+    border-radius: 40px;
+    text-align: center;
+    text-indent: 0;
+    box-sizing: border-box;
+    z-index: 2;
+    background: #fff;
+    font-family: gothamL;
+}
+.stepWrap {
+    margin-top: 50px;
+}
+.stepWrap ol li:last-child.on:before {
+    left: 80px;
+}
+.stepWrap ol li.on:before {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+.stepWrap ol li em {
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-size: 22px;
+}
 
-      .stepWrap ol li {
-            text-indent: -9999px;
-            position: relative;
-            display: inline-block;
-            padding: 0 0 1px 50px;
-            box-sizing: content-box;
-      }
+.stepWrap ol li {
+    text-indent: -9999px;
+    position: relative;
+    display: inline-block;
+    padding: 0 0 1px 50px;
+    box-sizing: content-box;
+}
 
-      .stepWrap ol li:last-child.on {
-            padding-left: 135px;
-      }
+.stepWrap ol li:last-child.on {
+    padding-left: 135px;
+}
 
-      .stepWrap ol li.on {
-            margin-right: 20px;
-            text-indent: 0;
-            width: auto;
-      }
+.stepWrap ol li.on {
+    margin-right: 20px;
+    text-indent: 0;
+    width: auto;
+}
+/* 회원가입 약관 제목 */
+.join .titDep2 {
+    margin-bottom: 18px;
+    letter-spacing: -.085em;
+}
+.titDep2:first-child {
+    margin-top: 0;
+}
+.titDep2 {
+    font: 500 30px gothamB, notokrR;
+    margin: 90px 0 15px;
+}
+/* 약관 박스 */
+.join .pageGuide {
+    line-height: 1.67;
+    letter-spacing: -.1em;
+}
+.join .agreeBox {
+    margin-top: 51px;
+    border-top: 1px solid #000;
+}
+.join .agreeBox .nonToggle {
+    padding: 18px;
+}
+.nonToggle + .toggleList.agreeCont {
+    border-top-color: #ccc;
+}
+.toggleList.agreeCont {
+    border-top: 1px solid #000;
+}
+.toggleList.agreeCont > li {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+.toggleList > li {
+    position: relative;
+}
+.toggleList.agreeCont .frm.type02 {
+    padding: 18px 20px 19px;
+}
+.frm.type02 {
+    display: block;
+}
+.frm.type02 label {
+    font-size: 18px;
+    padding-left: 33px;
+}
+.frm.type02 input[type=checkbox]+label:before {
+    background-position: 0 0;
+}
+.frm.type02 label:before {
+    left: 0;
+    top: 9px;
+    width: 18px;
+    height: 13px;
+}
+.toggleList.agreeCont .btnToggle {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    width: 18px;
+    height: 20px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.toggleList.agreeCont .btnToggle:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 10px;
+    padding: 5px 0;
+    background: url(../images/ico_toggle_18x10.png) no-repeat 0 5px;
+}
+button {
+    box-sizing: border-box;
+    border: none;
+    background: none;
+}
+/* 토글 바 */
+.toggleList.agreeCont .toggleCont .toggleInner {
+    padding: 25px;
+    background: #f9f9f9;
+}
+.toggleList > li .toggleCont .toggleInner {
+    padding: 40px 0;
+    padding: 33px 0;
+}
+.toggleList.agreeCont .notiTxt {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.join .notiTxt {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.toggleList.agreeCont .notiTxt+.notiTxt {
+    margin-top: 20px;
+}
