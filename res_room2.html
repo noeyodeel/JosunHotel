@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>res_room2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/headerfooter.js"></script>
     <style>
       .top {
         display: table;
@@ -201,7 +204,12 @@
     </style>
   </head>
   <body>
-    <header></header>
+    <div id="wrap">
+    <header w3-include-html="header.html"></header>
+    <div w3-include-html="header_scroll.html"></div>
+    <div id="container">
+      <footer w3-include-html="footer.html"></footer>
+    </div>
     <div class="top">
       <div>
         <h2>BOOKING</h2>
@@ -380,6 +388,9 @@
         <option value="breakfast">조식</option>
       </select>
     </div> -->
-    <footer></footer>
+    <footer w3-include-html="footer.html"></footer>
   </body>
+  <script>
+    w3.includeHTML();
+  </script>
 </html>
