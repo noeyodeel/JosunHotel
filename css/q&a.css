@@ -298,9 +298,7 @@ fieldset {
   font: 500 24px gothamB, notokrR;
 }
 /* 민지 */
-.filebox .upload-name1,
-.upload-name2,
-.upload-name3 {
+.filebox .upload-name {
   display: inline-block;
   height: 43px;
   padding: 8px 13px 8px 0;
@@ -312,6 +310,7 @@ fieldset {
   font-size: 18px;
   font-family: gothamL, notokrL;
   margin-right: 10px;
+  outline: none;
 }
 .filebox label {
   display: inline-block;
@@ -341,6 +340,20 @@ fieldset {
 .fileUpload > .filebox {
   position: absolute;
 }
+
+.inbox .btnDel {
+  /* position: absolute;
+  top: 50%;
+  display: inline-block; */
+  width: 15px;
+  height: 15px;
+  background: url(../images/q&a_img/btn_close_14x14.png) no-repeat 50% 50%;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+.inbox .btnDel.hidden {
+  display: none;
+}
 .filebox input[type="file"] {
   position: absolute;
   width: 0;
@@ -369,20 +382,6 @@ fieldset {
 }
 .show {
   display: block;
-}
-
-.intDel .btnDel {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  background: url(../images/btn_close_14x14.png) no-repeat 50% 50%;
-  color: transparent;
-  width: 14px;
-  height: 14px;
-  margin-top: -7px;
-  line-height: 0;
-  cursor: pointer;
 }
 
 /* 도연님 */

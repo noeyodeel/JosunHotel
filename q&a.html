@@ -43,7 +43,7 @@
               <ul class="app_list">
                 <!-- category -->
                 <li class="clear">
-                  <label for="category_lbl" class="tit_lbl pilsoo"
+                  <label for="category_lbl" class="tit_lbl `pilsoo"
                     >CATEGORY</label
                   >
                   <div class="app_content radio_area_category">
@@ -268,36 +268,46 @@
                   <div class="app_content">
                     <div class="filebox">
                       <div class="inbox">
-                        <input class="upload-name1" readonly="readonly" />
-                        <button
-                          type="button"
-                          class="btnDel"
-                          onclick="fileReset(this.form);"
-                        >
+                        <input
+                          id="file-uploadname-1"
+                          class="upload-name"
+                          readonly="readonly"
+                        />
+                        <button id="file-delete-1" type="button" class="btnDel">
                           삭제
                         </button>
                       </div>
-                      <label for="file1">파일선택</label>
-                      <input type="file" id="file1" name="upload" />
+                      <label for="file-1">파일선택</label>
+                      <input id="file-1" type="file" name="upload" />
                     </div>
                     <div class="filebox">
                       <div class="inbox">
-                        <input class="upload-name2" readonly="readonly" />
-                        <button type="button" class="btnDel" onclick="del__();">
+                        <input
+                          id="file-uploadname-2"
+                          class="upload-name"
+                          readonly="readonly"
+                        />
+                        <button id="file-delete-2" type="button" class="btnDel">
                           삭제
                         </button>
                       </div>
-                      <label for="file2">파일선택</label>
-                      <input type="file" id="file2" />
+                      <label for="file-2">파일선택</label>
+                      <input id="file-2" type="file" />
                     </div>
 
                     <div class="filebox">
                       <div class="inbox">
-                        <input class="upload-name3" readonly="readonly" />
-                        <button type="button" class="btnDel">삭제</button>
+                        <input
+                          id="file-uploadname-3"
+                          class="upload-name"
+                          readonly="readonly"
+                        />
+                        <button id="file-delete-3" type="button" class="btnDel">
+                          삭제
+                        </button>
                       </div>
-                      <label for="file3">파일선택</label>
-                      <input type="file" id="file3" />
+                      <label for="file-3">파일선택</label>
+                      <input id="file-3" type="file" />
                     </div>
 
                     <!-- <div class="fileUpload">
@@ -445,19 +455,6 @@
       <footer w3-include-html="footer.html"></footer>
     </div>
     <script>
-      $("#file1").on("change", function () {
-        var fileName = $("#file1").val();
-        $(".upload-name1").val(fileName);
-      });
-      $("#file2").on("change", function () {
-        var fileName = $("#file2").val();
-        $(".upload-name2").val(fileName);
-      });
-      $("#file3").on("change", function () {
-        var fileName = $("#file3").val();
-        $(".upload-name3").val(fileName);
-      });
-
       $("label[for = 'good_lbl']").click(function () {
         // $(this).attr("-52px -13px", "-78px -13px");
         $("label[for = 'good_lbl']").append(
@@ -479,7 +476,7 @@
       // $(document).ready(function () {
       //   var domEleArray = [$("#file1").clone()]; // 원본 복제
       //   $(".btnDel").click(function () {
-      //     domEleArray[1] = domEleArray[0].clone(true); // 쌔거(0번) -> 복제본(1번)
+      //     domEleArray[1] = domEleArray[0].clone(true); // 새 거(0번) -> 복제본(1번)
       //     $("#file1").replaceWith(domEleArray[1]);
       //     $(".upload-name1").empty();
       //   });

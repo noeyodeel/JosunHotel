@@ -57,12 +57,91 @@ function categoryChange(e) {
     target.appendChild(opt);
   }
 }
+
+// 파일 추가 기능 및 삭제버튼 (~124)
+class FileInputManager {
+  constructor(nth_file) {
+    this.HIDDEN_CLASSNAME = "hidden";
+
+    this.input_file = $(`#file-${nth_file}`);
+    this.input_file_uploadname = $(`#file-uploadname-${nth_file}`);
+    this.input_file_delete = $(`#file-delete-${nth_file}`);
+    //this 연결
+    this.addEventListeners = this.addEventListeners.bind(this);
+    this.deleteFile = this.deleteFile.bind(this);
+    this.updateRender = this.updateRender.bind(this);
+    this.syncFileName = this.syncFileName.bind(this);
+    this.enableDeleteButton = this.enableDeleteButton.bind(this);
+    this.disableDeleteButton = this.disableDeleteButton.bind(this);
+    this.isFileSelected = this.isFileSelected.bind(this);
+
+    this.addEventListeners();
+    this.updateRender();
+  }
+
+  addEventListeners() {
+    this.input_file.on("change", this.updateRender);
+    this.input_file_delete.on("click", this.deleteFile);
+  }
+
+  deleteFile() {
+    this.input_file.val("");
+    this.updateRender();
+  }
+
+  updateRender() {
+    this.syncFileName(); // 파일이름 맞춰주기
+    if (this.isFileSelected()) {
+      this.enableDeleteButton();
+    } else {
+      this.disableDeleteButton();
+    }
+  }
+
+  // 페이지에 보이는 파일이름을 갱신
+  syncFileName() {
+    const filename = this.input_file.val();
+    this.input_file_uploadname.val(filename);
+  }
+
+  isFileSelected() {
+    return this.input_file.val() != "";
+  }
+
+  enableDeleteButton() {
+    this.input_file_delete.removeClass(this.HIDDEN_CLASSNAME);
+  }
+
+  disableDeleteButton() {
+    this.input_file_delete.addClass(this.HIDDEN_CLASSNAME);
+  }
+}
+//페이지 로딩이 끝나면 실행시킴
+window.onload = () => {
+  new FileInputManager(1);
+  new FileInputManager(2);
+  new FileInputManager(3);
+};
+
 //개인정보
 $(function () {
   $(".toggleCont").hide();
   $(".btnToggle").click(function () {
     $(".toggleCont").slideToggle("fast");
   });
+});
+
+$("#file1").on("change", function () {
+  var fileName = $("#file1").val();
+  $(".upload-name1").val(fileName);
+});
+$("#file2").on("change", function () {
+  var fileName = $("#file2").val();
+  $(".upload-name2").val(fileName);
+});
+$("#file3").on("change", function () {
+  var fileName = $("#file3").val();
+  $(".upload-name3").val(fileName);
 });
 
 //파일 삭제
