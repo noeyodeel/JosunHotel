@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @font-face {
   font-family: "NotoKrL";
   font-style: normal;
@@ -83,7 +85,7 @@ div {
 }
 
 em {
-  font-style: normal; /*이탤릭체 해결*/
+  font-style: normal; /*이탈릭체 해결*/
 }
 
 ul {
@@ -109,6 +111,7 @@ ol::after {
   display: block;
   clear: both;
 }
+
 /* a {
   color: inherit;
   text-decoration: none;
@@ -117,8 +120,11 @@ ol::after {
 } */
 /*a:hover{text-decoration:underline}*/
 
-.container {
-  padding-top: 150px;
+.wrapper {
+  position: relative;
+  padding-bottom: 370px;
+  min-height: 100%;
+  min-width: 1500px;
 }
 
 .top {
@@ -319,7 +325,7 @@ ol::after {
   width: 7px;
   height: 13px;
   margin-top: -7px;
-  background-image: url(../img/arrow.png);
+  background-image: url(../images/arrow.png);
   content: "";
   display: block;
   position: absolute;
@@ -337,6 +343,7 @@ ol::after {
   width: 100%;
   table-layout: fixed;
 }
+
 .tab li {
   position: relative;
   display: table-cell;
@@ -344,10 +351,26 @@ ol::after {
   border: solid gray;
   border-width: 1px 0 0 1px;
 }
+/* 왼+위로 구분  */
 
-.tab li:first-child {
-  border-left: 1px solid gray;
-  border-right: 0;
+.tab li:last-child {
+  border-right: 1px solid gray;
+}
+/* 세번째 박스 오른선까지 */
+
+.tab li.on + li {
+  border-left: 0;
+}
+/* 선 겹침 방지 */
+
+.tab li.on {
+  z-index: 10;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+
+.tab li.on::after {
+  background: white;
 }
 
 .tab::after,
@@ -361,24 +384,7 @@ ol::after {
   height: 1px;
   background: black;
 }
-
-.tab li.on {
-  z-index: 10;
-  border: 1px solid black;
-  border-bottom: 0;
-}
-
-.tab li.on + li {
-  border-left: 0;
-}
-
-.tab li.on::after {
-  background: white;
-}
-
-.tab li:last-child {
-  border-right: 1px solid gray;
-}
+/* 아래 밑줄 */
 
 .tab li:first-child.on a {
   margin-left: 0;
@@ -398,4 +404,163 @@ ol::after {
   font-family: gothamL, notokrL;
   letter-spacing: -1px;
   text-transform: uppercase;
+}
+
+/* 룸 목록 */
+.roomContainer {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.banner {
+  padding: 30px 0 0 0;
+  font-weight: 600;
+}
+
+.banner .bannertitle {
+  min-width: 230px;
+  margin-right: 50px;
+  display: inline-block;
+  background-color: #b6a29a;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+.btnline {
+  display: inline-block;
+  line-height: 1.25;
+  font-size: 14px;
+}
+
+.banner .btnline {
+  margin-left: 20px;
+}
+
+.btnline::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.roomContainer .roomlist > li {
+  border-bottom: 1px solid gray;
+  padding: 71px 0;
+}
+
+.roomContainer .roomInfo {
+  position: relative;
+  padding-left: 585px;
+  min-height: 352px;
+}
+
+.roomContainer .roomInfo .roomName {
+  display: block;
+  font-size: 40px;
+  font-family: playfair;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  margin-bottom: 14px;
+  padding-top: 50px;
+}
+
+.roomContainer .roomInfo .keyword {
+  position: absolute;
+  left: 585px;
+  top: 0;
+}
+.keyword > span {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 3px 10px 4px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: gothamL, notokrL;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border: 1px solid black;
+  vertical-align: top;
+}
+
+.roomContainer .roomInfo .roomBenefit {
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roomContainer .roomInfo .btnPop {
+  margin-top: 10px;
+}
+
+.roomContainer .roomInfo .btnPop a {
+  font-size: 14px;
+  min-width: auto;
+  padding: 0;
+  position: relative;
+  background: transparent;
+  display: inline-block;
+  border: 0;
+  vertical-align: top;
+}
+
+.roomContainer .roomInfo .btnPop a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+  transform: inherit;
+  top: inherit;
+}
+
+.roomContainer .roomInfo .date {
+  position: absolute;
+  left: 585px;
+  bottom: 78px;
+  font-family: gothamL, notokrL;
+  font-size: 20px;
+}
+
+.roomContainer .roomInfo .pricewrap {
+  position: absolute;
+  left: 585px;
+  bottom: -7px;
+}
+
+.roomContainer .roomInfo .pricewrap > * {
+  display: block;
+}
+
+.roomContainer .roomInfo .pricewrap .price {
+  font-size: 40px;
+  font-family: playfair;
+  font-feature-settings: "lnum", "pnum";
+}
+
+.roomContainer .roomInfo .pricewrap .price em {
+  display: inline-block;
+  vertical-align: 6px;
+  font-size: 24px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -1px;
+  margin-left: 3px;
+}
+
+.roomContainer .roomInfo .pricewrap .day {
+  font-size: 16px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -1px;
+}
+
+.roomContainer .roomInfo .image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.roomContainer .roomInfo .image img {
+  width: 508px;
 }
