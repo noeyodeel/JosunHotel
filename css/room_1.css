@@ -112,19 +112,16 @@ ol::after {
   clear: both;
 }
 
-/* a {
-  color: inherit;
-  text-decoration: none;
+a,
+button {
   cursor: pointer;
-  box-sizing: border-box;
-} */
-/*a:hover{text-decoration:underline}*/
+}
 
 .wrapper {
   position: relative;
-  padding-bottom: 370px;
-  min-height: 100%;
   min-width: 1500px;
+  min-height: 100%;
+  height: auto;
 }
 
 .top {
@@ -369,12 +366,8 @@ ol::after {
   border-bottom: 0;
 }
 
-.tab li.on::after {
-  background: white;
-}
-
-.tab::after,
-.tab li::after {
+.tab li::after,
+.tab::after {
   content: "";
   display: block;
   position: absolute;
@@ -385,6 +378,9 @@ ol::after {
   background: black;
 }
 /* 아래 밑줄 */
+.tab li.on::after {
+  background: white;
+}
 
 .tab li:first-child.on a {
   margin-left: 0;
@@ -565,6 +561,37 @@ ol::after {
   width: 508px;
 }
 
+/* toggle */
+
+.roomContainer .btnRes {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 20px 132px 20px 25px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border: 1px solid black;
+  overflow: hidden;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+}
+
+.roomContainer .btnRes::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  margin-top: -5px;
+  width: 18px;
+  height: 10px;
+  background-image: url(../images/res_button.png);
+}
 .noData {
   text-align: center;
   padding: 130px 0;
