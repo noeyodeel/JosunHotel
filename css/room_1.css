@@ -564,3 +564,19 @@ ol::after {
 .roomContainer .roomInfo .image img {
   width: 508px;
 }
+
+.noData {
+  text-align: center;
+  padding: 130px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.noData .txt::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 45px;
+  margin: 0 auto 30px auto;
+  background-image: url(../images/exclamation_mark.gif);
+}
