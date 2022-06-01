@@ -113,7 +113,7 @@
                   <div class="app_content property_area">
                     <div class="select_hotel">
                       <select title="호텔 선택" onchange="categoryChange(this)">
-                        <option value="">호텔 선택</option>
+                        <option value="01" selected>호텔 선택</option>
                         <option value="wes_s">웨스틴 조선 서울</option>
                         <option value="wes_b">웨스틴 조선 부산</option>
                         <option value="popo_s">
@@ -130,14 +130,67 @@
                         <option value="josun_g">조선 팰리스 강남</option>
                         <option value="clubjosun_m">클럽조선 멤버쉽</option>
                       </select>
-
                       <select id="place">
                         <option value="">장소 선택</option>
                       </select>
+
+                      <!-- <button class="hotel_sel">호텔 선택</button>
+                      <div class="option">
+                        <ul>
+                          <li><a>웨스틴 조선 서울</a></li>
+                          <li><a>웨스틴 조선 부산</a></li>
+                          <li><a>포포인츠 바이 쉐라톤 서울역</a></li>
+                          <li><a>그랜드 조선 부산</a></li>
+                          <li><a>포포인츠 바이 쉐라톤 명동</a></li>
+                          <li><a>Retail & Service</a></li>
+                          <li><a>그래비티 서울 판교</a></li>
+                          <li><a>그랜드 조선 제주</a></li>
+                          <li><a>레스케이프</a></li>
+                          <li><a>조선 팰리스 강남</a></li>
+                          <li><a>클럽조선 멤버쉽</a></li>
+                        </ul>
+                      </div> -->
                     </div>
                   </div>
+
+                  <!-- <div class="place_sel">
+                      
+                    </div>
+                      <select id="place">
+                        <option value="">장소 선택</option>
+                      </select> 
+                  -->
+
+                  <!-- <div class="contentsArea">
+                    <div class="inner">
+                      <div class="searchSortArea">
+                        <select name="searchSort" id="searchSort" hidden>
+                          <option value="01" selected>추천 순</option>
+                          <option value="02">인기 순</option>
+                          <option value="03">최신 순</option>
+                          <option value="04">가격 낮은 순</option>
+                          <option value="05">가격 높은 순</option>
+                        </select>
+                        <button class="searchSort">추천 순</button>
+                        <div class="option">
+                          <ul>
+                            <li><a>추천 순</a></li>
+                            <li><a>인기 순</a></li>
+                            <li><a>최신 순</a></li>
+                            <li><a>가격 낮은 순</a></li>
+                            <li><a>가격 높은 순</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="btnArea" id="moreContents"></div>
+                    </div>
+                  </div>
+                </li> -->
+                  <!-- </div> -->
+
+                  <!-- TITLE -->
                 </li>
-                <!-- TITLE -->
+
                 <li class="clear">
                   <label for="title_lbl" class="tit_lbl pilsoo">TITLE</label>
                   <div class="app_content title_area">
@@ -543,6 +596,17 @@
         $(".radio_list7 > label").removeClass("change_radio");
         $(".radio_list8 > label").addClass("change_radio");
       });
+
+      // //검색결과 정렬 순서 선택창 open/close
+      // $(".hotel_sel").click(() => {
+      //   if (!$(".hotel_sel").hasClass("open")) {
+      //     $(".hotel_sel").addClass("open");
+      //     $(".option").addClass("openOption");
+      //   } else {
+      //     $(".hotel_sel").removeClass("open");
+      //     $(".option").removeClass("openOption");
+      //   }
+      // });
     </script>
     <script>
       w3.includeHTML();

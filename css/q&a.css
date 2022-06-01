@@ -159,21 +159,34 @@ fieldset {
   display: flex;
   background: #f9f9f9;
   width: 940px;
-  height: 33px;
-  padding: 40px 30px;
+  height: 50px;
+  padding: 25px 30px;
 }
 .gray_area > h4 {
   font: 400 18px/1 notokrL;
+  padding-top: 17px;
 }
 .gray_area > a {
-  margin-left: 470px;
+  position: absolute;
   border: 1px solid black;
   text-decoration: none;
   color: #000;
-  margin: auto;
-  margin-top: -25px;
+  margin-left: 42%;
   padding: 0 60px 0 20px;
-  line-height: 33px;
+  line-height: 50px;
+  height: 50px;
+  width: 87px;
+}
+.gray_area > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 13px;
+  background: url(../images/q&a_img/ico_arr_7x13.png) no-repeat 0 0;
 }
 .appForm {
   padding: 0;
@@ -192,6 +205,7 @@ fieldset {
   width: 6px;
   height: 6px;
   background: url(../images/q&a_img/ico_essential.png) no-repeat 0 0;
+  margin: 0 0 4px 4px;
 }
 .radio_list > label {
   /* 얘네에 before로 이미지 걸기 */
@@ -241,6 +255,7 @@ fieldset {
   color: #888;
   padding-left: 16px;
   font: 16px gothamL, notokrL, playfair;
+  margin-top: 14px;
 }
 .name_area > input {
   height: 44px;
@@ -285,6 +300,7 @@ fieldset {
   color: #888;
   padding-left: 16px;
   font: 16px gothamL, notokrL, playfair;
+  margin-top: 14px;
 }
 .txtGuide::before {
   content: "*";
@@ -332,25 +348,20 @@ fieldset {
   letter-spacing: -0.01em;
   cursor: pointer;
   margin-top: 10px;
-}
-.fileUpload label {
   margin-left: 20px;
 }
-
-.fileUpload > .filebox {
-  position: absolute;
-}
-
 .inbox .btnDel {
-  /* position: absolute;
-  top: 50%;
-  display: inline-block; */
+  position: absolute;
+  /* bottom: -122%; */
+  right: 34%;
+  margin-top: 25px;
   width: 15px;
   height: 15px;
   background: url(../images/q&a_img/btn_close_14x14.png) no-repeat 50% 50%;
   text-indent: -99999px;
   cursor: pointer;
 }
+
 .inbox .btnDel.hidden {
   display: none;
 }
@@ -773,3 +784,175 @@ p.txtGuide:before,
 .active:hover:before {
   left: -10%;
 }
+.app_content {
+  padding: 16px 0 5px;
+}
+.app_list > .clear {
+  margin-top: 30px;
+}
+.app_list > .clear:first-child {
+  margin-top: 30px;
+}
+.radio_list {
+  margin-right: 20px;
+}
+
+/* .property_area {
+  margin-top: 120px;
+}
+.property_area {
+  padding-bottom: 180px;
+} */
+/* .select_hotel {
+  z-index: 5;
+}
+
+.hotel_sel {
+  width: 150px;
+  height: 60px;
+  z-index: 1;
+  background: #fff;
+  font-size: 16px;
+  line-height: 58px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  font-family: gothamL, notokrL;
+  color: #333;
+  vertical-align: middle;
+}
+.hotel_sel::after {
+  content: "";
+  display: inline-block;
+  margin-right: 2px;
+  width: 11px;
+  height: 7px;
+  background: url(../images/q&a_img/spr_form.png) no-repeat 0 -39px;
+}
+.open::after {
+  background-position: -11px -39px;
+}
+.select_hotel .option {
+  width: 150px;
+  height: 200px;
+  /* overflow: auto; 
+  border: solid 1px #000;
+  /* position: absolute;
+  right: 0; 
+  display: none;
+}
+.select_hotel .option::-webkit-scrollbar {
+  width: 10px;
+  height: 200px;
+}
+.select_hotel .option::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  background-clip: padding-box;
+  border-top: solid 10px #fff;
+  border-bottom: solid 10px #fff;
+}
+.select_hotel > .option::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.openOption {
+  display: block !important;
+}
+.option li > a {
+  height: 50px;
+  background: #fff;
+  padding: 0 20px;
+  color: #000;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  display: block;
+  text-align: left;
+  line-height: 50px;
+}
+.option li > a:hover {
+  background: #f7f7f7;
+} */
+/*------------------ 정관님꺼---------------------- */
+/* 
+.contentsArea {
+  margin-top: 120px;
+}
+.contentsArea .inner {
+  padding-bottom: 180px;
+}
+.searchSortArea {
+  text-align: right;
+  z-index: 5;
+}
+.contentsArea .searchSort {
+  width: 150px;
+  height: 60px;
+  z-index: 1;
+  background: #fff;
+  font-size: 16px;
+  line-height: 58px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  font-family: gothamL, notokrL;
+  color: #333;
+  vertical-align: middle;
+}
+.contentsArea .searchSort::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  width: 11px;
+  height: 7px;
+  background: url(../images/package_img/spr_form.png) no-repeat 0 -39px;
+}
+.open:after {
+  background-position: -11px -39px !important;
+}
+.contentsArea .option {
+  width: 150px;
+  height: 200px;
+  overflow: auto;
+  border: solid 1px #000;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+.contentsArea .option::-webkit-scrollbar {
+  width: 10px;
+  height: 200px;
+}
+.contentsArea .option::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  background-clip: padding-box;
+  border-top: solid 10px #fff;
+  border-bottom: solid 10px #fff;
+}
+.contentsArea .option::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.openOption {
+  display: block !important;
+}
+.contentsArea .option li > a {
+  height: 50px;
+  background: #fff;
+  padding: 0 20px;
+  color: #000;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  display: block;
+  text-align: left;
+  line-height: 50px;
+}
+.contentsArea .option li > a:hover {
+  background: #f7f7f7;
+} */ ;
