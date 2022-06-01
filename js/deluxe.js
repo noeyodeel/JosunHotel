@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (wngud === false || true) {
         loveBtnInner.style.backgroundPosition = "0% 0%";
       }
-    }, 200);
+    }, 300);
   };
 
   loveBtnWrap.addEventListener("click", changeBtn);

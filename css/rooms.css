@@ -67,9 +67,34 @@ body {
 /* } */
 .box1:nth-child(odd) {
   background: #164438;
+  position: relative;
+}
+.box1:nth-child(odd)::after {
+  content: "";
+  display: block;
+  width: 380px;
+  height: 1000px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .box1:nth-child(even) {
   background: #e5cfc7;
+  position: relative;
+}
+.box1:nth-child(even) .infoCont {
+  padding-left: 100px;
+}
+.box1:nth-child(even)::after {
+  content: "";
+  display: block;
+  width: 380px;
+  height: 1000px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .box1:nth-child(even) .category span {
   color: #99726b;
@@ -185,21 +210,29 @@ a {
   box-sizing: border-box;
   vertical-align: top;
   position: relative;
+  cursor: pointer;
 }
 .box1:nth-child(even) .love_inner {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .love_inner::before {
   content: "";
-  background: url(../images/rooms_img/ico_bookmark.png) no-repeat -48px 12px;
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat;
+  background-position: var(--main-bg-position);
   width: 24px;
-  height: 40px;
+  height: 100%;
   position: absolute;
   left: 12px;
 }
 .box1:nth-child(even) .love_inner::before {
-  background: url(../images/rooms_img/ico_bookmark.png) no-repeat 0px 12px;
+  background-position: var(--main-bg-position2);
 }
+/* .love_inner:hover::before {
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat -72px 12px;
+} */
+/* .box1:nth-child(even) .love_inner::before {
+  background: url(../images/rooms_img/ico_bookmark.png) no-repeat 0px 12px;
+} */
 .rooms_list li + li::before {
   content: "";
   display: inline-block;
