@@ -517,23 +517,17 @@
       });
 
       //$(document).ready(function(){ //이 코딩 필수
+      //input 아래 선 생성
       $("input").click(function () {
         $(this).css("border-bottom", "solid 1px black");
+        $("input").not(this).css("border-bottom", "solid 1px #ccc");
       });
+
       $(document).click(function (e) {
         if (!$(e.target).is("input")) {
           $("input").css("border-bottom", "solid 1px #ccc");
         }
       });
-
-      // $(document).ready(function () {
-      //   var domEleArray = [$("#file1").clone()]; // 원본 복제
-      //   $(".btnDel").click(function () {
-      //     domEleArray[1] = domEleArray[0].clone(true); // 새 거(0번) -> 복제본(1번)
-      //     $("#file1").replaceWith(domEleArray[1]);
-      //     $(".upload-name1").empty();
-      //   });
-      // });
 
       //개인정보
       $("#privacyAgree").click(function () {
