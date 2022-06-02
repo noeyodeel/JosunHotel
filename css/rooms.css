@@ -69,7 +69,7 @@ body {
   background: #164438;
   position: relative;
 }
-.box1:nth-child(odd)::after {
+/* .box1:nth-child(odd)::after {
   content: "";
   display: block;
   width: 380px;
@@ -78,15 +78,15 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-}
+} */
 .box1:nth-child(even) {
   background: #e5cfc7;
   position: relative;
 }
-.box1:nth-child(even) .infoCont {
+/* .box1:nth-child(even) .infoCont {
   padding-left: 100px;
-}
-.box1:nth-child(even)::after {
+} */
+/* .box1:nth-child(even)::after {
   content: "";
   display: block;
   width: 380px;
@@ -95,7 +95,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-}
+} */
 .box1:nth-child(even) .category span {
   color: #99726b;
 }
