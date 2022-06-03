@@ -160,7 +160,7 @@ button {
     border: none;
     background: none;
 }
-/* 토글 바 */
+/* 두번째 토글 바 */
 .toggleList.agreeCont .toggleCont .toggleInner {
     padding: 25px;
     background: #f9f9f9;
@@ -178,7 +178,151 @@ button {
     font-size: 16px;
     color: #666;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 .toggleList.agreeCont .notiTxt+.notiTxt {
     margin-top: 20px;
+}
+.toggleList.agreeCont .notiTxt+table {
+    margin-top: 23px;
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    empty-cells: show;
+    border-spacing: 0;
+}
+.toggleList.agreeCont .frmWrap .frm label {
+    color: #666;
+    font-size: 16px;
+}
+.toggleList.agreeCont .frmWrap .frm+.frm {
+    margin-left: 30px;
+}
+.toggleList.agreeCont .frmWrap+.tblH {
+    margin-top: 23px;
+}
+.join .frmWrap+.tblH {
+    margin-top: 23px;
+}
+.join .frmBox {
+    display: table;
+    width: 100%;
+    padding-top: 20px;
+}
+/* 회원정보 박스 */
+/* 이름 */
+.join .frmBox .userInfo dt {
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -.01em;
+    vertical-align: top;
+}
+.join .frmBox {
+    display: table;
+    width: 100%;
+    padding-top: 20px;
+}
+.join .frmBox .userInfo {
+    display: table-cell;
+    width: 300px;
+    padding: 50px 35px;
+    background-color: #f9f9f9;
+    vertical-align: top;
+}
+.join .frmBox .frmInfo {
+    display: table-cell;
+    padding-left: 50px;
+}
+/* 정보 입력 */
+.intList > li .tit {
+    display: inline-block;
+    position: relative;
+}
+.intList > li .tit label {
+    display: inline-block;
+    font-family: gothamM,notokrM;
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    text-transform: uppercase;
+}
+.intList > li.error label {
+    color: #b01414;
+}
+.intList > li .essential {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: relative;
+    padding-right: 4px;
+    vertical-align: 2px;
+}
+.intList > li.error .essential:after {
+    background-position: -6px 0;
+}
+.intList > li .essential:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -4px;
+    width: 6px;
+    height: 6px;
+    background: url(../images/ico_essential.png) no-repeat 0 0;
+}
+.intList > li .intWrap+.intInner {
+    margin-top: 3px;
+}
+.intList > li .intInner {
+    display: inline-block;
+    position: relative;
+}
+.intList > li .intInner > span {
+    position: relative;
+    display: inline-block;
+}
+.intList > li .duobuleInp span+span, .intList > li .duobuleSelect div+div {
+    margin-left: 14px;
+}
+.intList > li .intInner > span {
+    position: relative;
+    display: inline-block;
+}
+.intList > li .intInner .alertMessage {
+    display: none;
+    position: absolute;
+    top: -32px;
+    left: 0;
+    width: 600px;
+    background: #fff;
+    color: #b01414;
+    font: 500 14px/32px notokrR;
+    margin: 0;
+}
+/* id */
+.intList > li .intArea+button {
+    margin-left: 20px;
+}
+.intList > li .txtGuide {
+    margin-top: 14px;
+}
+.intList > li.intList-repwd {
+    position: absolute;
+    margin-top: -133px !important;
+    right: 0;
+}
+.intList > li+li+li {
+    margin-top: 30px;
+}
+.intBox {
+    padding: 16px 0 5px 0;
+}
+.btnArea a, .btnArea button {
+    margin: 0 10px;
 }

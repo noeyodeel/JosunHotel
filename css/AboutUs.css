@@ -476,3 +476,73 @@ address {
   background: #aaa;
   margin: 0 19px 0 13px;
 }
+caption {
+  overflow: hidden;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  text-transform: uppercase;
+}
+/* 테이블 */
+.tblH thead tr th {
+  padding: 16px;
+  font-size: 17px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: gothamM, notokrM;
+  color: #333;
+}
+.tblH thead tr th:first-child, .tblH tbody tr td:first-child {
+  border-left: none;
+}
+.tblH thead tr th, .tblH tbody tr td {
+  font-family: gothamL, notokrL;
+  text-transform: uppercase;
+  background: #fff;
+}
+td, th {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.tblH tbody tr th {
+  background: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+.tcenter {
+  text-align: center !important;
+}
+.tblH tbody tr td {
+  padding: 16px;
+  font-size: 17px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.f18 {
+  font-size: 18px !important;
+  font-weight: 600;
+  color: #000 !important;
+  text-decoration: underline;
+}
+table + .txtGuide {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.btnM {
+  min-width: 162px;
+  height: 50px;
+  padding: 0 25px;
+  line-height: 48px;
+  font-size: 17px;
+  letter-spacing: -.01em;
+}
