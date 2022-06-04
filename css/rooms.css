@@ -245,6 +245,7 @@ a {
   background: url(../images/rooms_img/btn.png);
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 .deluxe_01 {
   position: relative;
