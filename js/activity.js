@@ -186,3 +186,7 @@ const onlineReservation = function () {
     location.href("#login.html"); // 확인시 로그인 페이지로 이동
   }
 };
+
+function en_on() {
+  $(".en").toggle();
+}

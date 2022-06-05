@@ -220,3 +220,7 @@ const contentsScrollEvnet = function () {
   }
 };
 window.addEventListener("scroll", contentsScrollEvnet); // 스크롤 이벤트 실행
+
+function en_on() {
+  $(".en").toggle();
+}

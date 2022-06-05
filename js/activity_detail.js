@@ -77,3 +77,24 @@ const inputLists = function (list) {
   otherProgramLists.innerHTML = newLists.innerHTML; // 리스트 교체
 };
 // otherPrograms list input end
+
+// 공유하기 모달창 start
+document.addEventListener("DOMContentLoaded", function () {
+  const shareBtn = document.querySelector(".shareBtn");
+  const modal = document.querySelector(".modal");
+  const closeBtn = document.querySelector(".modal_closeBtn");
+
+  const openModal = () => {
+    modal.classList.remove("hidden");
+  };
+  const closeModal = () => {
+    modal.classList.add("hidden");
+  };
+
+  shareBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+});
+function en_on() {
+  $(".en").toggle();
+}
+// 공유하기 모달창 end

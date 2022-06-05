@@ -33,3 +33,7 @@ $(".agree1 > div > button").click(() => {
   agreeOpenClose(".agree1");
   console.log($(".agree1" + " .detailArea"));
 });
+
+function en_on() {
+  $(".en").toggle();
+}
