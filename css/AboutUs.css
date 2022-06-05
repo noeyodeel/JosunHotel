@@ -546,3 +546,37 @@ table + .txtGuide {
   font-size: 17px;
   letter-spacing: -.01em;
 }
+.login .selectWrap .ui-selectmenu-button {
+  padding: 0 20px;
+  border-bottom: 0;
+  background: transparent;
+}
+.selectWrap .ui-selectmenu-button {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 58px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #000;
+  background: #fff;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  font-family: gothamL,notokrL;
+}
+.login .selectWrap {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 65px;
+  border: none;
+  background-color: #f9f9f9;
+}
+.selectWrap select {
+  display: none;
+}
+.login .selectWrap .ui-selectmenu-button::after {
+  right: 20px;
+}
