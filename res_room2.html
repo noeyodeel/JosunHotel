@@ -6,849 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/room_1.css" />
     <link rel="stylesheet" href="./css/headerfooter.css" />
-    <title>res_room1</title>
+    <title>res_room2</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
   </head>
-  <div class="wrapper">
-    <header w3-include-html="header.html"></header>
-    <div w3-include-html="header_scroll.html"></div>
-    <div id="container" class="container">
-      <!-- toppage -->
-      <div class="top">
-        <div class="topInner">
-          <h2 class="Innertitle">Booking</h2>
-          <div class="stepWrap">
-            <ol>
-              <li class="on">
-                <em>객실, 요금 선택</em>
-              </li>
-              <li>
-                <em>옵션 선택</em>
-              </li>
-              <li>
-                <em>예약자 정보 입력</em>
-              </li>
-            </ol>
+  <body>
+    <div class="wrapper">
+      <header w3-include-html="header.html"></header>
+      <div w3-include-html="header_scroll.html"></div>
+      <div id="container" class="container">
+        <div class="top">
+          <div class="topInner">
+            <h2 class="Innertitle">Booking</h2>
+            <div class="stepWrap">
+              <ol>
+                <li class="prev">
+                  <em>객실, 요금 선택</em>
+                </li>
+                <li class="on">
+                  <em>옵션 선택</em>
+                </li>
+                <li>
+                  <em>예약자 정보 입력</em>
+                </li>
+              </ol>
+            </div>
+            <!-- //stepwrap -->
           </div>
-          <!-- //stepwrap -->
+          <!-- //topInner -->
         </div>
-        <!-- //topInner -->
-      </div>
-      <!-- //top -->
+        <!-- //top -->
 
-      <div class="result">
+        <div class="result">
+          <div class="Inner">
+            <div class="resultInfo">
+              <dl class="dl01">
+                <dt>HOTEL</dt>
+                <dd>그랜드 조선 제주</dd>
+              </dl>
+              <dl class="dl02">
+                <dt>DATE</dt>
+                <dd id="dateText">
+                  2022.12.24&nbsp;토&nbsp;-&nbsp;2022.12.25&nbsp;일
+                  <span>1&nbsp;박</span>
+                </dd>
+              </dl>
+              <dl class="dl03">
+                <dt>ROOMS</dt>
+                <dd>1</dd>
+              </dl>
+              <dl class="dl03">
+                <dt>ADULTS</dt>
+                <dd>2</dd>
+              </dl>
+              <dl class="dl03">
+                <dt>CHILDREN</dt>
+                <dd>0</dd>
+              </dl>
+            </div>
+            <!-- //resultinfo -->
+            <a href="#none" class="btn">객실 다시 검색</a>
+          </div>
+          <!-- //Inner -->
+        </div>
+        <!-- //result -->
+
         <div class="Inner">
-          <div class="resultInfo">
-            <dl class="dl01">
-              <dt>HOTEL</dt>
-              <dd>그랜드 조선 제주</dd>
-            </dl>
-            <dl class="dl02">
-              <dt>DATE</dt>
-              <dd id="dateText">
-                2022.12.24&nbsp;토&nbsp;-&nbsp;2022.12.25&nbsp;일
-                <span>1&nbsp;박</span>
-              </dd>
-            </dl>
-            <dl class="dl03">
-              <dt>ROOMS</dt>
-              <dd>1</dd>
-            </dl>
-            <dl class="dl03">
-              <dt>ADULTS</dt>
-              <dd>2</dd>
-            </dl>
-            <dl class="dl03">
-              <dt>CHILDREN</dt>
-              <dd>0</dd>
-            </dl>
-          </div>
-          <!-- //resultinfo -->
-          <a href="#none" class="btn">객실 다시 검색</a>
-        </div>
-        <!-- //Inner -->
-      </div>
-      <!-- //result -->
-
-      <div class="Inner">
-        <div class="Innertitle2">
-          <ul class="tab">
-            <li id="tab01" class="on">
-              <a 상품으로 href="#none">상품으로 보기 3</a>
-            </li>
-            <li id="tab02">
-              <a 상품으로 href="#none">객실로 보기 24</a>
-            </li>
-            <li id="tab03">
-              <a 상품으로 href="#none">회원 전용 0</a>
-            </li>
-          </ul>
-          <div class="sideoption"></div>
-        </div>
-
-        <!-- 리스트 박스 부분 -->
-
-        <!-- roomContainer01 -->
-        <div class="roomContainer" id="roomcontainer01">
-          <div class="banner">
-            <div>
-              <span class="bannertitle">클럽조선 리워드 혜택</span>
-              멤버십 가입을 하시며 투숙 시, 할인 바우처를 발급해드립니다.
-              <a href="" target="_blank" class="btnline">멤버십 가입하기</a>
+          <div class="resRoomWrap">
+            <div class="leftCont">
+              <h2 class="Conttitle">SMART CHOICE</h2>
+              <p class="Conttext">DELUX / 2DOUBLE / STANDARD VIEW</p>
+              <ul class="roomRes" id="roomOpt">
+                <li class="toggleOn">
+                  <strong class="listTitle">객실1</strong>
+                  <button type="button" class="btnToggle"></button>
+                  <div class="toggleCont" style="display: block">
+                    <div class="toggleInner">
+                      <h3 class="OptionTitle">Breakfast</h3>
+                      <div class="addOption">
+                        <span class="txt">성인 조식 추가</span>
+                        <span class="price">KRW 45,000</span>
+                      </div>
+                      <div class="addOption">
+                        <span class="txt">어린이 조식 추가</span>
+                        <span class="price">KRW 27,000</span>
+                      </div>
+                      <ul class="textGuide">
+                        <li>
+                          인원 추가 금액에는 조식이 포함되어 있지 않습니다. 조식
+                          추가 기능을 통해 별도로 추가가 가능합니다.
+                        </li>
+                        <li>
+                          조식 옵션 추가 시, 투숙 일수와 동일한 횟수의 조식이
+                          제공됩니다.
+                        </li>
+                        <li>
+                          어린이 조식 추가 비용 적용 대상은 37개월 이상 만 12세
+                          이하입니다.
+                        </li>
+                        <li>
+                          사전 추가된 조식의 경우 특별요금이 적용된 혜택으로,
+                          체크인 후 미사용 시 환불이 불가합니다.
+                        </li>
+                        <li>
+                          코로나19에 따른 사회적 거리두기 정부 시책이 진행될
+                          경우, 뷔페 조식은 다른 장소 및 단품 메뉴로 대체 제공될
+                          수 있습니다.
+                        </li>
+                      </ul>
+                      <h3 class="OptionTitle">Requests</h3>
+                      <textarea
+                        name="Request"
+                        placeholder="호텔 이용 시 문의하실 사항이 있으시면 입력해 주세요."
+                      ></textarea>
+                      <p class="textGuide">
+                        전달해주신 요청사항은 최대한 반영하도록 최선을
+                        다하겠습니다. <br />
+                        다만, 부득이하게 반영되지 않을 수 있는 점, 양해
+                        부탁드립니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
-          <ul class="roomlist">
-            <li id="room0">
-              <dl class="roomInfo">
-                <dt class="roomName">SMART CHOICE</dt>
-                <dd class="keyword">
-                  <span>Room Only</span>
-                </dd>
-                <dd class="roomBenefit">
-                  즐거움은 UP, 부담은 DOWN한 슈퍼 세이브 혜택
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">자세히 보기</a>
-                </dd>
-                <dd class="date">2020.12.11&nbsp;-&nbsp;2023.04.30</dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >570,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res01.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-            
-            <li id="room1">
-              <dl class="roomInfo">
-                <dt class="roomName">BE JEJUFUL</dt>
-                <dd class="keyword">
-                  <span>조식</span>
-                  <span>Breakfast</span>
-                </dd>
-                <dd class="roomBenefit">객식 1박 + 아리아 조식 2인</dd>
-                <dd class="btnPop">
-                  <a href="#none">자세히 보기</a>
-                </dd>
-                <dd class="date">2020.12.01&nbsp;-&nbsp;2023.04.30</dd>
-                <dd class="pricewrap">
+            <!-- //leftCont -->
+
+            <div class="rightCont floating">
+              <ul class="rContList" id="roomInfo">
+                <li class="toggleOn">
+                  <strong class="ListTit"
+                    >객실1
+                    <span class="price"> <em>627,000</em>KRW </span>
+                  </strong>
+                  <button></button>
+                  <div class="toggleCont" style="display: block">
+                    <div class="toggleInner">
+                      <div class="designScroll">
+                        <div class="scrollWrap">
+                          <div class="ScrollBox">
+                            <ul class="infoData">
+                              <li>
+                                <span class="leftData">2022.12.24</span>
+                                <span class="rightData">570,000</span>
+                              </li>
+                            </ul>
+                            <ul class="infoData" style="display: none"></ul>
+                            <ul class="infoData">
+                              <li>
+                                <span class="leftData">세금</span>
+                                <span class="rightData">57,000</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="totalCont">
+                <div class="totalPrice">
+                  <span class="txt">총 예약금액</span>
+                  <span class="subTxt">+ 세금(10%)</span>
                   <span class="price">
-                    630,000
-                    <em>KRW~</em>
+                    <em id="totalCost">627,000</em>KRW
                   </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res02.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room2">
-              <dl class="roomInfo">
-                <dt class="roomName">ALMOST HEAVEN</dt>
-                <dd class="keyword">
-                  <span>패키지</span>
-                  <span>COUPLE</span>
-                  <span>SUITE</span>
-                </dd>
-                <dd class="roomBenefit">
-                  힐 스위트 + Gran J 조식 + Gran Choice
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">자세히 보기</a>
-                </dd>
-                <dd class="date">2020.11.10&nbsp;-&nbsp;2023.04.30</dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,160,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res03.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-          </ul>
-        </div>
-        <!-- //roomContainer01 -->
-
-        <!-- roomContainer2 -->
-        <div class="roomContainer" id="roomcontainer02">
-          <div class="banner">
-            <div>
-              <span class="bannertitle">클럽조선 리워드 혜택</span>
-              멤버십 가입을 하시며 투숙 시, 할인 바우처를 발급해드립니다.
-              <a href="" target="_blank" class="btnline">멤버십 가입하기</a>
+                </div>
+                <div class="btnArea">
+                  <div>
+                    <a href="#none" class="btnRsv">비회원 예약</a>
+                  </div>
+                  <div>
+                    <a href="#none" class="btnRsv">회원 예약</a>
+                  </div>
+                </div>
+                <p class="textGuide2">
+                  회원 예약 시 현장 사용 할인 쿠폰이 즉시 발급됩니다.
+                </p>
+              </div>
             </div>
+            <!-- //rightCont -->
           </div>
-          <ul class="roomlist">
-            <li id="room1">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE TWIN, STANDARD VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Standard View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >570,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res04.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl> 
-            </li>
-
-            <li id="room2">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE KING, STANDARD VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Standard View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >570,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res05.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room3">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE KING, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >620,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res05.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room4">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE TWIN, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >620,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res04.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room5">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE TWIN, POOLSIDE VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >670,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res04.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room6">
-              <dl class="roomInfo">
-                <dt class="roomName">DELUXE KING, POOLSIDE VIEW</dt>
-                <dd class="keyword">
-                  <span>Room</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 46.7㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >670,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res05.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room7">
-              <dl class="roomInfo">
-                <dt class="roomName">STUDIO SUITE TWIN</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 77.5㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >810,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res06.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room8">
-              <dl class="roomInfo">
-                <dt class="roomName">STUDIO SUITE KING</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 77.5㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >810,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res07.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room9">
-              <dl class="roomInfo">
-                <dt class="roomName">PREMIER SUITE KING, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >890,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room10">
-              <dl class="roomInfo">
-                <dt class="roomName">PREMIER SUITE TWIN, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >890,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room11">
-              <dl class="roomInfo">
-                <dt class="roomName">PREMIER SUITE KING, POOLSIDE VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >970,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room12">
-              <dl class="roomInfo">
-                <dt class="roomName">PREMIER SUITE TWIN, POOLSIDE VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >970,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room13">
-              <dl class="roomInfo">
-                <dt class="roomName">LUXURY SUITE TWIN, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,140,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room14">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL STUDIO SUITE TWIN, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,160,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res09.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room15">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL SUITE TWIN, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,160,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res10.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room16">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL STUDIO SUITE SUPER KING, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,160,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res09.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room17">
-              <dl class="roomInfo">
-                <dt class="roomName">LUXURY SUITE KING, POOLSIDE VIEW</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 95.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,190,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res08.jpeg"/>
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room18">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL SUITE TWIN, OCEAN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Ocean View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,310,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res11.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room19">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL STUDIO SUITE SUPER KING, OCEAN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Ocean View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,310,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res09.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room20">
-              <dl class="roomInfo">
-                <dt class="roomName">HILL STUDIO SUITE TWIN, OCEAN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Ocean View | Size: 89㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >1,310,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res12.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room21">
-              <dl class="roomInfo">
-                <dt class="roomName">PRESTIGE HILL SUITE, GARDEN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Garden View | Size: 193.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >2,180,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res13.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room22">
-              <dl class="roomInfo">
-                <dt class="roomName">ROYAL SUITE FAMILY</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 202㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >2,420,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res14.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room23">
-              <dl class="roomInfo">
-                <dt class="roomName">PRESTIGE HILL SUITE, OCEAN VIEW</dt>
-                <dd class="keyword">
-                  <span>Hill Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Ocean View | Size: 193.1㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >2,620,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res13.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-
-            <li id="room24">
-              <dl class="roomInfo">
-                <dt class="roomName">THE SUITE</dt>
-                <dd class="keyword">
-                  <span>Suite</span>
-                </dd>
-                <dd class="roomBenefit">
-                  Poolside View | Size: 267.5㎡
-                </dd>
-                <dd class="btnPop">
-                  <a href="#none">객실 상세 보기</a>
-                </dd>
-                <dd class="pricewrap">
-                  <span class="price"
-                    >2,800,000
-                    <em>KRW~</em>
-                  </span>
-                  <span class="day">1박&nbsp;/&nbsp;세금 별도</span>
-                </dd>
-                <dd class="image">
-                  <img src="./images/res_img/res15.jpeg">
-                </dd>
-                <button type="button" class="btnRes">RESERVE</button>
-              </dl>
-            </li>
-          </ul>
         </div>
-        <!-- //roomContainer02 -->
-
-        <!-- roomcontainer03 -->
-        <div class="roomContainer" id="roomcontainer03" >
-          <div class="banner">
-            <div>
-              <span class="bannertitle">클럽조선 리워드 혜택</span>
-              멤버십 가입을 하시며 투숙 시, 할인 바우처를 발급해드립니다.
-              <a href="" target="_blank" class="btnline">멤버십 가입하기</a>
-            </div>
-          </div>
-          <ul class="roomlist">
-            <li class="noData">
-              <p class="txt">
-                예약 가능한 패키지 상품이 없습니다. <br>
-                다시 검색해주세요.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <!-- //roomContainer03 -->
       </div>
-      <!-- //inner  -->
-    
+      <footer w3-include-html="footer.html"></footer>
     </div>
-    <!-- container -->
-  </div>
-  <!-- //wrapper -->
-  <footer w3-include-html="footer.html"></footer>
   </body>
   <script>
     w3.includeHTML();

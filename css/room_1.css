@@ -57,6 +57,7 @@
 }
 
 body,
+p,
 h1,
 h2,
 h3,
@@ -68,7 +69,8 @@ dt,
 dd,
 div,
 button,
-textarea {
+textarea,
+input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -78,7 +80,8 @@ textarea {
 
 body,
 button,
-textarea {
+textarea,
+input {
   color: black;
   font-family: notokrL, gothamL, playfair;
   font-weight: 400;
@@ -238,6 +241,18 @@ textarea {
   white-space: nowrap;
   word-wrap: normal;
   font-size: 22px;
+}
+
+.stepWrap ol li:last-child.on {
+  padding-left: 135px;
+}
+.stepWrap ol li:last-child.on::after {
+  position: absolute;
+  left: -12px;
+  top: 18px;
+}
+.stepWrap ol li:last-child.on::before {
+  left: 80px;
 }
 
 .stepWrap ol li.on::after {
@@ -745,10 +760,12 @@ textarea {
   background: gray;
 }
 
-.resRoomWrap .textGuide {
+.resRoomWrap .textGuide,
+.resRoomWrap .textGuide2 {
   margin-top: 14px;
 }
 
+p.textGuide,
 .textGuide li {
   position: relative;
   color: gray;
@@ -757,6 +774,7 @@ textarea {
   font-family: gothamL, notokrL, playfair;
 }
 
+p.textGuide::before,
 .textGuide li::before {
   content: "*";
   position: absolute;
@@ -772,4 +790,326 @@ textarea {
   padding: 10px 15px;
   width: 100%;
   height: 160px;
+}
+
+.toggleCont textarea + .textGuide {
+  margin-top: 8px;
+}
+
+.resRoomWrap .rightCont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+}
+
+.resRoomWrap .rightCont .rContList > li.toggleOn {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.resRoomWrap .rightCont .rContList > li {
+  padding: 34px 40px 28px 40px;
+}
+
+.rContList > li:last-child.toggleOn {
+  border-bottom: 0;
+}
+
+.rContList > li.toggleOn {
+  border-top: 1px solid #000;
+}
+
+.rContList > li {
+  position: relative;
+}
+
+.resRoomWrap .rightCont .ListTit {
+  font-size: 16px;
+  color: #989442;
+  vertical-align: top;
+}
+
+.rContList > li .ListTit {
+  font: 400 22px gothamB, notokrL;
+}
+
+.resRoomWrap .rightCont .ListTit .price {
+  display: block;
+  color: black;
+  font-size: 22px;
+  line-height: 1;
+  padding-bottom: 12px;
+  margin-top: -4px;
+  font-family: gothamL;
+}
+
+.resRoomWrap .rightCont .ListTit .price em {
+  display: inline-block;
+  vertical-align: -5px;
+  font-size: 36px;
+  font-family: playfair;
+  margin-right: 3px;
+  font-feature-settings: "lnum", "pnum";
+}
+
+.resRoomWrap .rightCont .designscroll {
+  overflow: inherit;
+  position: relative;
+}
+
+.resRoomWrap .rightCont .scrollWrap {
+  background: none;
+  height: auto;
+  max-height: 400px;
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
+  padding-right: 0;
+  overflow-y: hidden;
+}
+
+.infoData li .leftData {
+  float: left;
+}
+
+.infoData li .rightData {
+  float: right;
+  text-align: right;
+}
+
+.infoData li span {
+  font-family: gothamL;
+}
+
+.infoData li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.resRoomWrap .rightCont .scrollWrap .infoData + .infoData {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px dashed #ccc;
+}
+
+.resRoomWrap .rightCont .rContList > li.toggleOn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background: black;
+  z-index: 1;
+}
+
+.resRoomWrap .rightCont .totalCont .totalPrice {
+  position: relative;
+  padding: 80px 0 27px 0;
+}
+
+.resRoomWrap .rightCont .totalCont .totalPrice .txt {
+  font-size: 22px;
+}
+
+.resRoomWrap .rightCont .totalCont .totalPrice .subTxt {
+  position: absolute;
+  top: 37px;
+  right: 0;
+  font-size: 18px;
+}
+
+.resRoomWrap .rightCont .totalCont .totalPrice .price {
+  position: absolute;
+  bottom: 14px;
+  right: 0;
+  font: 600 26px gothamL, notokrL;
+}
+
+.resRoomWrap .rightCont .totalCont .totalPrice .price em {
+  display: inline-block;
+  vertical-align: -4px;
+  font: 500 40px playfair;
+  margin-right: 3px;
+  font-feature-settings: "lnum", "pnum";
+}
+
+.resRoomWrap .rightCont .totalCont .btnArea {
+  margin-top: 0;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.resRoomWrap .rightCont .totalCont .btnArea div {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.resRoomWrap .rightCont .totalCont .btnArea .btnRsv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 18px;
+  display: block;
+  background: black;
+  color: white;
+  height: 60px;
+  line-height: 58px;
+  position: relative;
+  border-style: border-box;
+  border: 1px solid black;
+  transition-property: color;
+  transition-duration: 00.5s;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+}
+
+.btnRsv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  background: white;
+  width: 130%;
+  height: 100%;
+  /* transform */
+  transition-property: all;
+  transition-duration: 00.5s;
+  transition-timing-function: ease-in-out;
+  z-index: -1;
+}
+
+.resRoomWrap .rightCont .totalCont .btnArea div + div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  width: 1px;
+  height: 20px;
+  background: #808080;
+  z-index: 99;
+}
+
+p.textGuide2 {
+  position: relative;
+  color: black;
+  padding-left: 16px;
+  font-size: 16px;
+  font-family: gothamL, notokrL, playfair;
+}
+
+p.textGuide2::before {
+  content: "\203B";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font: 600 14px notokrL;
+}
+
+.resRoomWrap .leftCont .infoList {
+  margin-top: 42px;
+}
+
+.infoList > li .tit {
+  display: inline-block;
+  position: relative;
+}
+
+.infoList > li .tit label {
+  display: inline-block;
+  font-family: gothaM, notokrM;
+  font-size: 14px;
+  line-height: 1;
+  color: black;
+  text-transform: uppercase;
+}
+
+.infoList > li .essential {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  text-indent: -9999px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 4px;
+  vertical-align: 2px;
+}
+
+.infoList > li .essential:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -4px;
+  width: 6px;
+  height: 6px;
+  background-image: url(../images/essential.png);
+}
+
+.infoList > li .intWrap + .infoInner {
+  margin-top: 3px;
+}
+
+.infoList > li .infoInner {
+  display: inline-block;
+  position: relative;
+}
+
+.infoBox {
+  padding: 16px 0 5px 0;
+}
+
+.choice {
+  display: inline-block;
+  position: relative;
+}
+
+.choice input[type="radio"] {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.choice label {
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  padding-left: 35px;
+  font-family: gothamL, notokrL;
+  text-transform: uppercase;
+}
+
+.choice input[type="radio"] + label::before {
+  background-position: -52px -13px;
+}
+
+.choice label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/button_ico.png);
+}
+
+.infoBox .choice + .choice {
+  margin-left: 18px;
+}
+
+.infoList > li + li {
+  margin-top: 30px;
 }
