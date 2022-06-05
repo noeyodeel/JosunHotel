@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/mypage.css" />
     <link rel="stylesheet" href="./css/mypage_roomList.css" />
     <title>MyPage</title>
+    <script src="./js/mypage_roomList.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
@@ -69,15 +70,15 @@
       <div class="myContents">
         <h3 class="roomList_tit">관심리스트</h3>
         <ul class="tabWrap">
-          <li>
+          <li class="tabWrap_list1" onclick="return false">
             <a href="#">객실</a>
           </li>
-          <li>
+          <li class="tabWrap_list2" onclick="return false">
             <a href="#">패키지</a>
           </li>
         </ul>
-        <div class="main_Allcheck">
-          <label for="" class="label_check">
+        <div class="main_Allcheck" id="lb">
+          <label for="lb" class="label_check">
             <span>전체 선택</span>
           </label>
           <button class="allcheck_btn">선택 삭제</button>

@@ -45,6 +45,7 @@
   padding-left: 35px;
   font-family: gothamL, notokrL;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .label_check::before {
   content: "";
@@ -56,6 +57,7 @@
   height: 26px;
   background: url(../images/mypage_roomList/main_allcheck.png) no-repeat;
   background-position-y: -13px;
+  background-position-x: var(--mypage-btn-position);
 }
 .main_Allcheck {
   position: relative;
