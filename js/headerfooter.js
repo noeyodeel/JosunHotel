@@ -64,3 +64,6 @@ $(function () {
 //     header.style.height = headerHeight + "px";
 //   });
 // }
+function en_on() {
+  $(".en").toggle();
+}

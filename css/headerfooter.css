@@ -54,11 +54,6 @@
   src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
@@ -157,6 +152,21 @@ header {
 .left_topbar {
   padding-left: 50px;
 }
+
+.language_select {
+  cursor: pointer;
+  background-color: black;
+  color: #bbbbbb;
+  border: none;
+}
+.en {
+  padding-left: 10px;
+  font-size: 14px;
+  margin: 0;
+  color: #bbbbbb;
+  line-height: 50px;
+}
+
 .right_topbar {
   padding-right: 50px;
 }
