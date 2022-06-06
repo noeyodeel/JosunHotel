@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/headerfooter_main.css">
+<link rel="stylesheet" href="./css/header_main.css">
       <!-- header 시작 -->
         <div class="header_area box_inner clear">
           <div class="header_cont">
@@ -6,9 +6,37 @@
                 <div class="left_topbar">
                     <li><a href="https://josunhotel.com/intro.do">JOSUN HOTELS & RESORTS</a></li>
                     <li><a class="hotel_search" href="호텔찾기 팝업실행">호텔찾기</a></li>
-                    <li><a class="language_select" href="언어 선택">KR</a></li>
-                    
+                    <li><button class="language_select" onclick="en_on();">KR</button></li>
+                    <li><div class="en" href="언어 선택" hidden>EN</div></li>
                 </div>
+                <!-- <div class="btnArea scroll">
+                  <a href="#" class="btn-box btn share-btn" onclick="return false">
+                    공유하기
+                  </a>
+                  <!-- 공유하기 버튼 모달창 시작 
+                  <div class="modal hidden">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content">
+                      <h2>공유하기</h2>
+                      <div class="modal_inner_wrap">
+                        <ul class="modal_inner">
+                          <li>
+                            <a href="#">카카오톡</a>
+                          </li>
+                          <li>
+                            <a href="#">이메일</a>
+                          </li>
+                          <li>
+                            <a href="#">URL복사</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <a class="modal_closeBtn"></a>
+                    </div>
+                  </div>
+                  <!-- 공유하기 버튼 모달창 끝 
+                </div> -->
+                
                 <div class="right_topbar">
                     <li><a href="로그인 링크">로그인</a></li>
                     <li><a href="회원가입 링크">회원가입</a></li>
@@ -20,12 +48,13 @@
             <nav>
               <ul class="gnb clear">
                 <li class="logo dropdown">
-                  <a href="./index.html">그랜드조선 로고</a>
+                  <a class="logo-image" href="./index.html">그랜드조선 로고</a>
                 </li>
                   <!-- RESERVATION -->
                 <li class="dropdown res">
                   <div class="reservation">
                     <a href="#" class="dropdown-menu"><b>RESERVATION</b></a>
+                    <a href="#" class="res_img"></a>
                   </div>
                   <ul class="dropdown-content">
                     <div class="nav_list">
@@ -38,7 +67,7 @@
                     </div>
                   </ul>
                 </li>
-                <p>|</p>
+                <p class="nav_bar">|</p>
 
                 <!-- ROOMS -->
                 <li class="dropdown">

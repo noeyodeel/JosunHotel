@@ -93,19 +93,35 @@ nav:hover .dropdown-menu {
   width: 11px;
   height: 11px;
   margin-left: 5px;
-  background: url(../images/ico_search_11x11.png) no-repeat 0 0;
+  background: url(../images/main_img/ico_search_11x11.png) no-repeat 0 0;
 }
 .language_select:after {
   content: "";
   display: inline-block;
   margin-left: 10px;
+  margin-right: 0px;
   width: 4px;
   height: 8px;
-  background: url(../images/ico_lang.png) no-repeat 0 0;
+  background: url(../images/main_img/ico_lang.png) no-repeat 0 0;
 }
 
+.en {
+  padding-left: 10px;
+  font-size: 14px;
+  margin: 0;
+  color: #bbbbbb;
+  line-height: 50px;
+}
+
+.language_select {
+  background-color: black;
+  color: #bbbbbb;
+  border: none;
+  font-size: 14px;
+}
 .left_topbar {
   padding-left: 50px;
+  height: 50px;
 }
 .right_topbar {
   padding-right: 50px;
@@ -117,12 +133,12 @@ nav:hover .dropdown-menu {
   background: transparent;
   padding: 30px 50px;
   height: 30px;
-  display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
+  display: flex; /*네비게이션 바 전부 다 한줄에 배치 */
 }
-.gnb > p {
+.nav_bar {
   color: white;
 }
-.gnb:hover p {
+.gnb:hover .nav_bar {
   color: black;
 }
 
@@ -139,6 +155,7 @@ nav:hover .dropdown-menu {
   padding-left: 20px;
 }
 .dropdown-menu {
+  font: 600 15px gothamM;
   padding-left: 35px;
   padding-right: 15px;
   margin: 0;
@@ -148,43 +165,47 @@ nav:hover .dropdown-menu {
   z-index: 100;
 }
 
-.logo > a {
+.logo .logo-image {
   display: block;
   left: 50px;
   width: 118px;
   height: 42px;
   text-indent: -9999px;
-  background: url(../images/bg_logo_grand.png) no-repeat 0 0px;
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 0;
+  background-position: 0 0;
+}
+.logo .logo-image.setLogoColorToBlack {
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 -42px;
+}
+.logo .logo-image.setLogoColorToWhite {
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 0;
 }
 .logo {
   margin: 0;
 }
-.logo > a::after {
+.logo .logo-image::after {
   background-position: 0 0;
 }
-.reservation > a:after {
-  content: "";
+
+.res_img {
   display: inline-block;
   position: absolute;
   width: 16px;
   height: 10px;
   margin-top: 6px;
   margin-left: 8px;
-  background: url(../images/ico_rsv.png) no-repeat 0 0px;
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 0;
   cursor: pointer;
 }
 /* reservation로고 색 변환 */
-.reservation > a:hover:after {
-  background-position: 0 -20px !important;
+.res_img:hover {
+  background-position: 0 -10px !important;
 }
 .reservation {
   margin-left: 50px;
 }
 
-/* .reservation:after:hover .res {
-    color: #ba998c !important;
-  } */
-
+/* TODO: GooNey Back = .gnb */
 .gnb > p {
   margin-top: 11px;
   font-size: 11px;
@@ -205,8 +226,8 @@ nav ul li {
 }
 
 /* .dropdown {
-    position: relative;
-  }  네비게이션바 세부메뉴 가로 배치 -> 세로배치 됨 */
+  position: relative;
+}  네비게이션바 세부메뉴 가로 배치 -> 세로배치 됨 */
 .dropdown-content > div {
   display: inline-flex;
 }
@@ -261,19 +282,14 @@ nav ul li {
   z-index: 100;
 }
 .gnb:hover .logo > a {
-  background: url(../images/bg_logo_grand.png) no-repeat 0 -42px;
+  background: url(../images/main_img/bg_logo_grand.png) no-repeat 0 -42px;
 }
-.gnb:hover .reservation > a:after {
-  background: url(../images/ico_rsv.png) no-repeat 0 -10px;
+.gnb:hover .res_img {
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 -10px;
 }
 .reservation > .dropdown-menu > b:hover {
   border: none;
 }
-
-/* .gnb:hover {
-    /* 네비게이션 바 세부 메뉴에 마우스 올리면 색상 변경 
-    background-color: #f1f1f1;
-  } */
 
 .nav_list {
   display: flex;
@@ -330,16 +346,16 @@ nav ul li {
 }
 
 /* ---------------------- 푸터 시작 ---------------------- */
-footer {
-  /* position: absolute; */
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
+.foot_area {
+  position: absolute;
   width: 100%;
-  display: block;
-  /* position: sticky; */
+  left: 0;
+  bottom: -50%;
+  bottom: -3%;
   background-color: black;
   color: white;
+  margin: 0 auto;
+  z-index: 100;
 }
 
 .foot_list1 {
@@ -358,9 +374,9 @@ footer {
   display: flex;
 }
 /* 
-  .foot_list1 > li :first-child {
-    margin-left: 20px;
-  } */
+.foot_list1 > li :first-child {
+  margin-left: 20px;
+} */
 
 .foot_bottom {
   display: flex;
@@ -373,7 +389,7 @@ footer {
   overflow: hidden;
   width: 150px;
   height: 70px;
-  background: url(../images/bg_logo_footer.png) no-repeat 0 0px;
+  background: url(../images/main_img/bg_logo_footer.png) no-repeat 0 0px;
   margin-left: 130px;
   margin-top: 30px;
 }
@@ -389,11 +405,11 @@ footer {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.info {
+.info__ {
   margin-left: 130px;
   padding-top: 5px;
 }
-.info > span {
+.info__ > span {
   font-size: 14px;
   color: gray;
 }
@@ -401,7 +417,7 @@ footer {
 .foot_list2 > li:nth-child(5n) > a {
   color: #989442;
 }
-.footer_select {
+.external_site2 > select {
   margin-top: 15px;
   margin-bottom: 25px;
   width: 230px;
@@ -429,4 +445,18 @@ select:focus {
 }
 .social > li {
   margin: 5%;
+}
+
+/* 헤더 색 바꾸는 함수 */
+.setColorToWhite {
+  color: white;
+}
+.setColorToBlack {
+  color: black;
+}
+.setResImgColorToBlack {
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 -10px;
+}
+.setResImgColorToWhite {
+  background: url(../images/main_img/ico_rsv.png) no-repeat 0 0;
 }

@@ -144,6 +144,7 @@ header {
   content: "";
   display: inline-block;
   margin-left: 10px;
+  margin-right: 0px;
   width: 4px;
   height: 8px;
   background: url(../images/main_img/ico_lang.png) no-repeat 0 0;
@@ -151,6 +152,7 @@ header {
 
 .left_topbar {
   padding-left: 50px;
+  height: 50px;
 }
 
 .language_select {
@@ -158,6 +160,7 @@ header {
   background-color: black;
   color: #bbbbbb;
   border: none;
+  font-size: 14px;
 }
 .en {
   padding-left: 10px;
