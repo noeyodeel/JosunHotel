@@ -1,62 +1,74 @@
-function emailCheck(val) {
+// 이메일 직접 입력
+function writeText() {
   var obj = document.getElementById("email2");
-  if (val == "email") {
-    obj.value = "";
-    obj.readOnly = false;
-    obj.focus();
-  } else {
-    obj.value = val;
-    obj.readOnly = true;
+
+  obj.value = "";
+  obj.readOnly = false;
+  obj.focus();
+}
+
+// 이메일 클릭시 왼쪽 input에 클릭된 것 뜨게
+function statusChange(statusItem) {
+  var strText = $(statusItem).text();
+
+  // strText 에 전체 문자열이 입력된다.
+  var obj = document.getElementById("email2");
+
+  $("#email2").val(strText);
+  obj.readOnly = true;
+}
+
+//호텔찾기 멀티 셀렉트박스
+function categoryChange(e) {
+  //조선 서울
+  var place_wes_s = [
+    "장소 선택",
+    "객실",
+    "아리아",
+    "나인스게이트",
+    "루브리카",
+    "조선델리",
+    "스시조",
+    "홍연",
+    "라운지엔바",
+    "연회",
+    "웨딩",
+    "멤버쉽",
+    "홈페이지",
+    "기타",
+  ];
+  //조선 부산
+  var place_wes_b = [
+    "장소 선택",
+    "객실",
+    "까밀리아",
+    "파노라마라운지",
+    "조선델리",
+    "오킴스",
+    "셔블",
+    "인룸다이닝",
+    "연회",
+    "웨딩",
+    "홈페이지",
+    "기타",
+  ];
+  var place_popo_s = ["장소 선택", "객실", "더이터리", "더바", "기타"]; //포포인츠 서울역
+
+  var target = document.getElementsByClassName("custom-select-list2");
+  console.log(e.value);
+  if (e.value == "wes_s") var d = place_wes_s;
+  else if (e.value == "wes_b") var d = place_wes_b;
+  else if (e.value == "popo_s") var d = place_popo_s;
+
+  target.options.length = 0;
+
+  for (x in d) {
+    var opt = document.createElement("li");
+    opt.value = d[x];
+    opt.innerHTML = d[x];
+    target.appendChild(opt);
   }
 }
-//호텔찾기 멀티 셀렉트박스
-// function categoryChange(e) {
-//   var place_wes_s = [
-//     "장소 선택",
-//     "객실",
-//     "아리아",
-//     "나인스게이트",
-//     "루브리카",
-//     "조선델리",
-//     "스시조",
-//     "홍연",
-//     "라운지엔바",
-//     "연회",
-//     "웨딩",
-//     "멤버쉽",
-//     "홈페이지",
-//     "기타",
-//   ]; //조선 서울
-//   var place_wes_b = [
-//     "장소 선택",
-//     "객실",
-//     "까밀리아",
-//     "파노라마라운지",
-//     "조선델리",
-//     "오킴스",
-//     "셔블",
-//     "인룸다이닝",
-//     "연회",
-//     "웨딩",
-//     "홈페이지",
-//     "기타",
-//   ]; //조선 부산
-//   var place_popo_s = ["장소 선택", "객실", "더이터리", "더바", "기타"]; //포포인츠 서울역
-//   var target = document.getElementById("place");
-
-//   if (e.value == "wes_s") var d = place_wes_s;
-//   else if (e.value == "wes_b") var d = place_wes_b;
-//   else if (e.value == "popo_s") var d = place_popo_s;
-
-//   target.options.length = 0;
-
-//   for (x in d) {
-//     var opt = document.createElement("option");
-//     opt.value = d[x];
-//     opt.innerHTML = d[x];
-//     target.appendChild(opt);
-//   }
-// }
 
 // 파일 추가 기능 및 삭제버튼 (~124)
 class FileInputManager {
@@ -154,3 +166,119 @@ $("#file3").on("change", function () {
 //     $(".option").removeClass("openOption");
 //   }
 // });
+
+let selectFlag1;
+let selectFlag2;
+let selectFlag3;
+
+// ---------------------------------------------------------
+$(".custom-select1").on("focusin", function () {
+  $(".custom-select-list1").show();
+});
+
+$(".custom-select1").on("focusout", function () {
+  if (!selectFlag1) {
+    $(".custom-select-list1").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option1").on("mouseenter", function () {
+  selectFlag1 = true;
+});
+
+$(".custom-select-option1").on("mouseout", function () {
+  selectFlag1 = false;
+});
+
+$(".custom-select-option1").on("click", function () {
+  let value1 = $(this).attr("value");
+
+  $(".custom-select-text1").text($(this).text());
+  $(".select-origin1").val(value1);
+  $(".custom-select-list1").hide();
+
+  $(".select-origin1")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value1) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
+// ---------------------------------------------------------
+$(".custom-select2").on("focusin", function () {
+  $(".custom-select-list2").show();
+});
+
+$(".custom-select2").on("focusout", function () {
+  if (!selectFlag2) {
+    $(".custom-select-list2").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option2").on("mouseenter", function () {
+  selectFlag2 = true;
+});
+
+$(".custom-select-option2").on("mouseout", function () {
+  selectFlag2 = false;
+});
+
+$(".custom-select-option2").on("click", function () {
+  let value2 = $(this).attr("value");
+
+  $(".custom-select-text2").text($(this).text());
+  $(".select-origin2").val(value2);
+  $(".custom-select-list2").hide();
+
+  $(".select-origin2")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value2) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
+//---------------------------------------------------
+$(".custom-select3").on("focusin", function () {
+  $(".custom-select-list3").show();
+});
+
+$(".custom-select3").on("focusout", function () {
+  if (!selectFlag3) {
+    $(".custom-select-list3").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option3").on("mouseenter", function () {
+  selectFlag3 = true;
+});
+
+$(".custom-select-option3").on("mouseout", function () {
+  selectFlag3 = false;
+});
+
+$(".custom-select-option3").on("click", function () {
+  let value3 = $(this).attr("value");
+
+  $(".custom-select-text3").text($(this).text());
+  $(".select-origin3").val(value3);
+  $(".custom-select-list3").hide();
+
+  $(".select-origin3")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value3) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
