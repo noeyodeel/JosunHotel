@@ -212,10 +212,11 @@ li {
 .btnArea .btn-box:nth-child(3) span {
   padding-left: 0;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
 .btnArea .btn-box:nth-child(3) span:hover {
-  /* padding-left: 0; */
   color: black;
+  transition: all 0.5s ease-in-out;
 }
 .info_list {
   height: 300px;
