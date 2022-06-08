@@ -797,165 +797,7 @@ p.txtGuide:before,
   margin-right: 20px;
 }
 
-/* .property_area {
-  margin-top: 120px;
-}
-.property_area {
-  padding-bottom: 180px;
-} */
-/* .select_hotel {
-  z-index: 5;
-}
-
-.hotel_sel {
-  width: 150px;
-  height: 60px;
-  z-index: 1;
-  background: #fff;
-  font-size: 16px;
-  line-height: 58px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: left;
-  font-family: gothamL, notokrL;
-  color: #333;
-  vertical-align: middle;
-}
-.hotel_sel::after {
-  content: "";
-  display: inline-block;
-  margin-right: 2px;
-  width: 11px;
-  height: 7px;
-  background: url(../images/q&a_img/spr_form.png) no-repeat 0 -39px;
-}
-.open::after {
-  background-position: -11px -39px;
-}
-.select_hotel .option {
-  width: 150px;
-  height: 200px;
-  /* overflow: auto; 
-  border: solid 1px #000;
-  /* position: absolute;
-  right: 0; 
-  display: none;
-}
-.select_hotel .option::-webkit-scrollbar {
-  width: 10px;
-  height: 200px;
-}
-.select_hotel .option::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  background-clip: padding-box;
-  border-top: solid 10px #fff;
-  border-bottom: solid 10px #fff;
-}
-.select_hotel > .option::-webkit-scrollbar-track {
-  background-color: #fff;
-}
-.openOption {
-  display: block !important;
-}
-.option li > a {
-  height: 50px;
-  background: #fff;
-  padding: 0 20px;
-  color: #000;
-  font-family: notokrL, gothamL, playfair;
-  font-weight: 400;
-  font-size: 16px;
-  position: relative;
-  display: block;
-  text-align: left;
-  line-height: 50px;
-}
-.option li > a:hover {
-  background: #f7f7f7;
-} */
-/*------------------ 정관님꺼---------------------- */
-/* 
-.contentsArea {
-  margin-top: 120px;
-}
-.contentsArea .inner {
-  padding-bottom: 180px;
-}
-.searchSortArea {
-  text-align: right;
-  z-index: 5;
-}
-.contentsArea .searchSort {
-  width: 150px;
-  height: 60px;
-  z-index: 1;
-  background: #fff;
-  font-size: 16px;
-  line-height: 58px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: left;
-  font-family: gothamL, notokrL;
-  color: #333;
-  vertical-align: middle;
-}
-.contentsArea .searchSort::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -1px;
-  width: 11px;
-  height: 7px;
-  background: url(../images/package_img/spr_form.png) no-repeat 0 -39px;
-}
-.open:after {
-  background-position: -11px -39px !important;
-}
-.contentsArea .option {
-  width: 150px;
-  height: 200px;
-  overflow: auto;
-  border: solid 1px #000;
-  position: absolute;
-  right: 0;
-  display: none;
-}
-.contentsArea .option::-webkit-scrollbar {
-  width: 10px;
-  height: 200px;
-}
-.contentsArea .option::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  background-clip: padding-box;
-  border-top: solid 10px #fff;
-  border-bottom: solid 10px #fff;
-}
-.contentsArea .option::-webkit-scrollbar-track {
-  background-color: #fff;
-}
-.openOption {
-  display: block !important;
-}
-.contentsArea .option li > a {
-  height: 50px;
-  background: #fff;
-  padding: 0 20px;
-  color: #000;
-  font-family: notokrL, gothamL, playfair;
-  font-weight: 400;
-  font-size: 16px;
-  position: relative;
-  display: block;
-  text-align: left;
-  line-height: 50px;
-}
-.contentsArea .option li > a:hover {
-  background: #f7f7f7;
-} */
+/* 셀렉트 박스 */
 .hotel_sel2 {
   margin-left: 25px;
 }
@@ -994,9 +836,6 @@ p.txtGuide:before,
   height: 7px;
   background: url(../images/mypage_changeInfo_img/spr_form.png) no-repeat 0 -39px;
 }
-.open:after {
-  background-position: -11px -39px !important;
-}
 .selectArea .option {
   width: 100%;
   display: block;
@@ -1008,9 +847,6 @@ p.txtGuide:before,
   border-width: 0 1px 1px 1px;
   background: #fff;
   display: none;
-}
-.openOption {
-  display: block !important;
 }
 .selectArea .option li > a {
   height: 50px;
@@ -1042,11 +878,6 @@ p.txtGuide:before,
   background-color: #fff;
 }
 
-.emailArea .selectArea {
-  width: 244px;
-  display: inline-block;
-  margin-left: 18px;
-}
 .selectArea {
   width: 244px;
   display: inline-block;
@@ -1057,4 +888,11 @@ p.txtGuide:before,
 }
 .show {
   display: block;
+}
+
+.open:after {
+  background-position: -11px -39px !important;
+}
+.openOption {
+  display: block !important;
 }

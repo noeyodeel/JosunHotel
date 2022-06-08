@@ -132,6 +132,10 @@ header {
   margin: 0;
   padding: 15px;
 }
+.hotel_search > span {
+  font-size: 12px;
+  color: #bbbbbb;
+}
 .hotel_search:after {
   content: "";
   display: inline-block;
@@ -611,4 +615,193 @@ select:focus {
 }
 .social > li {
   margin: 5%;
+}
+
+/* 팝업_인터넷 */
+/* 팝업 스타일 */
+.modal-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.85;
+  z-index: 999;
+}
+.modal-wrap {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 603px;
+  background: #fff;
+  z-index: 1000;
+}
+.modal-title {
+  margin-top: 50px;
+  text-align: center;
+  font: 400 34px notokrR;
+  margin-bottom: 35px;
+}
+.hotelSelect > li > a {
+  display: block;
+  border: 1px solid #ccc;
+  margin: 10px 5px 0;
+  text-align: center;
+  padding: 14px 5px 20px;
+  width: 330px;
+  height: 92px;
+}
+.hotelSelect > li > a:hover {
+  background: #999;
+}
+.hotelSelect > li > a:hover span {
+  color: #fff;
+}
+.hotelTit_hover {
+  display: none;
+}
+
+.hotelSelect > .change > a:hover .hotelTit_hover {
+  display: block;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+}
+.hotelSelect > .change > a:hover .hotelTit_hover::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  margin-bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(45deg);
+}
+.hotelSelect > .change > a:hover .hotelTit {
+  display: none;
+}
+
+.hotelFindPop {
+  width: 1060px;
+  padding: 0px 70px 0px;
+}
+.hotelFindPop .hotelSelect {
+  margin-top: -10px;
+}
+ul:after,
+ol:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.hotelSelect > li {
+  float: left;
+  width: 33.3%;
+}
+.modal-close {
+  background: url(../images/main_img/btn_close_25x25.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  text-indent: -9999px;
+  z-index: 999;
+  box-sizing: border-box;
+  border: none;
+}
+.hotelTit {
+  color: black;
+  font-family: notokrL, gothamL, playfair;
+  font-weight: 400;
+  font-size: 18px;
+}
+/* 팝업창 안에 이미지 */
+.hotelLogo {
+  display: block;
+  width: 282px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: transparent;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.palace {
+  background-image: url(../images/main_img/img_logo_hotel_palace.png);
+}
+.hotelSelect > li a:hover .hotelLogo.palace {
+  background-image: url(../images/main_img/img_logo_hotel_palace_active.png);
+}
+
+.westinSeoul {
+  background-image: url(../images/main_img/logo_wchosunseoul.png);
+  width: 200px;
+  height: 50px;
+  margin-top: 5px;
+}
+.hotelSelect > li a:hover .hotelLogo.westinSeoul {
+  background-image: url(../images/main_img/img_logo_hotel_westin_seoul_active.png);
+  width: 282px;
+  height: 60px;
+  margin-top: 0px;
+}
+
+.westinBusan {
+  background-image: url(../images/main_img/img_logo_hotel_westin_busan.png);
+}
+.hotelSelect > li a:hover .hotelLogo.westinBusan {
+  background-image: url(../images/main_img/img_logo_hotel_westin_busan_active.png);
+}
+
+.grandBusan {
+  background-image: url(../images/main_img/img_logo_hotel_grand_busan.png);
+}
+.hotelSelect > li a:hover .hotelLogo.grandBusan {
+  background-image: url(../images/main_img/img_logo_hotel_grand_busan_active.png);
+}
+
+.grandJeju {
+  background-image: url(../images/main_img/img_logo_hotel_grand_jeju.png);
+}
+.hotelSelect > li a:hover .hotelLogo.grandJeju {
+  background-image: url(../images/main_img/img_logo_hotel_grand_jeju_active.png);
+}
+
+.lescape {
+  background-image: url(../images/main_img/img_logo_hotel_lescape.png);
+}
+.hotelSelect > li a:hover .hotelLogo.lescape {
+  background-image: url(../images/main_img/img_logo_hotel_lescape_active.png);
+}
+
+.gravityPangyo {
+  background-image: url(../images/main_img/img_logo_hotel_gravity_pangyo.png);
+}
+.hotelSelect > li a:hover .hotelLogo.gravityPangyo {
+  background-image: url(../images/main_img/img_logo_hotel_gravity_pangyo_active.png);
+}
+
+.sheratonSeoulstation {
+  background-image: url(../images/main_img/img_logo_hotel_sheraton_seoulstation.png);
+}
+.hotelSelect > li a:hover .hotelLogo.sheratonSeoulstation {
+  background-image: url(../images/main_img/img_logo_hotel_sheraton_seoulstation_active.png);
+}
+
+.sheratonMyeongdong {
+  background-image: url(../images/main_img/img_logo_hotel_sheraton_seoulmyeongdong.png);
+}
+.hotelSelect > li a:hover .hotelLogo.sheratonMyeongdong {
+  background-image: url(../images/main_img/img_logo_hotel_sheraton_seoulmyeongdong_active.png);
 }

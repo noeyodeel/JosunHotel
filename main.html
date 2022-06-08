@@ -37,12 +37,11 @@
           <div class="res_bar">
             <!-- select bar -->
             <div class="selectWrap selectArea area-custom-select ">
-              <div class="select select1 custom-select custom-select1" tabindex="0">  
+              <div class="select custom-select1" tabindex="0">  
                 <span class="custom-select-text1">ROOM</span>
               </div>
               <ul
-                class="custom-select-list1 option"
-                style="display: none">
+                class="custom-select-list1 option" style="display: none">
                 <!-- li의 value와 option의 value를 동일하게 해야 li 선택시 select도 같이 선택 됨 -->
                 <li value="ROOM" class="custom-select-option1">
                   <a>ROOM</a>
@@ -90,7 +89,7 @@
                     <button type="button" class="btnClose" onclick="closeCalendar()">닫기</button>
                   </div>
                   <!-- 캘린더 끝 -->
-
+            
                   <!-- 객실,인원 선택 -->
                   <div class="roomWrap" onclick="openRoomSelect();">
                     <a href="#none">
@@ -237,9 +236,9 @@
                 </button>
               </div>
               
-              <div class="promInt selectWrap selectArea area-custom-select" style="white-space: nowrap">
-                <div class="selectWrap promSel" first="true" >
-                  <div class="select select2 custom-select custom-select2" tabindex="0">  
+              <div class="promInt" style="white-space: nowrap">
+                <div class="selectArea area-custom-select promSel">
+                  <div class="select custom-select2" tabindex="0">  
                     <span class="custom-select-text2">Code Type</span>
                   </div>
                   <ul
@@ -256,7 +255,6 @@
                   <select
                     data-msg="Code Type"
                     id="promoType"
-                    data-direction="down"
                     hidden 
                   >
                     <option value="" hidden="" selected="">Code Type</option>
@@ -264,6 +262,7 @@
                     <option value="PROMOTION">PROMOTION</option>
                   </select>
                 </div>
+                
                 <input
                   type="text"
                   id="promoCode"
@@ -275,6 +274,7 @@
               </div>
               <!-- ROOM 선택 일 경우 끝 -->
             </div>
+          </div>
 
             <!-- <form name="res_date" action="값을 보낼 주소" method="post"> -->
             <!-- <input type="date" name="res_date" value="2022-05-20" /> -->
@@ -283,7 +283,7 @@
                   <img src="room/adult/children" alt="인원" />
                 </a>
               </div> -->
-          </div>
+          
           <div class="video_btn_area">
             <button type="button" id="btn-play"></button>
             <button type="button" id="btn-sound"></button>
@@ -609,10 +609,11 @@
         </ul>
       </div>
     </div>
-      
   </div>
     <script type="text/javascript" src="./lib/slick/slick.min.js"></script>
     <script type="text/javascript" src="./lib/slick/slick.js"></script>
+    <script src="./js/headerfooter.js"></script>
+    <script src="./js/main.js"></script>
     <script>
       var video = document.getElementById("mainvideo");
       var play = document.getElementById("btn-play");
@@ -712,6 +713,7 @@ $(function () {
       // .addIndicators() // add indicators (requires plugin)
       .addTo(controller);
   }
+
 });
 
 // 다른 방법
@@ -846,10 +848,12 @@ if (target!=roomWrap && target!=chkInout) {
     resbar.classList.remove("top73");
   }
 }
+
+
     </script>
   </body>
   <script>
     w3.includeHTML();
   </script>
-  <script src="./js/main.js"></script>
+
 </html>

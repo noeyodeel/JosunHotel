@@ -1,3 +1,80 @@
+let selectFlag1;
+let selectFlag2;
+// ---------------------------------------------------------
+$(".custom-select1").on("focusin", function () {
+  $(".custom-select-list1").show();
+});
+
+$(".custom-select1").on("focusout", function () {
+  if (!selectFlag1) {
+    $(".custom-select-list1").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option1").on("mouseenter", function () {
+  selectFlag1 = true;
+});
+
+$(".custom-select-option1").on("mouseout", function () {
+  selectFlag1 = false;
+});
+
+$(".custom-select-option1").on("click", function () {
+  let value1 = $(this).attr("value");
+
+  $(".custom-select-text1").text($(this).text());
+  $(".select-origin1").val(value1);
+  $(".custom-select-list1").hide();
+
+  $(".select-origin1")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value1) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
+// ---------------------------------------------------------
+$(".custom-select2").on("focusin", function () {
+  $(".custom-select-list2").show();
+});
+
+$(".custom-select2").on("focusout", function () {
+  if (!selectFlag2) {
+    $(".custom-select-list2").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option2").on("mouseenter", function () {
+  selectFlag2 = true;
+});
+
+$(".custom-select-option2").on("mouseout", function () {
+  selectFlag2 = false;
+});
+
+$(".custom-select-option2").on("click", function () {
+  let value2 = $(this).attr("value");
+
+  $(".custom-select-text2").text($(this).text());
+  $(".select-origin2").val(value2);
+  $(".custom-select-list2").hide();
+
+  $(".select-origin2")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value2) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
+
 //기본 스크롤 이벤트 제거
 window.addEventListener(
   "wheel",
@@ -285,11 +362,11 @@ function showLayer_menu() {
   $("#sub_menu").show();
   $("#close_offers").show();
 
-  //스크롤 막기
-  $("#wrap").on("scroll touchmove mousewheel", function (event) {
-    event.preventDefault();
-    return false;
-  });
+  // //스크롤 막기
+  // $("#wrap").on("scroll touchmove mousewheel", function (event) {
+  //   event.preventDefault();
+  //   return false;
+  // });
 
   // var el = $($(this).attr('href'));
   // if (!el.hasClass('open')) {
@@ -297,6 +374,15 @@ function showLayer_menu() {
   // } else {
   //   el.removeClass('open');
   // }
+  $("html, body").css({ overflow: "hidden", height: "100%" }); //  html,body의 scroll을 hidden시킴
+  // $("html, body").addClass("scroll_body");
+  $("body").on("scroll touchmove mousewheel", function (event) {
+    // 터치무브와 마우스휠 스크롤 방지
+    event.preventDefault();
+    event.stopPropagation();
+
+    return false;
+  });
 }
 function close_menu() {
   $("#fade").hide();
@@ -304,13 +390,10 @@ function close_menu() {
   document.getElementById("close_offers").style.width = "0px";
   document.getElementById("close_offers").style.right = "0px";
 
-  $(".wrap").off("scroll touchmove mousewheel");
+  $("html, body").css({ overflow: "scroll", height: "100%" }); //scroll hidden 해제
+  // $("html, body").removeClass("scroll_body");
+  $("body").off("scroll touchmove mousewheel"); // 터치무브 및 마우스휠 스크롤 가능
 }
-
-window.onload = function () {
-  // window.document.body.scroll = "yes";
-  window.document.getElementById("sub_menu").scroll = "yes";
-};
 
 function openCalendar() {
   // wrapWindowByMask_menu();
@@ -415,80 +498,3 @@ function count(type) {
 //   //스크롤 막기 해제
 //   $(".wrap").off("scroll touchmove mousewheel");
 // }
-
-let selectFlag1;
-let selectFlag2;
-// ---------------------------------------------------------
-$(".custom-select1").on("focusin", function () {
-  $(".custom-select-list1").show();
-});
-
-$(".custom-select1").on("focusout", function () {
-  if (!selectFlag1) {
-    $(".custom-select-list1").hide();
-  }
-  $(this).removeClass("selected");
-});
-
-$(".custom-select-option1").on("mouseenter", function () {
-  selectFlag1 = true;
-});
-
-$(".custom-select-option1").on("mouseout", function () {
-  selectFlag1 = false;
-});
-
-$(".custom-select-option1").on("click", function () {
-  let value1 = $(this).attr("value");
-
-  $(".custom-select-text1").text($(this).text());
-  $(".select-origin1").val(value1);
-  $(".custom-select-list1").hide();
-
-  $(".select-origin1")
-    .find("option")
-    .each(function (index, el) {
-      if ($(el).attr("value") == value1) {
-        $(el).attr("selected", "selected");
-      } else {
-        $(el).removeAttr("selected");
-      }
-    });
-});
-// ---------------------------------------------------------
-$(".custom-select2").on("focusin", function () {
-  $(".custom-select-list2").show();
-});
-
-$(".custom-select2").on("focusout", function () {
-  if (!selectFlag2) {
-    $(".custom-select-list2").hide();
-  }
-  $(this).removeClass("selected");
-});
-
-$(".custom-select-option2").on("mouseenter", function () {
-  selectFlag2 = true;
-});
-
-$(".custom-select-option2").on("mouseout", function () {
-  selectFlag2 = false;
-});
-
-$(".custom-select-option2").on("click", function () {
-  let value2 = $(this).attr("value");
-
-  $(".custom-select-text2").text($(this).text());
-  $(".select-origin2").val(value2);
-  $(".custom-select-list2").hide();
-
-  $(".select-origin2")
-    .find("option")
-    .each(function (index, el) {
-      if ($(el).attr("value") == value2) {
-        $(el).attr("selected", "selected");
-      } else {
-        $(el).removeAttr("selected");
-      }
-    });
-});

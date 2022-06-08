@@ -52,7 +52,8 @@ function categoryChange(e) {
     "홈페이지",
     "기타",
   ];
-  var place_popo_s = ["장소 선택", "객실", "더이터리", "더바", "기타"]; //포포인츠 서울역
+  //포포인츠 서울역
+  var place_popo_s = ["장소 선택", "객실", "더이터리", "더바", "기타"];
 
   var target = document.getElementsByClassName("custom-select-list2");
   console.log(e.value);

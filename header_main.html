@@ -5,44 +5,105 @@
             <ul class="top_bar clear">
                 <div class="left_topbar">
                     <li><a href="https://josunhotel.com/intro.do">JOSUN HOTELS & RESORTS</a></li>
-                    <li><a class="hotel_search" href="호텔찾기 팝업실행">호텔찾기</a></li>
-                    <li><button class="language_select" onclick="en_on();">KR</button></li>
-                    <li><div class="en" href="언어 선택" hidden>EN</div></li>
-                </div>
-                <!-- <div class="btnArea scroll">
-                  <a href="#" class="btn-box btn share-btn" onclick="return false">
-                    공유하기
-                  </a>
-                  <!-- 공유하기 버튼 모달창 시작 
-                  <div class="modal hidden">
-                    <div class="modal__overlay"></div>
-                    <div class="modal__content">
-                      <h2>공유하기</h2>
-                      <div class="modal_inner_wrap">
-                        <ul class="modal_inner">
-                          <li>
-                            <a href="#">카카오톡</a>
-                          </li>
-                          <li>
-                            <a href="#">이메일</a>
-                          </li>
-                          <li>
-                            <a href="#">URL복사</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <a class="modal_closeBtn"></a>
+                    <li>
+                      <!-- Content -->
+                      <section class="content">
+                          <div class="container">
+                              <!-- 팝업용 임시 버튼입니다. -->
+                              <div class="btn-box">
+                                <a class="hotel_search btn-open"  onclick="javascript:popOpen();"><span>호텔찾기</span></a>
+                              </div>
+                              <!-- //팝업용 임시 버튼입니다. -->
+                          </div>
+                      </section>
+                      <!-- //Content -->       
+                          <!-- modal 영역 -->
+                        <div class="modal-bg"></div>
+                        <div class="modal-wrap">
+                          <div class="hotelFindPop">
+                            <button class="modal-close" onClick="javascript:popClose();">닫기</button>
+                            <h2 class="modal-title">호텔찾기</h2>
+                            <ul class="hotelSelect">
+                              <li class="no_change">
+                                <a href="https://jpg.josunhotel.com/main.do" target="_blank" title="새창열림" >		
+                                <span class="hotelLogo palace" ></span>
+                                <span class="hotelTit">조선 팰리스</span>
+                                </a>
+                              </li>
+                              <li class="change">
+                                <a href="https://www.marriott.co.kr/hotels/travel/selwi-the-westin-chosun-seoul" target="_blank"title="새창열림">
+                                <span class="hotelLogo westinSeoul"></span>
+                                <span class="hotelTit">웨스틴 조선 서울</span>
+                                <span class="hotelTit_hover">메리어트 사이트로 이동</span>
+                                </a>
+                              </li>
+                              <li class="change">
+                                <a href="https://www.marriott.co.kr/hotels/travel/puswi-the-westin-chosun-busan" target="_blank"title="새창열림">
+                                  <span class="hotelLogo westinBusan"></span>
+                                  <span class="hotelTit">웨스틴 조선 부산</span>
+                                  <span class="hotelTit_hover">메리어트 사이트로 이동</span>
+                                </a>
+                              </li>
+                              <li class="no_change">
+                                <a href="https://gjb.josunhotel.com/main.do" target="_blank" title="새창열림" data-gtm-vis-has-fired-36519946_61="1">
+                                  <span class="hotelLogo grandBusan"></span>
+                                  <span class="hotelTit">그랜드 조선 부산</span>
+                                </a>
+                              </li>
+                              <li class="no_change">
+                                <a href="https://gjj.josunhotel.com/main.do" target="_blank" title="새창열림">
+                                  <span class="hotelLogo grandJeju"></span>
+                                  <span class="hotelTit">그랜드 조선 제주</span>
+                                </a>
+                              </li>
+                              <li class="no_change">
+                                <a href="https://lescapehotel.com/main" target="_blank" title="새창열림">
+                                  <span class="hotelLogo lescape"></span>
+                                  <span class="hotelTit">레스케이프 호텔</span>
+                                </a>
+                              </li>
+                              <li class="no_change">
+                                <a href="https://grp.josunhotel.com/main.do" target="_blank" title="새창열림">
+                                  <span class="hotelLogo gravityPangyo">
+                                  </span>
+                                  <span class="hotelTit">그래비티 서울 판교</span>
+                                </a>
+                              </li>
+                              <li class="change">
+                                <a href="https://www.marriott.co.kr/hotels/travel/selfp-four-points-seoul-namsan" target="_blank"title="새창열림">
+                                <span class="hotelLogo sheratonSeoulstation"></span>
+                                <span class="hotelTit">포포인츠 바이 쉐라톤 조선 서울역</span>
+                                <span class="hotelTit_hover">메리어트 사이트로 이동</span>
+                                </a>
+                              </li>
+                              <li class="change">
+                                <a href="https://www.marriott.co.kr/hotels/travel/selfd-four-points-seoul-myeongdong" target="_blank"title="새창열림">
+                                <span class="hotelLogo sheratonMyeongdong"></span>
+                                <span class="hotelTit">포포인츠 바이 쉐라톤 조선, 서울 명동</span>
+                                <span class="hotelTit_hover">메리어트 사이트로 이동</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                          <!-- //modal 영역 -->
+
+                          
+                    </li>
+                    <!-- 팝업창 끝 -->
+                        
+                          
+                          
+                          
+                        
+                        <li><button class="language_select" onclick="en_on();">KR</button></li>
+                        <li><div class="en" href="언어 선택" hidden>EN</div></li>
                     </div>
-                  </div>
-                  <!-- 공유하기 버튼 모달창 끝 
-                </div> -->
-                
-                <div class="right_topbar">
-                    <li><a href="로그인 링크">로그인</a></li>
-                    <li><a href="회원가입 링크">회원가입</a></li>
-                    <li><a href="로그아웃상태시 로그인창으로 이동(비회원), 로그인 시 마이페이지로 이동">예약확인</a></li>
-                    <li><a href="CLUB JOSUN으로 이동">멤버십</a></li>
-                </div>
+                    <div class="right_topbar">
+                        <li><a href="로그인 링크">로그인</a></li>
+                        <li><a href="회원가입 링크">회원가입</a></li>
+                        <li><a href="로그아웃상태시 로그인창으로 이동(비회원), 로그인 시 마이페이지로 이동">예약확인</a></li>
+                        <li><a href="CLUB JOSUN으로 이동">멤버십</a></li>
             </ul>
             <!-- 네비게이션 바 -->
             <nav>

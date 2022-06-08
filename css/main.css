@@ -1728,13 +1728,10 @@ dl {
   height: 7px;
   background: url(../images/mypage_changeInfo_img/spr_form.png) no-repeat 0 -39px;
 }
-.open:after {
-  background-position: -11px -39px !important;
-}
 .selectArea .option {
   width: 100%;
   display: block;
-  z-index: 3;
+  z-index: 50;
   height: 150px;
   overflow-y: scroll;
   position: absolute;
@@ -1743,9 +1740,7 @@ dl {
   background: #fff;
   display: none;
 }
-.openOption {
-  display: block !important;
-}
+
 .selectArea .option li > a {
   height: 50px;
   background: #fff;
@@ -1781,9 +1776,19 @@ dl {
   display: inline-block;
 }
 
+.open:after {
+  background-position: -11px -39px !important;
+}
+.openOption {
+  display: block !important;
+}
 .hide {
   display: none;
 }
 .show {
   display: block;
+}
+.scroll_body {
+  overflow: "hidden";
+  height: "100%";
 }
