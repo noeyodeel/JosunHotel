@@ -9,7 +9,7 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
     <script type="text/javascript" src="./lib/slick/slick.min.js"></script> 
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css" />
@@ -36,19 +36,34 @@
           ></video>
           <div class="res_bar">
             <!-- select bar -->
-            <div class="selectWrap" first="true">
+            <div class="selectWrap selectArea area-custom-select ">
+              <div class="select select1 custom-select custom-select1" tabindex="0">  
+                <span class="custom-select-text1">ROOM</span>
+              </div>
+              <ul
+                class="custom-select-list1 option"
+                style="display: none">
+                <!-- li의 value와 option의 value를 동일하게 해야 li 선택시 select도 같이 선택 됨 -->
+                <li value="ROOM" class="custom-select-option1">
+                  <a>ROOM</a>
+                </li>
+                <li value="DINING" class="custom-select-option1">
+                  <a>DINING</a>
+                </li>
+                <li value="MEMBERSHIP" class="custom-select-option1">
+                  <a>MEMBERSHIP</a>
+                </li>
+              </ul>
               <select
-                id="type_box"
-                data-height="150px"
-                data-direction="up"
-                name="selectVal"
+                name="select"
+                id="select"
+                class="select-origin1"
+                hidden
               >
-                <option value="">ROOM</option>
-                <option value="ROOM">ROOM</option>
+                <option value="ROOM"  selected="selected">ROOM</option>
                 <option value="DINING">DINING</option>
                 <option value="MEMBERSHIP">MEMBERSHIP</option>
               </select>
-              <button id="arrow__"></button>
             </div>
             <!-- select date -->
             <div class="selectDate">
@@ -215,21 +230,38 @@
                 </div>
               </form>
               <!-- 프로모션 코드 -->
-              <div class="promCode">
+
+              <div class="promCode" >
                 <button type="button" class="btnSC btnPromo" onclick="openPromotion();">
                   + 프로모션 코드
                 </button>
               </div>
-              <div class="promInt" style="white-space: nowrap">
-                <div class="selectWrap promSel" first="true">
+              
+              <div class="promInt selectWrap selectArea area-custom-select" style="white-space: nowrap">
+                <div class="selectWrap promSel" first="true" >
+                  <div class="select select2 custom-select custom-select2" tabindex="0">  
+                    <span class="custom-select-text2">Code Type</span>
+                  </div>
+                  <ul
+                    class="custom-select-list2 option"
+                    style="display: none">
+                    <!-- li의 value와 option의 value를 동일하게 해야 li 선택시 select도 같이 선택 됨 -->
+                    <li value="COMPANY" class="custom-select-option2">
+                      <a>COMPANY</a>
+                    </li>
+                    <li value="PROMOTION" class="custom-select-option2">
+                      <a>PROMOTION</a>
+                    </li>
+                  </ul>
                   <select
                     data-msg="Code Type"
                     id="promoType"
-                    data-direction="down" 
+                    data-direction="down"
+                    hidden 
                   >
                     <option value="" hidden="" selected="">Code Type</option>
-                    <option value="companyCode">COMPANY</option>
-                    <option value="promotionCode">PROMOTION</option>
+                    <option value="COMPANY">COMPANY</option>
+                    <option value="PROMOTION">PROMOTION</option>
                   </select>
                 </div>
                 <input
@@ -819,4 +851,5 @@ if (target!=roomWrap && target!=chkInout) {
   <script>
     w3.includeHTML();
   </script>
+  <script src="./js/main.js"></script>
 </html>

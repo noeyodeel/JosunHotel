@@ -415,3 +415,80 @@ function count(type) {
 //   //스크롤 막기 해제
 //   $(".wrap").off("scroll touchmove mousewheel");
 // }
+
+let selectFlag1;
+let selectFlag2;
+// ---------------------------------------------------------
+$(".custom-select1").on("focusin", function () {
+  $(".custom-select-list1").show();
+});
+
+$(".custom-select1").on("focusout", function () {
+  if (!selectFlag1) {
+    $(".custom-select-list1").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option1").on("mouseenter", function () {
+  selectFlag1 = true;
+});
+
+$(".custom-select-option1").on("mouseout", function () {
+  selectFlag1 = false;
+});
+
+$(".custom-select-option1").on("click", function () {
+  let value1 = $(this).attr("value");
+
+  $(".custom-select-text1").text($(this).text());
+  $(".select-origin1").val(value1);
+  $(".custom-select-list1").hide();
+
+  $(".select-origin1")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value1) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
+// ---------------------------------------------------------
+$(".custom-select2").on("focusin", function () {
+  $(".custom-select-list2").show();
+});
+
+$(".custom-select2").on("focusout", function () {
+  if (!selectFlag2) {
+    $(".custom-select-list2").hide();
+  }
+  $(this).removeClass("selected");
+});
+
+$(".custom-select-option2").on("mouseenter", function () {
+  selectFlag2 = true;
+});
+
+$(".custom-select-option2").on("mouseout", function () {
+  selectFlag2 = false;
+});
+
+$(".custom-select-option2").on("click", function () {
+  let value2 = $(this).attr("value");
+
+  $(".custom-select-text2").text($(this).text());
+  $(".select-origin2").val(value2);
+  $(".custom-select-list2").hide();
+
+  $(".select-origin2")
+    .find("option")
+    .each(function (index, el) {
+      if ($(el).attr("value") == value2) {
+        $(el).attr("selected", "selected");
+      } else {
+        $(el).removeAttr("selected");
+      }
+    });
+});
