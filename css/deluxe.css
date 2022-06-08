@@ -575,7 +575,16 @@ dt {
   width: 100%;
 } */
 .slide_wrapShow > ul > li {
-  position: absolute;
+  /* position: absolute; */
+  /* left: 0; */
+  /* width: 1400px; */
+  float: left;
+  display: table;
+}
+.slide_wrapShow > ul > li > img {
+  width: 1400px;
+  position: relative;
+  left: -40px;
 }
 .slide_wrapShow {
   position: relative;
@@ -583,14 +592,14 @@ dt {
   width: 1400px;
   overflow: hidden;
 }
-.deluxe_01 {
-  /* width: 5600px; */
+/* .deluxe_01 {
+  width: 5600px;
   position: absolute;
   left: 0;
   top: 0;
   transition: left 0.5s ease-out;
-}
-.deluxe_img1 {
+} */
+/* .deluxe_img1 {
   transform: translate3d(0px, 0px, 0px);
 }
 .deluxe_img2 {
@@ -601,7 +610,7 @@ dt {
 }
 .deluxe_img4 {
   transform: translate3d(4200px, 0px, 0px);
-}
+} */
 .btnNext {
   right: 40px;
   background-position-x: right;
@@ -622,4 +631,7 @@ dt {
 }
 /* .amanity_bathroom {
   border-bottom: none;
+} */
+/* .common_deluxeImg {
+  width: 1400px;
 } */
