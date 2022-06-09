@@ -506,7 +506,7 @@ dt {
 }
 .modal__content > div > ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-left: 0;
 }
 .modal_closeBtn {
@@ -626,8 +626,17 @@ dt {
   height: 100%;
   align-items: center;
 }
+.modal_inner li {
+  margin: 0 30px;
+}
 .res_fullWidth {
   width: 100%;
+}
+.subTxt {
+  position: absolute;
+  top: 93%;
+  right: 3%;
+  color: #fff;
 }
 /* .amanity_bathroom {
   border-bottom: none;

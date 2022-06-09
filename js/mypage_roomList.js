@@ -30,3 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .style.setProperty("--mypage-btn-position", "-26px");
   });
 });
+function en_on() {
+  $(".en").toggle();
+}

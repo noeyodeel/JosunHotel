@@ -18,3 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+function en_on() {
+  $(".en").toggle();
+}
