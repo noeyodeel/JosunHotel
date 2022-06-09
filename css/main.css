@@ -1792,3 +1792,69 @@ dl {
   overflow: "hidden";
   height: "100%";
 }
+
+/*----------------------- daterangepicker start -----------------------------*/
+.startDay {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin-left: 15px;
+  font: 600 20px/1 gothamM, notokrM;
+  width: 400px;
+}
+.daterangepicker {
+  width: 1400px;
+  height: 384px;
+  margin-top: -500px;
+  left: 12% !important;
+  top: 85.15% !important;
+  border-radius: 0;
+  border-bottom: 1px solid #999; /* 수정 */
+}
+.drp-selected,
+.applyBtn {
+  display: none !important;
+}
+.daterangepicker.show-calendar .drp-buttons {
+  /* display: none; */
+  position: absolute;
+  border: none;
+  right: 0;
+}
+
+.cancelBtn {
+  position: absolute;
+  display: block !important;
+  top: 12px;
+  right: 13px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  background: url(../images/main_img/btn_close_25x25.png) no-repeat 50% 50%;
+  border: none;
+  cursor: pointer;
+}
+.daterangepicker .drp-calendar {
+  margin-top: 70px;
+  width: 378px !important;
+  height: 336.2px;
+}
+.daterangepicker .drp-calendar.right {
+  width: 378px !important;
+  margin-right: 250px;
+  float: right;
+}
+.daterangepicker .drp-calendar.left {
+  width: 378px !important;
+  margin-left: 250px;
+  margin-right: 200px;
+}
+/* daterangepicker end*/
+.daterangepicker::after {
+  display: none;
+}
+.daterangepicker::before {
+  display: none;
+}

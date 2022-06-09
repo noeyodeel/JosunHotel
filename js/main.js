@@ -315,26 +315,26 @@ function setIndicatorRemoveWhite() {
 }
 
 // 달력 api 사용
-$("#calendar").fullCalendar({
-  googleCalendarApiKey: "AIzaSyAy-8yEFSYYeDLybdvsPPQ-Z0dRrf9Tiqk", //API key
-  header: {
-    left: "",
-    center: "prev, title, next",
-    // right: 'month, basicWeek, agendaDay'
-    right: "",
-  },
-  monthYearFormat: "MMMM YYYY",
-  ventLimit: true,
-  fixedWeekCount: false,
-  defaultView: "month",
-  dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
-  buttonText: {
-    today: "오늘",
-    month: "월별",
-    week: "주별",
-    day: "일별",
-  },
-});
+// $("#calendar").fullCalendar({
+//   googleCalendarApiKey: "AIzaSyAy-8yEFSYYeDLybdvsPPQ-Z0dRrf9Tiqk", //API key
+//   header: {
+//     left: "",
+//     center: "prev, title, next",
+//     // right: 'month, basicWeek, agendaDay'
+//     right: "",
+//   },
+//   monthYearFormat: "MMMM YYYY",
+//   ventLimit: true,
+//   fixedWeekCount: false,
+//   defaultView: "month",
+//   dayNamesShort: ["S", "M", "T", "W", "T", "F", "S"],
+//   buttonText: {
+//     today: "오늘",
+//     month: "월별",
+//     week: "주별",
+//     day: "일별",
+//   },
+// });
 function en_on() {
   $(".en").toggle();
 }
@@ -439,10 +439,30 @@ function closePromotion() {
   $(".promInt").css("width", "0px");
 }
 
-//동주오빠방식 적용?
-function count(type) {
+// 인원 추가(6개)
+function count1(type) {
   // 결과를 표시할 element
-  const resultElement = document.getElementById("result");
+  const resultElement = document.getElementById("result-1");
+
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+function count2(type) {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById("result-2");
 
   // 현재 화면에 표시된 값
   let number = resultElement.innerText;
@@ -451,7 +471,95 @@ function count(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+function count3(type) {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById("result-3");
+
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+function count4(type) {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById("result-4");
+
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+function count5(type) {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById("result-5");
+
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+function count6(type) {
+  // 결과를 표시할 element
+  const resultElement = document.getElementById("result-6");
+
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    if (number > 0) {
+      number = parseInt(number) - 1;
+    } else {
+      number = 0;
+    }
   }
 
   // 결과 출력
@@ -498,3 +606,114 @@ function count(type) {
 //   //스크롤 막기 해제
 //   $(".wrap").off("scroll touchmove mousewheel");
 // }
+
+// datepicker start
+// 설정
+// $(function () {
+//   // 시작일
+//   (from = $("#datepickerFrom")
+//     .datepicker({
+//       dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+//       monthNames: [
+//         "01",
+//         "02",
+//         "03",
+//         "04",
+//         "05",
+//         "06",
+//         "07",
+//         "08",
+//         "09",
+//         "10",
+//         "11",
+//         "12",
+//       ],
+//       maxDate: "+1y",
+//       minDate: "-1y",
+//       showMonthAfterYear: true,
+//       dateFormat: "yy.mm.dd",
+//     })
+//     .on("change", function () {
+//       // 선택된 시작일 이전은 종료일에서 선택 불가
+//       to.datepicker("option", "minDate", getDate(from));
+//     })),
+//     // 종료일
+//     (to = $("#datepickerTo")
+//       .datepicker({
+//         dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+//         monthNames: [
+//           "01",
+//           "02",
+//           "03",
+//           "04",
+//           "05",
+//           "06",
+//           "07",
+//           "08",
+//           "09",
+//           "10",
+//           "11",
+//           "12",
+//         ],
+//         maxDate: "+1y",
+//         minDate: "-1y",
+//         showMonthAfterYear: true,
+//         dateFormat: "yy.mm.dd",
+//       })
+//       .on("change", function () {
+//         // 선택된 종료일 이후는 시작일에서 선택 불가
+//         from.datepicker("option", "maxDate", getDate(to));
+//       }));
+
+//   // 선택된 날짜 가져오기
+//   function getDate(element) {
+//     var date;
+//     try {
+//       date = element.val();
+//     } catch (error) {
+//       date = null;
+//     }
+//     return date;
+//   }
+// });
+
+// // datepicker end
+// // 검색 조건 입력후 css
+// $("#datepickerFrom").change(() => {
+//   if ($("#datepickerFrom").val() != null) {
+//     $("#datepickerFrom").css("color", "#000");
+//   }
+// });
+// $("#datepickerTo").change(() => {
+//   if ($("#datepickerTo").val() != null) {
+//     $("#datepickerTo").css("color", "#000");
+//   }
+// });
+// $("#seach").change(() => {
+//   if ($("#seach").val() != null) {
+//     $("#seach").css("color", "#000");
+//   }
+// });
+
+// $("#datepickerFrom").daterangepicker({
+//   datepickerOptions: {
+//     numberOfMonths: 2,
+//   },
+// });
+$('input[name="dates"]').daterangepicker();
+// $("#datepickerFrom").daterangepicker();
+
+// $(".dates").daterangepicker();
+moment.locale("ko"); //언어를 한국어로 설정함!
+// $(".startDay").daterangepicker({
+//   timePicker: false,
+//   timePicker24Hour: true,
+//   timePickerSeconds: true,
+//   singleDatePicker: false,
+//   locale: {
+//     format: "YYYY-MM-DD",
+//     separator: " ~ ",
+//     applyLabel: "적용",
+//     cancelLabel: "닫기",
+//   },
+// });

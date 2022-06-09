@@ -9,8 +9,10 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery-ui-daterangepicker-0.6.0-beta.1/moment-with-locales.js"></script>
     <!-- <script src="./js/main.js"></script> -->
     <script type="text/javascript" src="./lib/slick/slick.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css" />
     <!-- <link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css" /> -->
@@ -19,6 +21,10 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
@@ -74,20 +80,32 @@
                     <a href="#">
                       <strong class="tit">CHECK IN / OUT</strong>
                       <!-- 현재날짜로 변경해야함 -->
-                      <span class="date" id="dateTextProp"
-                        ><b>2022.05.15&nbsp;</b
+                      <input
+                        type="text"
+                        class="startDay"
+                        placeholder="YYYY-MM-DD"
+                        name="dates"
+                        readonly
+                      />
+                      <!-- <span class="date" id="dateTextProp">
+                        <b>2022.05.15&nbsp;</b
                         >일<b>&nbsp;-&nbsp;2022.05.16&nbsp;</b>월<span
                           ><b>1</b>박</span
                         >
-                      </span>
+                      </span> -->
                     </a>
                   </div>
                   <!-- 캘린더 -->
-                  <div class="mainCalendar clearCont opened" style="display: block;"> <!-- 메인 달력의 경우 요일 표시 S, M, T, W, T, F, S -->
-                    <div class="calContainer calendarS hasDatepicker" id="dp1654260975016"><div class="calWrap ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi" style="display: block;"><div class="ui-datepicker-group calInner calLeft"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-left"><button class="btnMonth prevMonth ui-corner-all" type="button" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></button><strong class="calMonth"><span class="ui-datepicker-year">2022</span>.<span class="ui-datepicker-month">10</span></strong></div><table class="calendar"><thead><tr><th scope="col" class="fRed"><span title="Sunday">S</span></th><th scope="col"><span title="Monday">M</span></th><th scope="col"><span title="Tuesday">T</span></th><th scope="col"><span title="Wednesday">W</span></th><th scope="col"><span title="Thursday">T</span></th><th scope="col"><span title="Friday">F</span></th><th scope="col"><span title="Saturday">S</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">1</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">8</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">15</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">22</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">29</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2022"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-group calInner calRight"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right"><button class="btnMonth nextMonth ui-corner-all" type="button" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></button><strong class="calMonth"><span class="ui-datepicker-year">2022</span>.<span class="ui-datepicker-month">11</span></strong></div><table class="calendar"><thead><tr><th scope="col" class="fRed"><span title="Sunday">S</span></th><th scope="col"><span title="Monday">M</span></th><th scope="col"><span title="Tuesday">T</span></th><th scope="col"><span title="Wednesday">W</span></th><th scope="col"><span title="Thursday">T</span></th><th scope="col"><span title="Friday">F</span></th><th scope="col"><span title="Saturday">S</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">5</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">12</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">19</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">26</a></td></tr><tr><td class=" fRed " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2022"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="ui-datepicker-row-break"></div></div></div>
-                    <!-- <input type="button" class="btnClose" onclick="closeCalendar();"> -->
+                  <!-- <div class="mainCalendar clearCont opened" style="display: block;"> 
+                    <div class="give_margin">
+                      <div
+                  class="startDay dates"
+                  name="dates"></div>
+                
+                    </div>
+                    
                     <button type="button" class="btnClose" onclick="closeCalendar()">닫기</button>
-                  </div>
+                  </div> -->
                   <!-- 캘린더 끝 -->
             
                   <!-- 객실,인원 선택 -->
@@ -117,26 +135,26 @@
                                 data-target="adult"
                               >
                               <input type='button'
-                                    class='btnDown'
-                                    onclick='count("minus")'
+                                    class='btnDown btnDown-1'
+                                    onclick='count1("minus")'
                                     />성인
-                              <div id='result'>0</div>
+                              <div id='result-1'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'/>
+                              class="btnUp btnUp-1"
+                                    onclick='count1("plus")'/>
                             </div>
                             <div
                                 class="numPeople"
                                 data-target="children"
                               >
                               <input type='button'
-                              class="btnDown"
-                                    onclick='count("minus")'
+                              class="btnDown btnDown-2"
+                                    onclick='count2("minus")'
                                   />어린이
-                              <div id='result'>0</div>
+                              <div id='result-2'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'
+                              class="btnUp btnUp-2"
+                                    onclick='count2("plus")'
                                     />
                             </div>
                           </div>
@@ -151,13 +169,13 @@
                                 data-target="adult"
                               >
                               <input type='button'
-                              class="btnDown"
-                                    onclick='count("minus")'
+                              class="btnDown btnDown-3"
+                                    onclick='count3("minus")'
                                     />성인
-                              <div id='result'>0</div>
+                              <div id='result-3'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'
+                              class="btnUp btnUp-3"
+                                    onclick='count3("plus")'
                                     />
                             </div>
                             <div
@@ -165,13 +183,13 @@
                                 data-target="children"
                               >
                               <input type='button'
-                              class="btnDown"
-                                    onclick='count("minus")'
+                              class="btnDown btnDown-4"
+                                    onclick='count4("minus")'
                                     />어린이
-                              <div id='result'>0</div>
+                              <div id='result-4'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'
+                              class="btnUp btnUp-4"
+                                    onclick='count4("plus")'
                                 />
                             </div>
                             
@@ -186,13 +204,13 @@
                                 data-target="adult"
                               >
                               <input type='button'
-                              class="btnDown"
-                                    onclick='count("minus")'
+                              class="btnDown btnDown-5"
+                                    onclick='count5("minus")'
                                     />성인
-                              <div id='result'>0</div>
+                              <div id='result-5'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'
+                              class="btnUp btnUp-5"
+                                    onclick='count5("plus")'
                                     />
                             </div>
                             <div
@@ -200,13 +218,13 @@
                                 data-target="children"
                               >
                               <input type='button'
-                              class="btnDown"
-                                    onclick='count("minus")'
+                              class="btnDown btnDown-6"
+                                    onclick='count6("minus")'
                                     />어린이
-                              <div id='result'>0</div>
+                              <div id='result-6'>0</div>
                               <input type='button'
-                              class="btnUp"
-                                    onclick='count("plus")'
+                              class="btnUp btnUp-6"
+                                    onclick='count6("plus")'
                                     />
                             </div>
                             
@@ -612,6 +630,7 @@
   </div>
     <script type="text/javascript" src="./lib/slick/slick.min.js"></script>
     <script type="text/javascript" src="./lib/slick/slick.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="./js/headerfooter.js"></script>
     <script src="./js/main.js"></script>
     <script>
@@ -755,62 +774,85 @@ $(function () {
 });
 
   var body = document.querySelector("body");
-body.addEventListener("click", clickBodyEvent1);
-// body.addEventListener("click", clickBodyEvent2);
+  body.addEventListener("click", clickBodyEvent1);
+  body.addEventListener("click", clickBodyEvent2);
+
+
 
 function clickBodyEvent1(event) {
   var target = event.target;
   console.log(target);
-  // 체크인 아웃 함수
+  // 체크인 아웃 함수(달력)
   var reviewWriteInfo = event.currentTarget.querySelector(".mainCalendar");
   var chkInout = event.currentTarget.querySelector(".chkInout");
   var resbar = event.currentTarget.querySelector(".res_bar");
-  var resbar2 = document.getElementsByClassName("res_bar");
+  // var resbar2 = document.getElementsByClassName("res_bar");
 
-  var spanTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("span");
-  var bTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("b");
-  var strongTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("strong");
-  var aTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("a");
-
+  // var spanTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("span");
+  // var bTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("b");
+  // var strongTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("strong");
+  // var aTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("a");
+  // var divTags = event.currentTarget.querySelector(".mainCalendar").querySelectorAll("div");
+  // var cal_aTags = event.currentTarget.querySelector(".mainCalendar").querySelectorAll("a");
+  // var cal_divTags = event.currentTarget.querySelector(".calWrap").querySelectorAll("div");
+  var startDay=event.currentTarget.querySelector(".startDay");
+// var bodytag=event.currentTarget.querySelectorAll("body");
   // 인원 선택 함수
   var roomWrap = event.currentTarget.querySelector(".roomWrap");
   var mainRoom = event.currentTarget.querySelector(".mainRoom");  
+  var roomContainer = event.currentTarget.querySelector(".roomContainer").querySelectorAll("section");
   var dlTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dl");
   var ddTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dd");
   var dtTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dt");
+  var rc_divTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("div");
+
+  var rc_strongTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("strong");
+  var rc_inputTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("input");
+  var rc_ulTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("ul");
+  var rc_liTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("li");
 
   console.log(target);
 
-  if (target==chkInout) {
+  if (target==chkInout || target == body) {
     resbar.classList.add("top73");
 }
   
 //체크인아웃 클릭시
   if (target!=chkInout) {
   console.log("하이2")
-    // 1. mainCalendar 영역 이면 pass
-    if (target == event.currentTarget.querySelector(".mainCalendar")) return;
-    if (target == event.currentTarget.querySelector(".chkInout")) return;
+    // // 1. checkinout 영역 이면 pass
+    // if (target == event.currentTarget.querySelector(".mainCalendar")) return;
+    // if (target == event.currentTarget.querySelector(".chkInout")) return;
 
-    // 2. mainCalendar 영역 내 span이면 pass
-     for(var i=0; i<spanTags.length; i++) {
-         if( spanTags[i] == target ) return ;
-     }
-    // 3. mainCalendar 영역 내 b이면 pass
-     for(var i=0; i<bTags.length; i++) {
-         if( bTags[i] == target ) return ;
-     }
-     // 4. mainCalendar 영역 내 strong이면 pass
-     for(var i=0; i<strongTags.length; i++) {
-         if( strongTags[i] == target ) return ;
-     }
+    // // 2. checkinout 영역 내 span이면 pass
+    //  for(var i=0; i<spanTags.length; i++) {
+    //      if( spanTags[i] == target ) return ;
+    //  }
+    // // 3. checkinout 영역 내 b이면 pass
+    //  for(var i=0; i<bTags.length; i++) {
+    //      if( bTags[i] == target ) return ;
+    //  }
+    //  // 4. checkinout 영역 내 strong이면 pass
+    //  for(var i=0; i<strongTags.length; i++) {
+    //      if( strongTags[i] == target ) return ;
+    //  }
 
-     // 5. mainCalendar 영역 내 a이면 pass
-     for(var i=0; i<aTags.length; i++) {
-         if( aTags[i] == target ) return ;
-     }
+    //  // 5. checkinout 영역 내 a이면 pass
+    //  for(var i=0; i<aTags.length; i++) {
+    //      if( aTags[i] == target ) return ;
+    //  }
 
-    // 6. res_bar 영역이면 pass
+    //  // 6. mainCalendar 영역 내 div면 pass
+    //  for(var i=0; i<divTags.length; i++) {
+    //      if( divTags[i] == target ) return ;
+    //  }
+
+    //  // 7. calWrap 영역 내 div면 pass
+    //  for(var i=0; i<cal_divTags.length; i++) {
+    //      if( cal_divTags[i] == target ) return ;
+    //  }
+
+    // 8. res_bar 영역이면 pass
     if (target == event.currentTarget.querySelector(".res_bar")) return;
 
     reviewWriteInfo.style.height = "0px";
@@ -825,21 +867,44 @@ if (target!=roomWrap && target!=chkInout) {
   console.log("하이3") 
     // 1. mainRoom 영역 이면 pass
     if (target == event.currentTarget.querySelector(".mainRoom")) return;
+    if (target == event.currentTarget.querySelector(".roomContainer")) return;
+    
 
     // 2. roomWrap 영역 내 dl이면 pass
      for(var i=0; i<dlTags.length; i++) {
          if( dlTags[i] == target ) return ;
      }
-    // 3. mainRoom 영역 내 dd이면 pass
+    // 3. roomWrap 영역 내 dd이면 pass
      for(var i=0; i<ddTags.length; i++) {
          if( ddTags[i] == target ) return ;
      }
-     // 4. mainRoom 영역 내 dt이면 pass
+     // 4. roomWrap 영역 내 dt이면 pass
      for(var i=0; i<dtTags.length; i++) {
          if( dtTags[i] == target ) return ;
      }
+    // 5. roomContainer 영역 내 div면 pass
+    for(var i=0; i<rc_divTags.length; i++) {
+         if( rc_divTags[i] == target ) return ;
+     }
+     // 6. roomContainer 영역 내 strong이면 pass
+     for(var i=0; i<rc_strongTags.length; i++) {
+         if( rc_strongTags[i] == target ) return ;
+     }
 
-    // 5. res_bar 영역이면 pass
+     // 7. roomContainer 영역 내 input이면 pass
+     for(var i=0; i<rc_inputTags.length; i++) {
+         if( rc_inputTags[i] == target ) return ;
+     }
+     // 8. roomContainer 영역 내 ul이면 pass
+     for(var i=0; i<rc_ulTags.length; i++) {
+         if( rc_ulTags[i] == target ) return ;
+     }
+     // 9. roomContainer 영역 내 li면 pass
+     for(var i=0; i<rc_liTags.length; i++) {
+         if( rc_liTags[i] == target ) return ;
+     }
+
+    // 10. res_bar 영역이면 pass
     if (target == event.currentTarget.querySelector(".res_bar")) return;
 
     mainRoom.style.height = "0px";
@@ -848,7 +913,6 @@ if (target!=roomWrap && target!=chkInout) {
     resbar.classList.remove("top73");
   }
 }
-
 
     </script>
   </body>
