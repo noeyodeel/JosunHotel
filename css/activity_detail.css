@@ -218,7 +218,7 @@ button {
 /* eservationArea fix effect start */
 .fixed {
   position: fixed;
-  top: 79px;
+  top: 78px;
 }
 .marginForFixed {
   margin-top: 210px !important;
@@ -511,4 +511,11 @@ button {
   position: absolute;
   top: 20px;
   right: 0;
+}
+/* header 조정부분 */
+header {
+  position: absolute;
+}
+nav {
+  background-color: #fff;
 }

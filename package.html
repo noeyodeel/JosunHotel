@@ -64,20 +64,26 @@
         <div class="inner">
           <div class="searchSortArea">
             <select name="searchSort" id="searchSort" hidden>
-              <option value="01" selected>추천 순</option>
-              <option value="02">인기 순</option>
-              <option value="03">최신 순</option>
-              <option value="04">가격 낮은 순</option>
-              <option value="05">가격 높은 순</option>
+              <option value="추천 순" selected>추천 순</option>
+              <option value="인기 순">인기 순</option>
+              <option value="최신 순">최신 순</option>
+              <option value="가격 낮은 순">가격 낮은 순</option>
+              <option value="가격 높은 순">가격 높은 순</option>
             </select>
-            <button class="searchSort">추천 순</button>
-            <div class="option">
+            <button
+              class="searchSort"
+              id="searchSortBtn"
+              onclick="createMenu()"
+            >
+              추천 순
+            </button>
+            <div class="option" id="option">
               <ul>
-                <li><a>추천 순</a></li>
-                <li><a>인기 순</a></li>
-                <li><a>최신 순</a></li>
-                <li><a>가격 낮은 순</a></li>
-                <li><a>가격 높은 순</a></li>
+                <li><a class="optionList">추천 순</a></li>
+                <li><a class="optionList">인기 순</a></li>
+                <li><a class="optionList">최신 순</a></li>
+                <li><a class="optionList">가격 낮은 순</a></li>
+                <li><a class="optionList">가격 높은 순</a></li>
               </ul>
             </div>
           </div>

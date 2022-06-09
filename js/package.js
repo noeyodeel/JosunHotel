@@ -120,14 +120,52 @@ $("#keywordOnOff").click(() => {
 });
 
 // 검색결과 정렬 순서 선택창 open/close
-$("button.searchSort").click(() => {
-  if (!$("button.searchSort").hasClass("open")) {
-    $("button.searchSort").addClass("open");
-    $(".option").addClass("openOption");
+// $("button.searchSort").click(() => {
+//   if (!$("button.searchSort").hasClass("open")) {
+//     $("button.searchSort").addClass("open");
+//     $(".option").addClass("openOption");
+//   } else {
+//     $("button.searchSort").removeClass("open");
+//     $(".option").removeClass("openOption");
+//   }
+// });
+const createMenu = () => {
+  let searchSortBtn = document.getElementById("searchSortBtn");
+  let option = document.getElementById("option");
+
+  if (!searchSortBtn.classList.contains("open")) {
+    searchSortBtn.classList.add("open");
+    option.classList.add("openOption");
   } else {
-    $("button.searchSort").removeClass("open");
-    $(".option").removeClass("openOption");
+    searchSortBtn.classList.remove("open");
+    option.classList.remove("openOption");
   }
+
+  var body = document.querySelector("body");
+  if (searchSortBtn.classList.contains("open")) {
+    body.addEventListener("click", clickBodyEvent);
+  }
+  function clickBodyEvent(event) {
+    var target = event.target;
+
+    if (
+      !event.currentTarget.querySelector(".searchSort").contains(target) &&
+      !event.currentTarget.querySelector(".option").contains(target)
+    ) {
+      searchSortBtn.classList.remove("open");
+      option.classList.remove("openOption");
+    }
+  }
+};
+
+$(() => {
+  $("#option .optionList").click((e) => {
+    $("#searchSort").val(e.currentTarget.innerText).prop("selected", true);
+    console.log($("#searchSort option:selected").val());
+    $("#searchSortBtn").text(e.currentTarget.innerText);
+    searchSortBtn.classList.remove("open");
+    option.classList.remove("openOption");
+  });
 });
 
 // 컨텐츠 리스트
@@ -168,9 +206,7 @@ const searchContents = (countsOfContentsOnView) => {
     <img src="${contents[i].img}" alt="이미지없음" />
   </div>
   <div class="keyword">
-    <span>여름</span>
-    <span>EARLY BIRD</span>
-    <span>TIME SALE</span>
+    ${contents[i].keywords}
   </div>
   <div class="title"><p>${contents[i].title}</p></div>
   <div class="txt">

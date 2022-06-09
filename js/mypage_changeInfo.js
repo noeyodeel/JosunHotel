@@ -1,19 +1,61 @@
 // select
 const selectOpenClose = (li) => {
-  if (!$(li + " button.select").hasClass("open")) {
-    $(li + " button.select").addClass("open");
-    $(li + " .option").addClass("openOption");
+  let selectBtn = document.querySelector(li + " button.select");
+  let option = document.querySelector(li + " .option");
+  if (!selectBtn.classList.contains("open")) {
+    selectBtn.classList.add("open");
+    option.classList.add("openOption");
   } else {
-    $(li + " button.select").removeClass("open");
-    $(li + " .option").removeClass("openOption");
+    selectBtn.classList.remove("open");
+    option.classList.remove("openOption");
   }
 };
+// 대상 이외 부분 클릭시
+function clickBodyEventNationality(event) {
+  if (document.querySelector("#selectBtn").classList.contains("open")) {
+    var target = event.target;
+    if (
+      !document.querySelector("#selectBtn").contains(target) &&
+      !document.querySelector("#option").contains(target)
+    ) {
+      document.querySelector("#selectBtn").classList.remove("open");
+      document.querySelector("#option").classList.remove("openOption");
+    }
+  }
+}
+function clickBodyEventEmail(event) {
+  if (document.querySelector("#selectEmailBtn").classList.contains("open")) {
+    var target = event.target;
+    if (
+      !document.querySelector("#selectEmailBtn").contains(target) &&
+      !document.querySelector("#optionEmail").contains(target)
+    ) {
+      document.querySelector("#selectEmailBtn").classList.remove("open");
+      document.querySelector("#optionEmail").classList.remove("openOption");
+    }
+  }
+}
 
-$(".nationalityArea button.select").click(() => {
+$(document).on("click", ".nationalityArea button.select", function () {
   selectOpenClose(".nationalityArea");
 });
-$(".emailArea button.select").click(() => {
+window.addEventListener("click", clickBodyEventNationality);
+$(".nationalityArea .optionList").click((e) => {
+  $("#select").val(e.currentTarget.innerText).prop("selected", true);
+  $("#selectBtn").text(e.currentTarget.innerText);
+  document.querySelector("#selectBtn").classList.remove("open");
+  document.querySelector("#option").classList.remove("openOption");
+});
+
+$(document).on("click", ".emailArea button.select", function () {
   selectOpenClose(".emailArea");
+});
+window.addEventListener("click", clickBodyEventEmail);
+$(".emailArea .optionList").click((e) => {
+  $("#selectEmail").val(e.currentTarget.innerText).prop("selected", true);
+  $("#selectEmailBtn").text(e.currentTarget.innerText);
+  document.querySelector("#selectEmailBtn").classList.remove("open");
+  document.querySelector("#optionEmail").classList.remove("openOption");
 });
 
 // 약관동의

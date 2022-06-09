@@ -116,15 +116,17 @@
                         <option value="05">과들루프[GP]</option>
                         <option value="00" selected>대한민국[KR]</option>
                       </select>
-                      <button type="button" class="select">대한민국[KR]</button>
-                      <div class="option">
+                      <button type="button" id="selectBtn" class="select">
+                        대한민국[KR]
+                      </button>
+                      <div class="option" id="option">
                         <ul>
-                          <li><a>가나[GH]</a></li>
-                          <li><a>가봉[GA]</a></li>
-                          <li><a>가이아나[GY]</a></li>
-                          <li><a>감비아[GM]</a></li>
-                          <li><a>과들루프[GP]</a></li>
-                          <li><a>대한민국[KR]</a></li>
+                          <li><a class="optionList">가나[GH]</a></li>
+                          <li><a class="optionList">가봉[GA]</a></li>
+                          <li><a class="optionList">가이아나[GY]</a></li>
+                          <li><a class="optionList">감비아[GM]</a></li>
+                          <li><a class="optionList">과들루프[GP]</a></li>
+                          <li><a class="optionList">대한민국[KR]</a></li>
                         </ul>
                       </div>
                     </div>
@@ -231,7 +233,7 @@
                         value="email2.com"
                       />
                       <div class="selectArea">
-                        <select name="select" id="select" hidden>
+                        <select name="select" id="selectEmail" hidden>
                           <option value="01" selected>직접 입력</option>
                           <option value="02">naver.com</option>
                           <option value="03">hanmail.net</option>
@@ -239,15 +241,21 @@
                           <option value="05">nate.com</option>
                           <option value="06">gmail.com</option>
                         </select>
-                        <button type="button" class="select">직접 입력</button>
-                        <div class="option">
+                        <button
+                          type="button"
+                          class="select"
+                          id="selectEmailBtn"
+                        >
+                          직접 입력
+                        </button>
+                        <div class="option" id="optionEmail">
                           <ul>
-                            <li><a>직접 입력</a></li>
-                            <li><a>naver.com</a></li>
-                            <li><a>hanmail.net</a></li>
-                            <li><a>hotmailcom</a></li>
-                            <li><a>nate.com</a></li>
-                            <li><a>gmail.com</a></li>
+                            <li><a class="optionList">직접 입력</a></li>
+                            <li><a class="optionList">naver.com</a></li>
+                            <li><a class="optionList">hanmail.net</a></li>
+                            <li><a class="optionList">hotmailcom</a></li>
+                            <li><a class="optionList">nate.com</a></li>
+                            <li><a class="optionList">gmail.com</a></li>
                           </ul>
                         </div>
                       </div>
