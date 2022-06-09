@@ -326,3 +326,6 @@ table {
 .btnArea a, .btnArea button {
     margin: 0 10px;
 }
+/* .toggleCont .toggleInner {
+    display: block !important;
+} */
