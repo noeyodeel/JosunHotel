@@ -16,11 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         if (conFirm === false) {
           e.target.style.setProperty("--main-bg-position", "-48px");
+          e.target.style.setProperty("--main-bg-position2", "0px");
         }
       }, 300);
     });
   }
 });
+
 function en_on() {
   $(".en").toggle();
 }
