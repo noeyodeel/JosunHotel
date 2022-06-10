@@ -75,135 +75,158 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 객실 어메니티 버튼 클릭시 리스트 시작
   // 객실 4가지 버튼들
-  const bathroom_btn = document.querySelector(".amanity_bathroom");
-  const bedroom_btn = document.querySelector(".amanity_bedroom");
-  const minibar_btn = document.querySelector(".amanity_minibar");
-  const closet_btn = document.querySelector(".amanity_closet");
+  // const bathroom_btn = document.querySelector(".amanity_bathroom");
+  // const bedroom_btn = document.querySelector(".amanity_bedroom");
+  // const minibar_btn = document.querySelector(".amanity_minibar");
+  // const closet_btn = document.querySelector(".amanity_closet");
 
-  // 객실 리스트들
-  const bathroom_list = document.querySelector(".bath_room_list");
-  const bedroom_list = document.querySelector(".bed_room_list");
-  const minibar_list = document.querySelector(".mini_bar_list");
-  const closet_list = document.querySelector(".closet_list");
-  // 첫번째 bath room 버튼 클릭했을때
-  document
-    .querySelector(".amanity_bathroom")
-    .addEventListener("click", function () {
-      bathroom_list.style.display = "block";
-      bedroom_list.style.display = "none";
-      minibar_list.style.display = "none";
-      closet_list.style.display = "none";
+  // // 객실 리스트들
+  // const bathroom_list = document.querySelector(".bath_room_list");
+  // const bedroom_list = document.querySelector(".bed_room_list");
+  // const minibar_list = document.querySelector(".mini_bar_list");
+  // const closet_list = document.querySelector(".closet_list");
+  // // 첫번째 bath room 버튼 클릭했을때
+  // document
+  //   .querySelector(".amanity_bathroom")
+  //   .addEventListener("click", function () {
+  //     bathroom_list.style.display = "block";
+  //     bedroom_list.style.display = "none";
+  //     minibar_list.style.display = "none";
+  //     closet_list.style.display = "none";
 
-      bathroom_btn.style.borderTop = "1px solid black";
-      bathroom_btn.style.borderLeft = "1px solid black";
-      bathroom_btn.style.borderRight = "1px solid black";
-      bathroom_btn.style.borderBottom = "none";
+  //     bathroom_btn.style.borderTop = "1px solid black";
+  //     bathroom_btn.style.borderLeft = "1px solid black";
+  //     bathroom_btn.style.borderRight = "1px solid black";
+  //     bathroom_btn.style.borderBottom = "none";
 
-      bedroom_btn.style.borderTop = "none";
-      bedroom_btn.style.borderLeft = "none";
-      bedroom_btn.style.borderRight = "none";
-      bedroom_btn.style.borderBottom = "1px solid black";
+  //     bedroom_btn.style.borderTop = "none";
+  //     bedroom_btn.style.borderLeft = "none";
+  //     bedroom_btn.style.borderRight = "none";
+  //     bedroom_btn.style.borderBottom = "1px solid black";
 
-      minibar_btn.style.borderTop = "none";
-      minibar_btn.style.borderRight = "none";
-      minibar_btn.style.borderLeft = "none";
-      minibar_btn.style.borderBottom = "1px solid black";
+  //     minibar_btn.style.borderTop = "none";
+  //     minibar_btn.style.borderRight = "none";
+  //     minibar_btn.style.borderLeft = "none";
+  //     minibar_btn.style.borderBottom = "1px solid black";
 
-      closet_btn.style.borderLeft = "none";
-      closet_btn.style.borderTop = "none";
-      closet_btn.style.borderRight = "none";
-      closet_btn.style.borderBottom = "1px solid black";
+  //     closet_btn.style.borderLeft = "none";
+  //     closet_btn.style.borderTop = "none";
+  //     closet_btn.style.borderRight = "none";
+  //     closet_btn.style.borderBottom = "1px solid black";
+  //   });
+
+  // // 두번째 bed room 버튼 클릭했을때
+  // document
+  //   .querySelector(".amanity_bedroom")
+  //   .addEventListener("click", function () {
+  //     bedroom_list.style.display = "block";
+  //     bathroom_list.style.display = "none";
+  //     minibar_list.style.display = "none";
+  //     closet_list.style.display = "none";
+
+  //     bathroom_btn.style.borderTop = "none";
+  //     bathroom_btn.style.borderLeft = "none";
+  //     bathroom_btn.style.borderRight = "none";
+  //     bathroom_btn.style.borderBottom = "1px solid black";
+
+  //     bedroom_btn.style.borderBottom = "none";
+  //     bedroom_btn.style.borderTop = "1px solid black";
+  //     bedroom_btn.style.borderRight = "1px solid black";
+  //     bedroom_btn.style.borderLeft = "1px solid black";
+
+  //     minibar_btn.style.borderTop = "none";
+  //     minibar_btn.style.borderRight = "none";
+  //     minibar_btn.style.borderLeft = "none";
+  //     minibar_btn.style.borderBottom = "1px solid black";
+
+  //     closet_btn.style.borderLeft = "none";
+  //     closet_btn.style.borderTop = "none";
+  //     closet_btn.style.borderRight = "none";
+  //     closet_btn.style.borderBottom = "1px solid black";
+  //   });
+
+  // // 세번째 mini bar 버튼 클릭했을때
+  // document
+  //   .querySelector(".amanity_minibar")
+  //   .addEventListener("click", function () {
+  //     minibar_list.style.display = "block";
+  //     bathroom_list.style.display = "none";
+  //     bedroom_list.style.display = "none";
+  //     closet_list.style.display = "none";
+
+  //     bathroom_btn.style.borderRight = "none";
+  //     bathroom_btn.style.borderLeft = "none";
+  //     bathroom_btn.style.borderTop = "none";
+  //     bathroom_btn.style.borderBottom = "1px solid black";
+
+  //     bedroom_btn.style.borderTop = "none";
+  //     bedroom_btn.style.borderLeft = "none";
+  //     bedroom_btn.style.borderRight = "none";
+  //     bedroom_btn.style.borderBottom = "1px solid black";
+
+  //     minibar_btn.style.borderTop = "1px solid black";
+  //     minibar_btn.style.borderRight = "1px solid black";
+  //     minibar_btn.style.borderLeft = "1px solid black";
+  //     minibar_btn.style.borderBottom = "none";
+
+  //     closet_btn.style.borderTop = "none";
+  //     closet_btn.style.borderRight = "none";
+  //     closet_btn.style.borderLeft = "none";
+  //     closet_btn.style.borderBottom = "1px solid black";
+  //   });
+
+  // // 네번째 closet 버튼 클릭했을때
+  // document
+  //   .querySelector(".amanity_closet")
+  //   .addEventListener("click", function () {
+  //     closet_list.style.display = "block";
+  //     bathroom_list.style.display = "none";
+  //     bedroom_list.style.display = "none";
+  //     minibar_list.style.display = "none";
+
+  //     bathroom_btn.style.borderTop = "none";
+  //     bathroom_btn.style.borderRight = "none";
+  //     bathroom_btn.style.borderLeft = "none";
+  //     bathroom_btn.style.borderBottom = "1px solid black";
+
+  //     bedroom_btn.style.borderLeft = "none";
+  //     bedroom_btn.style.borderTop = "none";
+  //     bedroom_btn.style.borderRight = "none";
+  //     bedroom_btn.style.borderBottom = "1px solid black";
+
+  //     minibar_btn.style.borderTop = "none";
+  //     minibar_btn.style.borderBottom = "1px solid black";
+  //     minibar_btn.style.borderLeft = "none";
+  //     minibar_btn.style.borderRight = "none";
+
+  //     closet_btn.style.borderTop = "1px solid black";
+  //     closet_btn.style.borderRight = "1px solid black";
+  //     closet_btn.style.borderLeft = "1px solid black";
+  //     closet_btn.style.borderBottom = "none";
+  //   });
+  const amanityBtns = document.querySelectorAll(".amanity_btn");
+  const amanityLists = document.querySelectorAll(".room_info");
+
+  // foreach(요소, 인덱스 순서) 이거는 정해진 순서임. 바꾸면안됨.
+  amanityBtns.forEach((targetBtn, targetBtnIndex) => {
+    targetBtn.addEventListener("click", () => {
+      amanityLists.forEach((list, listIndex) => {
+        const listDisplayStatus =
+          targetBtnIndex === listIndex ? "block" : "none";
+        list.style.display = listDisplayStatus;
+      });
+
+      amanityBtns.forEach((btn, btnIndex) => {
+        if (targetBtnIndex === btnIndex) {
+          btn.style.border = "1px solid black";
+          btn.style.borderBottom = "none";
+        } else {
+          btn.style.border = "none";
+          btn.style.borderBottom = "1px solid black";
+        }
+      });
     });
-
-  // 두번째 bed room 버튼 클릭했을때
-  document
-    .querySelector(".amanity_bedroom")
-    .addEventListener("click", function () {
-      bedroom_list.style.display = "block";
-      bathroom_list.style.display = "none";
-      minibar_list.style.display = "none";
-      closet_list.style.display = "none";
-
-      bathroom_btn.style.borderTop = "none";
-      bathroom_btn.style.borderLeft = "none";
-      bathroom_btn.style.borderRight = "none";
-      bathroom_btn.style.borderBottom = "1px solid black";
-
-      bedroom_btn.style.borderBottom = "none";
-      bedroom_btn.style.borderTop = "1px solid black";
-      bedroom_btn.style.borderRight = "1px solid black";
-      bedroom_btn.style.borderLeft = "1px solid black";
-
-      minibar_btn.style.borderTop = "none";
-      minibar_btn.style.borderRight = "none";
-      minibar_btn.style.borderLeft = "none";
-      minibar_btn.style.borderBottom = "1px solid black";
-
-      closet_btn.style.borderLeft = "none";
-      closet_btn.style.borderTop = "none";
-      closet_btn.style.borderRight = "none";
-      closet_btn.style.borderBottom = "1px solid black";
-    });
-
-  // 세번째 mini bar 버튼 클릭했을때
-  document
-    .querySelector(".amanity_minibar")
-    .addEventListener("click", function () {
-      minibar_list.style.display = "block";
-      bathroom_list.style.display = "none";
-      bedroom_list.style.display = "none";
-      closet_list.style.display = "none";
-
-      bathroom_btn.style.borderRight = "none";
-      bathroom_btn.style.borderLeft = "none";
-      bathroom_btn.style.borderTop = "none";
-      bathroom_btn.style.borderBottom = "1px solid black";
-
-      bedroom_btn.style.borderTop = "none";
-      bedroom_btn.style.borderLeft = "none";
-      bedroom_btn.style.borderRight = "none";
-      bedroom_btn.style.borderBottom = "1px solid black";
-
-      minibar_btn.style.borderTop = "1px solid black";
-      minibar_btn.style.borderRight = "1px solid black";
-      minibar_btn.style.borderLeft = "1px solid black";
-      minibar_btn.style.borderBottom = "none";
-
-      closet_btn.style.borderTop = "none";
-      closet_btn.style.borderRight = "none";
-      closet_btn.style.borderLeft = "none";
-      closet_btn.style.borderBottom = "1px solid black";
-    });
-
-  // 네번째 closet 버튼 클릭했을때
-  document
-    .querySelector(".amanity_closet")
-    .addEventListener("click", function () {
-      closet_list.style.display = "block";
-      bathroom_list.style.display = "none";
-      bedroom_list.style.display = "none";
-      minibar_list.style.display = "none";
-
-      bathroom_btn.style.borderTop = "none";
-      bathroom_btn.style.borderRight = "none";
-      bathroom_btn.style.borderLeft = "none";
-      bathroom_btn.style.borderBottom = "1px solid black";
-
-      bedroom_btn.style.borderLeft = "none";
-      bedroom_btn.style.borderTop = "none";
-      bedroom_btn.style.borderRight = "none";
-      bedroom_btn.style.borderBottom = "1px solid black";
-
-      minibar_btn.style.borderTop = "none";
-      minibar_btn.style.borderBottom = "1px solid black";
-      minibar_btn.style.borderLeft = "none";
-      minibar_btn.style.borderRight = "none";
-
-      closet_btn.style.borderTop = "1px solid black";
-      closet_btn.style.borderRight = "1px solid black";
-      closet_btn.style.borderLeft = "1px solid black";
-      closet_btn.style.borderBottom = "none";
-    });
+  });
   // 객실 어메니티 버튼 클릭시 리스트 끝
 
   (function () {

@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.style.setProperty("--main-bg-position2", "-24px");
 
       setTimeout(function () {
-        window.confirm(
+        const conFirm = window.confirm(
           "로그인 후, 관심 상품 담기가 가능합니다. 로그인 하시겠습니까?"
         );
+        if (conFirm === false) {
+          e.target.style.setProperty("--main-bg-position", "-48px");
+        }
       }, 300);
     });
   }
