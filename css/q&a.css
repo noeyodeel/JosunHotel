@@ -896,3 +896,6 @@ p.txtGuide:before,
 .openOption {
   display: block !important;
 }
+.open_select::after {
+  background-position: -11px -39px !important;
+}

@@ -3,21 +3,25 @@ let selectFlag2;
 // ---------------------------------------------------------
 $(".custom-select1").on("focusin", function () {
   $(".custom-select-list1").show();
+  $(".custom-select1").addClass("open_select");
 });
 
 $(".custom-select1").on("focusout", function () {
   if (!selectFlag1) {
     $(".custom-select-list1").hide();
+    $(".custom-select1").removeClass("open_select");
   }
   $(this).removeClass("selected");
 });
 
 $(".custom-select-option1").on("mouseenter", function () {
   selectFlag1 = true;
+  $(".custom-select1").addClass("open_select");
 });
 
 $(".custom-select-option1").on("mouseout", function () {
   selectFlag1 = false;
+  $(".custom-select1").removeClass("open_select");
 });
 
 $(".custom-select-option1").on("click", function () {
@@ -40,21 +44,25 @@ $(".custom-select-option1").on("click", function () {
 // ---------------------------------------------------------
 $(".custom-select2").on("focusin", function () {
   $(".custom-select-list2").show();
+  $(".custom-select2").addClass("open_select");
 });
 
 $(".custom-select2").on("focusout", function () {
   if (!selectFlag2) {
     $(".custom-select-list2").hide();
+    $(".custom-select2").removeClass("open_select");
   }
   $(this).removeClass("selected");
 });
 
 $(".custom-select-option2").on("mouseenter", function () {
   selectFlag2 = true;
+  $(".custom-select2").addClass("open_select");
 });
 
 $(".custom-select-option2").on("mouseout", function () {
   selectFlag2 = false;
+  $(".custom-select2").removeClass("open_select");
 });
 
 $(".custom-select-option2").on("click", function () {
@@ -400,8 +408,7 @@ function openCalendar() {
   $(".res_bar").addClass("top73");
   $(".res_bar").removeClass("top58");
 
-  $(".mainCalendar").css("height", "384px");
-  $(".mainCalendar").css("padding", "70px 0px");
+  // $(".daterangepicker").css("height", "524px !important");
 
   $(".mainRoom").css("height", "0px");
   $(".mainRoom").css("padding", "0px");
@@ -414,29 +421,34 @@ function openRoomSelect() {
   $(".mainRoom").css("height", "384px");
   $(".mainRoom").css("padding", "70px 0px");
 
-  $(".mainCalendar").css("height", "0px");
-  $(".mainCalendar").css("padding", "0px");
+  // $(".daterangepicker").css("height", "0px !important");
 }
 
-function closeCalendar() {
-  $(".res_bar").css("top", "58%");
-  $(".res_bar").removeClass("top73");
-  $(".mainCalendar").css("height", "0px");
-  $(".mainCalendar").css("padding", "0px");
-}
-function closeRoomSelect() {
-  $(".res_bar").css("top", "58%");
-  $(".res_bar").removeClass("top73");
-  $(".mainRoom").css("height", "0px");
-  $(".mainRoom").css("padding", "0px");
-}
+// function closeCalendar() {
+//   $(".res_bar").css("top", "58%");
+//   $(".res_bar").removeClass("top73");
+//   $(".mainCalendar").css("height", "0px");
+//   $(".mainCalendar").css("padding", "0px");
+// }
+// function closeRoomSelect() {
+//   $(".res_bar").css("top", "58%");
+//   $(".res_bar").removeClass("top73");
+//   $(".mainRoom").css("height", "0px");
+//   $(".mainRoom").css("padding", "0px");
+// }
 
 //프로모션 코드
 function openPromotion() {
   $(".promInt").css("width", "500px");
+  $(".promSel").css("display", "block");
+  $(".btnLine").css("display", "block");
+  $("#promoCode").css("display", "block");
 }
 function closePromotion() {
   $(".promInt").css("width", "0px");
+  $(".promSel").css("display", "none");
+  $(".btnLine").css("display", "none");
+  $("#promoCode").css("display", "none");
 }
 
 // 인원 추가(6개)
@@ -607,88 +619,6 @@ function count6(type) {
 //   $(".wrap").off("scroll touchmove mousewheel");
 // }
 
-// datepicker start
-// 설정
-// $(function () {
-//   // 시작일
-//   (from = $("#datepickerFrom")
-//     .datepicker({
-//       dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
-//       monthNames: [
-//         "01",
-//         "02",
-//         "03",
-//         "04",
-//         "05",
-//         "06",
-//         "07",
-//         "08",
-//         "09",
-//         "10",
-//         "11",
-//         "12",
-//       ],
-//       maxDate: "+1y",
-//       minDate: "-1y",
-//       showMonthAfterYear: true,
-//       dateFormat: "yy.mm.dd",
-//     })
-//     .on("change", function () {
-//       // 선택된 시작일 이전은 종료일에서 선택 불가
-//       to.datepicker("option", "minDate", getDate(from));
-//     })),
-//     // 종료일
-//     (to = $("#datepickerTo")
-//       .datepicker({
-//         dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
-//         monthNames: [
-//           "01",
-//           "02",
-//           "03",
-//           "04",
-//           "05",
-//           "06",
-//           "07",
-//           "08",
-//           "09",
-//           "10",
-//           "11",
-//           "12",
-//         ],
-//         maxDate: "+1y",
-//         minDate: "-1y",
-//         showMonthAfterYear: true,
-//         dateFormat: "yy.mm.dd",
-//       })
-//       .on("change", function () {
-//         // 선택된 종료일 이후는 시작일에서 선택 불가
-//         from.datepicker("option", "maxDate", getDate(to));
-//       }));
-
-//   // 선택된 날짜 가져오기
-//   function getDate(element) {
-//     var date;
-//     try {
-//       date = element.val();
-//     } catch (error) {
-//       date = null;
-//     }
-//     return date;
-//   }
-// });
-
-// // datepicker end
-// // 검색 조건 입력후 css
-// $("#datepickerFrom").change(() => {
-//   if ($("#datepickerFrom").val() != null) {
-//     $("#datepickerFrom").css("color", "#000");
-//   }
-// });
-// $("#datepickerTo").change(() => {
-//   if ($("#datepickerTo").val() != null) {
-//     $("#datepickerTo").css("color", "#000");
-//   }
-// });
 // $("#seach").change(() => {
 //   if ($("#seach").val() != null) {
 //     $("#seach").css("color", "#000");
@@ -700,7 +630,7 @@ function count6(type) {
 //     numberOfMonths: 2,
 //   },
 // });
-$('input[name="dates"]').daterangepicker();
+// $('input[name="dates"]').daterangepicker();
 // $("#datepickerFrom").daterangepicker();
 
 // $(".dates").daterangepicker();
@@ -717,3 +647,51 @@ moment.locale("ko"); //언어를 한국어로 설정함!
 //     cancelLabel: "닫기",
 //   },
 // });
+
+var today = new Date();
+
+var year = today.getFullYear();
+var month = ("0" + (today.getMonth() + 1)).slice(-2);
+var day = ("0" + (today.getDate() + 1)).slice(-2);
+var dateString = year + "/" + month + "/" + day;
+
+$('input[name="dates"]').daterangepicker(
+  {
+    locale: {
+      format: "YYYY/MM/DD",
+      separator: " - ",
+      daysOfWeek: ["S", "M", "T", "W", "T", "F", "S"],
+      monthNames: [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+      ],
+    },
+    endDate: dateString,
+    drops: "up",
+  },
+  function (start, end, label) {
+    console.log(
+      "New date range selected: " +
+        start.format("YYYY-MM-DD") +
+        " to " +
+        end.format("YYYY-MM-DD") +
+        " (predefined range: " +
+        label +
+        ")"
+    );
+  }
+);
+$('input[name="dates"]').on("show.daterangepicker", function (ev, picker) {
+  $(".yearselect").css("float", "left");
+  $(".monthselect").css("float", "right");
+});

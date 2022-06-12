@@ -94,13 +94,14 @@ video {
   left: 12%;
   display: flex;
   background-color: white;
+  z-index: 400;
 }
 /* 216 652 364 168 */
 .chkInout {
   width: 621px;
   height: 64px;
   line-height: 64px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   border-right: 1px solid #ccc;
 }
 .calContainer {
@@ -240,106 +241,7 @@ p.txtGuide:before,
   top: 4px;
   font: 600 15px gothamL;
 }
-.numWrap {
-  display: inline-block;
-  vertical-align: middle;
-}
-.numWrap:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.calLeft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* height: 100%; */
-  padding-left: 245px;
-}
-.calRight {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-right: 245px;
-  /* height: 100%; */
-}
-.calendarS .prevMonth {
-  left: 0;
-  background-position: 0 0;
-  margin-left: 245px;
-}
-.calendarS .nextMonth {
-  right: 0;
-  background-position: -12px 0;
-  margin-right: 245px;
-}
-.calInner .calendar .fRed,
-.calInner .calendar .fRed a {
-  color: #de3636 !important;
-}
-.calendarS .btnMonth {
-  display: block;
-  position: absolute;
-  top: 7px;
-  text-indent: -9999px;
-  overflow: hidden;
-  width: 12px;
-  height: 21px;
-  background: url(../images/main_img/btn_swipe_12x21_black.png) no-repeat;
-  border: none;
-  cursor: pointer;
-}
-.btnClose {
-  position: absolute;
-  top: 12px;
-  right: 13px;
-  overflow: hidden;
-  text-indent: -9999px;
-  width: 50px;
-  height: 50px;
-  z-index: 999;
-  background: url(../images/main_img/btn_close_25x25.png) no-repeat 50% 50%;
-  border: none;
-  cursor: pointer;
-}
-.mainCalendar .calendarS .calInner .calendar td a {
-  display: block;
-  position: inherit;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0;
-  font-size: 18px;
-  margin: 0 auto;
-  color: black;
-  text-align: center;
-  font-family: gothamL;
-  z-index: 1;
-}
-.mainCalendar .calendarS .calWrap {
-  margin: 0 auto;
-  width: 910px;
-}
-.calContainer .calWrap:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.mainCalendar .calendarS .calWrap .calMonth {
-  margin-bottom: 15px;
-  font: 500 26px/1.2 gothamM;
-  display: block;
-  text-align: center;
-  color: #000;
-}
 
-.date {
-  color: black;
-  font-size: 20px;
-}
-.date > b {
-  font: 600 20px/1 gothamM, notokrM;
-}
 .roomWrap > a > dl > dt {
   display: inline-block;
   padding: 21px 0 21px;
@@ -357,6 +259,11 @@ p.txtGuide:before,
   color: #888888;
   font-size: 14px;
   font: 400 14px/1 gothamM;
+  position: absolute;
+  top: 43%;
+  z-index: 500;
+  left: 260px;
+  pointer-events: none; /* 클릭안되게 */
 }
 
 .date > span:before {
@@ -436,11 +343,9 @@ dl {
   padding-left: 30px;
   height: 64px;
 }
-/* .mainRoom {
-  display: none;
-} */
-.promInt {
-  display: none;
+
+.promSel {
+  position: absolute;
 }
 .promCode {
   float: right;
@@ -449,6 +354,7 @@ dl {
 
 .btnPromo {
   position: absolute;
+  right: 0;
   border: none;
   background: none;
   font-size: 16px;
@@ -559,11 +465,11 @@ dl {
   right: 0;
   background: white;
   width: 0px;
-  height: 52px;
+  height: 60px;
   transition: 0.5s;
-  overflow-x: hidden;
   margin-top: 3px;
 }
+
 .promSel {
   cursor: pointer;
   border: none;
@@ -1695,7 +1601,22 @@ dl {
 .top73 {
   top: 73%;
 }
-
+.custom-select1 > span {
+  font: 600 20px gothamM;
+  padding-left: 20px;
+}
+.promInt > .promSel > .option {
+  width: 100%;
+  z-index: 50;
+  /* height: 150px; */
+  overflow-y: scroll;
+  position: absolute;
+  top: 60.7px;
+  border: solid #333;
+  border-width: 0 1px 1px 1px;
+  background: #fff;
+  display: none;
+}
 .selectArea {
   width: 490px;
   position: relative;
@@ -1727,18 +1648,6 @@ dl {
   width: 11px;
   height: 7px;
   background: url(../images/mypage_changeInfo_img/spr_form.png) no-repeat 0 -39px;
-}
-.selectArea .option {
-  width: 100%;
-  display: block;
-  z-index: 50;
-  height: 150px;
-  overflow-y: scroll;
-  position: absolute;
-  border: solid #333;
-  border-width: 0 1px 1px 1px;
-  background: #fff;
-  display: none;
 }
 
 .selectArea .option li > a {
@@ -1776,12 +1685,6 @@ dl {
   display: inline-block;
 }
 
-.open:after {
-  background-position: -11px -39px !important;
-}
-.openOption {
-  display: block !important;
-}
 .hide {
   display: none;
 }
@@ -1795,21 +1698,23 @@ dl {
 
 /*----------------------- daterangepicker start -----------------------------*/
 .startDay {
+  /* 체크인/아웃 옆의 날짜  */
   outline: none;
   cursor: pointer;
   border: none;
-  margin-left: 15px;
+  text-align: center;
   font: 600 20px/1 gothamM, notokrM;
-  width: 400px;
+  width: 621px;
+  z-index: 550;
+  height: 64px;
 }
 .daterangepicker {
-  width: 1400px;
-  height: 384px;
-  margin-top: -500px;
+  width: 1400px !important;
+  height: 524px !important;
   left: 12% !important;
-  top: 85.15% !important;
-  border-radius: 0;
-  border-bottom: 1px solid #999; /* 수정 */
+  top: 17.6% !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #999 !important;
 }
 .drp-selected,
 .applyBtn {
@@ -1852,9 +1757,168 @@ dl {
   margin-right: 200px;
 }
 /* daterangepicker end*/
-.daterangepicker::after {
-  display: none;
+.drop-up::after {
+  display: none !important;
 }
-.daterangepicker::before {
-  display: none;
+.drop-up::before {
+  display: none !important;
+}
+/*--------------- 가져온 코드 ------------------*/
+.numWrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+.numWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* .daterangepicker .calendar-table table {
+  margin-top: 50px;
+} */
+
+.daterangepicker .left .calendar-table table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 378px;
+  height: 366px;
+  margin: 70px 0 0 245px;
+  /* margin-left: 245px; */
+}
+.daterangepicker .drp-calendar.left {
+  clear: none !important;
+}
+.daterangepicker .right .calendar-table table {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 378px;
+  height: 366px;
+  margin: 70px 245px 0 0;
+}
+.calInner .calendar .fRed,
+.calInner .calendar .fRed a {
+  color: #de3636 !important;
+}
+.calendarS .btnMonth {
+  display: block;
+  position: absolute;
+  top: 7px;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 12px;
+  height: 21px;
+  background: url(../images/main_img/btn_swipe_12x21_black.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.btnClose {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  background: url(../images/main_img/btn_close_25x25.png) no-repeat 50% 50%;
+  border: none;
+  cursor: pointer;
+}
+/* .mainCalendar .calendarS .calInner .calendar td a  */
+
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  /* display: block; */
+  /* position: inherit; */
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0 7px !important;
+  font-size: 18px !important;
+  text-align: center !important;
+  font-family: gothamL !important;
+  z-index: 1;
+}
+.daterangepicker th.month {
+  padding-bottom: 15px !important;
+  font: 500 26px/1.2 gothamM !important;
+}
+/* 달력 넘기는 화살표 */
+.daterangepicker .calendar-table .prev span {
+  border-color: #999 !important;
+}
+.daterangepicker .calendar-table tr > td:first-child {
+  color: red;
+}
+.daterangepicker .calendar-table tr > th:first-child {
+  color: red;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #ba998c !important;
+  /* border-radius: 100% !important; */
+  border-color: transparent;
+  color: #fff;
+}
+
+.daterangepicker td.in-range {
+  background-color: #d6c2ba !important;
+  border-color: transparent;
+  border-radius: 0;
+  color: #fff !important;
+}
+.daterangepicker td.start-date {
+  color: #fff !important;
+}
+.daterangepicker td.end-date {
+  background-color: #ba998c !important;
+  /* border-radius: 100% !important; */
+  border-color: transparent;
+  /* border-radius: 0 4px 4px 0; */
+}
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date {
+  background-color: #fff;
+  border-color: transparent;
+  color: white;
+}
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date:hover {
+  visibility: hidden; /* 레이아웃은 차지하지만 보이지않음 */
+}
+
+.mainCalendar .calendarS .calWrap {
+  margin: 0 auto;
+  width: 910px;
+}
+.calContainer .calWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.mainCalendar .calendarS .calWrap .calMonth {
+  margin-bottom: 15px;
+  font: 500 26px/1.2 gothamM;
+  display: block;
+  text-align: center;
+  color: #000;
+}
+
+.date {
+  color: black;
+  font-size: 20px;
+}
+.date > b {
+  font: 600 20px/1 gothamM, notokrM;
+}
+
+.open_select::after {
+  background-position: -11px -39px !important;
 }

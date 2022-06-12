@@ -175,21 +175,25 @@ let selectFlag3;
 // ---------------------------------------------------------
 $(".custom-select1").on("focusin", function () {
   $(".custom-select-list1").show();
+  $(".custom-select1").addClass("open_select");
 });
 
 $(".custom-select1").on("focusout", function () {
   if (!selectFlag1) {
     $(".custom-select-list1").hide();
+    $(".custom-select1").removeClass("open_select");
   }
   $(this).removeClass("selected");
 });
 
 $(".custom-select-option1").on("mouseenter", function () {
   selectFlag1 = true;
+  $(".custom-select1").addClass("open_select");
 });
 
 $(".custom-select-option1").on("mouseout", function () {
   selectFlag1 = false;
+  $(".custom-select1").removeClass("open_select");
 });
 
 $(".custom-select-option1").on("click", function () {
@@ -212,21 +216,25 @@ $(".custom-select-option1").on("click", function () {
 // ---------------------------------------------------------
 $(".custom-select2").on("focusin", function () {
   $(".custom-select-list2").show();
+  $(".custom-select2").addClass("open_select");
 });
 
 $(".custom-select2").on("focusout", function () {
   if (!selectFlag2) {
     $(".custom-select-list2").hide();
+    $(".custom-select2").removeClass("open_select");
   }
   $(this).removeClass("selected");
 });
 
 $(".custom-select-option2").on("mouseenter", function () {
   selectFlag2 = true;
+  $(".custom-select2").addClass("open_select");
 });
 
 $(".custom-select-option2").on("mouseout", function () {
   selectFlag2 = false;
+  $(".custom-select2").removeClass("open_select");
 });
 
 $(".custom-select-option2").on("click", function () {
@@ -249,21 +257,25 @@ $(".custom-select-option2").on("click", function () {
 //---------------------------------------------------
 $(".custom-select3").on("focusin", function () {
   $(".custom-select-list3").show();
+  $(".custom-select3").addClass("open_select");
 });
 
 $(".custom-select3").on("focusout", function () {
   if (!selectFlag3) {
     $(".custom-select-list3").hide();
+    $(".custom-select3").removeClass("open_select");
   }
   $(this).removeClass("selected");
 });
 
 $(".custom-select-option3").on("mouseenter", function () {
   selectFlag3 = true;
+  $(".custom-select3").addClass("open_select");
 });
 
 $(".custom-select-option3").on("mouseout", function () {
   selectFlag3 = false;
+  $(".custom-select3").removeClass("open_select");
 });
 
 $(".custom-select-option3").on("click", function () {

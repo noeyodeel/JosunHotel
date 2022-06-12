@@ -9,24 +9,23 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script type="text/javascript" src="./lib/jquery-ui-daterangepicker-0.6.0-beta.1/moment-with-locales.js"></script>
-    <!-- <script src="./js/main.js"></script> -->
     <script type="text/javascript" src="./lib/slick/slick.min.js"></script> 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <!-- daterangepicker 순서 주의!! -->
+    <link rel="stylesheet" type="text/css" href="./lib/daterangepicker-master/daterangepicker.css" />
+    <script type="text/javascript" src="./lib/daterangepicker-master/moment.min.js"></script>
+    <script type="text/javascript" src="./lib/daterangepicker-master/daterangepicker.js"></script>
+    <script type="text/javascript" src="./lib/daterangepicker-master/moment-with-locales.js"></script> 
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </head>
   <body>
     <div id="wrap">
@@ -79,7 +78,6 @@
                   <div class="chkInout" onclick="openCalendar();">
                     <a href="#">
                       <strong class="tit">CHECK IN / OUT</strong>
-                      <!-- 현재날짜로 변경해야함 -->
                       <input
                         type="text"
                         class="startDay"
@@ -87,27 +85,8 @@
                         name="dates"
                         readonly
                       />
-                      <!-- <span class="date" id="dateTextProp">
-                        <b>2022.05.15&nbsp;</b
-                        >일<b>&nbsp;-&nbsp;2022.05.16&nbsp;</b>월<span
-                          ><b>1</b>박</span
-                        >
-                      </span> -->
                     </a>
-                  </div>
-                  <!-- 캘린더 -->
-                  <!-- <div class="mainCalendar clearCont opened" style="display: block;"> 
-                    <div class="give_margin">
-                      <div
-                  class="startDay dates"
-                  name="dates"></div>
-                
-                    </div>
-                    
-                    <button type="button" class="btnClose" onclick="closeCalendar()">닫기</button>
-                  </div> -->
-                  <!-- 캘린더 끝 -->
-            
+                  </div>  
                   <!-- 객실,인원 선택 -->
                   <div class="roomWrap" onclick="openRoomSelect();">
                     <a href="#none">
@@ -237,7 +216,7 @@
                           <li>어린이 기준 : 37개월 ~ 만 12세</li>
                         </ul>
                       </div>
-                      <button type="button" class="btnClose" onclick="closeRoomSelect();">닫기</button>
+                      <button type="button" class="btnClose" >닫기</button>
                     </div>
                     <!-- //mainRoom 끝 -->
                   </div>
@@ -253,9 +232,10 @@
                   + 프로모션 코드
                 </button>
               </div>
-              
-              <div class="promInt" style="white-space: nowrap">
-                <div class="selectArea area-custom-select promSel">
+
+
+               <div class="promInt" style="white-space: nowrap">
+                <div class="selectArea area-custom-select promSel" style="display: none">
                   <div class="select custom-select2" tabindex="0">  
                     <span class="custom-select-text2">Code Type</span>
                   </div>
@@ -280,28 +260,21 @@
                     <option value="PROMOTION">PROMOTION</option>
                   </select>
                 </div>
-                
+                <!-- <div class="prom_right"> -->
                 <input
-                  type="text"
-                  id="promoCode"
-                  placeholder="프로모션 코드 입력"
-                  title="프로모션 코드 입력"
-                  onkeyup="this.value=this.value.replace(/[^a-z]/gi, '').toUpperCase();"
+                type="text"
+                id="promoCode"
+                placeholder="프로모션 코드 입력"
+                title="프로모션 코드 입력"
+                onkeyup="this.value=this.value.replace(/[^a-z]/gi, '').toUpperCase();"
+                style="display: none"
                 />
-                <button type="button" class="btnLine" onclick="closePromotion();">확인</button>
+                <button type="button" class="btnLine" onclick="closePromotion();" style="display: none">확인</button>
+                <!-- </div> -->
               </div>
               <!-- ROOM 선택 일 경우 끝 -->
             </div>
           </div>
-
-            <!-- <form name="res_date" action="값을 보낼 주소" method="post"> -->
-            <!-- <input type="date" name="res_date" value="2022-05-20" /> -->
-            <!-- <div class="people_btn">
-                <a href="#">
-                  <img src="room/adult/children" alt="인원" />
-                </a>
-              </div> -->
-          
           <div class="video_btn_area">
             <button type="button" id="btn-play"></button>
             <button type="button" id="btn-sound"></button>
@@ -633,6 +606,7 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="./js/headerfooter.js"></script>
     <script src="./js/main.js"></script>
+
     <script>
       var video = document.getElementById("mainvideo");
       var play = document.getElementById("btn-play");
@@ -772,35 +746,36 @@ $(function () {
     $("#gx_").animate({ right: "-350px" }, 500);
   })
 });
+$(".startDay").click(function () {
+  $(".res_bar").addClass("top73");
+  $(".res_bar").removeClass("top58");
+});
 
+
+//달력, 인원 선택시 res_bar 위치 조절,펼쳐지기 조절
   var body = document.querySelector("body");
   body.addEventListener("click", clickBodyEvent1);
-  body.addEventListener("click", clickBodyEvent2);
-
-
 
 function clickBodyEvent1(event) {
   var target = event.target;
   console.log(target);
-  // 체크인 아웃 함수(달력)
-  var reviewWriteInfo = event.currentTarget.querySelector(".mainCalendar");
-  var chkInout = event.currentTarget.querySelector(".chkInout");
-  var resbar = event.currentTarget.querySelector(".res_bar");
-  // var resbar2 = document.getElementsByClassName("res_bar");
+  //달력 input
+  var startDay = event.currentTarget.querySelector(".startDay");
 
-  // var spanTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("span");
-  // var bTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("b");
-  // var strongTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("strong");
-  // var aTags = event.currentTarget.querySelector(".chkInout").querySelectorAll("a");
-  // var divTags = event.currentTarget.querySelector(".mainCalendar").querySelectorAll("div");
-  // var cal_aTags = event.currentTarget.querySelector(".mainCalendar").querySelectorAll("a");
-  // var cal_divTags = event.currentTarget.querySelector(".calWrap").querySelectorAll("div");
-  var startDay=event.currentTarget.querySelector(".startDay");
-// var bodytag=event.currentTarget.querySelectorAll("body");
+  // var thTags = event.currentTarget.querySelector(".table-condensed").querySelectorAll("th");
+  // var trTags = event.currentTarget.querySelector(".table-condensed").querySelectorAll("tr");
+  // var tableTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("table");
+  // var spanTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("span");
+  // var divTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("div");
+
+  //res_bar
+  var resbar = event.currentTarget.querySelector(".res_bar");
+
   // 인원 선택 함수
   var roomWrap = event.currentTarget.querySelector(".roomWrap");
   var mainRoom = event.currentTarget.querySelector(".mainRoom");  
-  var roomContainer = event.currentTarget.querySelector(".roomContainer").querySelectorAll("section");
+  var btnClose = event.currentTarget.querySelector(".btnClose");  
+  // var roomContainer = event.currentTarget.querySelector(".roomContainer").querySelectorAll("section");
   var dlTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dl");
   var ddTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dd");
   var dtTags = event.currentTarget.querySelector(".roomWrap").querySelectorAll("dt");
@@ -812,69 +787,55 @@ function clickBodyEvent1(event) {
   var rc_liTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("li");
 
   console.log(target);
+//res_bar에서 달력 영역, 인원 영역 클릭 시 res_bar내려가게 함
+  if (target == body||target == roomWrap) {
+  console.log("하이1")
 
-  if (target==chkInout || target == body) {
     resbar.classList.add("top73");
+    resbar.classList.remove("top58");
 }
-  
-//체크인아웃 클릭시
-  if (target!=chkInout) {
-  console.log("하이2")
-    // // 1. checkinout 영역 이면 pass
-    // if (target == event.currentTarget.querySelector(".mainCalendar")) return;
-    // if (target == event.currentTarget.querySelector(".chkInout")) return;
+if (target == btnClose){
+  console.log("하이1/2")
+  mainRoom.style.height = "0px";
+  mainRoom.style.padding = "0px";
+  resbar.classList.add("top58");
+  resbar.classList.remove("top73");
+}
 
-    // // 2. checkinout 영역 내 span이면 pass
-    //  for(var i=0; i<spanTags.length; i++) {
-    //      if( spanTags[i] == target ) return ;
-    //  }
-    // // 3. checkinout 영역 내 b이면 pass
-    //  for(var i=0; i<bTags.length; i++) {
-    //      if( bTags[i] == target ) return ;
-    //  }
-    //  // 4. checkinout 영역 내 strong이면 pass
-    //  for(var i=0; i<strongTags.length; i++) {
-    //      if( strongTags[i] == target ) return ;
-    //  }
+//res_bar에서 달력 영역, 인원 영역이 아닌 곳 클릭 시
+ if (target != startDay && target != body && target != roomWrap ) {
+   console.log("하이2")
+   console.log(target);
+  if (target == event.currentTarget.querySelector(".daterangepicker")) return;
+  if (target == event.currentTarget.querySelector(".available")) return;
+  if (target == event.currentTarget.querySelector(".calendar-table")) return;
+  if (target == event.currentTarget.querySelector(".right")) return;
 
-    //  // 5. checkinout 영역 내 a이면 pass
-    //  for(var i=0; i<aTags.length; i++) {
-    //      if( aTags[i] == target ) return ;
+    // for(var i=0; i<thTags.length; i++) {
+    //      if( thTags[i] == target ) return ;
     //  }
-
-    //  // 6. mainCalendar 영역 내 div면 pass
-    //  for(var i=0; i<divTags.length; i++) {
-    //      if( divTags[i] == target ) return ;
+    //  for(var i=0; i<tableTags.length; i++) {
+    //      if( tableTags[i] == target ) return ;
     //  }
-
-    //  // 7. calWrap 영역 내 div면 pass
-    //  for(var i=0; i<cal_divTags.length; i++) {
-    //      if( cal_divTags[i] == target ) return ;
+    //  for(var i=0; i< spanTags.length; i++) {
+    //      if(  spanTags[i] == target ) return ;
+    //  }
+    //  for(var i=0; i< trTags.length; i++) {
+    //      if(  trTags[i] == target ) return ;
+    //  }
+    //  for(var i=0; i< divTags.length; i++) {
+    //      if(  divTags[i] == target ) return ;
     //  }
 
-    // 8. res_bar 영역이면 pass
-    if (target == event.currentTarget.querySelector(".res_bar")) return;
-
-    reviewWriteInfo.style.height = "0px";
-    reviewWriteInfo.style.padding = "0px";
-    resbar.classList.add("top58");
-    resbar.classList.remove("top73");
-  }
-  resbar.classList.add("top73");
-
-// 인원 선택 클릭시
-if (target!=roomWrap && target!=chkInout) {
-  console.log("하이3") 
-    // 1. mainRoom 영역 이면 pass
+      // 1. mainRoom 영역 이면 pass
     if (target == event.currentTarget.querySelector(".mainRoom")) return;
     if (target == event.currentTarget.querySelector(".roomContainer")) return;
-    
 
     // 2. roomWrap 영역 내 dl이면 pass
      for(var i=0; i<dlTags.length; i++) {
          if( dlTags[i] == target ) return ;
      }
-    // 3. roomWrap 영역 내 dd이면 pass
+         // 3. roomWrap 영역 내 dd이면 pass
      for(var i=0; i<ddTags.length; i++) {
          if( ddTags[i] == target ) return ;
      }
@@ -904,16 +865,16 @@ if (target!=roomWrap && target!=chkInout) {
          if( rc_liTags[i] == target ) return ;
      }
 
+
+
     // 10. res_bar 영역이면 pass
     if (target == event.currentTarget.querySelector(".res_bar")) return;
-
     mainRoom.style.height = "0px";
     mainRoom.style.padding = "0px";
     resbar.classList.add("top58");
     resbar.classList.remove("top73");
   }
 }
-
     </script>
   </body>
   <script>
