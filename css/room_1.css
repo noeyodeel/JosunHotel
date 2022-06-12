@@ -164,6 +164,13 @@ textarea {
   padding-left: 0px;
 }
 
+.resRoomWrap {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 180px;
+}
+
 .Innertitle {
   font-style: normal;
   font-weight: 500;
@@ -631,7 +638,7 @@ textarea {
   margin-top: -5px;
   width: 18px;
   height: 10px;
-  background-image: url(../images/res_button.png);
+  background-image: url(../images/res_button_icon.png);
 }
 .noData {
   text-align: center;
@@ -706,7 +713,7 @@ textarea {
   width: 28px;
   height: 15px;
   padding: 6px 0 7px 0;
-  background-image: url(../images/res_button.png);
+  background-image: url(../images/res_button_icon.png);
 }
 
 .roomRes > li .toggleCont {
@@ -1027,7 +1034,7 @@ p.textGuide2::before {
 
 .infoList > li .tit label {
   display: inline-block;
-  font-family: gothaM, notokrM;
+  font-family: gothamM, notokrM;
   font-size: 14px;
   line-height: 1;
   color: black;
@@ -1057,7 +1064,7 @@ p.textGuide2::before {
   background-image: url(../images/essential.png);
 }
 
-.infoList > li .intWrap + .infoInner {
+.infoList > li .infoWrap + .infoInner {
   margin-top: 3px;
 }
 
@@ -1116,7 +1123,8 @@ p.textGuide2::before {
   margin-top: 30px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   height: 60px;
   padding: 8px 13px 8px 0;
   color: #000;
@@ -1216,4 +1224,260 @@ input[type="text"] {
   height: 1px;
   margin-left: -7px;
   background: #000;
+}
+
+.infoList > li .email .selectWrap {
+  display: inline-block;
+  margin-left: 18px;
+  vertical-align: middle;
+}
+
+.infoList > li .infoWrap + .infoInner {
+  margin-top: 3px;
+}
+
+.infoList > li .number span + span,
+.infoList > li .numberSelect div + div {
+  margin-left: 14px;
+}
+
+.resRoomWrap .infoList + .textGuide {
+  margin-top: 20px;
+}
+
+/* noticeContainer */
+.notiContainer,
+.notiContainer .notiTit {
+  margin-top: 70px;
+}
+
+.notiTit {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.toggleList.agreeCont {
+  border-top: 1px solid #000;
+}
+
+.toggleList > li {
+  position: relative;
+}
+
+.toggleList.agreeCont > li {
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.form {
+  position: relative;
+}
+
+.form.type2 {
+  display: block;
+}
+
+.toggleList.agreeCont .form.type2 {
+  padding: 18px 20px 19px;
+}
+
+.form input[type="checkbox"] {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form.type2 label {
+  font-size: 18px;
+  padding-left: 33px;
+}
+.form label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/button_ico.png);
+}
+
+.form.type2 label::before {
+  left: 20px;
+  top: 28px;
+  width: 18px;
+  height: 13px;
+}
+
+.form input[type="checkbox"] + label::before {
+  background-position: 0px -13px;
+}
+.form.type2 input[type="checkbox"] + label::before {
+  background-position: 0px 0px;
+}
+
+.toggleList.agreeCont .btnToggle {
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  width: 18px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.toggleList.agreeCont .btnToggle::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 10px;
+  padding: 5px 0;
+  background-image: url(../images/res_button_icon.png);
+  background-position: 0 5px;
+}
+
+.notiContainer .toggleList + .textGuide {
+  margin-top: 20px;
+}
+
+/* room0 */
+.pageGuide {
+  margin-top: 6px;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+
+.promCode {
+  position: relative;
+  text-align: right;
+  margin: -40px 0 20px;
+  padding-right: 20px;
+}
+
+.promCode .btnProm {
+  height: 50px;
+  line-height: 50px;
+  font-family: notokrL;
+  min-width: 162px;
+}
+
+.btnProm {
+  padding: 0 20px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+.btnSC {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+  transition: color 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+}
+
+.btnL {
+  min-width: 190px;
+  height: 60px;
+  padding: 0 25px;
+  line-height: 58px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.active {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.btnArea a,
+.btnArea button {
+  margin: 0 10px;
+}
+.btnProm::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  background-image: url(../images/ico_plus.png);
+}
+
+.rsvList > li.toggleOn {
+  border-top: 1px solid #000;
+}
+
+.rsvList > li {
+  padding: 21px 20px 22px;
+  border-top: 1px solid #ccc;
+}
+.rsvList > li .listTit {
+  font: 400 22px gothamB, notokrL;
+}
+.rsvList > li .btnToggle {
+  position: absolute;
+  right: 18px;
+  top: 24px;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.rsvList > li .btnToggle:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 15px;
+  padding: 6px 0 7px;
+  background-image: url(../images/res_button_icon.png);
+  background-position: 0 5px;
+}
+
+.rsvList > li.toggleOn .btnToggle:before {
+  background-position: -28px 5px;
+}
+
+.toggleList > li .toggleCont .toggleInner {
+  padding: 33px 0;
+}
+
+.rsvList > li .infoValue {
+  position: absolute;
+  right: 76px;
+  top: 19px;
+  font-size: 22px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -0.04em;
+}
+.rsvList > li .infoValue span::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 1px;
+  height: 22px;
+  background: #ccc;
+  margin: 0 13px 0 15px;
+}
+
+/* 객실 검색 버튼 */
+
+.btnArea {
+  text-align: center;
+  margin-top: 78px;
+}
+
+.rsvList .roomContainer + .btnArea {
+  margin-top: 83px;
 }

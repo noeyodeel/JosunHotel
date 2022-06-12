@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/room_1.css" />
-    <link rel="stylesheet" href="./css/headerfooter.css" />
     <title>res_room3(non_member)</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -66,7 +65,7 @@
               </dl>
             </div>
             <!-- //resultinfo -->
-            <a href="#none" class="btn">객실 다시 검색</a>
+            <a href="res_room0.html" class="btn">객실 다시 검색</a>
           </div>
           <!-- //Inner -->
         </div>
@@ -242,47 +241,150 @@
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Card Number</label>
+                      <label for="cardNum">Card Number</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner number">
+                    <span class="infoArea">
+                      <input type="text" id="cardNum1" name="cardNum1" style="width: 165px;" maxlength="4">
+                    </span>
+                    <span class="infoArea">
+                      <input type="text" id="cardNum2" name="cardNum2" style="width: 165px;" maxlength="4">
+                    </span>
+                    <span class="infoArea">
+                      <input type="text" id="cardNum3" name="cardNum3" style="width: 165px;" maxlength="4">
+                    </span>
+                    <span class="infoArea">
+                      <input type="text" id="cardNum4" name="cardNum4" style="width: 165px;" maxlength="4">
+                    </span>
+                    <span class="alertMsg">신용카드 번호를 입력해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Expiry Date</label>
+                      <label for="Expiry">Expiry Date</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner numberSelect">
+                    <div class="infoArea selectWrap" style="width:440px" first="true">
+                      <select name="expMonth" id="expMonth" style="display: none;">
+                        <option value>월</option>
+                        <option value="01">1월</option>
+                        <option value="02">2월</option>
+                        <option value="03">3월</option>
+                        <option value="04">4월</option>
+                        <option value="05">5월</option>
+                        <option value="06">6월</option>
+                        <option value="07">7월</option>
+                        <option value="08">8월</option>
+                        <option value="09">9월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>
+                      </select>
+                      <button type="button" id="expMonth-button" class="selectmenu">
+                        <span class="selectmenu-text">월</span>
+                      </button>
+                     </div>
+                    <div class="infoArea selectWrap" style="width:440px" first="true">
+                      <select name="expYear" id="expYear" style="display: none;">
+                        <option value>년</option>
+                        <option value="2022">2022년</option>
+                        <option value="2023">2023년</option>
+                        <option value="2024">2024년</option>
+                        <option value="2025">2025년</option>
+                        <option value="2026">2026년</option>
+                        <option value="2027">2027년</option>
+                        <option value="2028">2028년</option>
+                        <option value="2029">2029년</option>
+                        <option value="2030">2030년</option>
+                        <option value="2031">2031년</option>
+                        <option value="2032">2032년</option>
+                      </select>
+                      <button type="button" id="expYear-button" class="selectmenu">
+                        <span class="selectmenu-text">년</span>
+                      </button>
+                     </div>
+                    <span class="alertMsg">신용카드 유효기간을 선택해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Card PASSWORD</label>
+                      <label for="cardPw">Card PASSWORD</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner">
+                    <span class="infoArea">
+                      <input type="password" id="cardPW" name="carsPw" placeholder="비밀번호 앞 2자리" style="width: 165px;" aria-required="true" maxlength="2">
+                    </span>
+                    <span class="alertMsg">카드 비밀번호를 입력해주세요. (비밀번호 앞 2자리)</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Date of BIRTH</label>
-                      <span class="essential"> 필수</span>
+                      <label for="birth">Date of BIRTH</label>
+                      <span class="essential">필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner number">
+                    <span class="infoArea">
+                      <input type="text" id="birth1" name="birth1" placeholder="YYYY" style="width: 165px;" maxlength="4">
+                    </span>
+                    <span class="infoArea">
+                      <input type="text" id="birth2" name="birth2" placeholder="MM" style="width: 165px;" maxlength="2">
+                    </span>
+                    </span>
+                    <span class="infoArea">
+                      <input type="text" id="birth3" name="birth3" placeholder="DD" style="width: 165px;" maxlength="2">
+                    </span>
+                    </span>
+                    <span class="alertMsg">생년원일을 입력해주세요.</span>
+                  </div>
                 </li>
               </ul>
-              <p class="textGuide"></p>
-              <p class="textGuide"></p>
-              <div class="noticeContiner"></div>
+              <p class="textGuide">예약 접수 확인 용도이며, 온라인 예약 시 직접 결제가 이루어지지 않습니다.
+              </p>
+              <p class="textGuide">객실 재판매 행위는 법적 제재를 받을 수 있습니다.
+              </p>
+
+
+              <div class="notiContainer">
+                <h3 class="notiTit">개인정보 수집 · 이용 동의</h3>
+                <ul class="toggleList agreeCont">
+                  <li>
+                    <span class="form type2">
+                      <input type="checkbox" id="Agree" name="Agree">
+                      <label for="Agree">[필수] 개인정보 수집 · 이용에 동의합니다.</label>
+                    </span>
+                    <button type="button" class="btnToggle">
+                      <span class="hidden">상세내용 보기</span>
+                    </button>
+                  </li>
+                </ul>
+                <p class="textGuide">위 개인정보 수집 · 이용에 대한 동의를 거부할 수 있으나 동의 거부 시 객실 예약이 불가합니다.</p>
+                <h3 class="notiTit">취소 규정</h3>
+                <ul class="toggleList agreeCont">
+                  <li class="toggleOn">
+                    <span class="form type2">
+                      <input type="checkbox" id="cancelAgree" name="cancelAgree">
+                      <label for="cancelAgree">[필수] 취소 및 노쇼(NO-SHOW) 규정에 동의합니다.</label>
+                    </span>
+                    <button type="button" class="btnToggle">
+                      <span class="hidden">상세내용 보기</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
 
 
-            <div class="rightCont floating">
+            <div class="rightCont floating" style="transition:margin-top 0.3s ease-put 0s">
               <ul class="rContList" id="roomInfo">
                 <li class="toggleOn">
                   <strong class="ListTit"
