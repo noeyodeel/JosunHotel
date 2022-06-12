@@ -38,16 +38,39 @@
 
 $("button[name='btnToggle']").click(() => {
 	// agreeOpen(".toggle");
-	$( '.agree' ).toggle( );
+	$('.agree').slideToggle();
 	console.log("dk");
 });
 
 
 $("button[name='btnToggletwo']").click(() => {
 	// agreeOpen(".toggle");
-	$( '.agree2' ).toggle( );
+	$('.agree2').slideToggle();
 	console.log("dk");
 });
+
+// 체크선택
+// 체크 선택
+// $(".frm > label").click(() => {
+// 	$(".frm > label").Attr("style", "background-position: 0 -13px;");
+// });
+
+function is_checked() {
+
+	// 1. checkbox element를 찾습니다.
+	const checkbox = document.getElementById('frmChk01');
+
+	// 2. checked 속성을 체크합니다.
+	const is_checked = checkbox.checked;
+
+	// 3. 결과를 출력합니다.
+	if(is_checked == true){
+
+		document.getElementById('frmChk01').style.backgroundPosition="top right";
+		console.log("ok");
+	}
+
+}
 
 
 
@@ -72,5 +95,3 @@ $("button[name='btnToggletwo']").click(() => {
 // 			{height: 0}, 500);
 // 	}
 // });
-
-
