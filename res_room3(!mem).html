@@ -103,56 +103,141 @@
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Reservation Name</label>
-                      <span class="essential"> 필수</span>
+                      <label for="KorName">Reservation Name</label>
+                      <span class="essential">필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner">
+                    <div class="infoArea">
+                      <input type="text" id="KorName" name="KorName" placeholder="성함(국문)을 입력해주세요." style="width: 440px;" aria-required="true">
+                    </div>
+                    <span class="alertMsg">성함(국문)을 입력해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">English Name</label>
+                      <label for="EngName">English Name</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner">
+                    <div class="infoArea">
+                      <input type="text" id="FamName" name="FamName" placeholder="Family Name (성)" style="width: 440px;" aria-required="true">
+                      <input type="text" id="FirstName" name="FirstName" placeholder="First Name (이름)" style="width: 440px;" aria-required="true">
+                    </div>
+                    <span class="alertMsg">이름(영문)을 입력해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Nationality</label>
+                      <label for="Nationality">Nationality</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoArea infoInner">
+                    <div class="selectWrap" style="width: 440px;" first="true">
+                      <select name="country" id="country" style="display: none;">
+                        <option value="GN">가나</option>
+                        <option value="KR" selected="selected">대한민국</option>
+                        <option value="MX">멕시코</option>
+                        <option value="BO">볼리비아</option>
+                        <option value="FR">프랑스</option>
+                      </select>
+                      <button type="button" id="country-button" class="selectmenu">
+                        <span class="selectmenu-text">대한민국</span>
+                      </button>
+                    </div>
+                    <span class="alertMsg">국적을 선택해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Phone Number</label>
+                      <label for="phoneNum">Phone Number</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner phone">
+                    <div class="infoArea selectWrap" first="true">
+                      <select name="PhoneNbr" id="PhoneNbr" style="display: none; width: 319px;">
+                        <option value="GN">가나(233)</option>
+                        <option value="KR" selected="selected">대한민국(82)</option>
+                        <option value="MX">멕시코(52)</option>
+                        <option value="BO">볼리비아(591)</option>
+                        <option value="FR">프랑스(33)</option>
+                      </select>
+                      <button type="button" id="PhoneNbr-button" class="selectmenu" style="width: 319px;">
+                        <span class="selectmenu-text">대한민국(82)</span>
+                      </button>
+                    </div>
+                    <span class="infoArea">
+                      <input type="text" id="PNum" name="Pnum" style="width: 145px;">
+                    </span>
+                    <span class="dash"></span>
+                    <span class="infoArea">
+                      <input type="text" id="PNum1" name="Pnum1" style="width: 145px;">
+                    </span>
+                    <span class="dash"></span>
+                    <span class="infoArea">
+                      <input type="text" id="PNum2" name="Pnum2" style="width: 145px;">
+                    </span>
+                    <span class="alertMsg">휴대폰 번호를 입력해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">E-mail</label>
-                      <span class="essential"> 필수</span>
+                      <label for="email">E-mail</label>
+                      <span class="essential">필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoInner email">
+                    <span class="infoArea">
+                      <input type="text" id="email1" name="email1" style="width: 273px;">
+                    </span>
+                    <span class="dash">@</span>
+                    <span class="infoArea">
+                      <input type="text" id="email2" name="email2" style="width: 273px;">
+                    </span>
+                    <div class="infoArea selectWrap" style="width:273px" first="true">
+                      <select name="emailType" id="emailType" style="display: none; width: 319px;">
+                        <option value>직접 입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                      </select>
+                      <button type="button" id="emailType-button" class="selectmenu">
+                        <span class="selectmenu-text">직접 입력</span>
+                      </button>
+                    <span class="alertMsg">이메일을 입력해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">
                     <span class="tit">
-                      <label for="KorNAme">Credit Card Type</label>
+                      <label for="card">Credit Card Type</label>
                       <span class="essential"> 필수</span>
                     </span>
                   </div>
-                  <div class="infoInner"></div>
+                  <div class="infoArea infoInner">
+                    <div class="selectWrap" style="width: 900px;" first="true">
+                      <select name="card" id="card" style="display: none;">
+                        <option value=>카드 선택</option>
+                        <option value="01">비씨</option>
+                        <option value="02">국민</option>
+                        <option value="03">하나(외환)</option>
+                        <option value="04">삼성</option>
+                      </select>
+                      <button type="button" id="card-button" class="selectmenu">
+                        <span class="selectmenu-text">카드 선택</span>
+                      </button>
+                    </div>
+                    <span class="alertMsg">신용카드 종류를 선택해주세요.</span>
+                  </div>
                 </li>
                 <li>
                   <div class="infoWrap">

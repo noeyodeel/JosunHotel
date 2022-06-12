@@ -70,7 +70,8 @@ dd,
 div,
 button,
 textarea,
-input {
+input,
+select {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -81,7 +82,8 @@ input {
 body,
 button,
 textarea,
-input {
+input,
+select {
   color: black;
   font-family: notokrL, gothamL, playfair;
   font-weight: 400;
@@ -1112,4 +1114,106 @@ p.textGuide2::before {
 
 .infoList > li + li {
   margin-top: 30px;
+}
+
+input[type="text"] {
+  height: 60px;
+  padding: 8px 13px 8px 0;
+  color: #000;
+  border: solid #ccc;
+  border-width: 0 0 1px 0;
+  vertical-align: middle;
+  font-size: 18px;
+  font-family: gothamL, notokrL;
+}
+
+.infoList > li .infoInner .alertMsg {
+  display: none;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  width: 600px;
+  background: #fff;
+  color: #b01414;
+  font: 500 14px/32px notokrR;
+  margin: 0;
+}
+
+.selectWrap {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  background: #fff;
+}
+
+.selectWrap .selectmenu {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 58px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid #000;
+  background: #fff;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  font-family: gothamL, notokrL;
+}
+
+.selectWrap .selectmenu span {
+  display: inline-block;
+  font-family: gothamL, notokrL;
+  color: #333;
+  vertical-align: middle;
+}
+
+.selectWrap .selectmenu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1px;
+  width: 11px;
+  height: 7px;
+  background-image: url(../images/button_ico.png);
+  background-position: 0 -39px;
+}
+
+.selectWrap .selectmenu-open {
+  background-color: #333;
+}
+
+.selectWrap .selectmenu-open::after {
+  background-position: -11px -39px;
+}
+
+.infoList > li .phone .selectWrap {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.infoList > li .infoInner > span {
+  position: relative;
+  display: inline-block;
+}
+
+.infoList > li .phone .dash {
+  position: relative;
+  display: inline-block;
+  width: 49px;
+}
+
+.infoList > li .phone .dash::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 1px;
+  margin-left: -7px;
+  background: #000;
 }
