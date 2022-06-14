@@ -59,23 +59,30 @@ $(".emailArea .optionList").click((e) => {
 });
 
 // 약관동의
-const agreeOpenClose = (li) => {
-  if (!$(li + "> div > button").hasClass("openAgreeBtn")) {
-    $(li + "> div > button").addClass("openAgreeBtn");
-    $(li + "> div > button").text("상세내용 닫기");
-    $(li + " .detailArea").addClass("openAgree");
-  } else {
-    $(li + "> div > button").removeClass("openAgreeBtn");
-    $(li + "> div > button").text("상세내용 열기");
-    $(li + " .detailArea").removeClass("openAgree");
-  }
-};
+// const agreeOpenClose = (li) => {
+//   if (!$(li + "> div > button").hasClass("openAgreeBtn")) {
+//     $(li + "> div > button").addClass("openAgreeBtn");
+//     $(li + "> div > button").text("상세내용 닫기");
+//     $(li + " .detailArea").addClass("openAgree");
+//   } else {
+//     $(li + "> div > button").removeClass("openAgreeBtn");
+//     $(li + "> div > button").text("상세내용 열기");
+//     $(li + " .detailArea").removeClass("openAgree");
+//   }
+// };
+
+// $(".agree1 > div > button").click(() => {
+//   agreeOpenClose(".agree1");
+//   console.log($(".agree1" + " .detailArea"));
+// });
 
 $(".agree1 > div > button").click(() => {
-  agreeOpenClose(".agree1");
-  console.log($(".agree1" + " .detailArea"));
+  // agreeOpen(".toggle");
+  $(".agree1" + " .detailArea").slideToggle();
+  console.log("dk");
 });
 
+// header/footer
 function en_on() {
   $(".en").toggle();
 }
