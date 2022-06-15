@@ -973,6 +973,8 @@ dl {
   padding: 0 25px;
   line-height: 48px;
   font-size: 17px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -0.01em;
 }
 .membership_btn::after {
   content: "";
@@ -1174,7 +1176,7 @@ dl {
   margin: 13px 0 14px;
 }
 .sub_menu_package {
-  padding-bottom: 80px;
+  padding-bottom: 55px;
 }
 .sub_menu_package > h3 {
   margin-top: 22px;
@@ -1392,9 +1394,20 @@ dl {
 }
 .sub_menu_events span {
   display: block;
-  /* margin-top: 5px; */
+  margin-top: 7px;
   font: 16px gothamL;
   color: #333;
+}
+.thum_p {
+  padding-bottom: 20px;
+}
+.item > strong {
+  font: 26px playfair;
+  display: block;
+  padding-bottom: 10px;
+}
+.item > p {
+  padding-bottom: 5px;
 }
 .events_first {
   display: block;

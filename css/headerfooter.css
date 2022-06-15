@@ -195,8 +195,9 @@ header {
 }
 
 .dropdown {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 15px;
+  font: 600 15px gothamM;
 }
 .reservation {
   padding-left: 20px;
@@ -294,7 +295,7 @@ nav ul li {
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 8px 16px;
   text-decoration: none;
   display: block;
 }
@@ -326,16 +327,31 @@ nav ul li {
   left: 0;
   padding-top: 0px; /*네비게이션 바 서브메뉴 높이 조정 */
 }
+.dropdown-content > span {
+  font-size: 14px;
+  font-weight: 400;
+}
 
+.hill_roomlist > li > a,
+.main_roomlist > li > a {
+  font: 400 15px gothamL;
+}
+
+.offers_list > li > a,
+.MW_list > li > a,
+.about_list > li > a,
+.dining_list > li > a,
+.reservation > li > a,
+.reservation_list > li > a {
+  font: 400 15px/30px gothamM;
+}
+
+.reservation > .dropdown-menu > b {
+  font: 600 15px gothamM;
+}
 .reservation > .dropdown-menu > b:hover {
   border: none;
 }
-
-/* .gnb:hover {
-    /* 네비게이션 바 세부 메뉴에 마우스 올리면 색상 변경 
-    background-color: #f1f1f1;
-  } */
-
 .nav_list {
   display: flex;
   flex-direction: column; /* 한눈에 보기가 내려감 */
@@ -355,11 +371,11 @@ nav ul li {
 .nav_list > a {
   margin-left: 120px;
   padding-left: 100px;
+  margin-top: 15px;
 }
 .nav_list > a > span {
   font-size: 14px;
   border-bottom: 1px solid black;
-  padding-bottom: 2px;
 }
 
 .dropdown-content > div > li > a {
@@ -369,7 +385,7 @@ nav ul li {
 }
 
 .dropdown-content > div {
-  margin: 10px 0 10px 50px;
+  margin: 10px 0 20px 50px;
 }
 .dropdown-content > div > li {
   margin-left: 70px;
@@ -397,6 +413,7 @@ nav ul li {
   width: 100%;
   display: block;
   z-index: 100;
+  border-bottom: 1.5px solid lightgray;
 }
 .gnb2 {
   height: 10%;
@@ -405,13 +422,20 @@ nav ul li {
   margin-right: 20px;
   margin-top: 8px;
 }
+.logo_ > a > b {
+  font: 600 15px gothamM !important;
+}
 .dropdown_new {
   position: relative;
 }
 
+/* 네비게이션 바 호버했을때 크기 조정(dc_new, gnb_new:hover) */
 .dc_new {
-  height: 570px;
+  height: 470px !important;
   background-color: white;
+}
+.gnb_new:hover {
+  height: 500px;
 }
 
 .dc_new > div {
@@ -422,6 +446,11 @@ nav ul li {
 .dc_new > div > li {
   padding: 0;
   margin: 0;
+}
+.dc_new > div > li > a {
+  font-size: 15px;
+  font-family: gothamL;
+  font-weight: bold;
 }
 .dining__- {
   padding-right: 10px;
@@ -442,13 +471,17 @@ nav ul li {
   padding-left: 22px;
   padding-right: 22px;
 }
-
+/* .main_roomlist_ > li > li > a,
+.hill_roomlist_ > li > li > a {
+  font: 400 15px gothamM !important;
+} */
 .dm-new {
-  padding-left: 47px;
-  padding-right: 47px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
-#nav_bar {
-  border-bottom: 1.5px solid lightgray;
+.dining__- > a {
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
 .gnb:hover .dc_new {
@@ -459,13 +492,6 @@ nav ul li {
   padding-top: 20px;
   text-align: center;
 }
-
-.gnb_new:hover {
-  height: 600px;
-}
-/* .dropdown:hover {
-    pointer-events: none;
-  } */
 .dropdown_new {
   margin-bottom: 10px;
 }
@@ -475,7 +501,8 @@ nav ul li {
 .mainbuilding_list_ > li > button {
   border: none;
   background-color: white;
-  font-size: 13.5px;
+  font-size: 15px;
+  font-family: gothamL;
   font-weight: bold;
 }
 .hill_roomlist_ {
@@ -484,7 +511,8 @@ nav ul li {
 .hillbuilding_list_ > li > button {
   border: none;
   background-color: white;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: gothamL;
   font-weight: bold;
 }
 .main_roomlist_ > li {
@@ -497,9 +525,11 @@ nav ul li {
 }
 .main_roomlist_ > li > a {
   color: #666;
+  font: 300 15px gothamL !important;
 }
 .hill_roomlist_ > li > a {
   color: #666;
+  font: 300 15px gothamL !important;
 }
 
 .mainbuilding_list_ > li > button {
@@ -511,14 +541,15 @@ nav ul li {
   cursor: pointer;
   margin-top: 27px;
 }
-
 .selec {
   background: white;
   color: #ba998c;
 }
+.building {
+  margin-bottom: 10px;
+}
 /* ---------------------- 푸터 시작 ---------------------- */
 footer {
-  /* position: fixed; */
   left: 0;
   bottom: 0;
   margin: 0 auto;
@@ -527,14 +558,18 @@ footer {
   background-color: black;
   color: white;
 }
+/* .footer .footArea {
+  position: relative;
+  width: 1400px;
+  height: 370px;
+  margin: 0 auto;
+  padding: 150px 0 0 280px;
+} */
 
 .foot_list1 {
   display: flex;
-  padding-block-start: 2em;
-  padding-block-end: 1em;
-  padding-inline-start: 0px;
-  padding-inline-end: 0px;
-  padding-inline-start: 220px; /*외부 사이트 로고 가운데 정렬*/
+  padding-left: 220px;
+  padding-top: 40px;
 }
 .foot_list1 > li {
   margin-left: 20px;

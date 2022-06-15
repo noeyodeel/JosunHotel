@@ -654,11 +654,19 @@ var year = today.getFullYear();
 var month = ("0" + (today.getMonth() + 1)).slice(-2);
 var day = ("0" + (today.getDate() + 1)).slice(-2);
 var dateString = year + "/" + month + "/" + day;
-
+var week = new Array(
+  "일요일",
+  "월요일",
+  "화요일",
+  "수요일",
+  "목요일",
+  "금요일",
+  "토요일"
+);
 $('input[name="dates"]').daterangepicker(
   {
     locale: {
-      format: "YYYY/MM/DD",
+      format: "YYYY.MM.DD E",
       separator: " - ",
       daysOfWeek: ["S", "M", "T", "W", "T", "F", "S"],
       monthNames: [
@@ -689,8 +697,10 @@ $('input[name="dates"]').daterangepicker(
         label +
         ")"
     );
+    var e_s = end.format("YYYYMMDD") - start.format("YYYYMMDD");
   }
 );
+console.log(e_s);
 $('input[name="dates"]').on("show.daterangepicker", function (ev, picker) {
   $(".yearselect").css("float", "left");
   $(".monthselect").css("float", "right");

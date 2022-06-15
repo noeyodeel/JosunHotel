@@ -58,6 +58,7 @@
 }
 html {
   width: 100%;
+  overflow-x: hidden; /* 창 크기 줄일 시 푸터 이상해지는 문제 -> x축 스크롤 막아서 안보임, 대신 다른 body 내용들 줄인 상태로 못봄  */
 }
 body {
   width: 100%;
@@ -154,6 +155,7 @@ fieldset {
 .qa_form_area > h2 {
   margin-top: 0px;
   margin-bottom: 15px;
+  font: 500 30px gothamB, notokrR;
 }
 .gray_area {
   display: flex;
@@ -195,7 +197,13 @@ fieldset {
   padding: 0;
   margin-top: 15px;
 }
-
+.tit_lbl {
+  font-family: gothamM, notokrM;
+  font-size: 14px;
+  line-height: 1;
+  color: #333;
+  text-transform: uppercase;
+}
 .pilsoo::after {
   content: "";
   display: inline-block;
@@ -542,7 +550,7 @@ label {
   position: absolute;
   right: 18px;
   top: 24px;
-  width: 28px;
+  width: 40px;
   height: 28px;
   overflow: hidden;
   text-indent: -9999px;

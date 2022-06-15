@@ -418,7 +418,7 @@
         <div id="goto-5" class="activity_area content">
           <div class="white_area"></div>
           <div class="activity_txt">
-            <h3>GET ACTIVE</h3>
+            <h3>Get Active</h3>
             <h5>몸과 마음에 활력을 더해 줄 다채로운 액티비티</h5>
             <h6>JOSUN JUNIOR / GRAN JOE</h6>
             <div class="arrow_btn">
@@ -438,7 +438,7 @@
         <div id="goto-6" class="membership_area content">
           <div class="membership_txt">
             <div class="text_area">
-              <h3>CLUB JOSUN</h3>
+              <h3>Club Josun</h3>
               <h6>JOSUN HOTELS & RESORTS MEMBERSHIP PROGRAM</h6>
               <h5>
                 조선호텔앤리조트의 멤버십 프로그램 클럽조선은 품격있는
@@ -453,7 +453,7 @@
         <div id="goto-7" class="meeting_area content">
           <div class="white_area"></div>
           <div class="meeting_txt">
-            <h3>THE PERFECT VENUE FOR YOUR SPECIAL EVENT</h3>
+            <h3>The Perfect Venue For Your Special Event</h3>
             <p>
               인생의 특별한 순간을 위한 이벤트와 컨퍼런스를<br />그랜드 조선
               제주에서 준비해보세요.
@@ -752,7 +752,18 @@ $(".startDay").click(function () {
 });
 
 
-//달력, 인원 선택시 res_bar 위치 조절,펼쳐지기 조절
+// $(".prev").click(function () {
+//   $(".res_bar").addClass("top73");
+//   $(".res_bar").removeClass("top58");
+// });
+// $(".next").click(function () {
+//   $(".res_bar").addClass("top73");
+//   $(".res_bar").removeClass("top58");
+// });
+
+
+
+//달력, 인원 선택시 res_bar 위치 조절, 펼쳐지기 조절
   var body = document.querySelector("body");
   body.addEventListener("click", clickBodyEvent1);
 
@@ -762,9 +773,13 @@ function clickBodyEvent1(event) {
   //달력 input
   var startDay = event.currentTarget.querySelector(".startDay");
 
-  // var thTags = event.currentTarget.querySelector(".table-condensed").querySelectorAll("th");
-  // var trTags = event.currentTarget.querySelector(".table-condensed").querySelectorAll("tr");
-  // var tableTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("table");
+  var thTags = event.currentTarget.querySelector(".left").querySelectorAll("th");
+  var trTags = event.currentTarget.querySelector(".left").querySelectorAll("tr");
+  var thTags_r = event.currentTarget.querySelector(".right").querySelectorAll("th");
+  var trTags_r = event.currentTarget.querySelector(".right").querySelectorAll("tr");
+  var tdTags = event.currentTarget.querySelector(".left").querySelectorAll("td");
+  var tdTags_r = event.currentTarget.querySelector(".right").querySelectorAll("td");
+  var tableTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("table");
   // var spanTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("span");
   // var divTags = event.currentTarget.querySelector(".daterangepicker").querySelectorAll("div");
 
@@ -807,21 +822,37 @@ if (target == btnClose){
    console.log("하이2")
    console.log(target);
   if (target == event.currentTarget.querySelector(".daterangepicker")) return;
-  if (target == event.currentTarget.querySelector(".available")) return;
+  // if (target == event.currentTarget.querySelector(".available")) return;
   if (target == event.currentTarget.querySelector(".calendar-table")) return;
   if (target == event.currentTarget.querySelector(".right")) return;
+  if (target == event.currentTarget.querySelector(".left")) return;
+  // if (target == event.currentTarget.querySelector(".prev")) return;
+  // if (target == event.currentTarget.querySelector(".next")) return;
 
-    // for(var i=0; i<thTags.length; i++) {
-    //      if( thTags[i] == target ) return ;
-    //  }
-    //  for(var i=0; i<tableTags.length; i++) {
-    //      if( tableTags[i] == target ) return ;
-    //  }
+
+    for(var i=0; i<thTags.length; i++) {
+         if( thTags[i] == target ) return ;
+     }
+     for(var i=0; i< trTags.length; i++) {
+         if(  trTags[i] == target ) return ;
+     }
+    for(var i=0; i<thTags_r.length; i++) {
+         if( thTags_r[i] == target ) return ;
+     }
+     for(var i=0; i< trTags_r.length; i++) {
+         if(  trTags_r[i] == target ) return ;
+     }
+     for(var i=0; i< tdTags.length; i++) {
+         if(  tdTags[i] == target ) return ;
+     }
+    for(var i=0; i<tdTags_r.length; i++) {
+         if( tdTags_r[i] == target ) return ;
+     }
+     for(var i=0; i<tableTags.length; i++) {
+         if( tableTags[i] == target ) return ;
+     }
     //  for(var i=0; i< spanTags.length; i++) {
     //      if(  spanTags[i] == target ) return ;
-    //  }
-    //  for(var i=0; i< trTags.length; i++) {
-    //      if(  trTags[i] == target ) return ;
     //  }
     //  for(var i=0; i< divTags.length; i++) {
     //      if(  divTags[i] == target ) return ;
@@ -866,7 +897,6 @@ if (target == btnClose){
      }
 
 
-
     // 10. res_bar 영역이면 pass
     if (target == event.currentTarget.querySelector(".res_bar")) return;
     mainRoom.style.height = "0px";
@@ -874,6 +904,8 @@ if (target == btnClose){
     resbar.classList.add("top58");
     resbar.classList.remove("top73");
   }
+
+
 }
     </script>
   </body>

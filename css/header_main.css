@@ -270,6 +270,11 @@ nav ul li {
   height: 50px;
 }
 
+.hill_roomlist > li > a,
+.main_roomlist > li > a {
+  font: 400 15px gothamL;
+}
+
 /*----------  마우스 올리면 네비게이션 바 변경 시작 ----------*/
 .dropdown-menu > b:hover {
   border-bottom: 2px solid #ba998c;
@@ -311,6 +316,7 @@ nav ul li {
   padding-left: 100px;
   margin-left: 120px;
   font-weight: 900;
+  font: 600 24px gothamM;
 }
 .nav_list > a {
   margin-left: 120px;
@@ -326,6 +332,7 @@ nav ul li {
   /*세부 굵은 글씨*/
   font-size: 15px;
   font-weight: bold;
+  font: 600 15px/30px gothamM;
 }
 
 .dropdown-content > div {
