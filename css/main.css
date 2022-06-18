@@ -547,13 +547,14 @@ dl {
 .room_event {
   margin-top: 70px;
 }
-.room_event > p:first-child {
+.room_event > a > p:first-child {
   width: 59%;
   font: 14px gothamL;
+  color: #000;
   border: 1px solid #000;
   padding: 5px 10px 6px;
 }
-.room_event > img {
+.room_event img {
   width: 290px;
   height: 150px;
 }
@@ -585,6 +586,7 @@ dl {
 .txt {
   padding-top: 18px;
   margin-bottom: 8px;
+  color: #000;
 }
 .date {
   margin-bottom: 17px;

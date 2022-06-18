@@ -507,6 +507,30 @@ ol {
   height: 1px;
   opacity: 0;
 }
+/* ---------------------------------------------- */
+.select_hotel {
+  margin-right: 110px;
+}
+.select-origin1,
+.select-origin2 {
+  width: 325px;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: gothamL, notokrL;
+  color: #333;
+}
+.select-origin1 > option,
+.select-origin2 > option {
+  font-size: 18px;
+}
+select:focus {
+  outline: none;
+}
+/* ---------------------------------------------- */
 input,
 select {
   vertical-align: middle;

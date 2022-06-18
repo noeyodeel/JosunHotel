@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="shortcut icon" href="./images/deluxe_img/favicon.ico" />
     <!-- daterangepicker 순서 주의!! -->
     <link rel="stylesheet" type="text/css" href="./lib/daterangepicker-master/daterangepicker.css" />
     <script type="text/javascript" src="./lib/daterangepicker-master/moment.min.js"></script>
@@ -222,7 +223,7 @@
                   </div>
 
                   <!-- search -->
-                  <a href="" class="btnSearch">SEARCH</a>
+                  <a href="./res_room0.html" class="btnSearch">SEARCH</a>
                 </div>
               </form>
               <!-- 프로모션 코드 -->
@@ -346,30 +347,27 @@
               </h5>
               <h6>GRAND JOSUN JEJU /<br />GRAND JOSUN HILL SUITE</h6>
               <div class="arrow_btn">
-                <a href="#"></a>
+                <a href="./rooms.html"></a>
               </div>
             </div>
             <div class="room_event">
-              <p>SEASONAL PROMOTION</p>
-              <p class="txt">SUMMER VOYAGE</p>
-              <p class="date">2022.05.13 - 2022.08.31</p>
-              <img src="./images/main_img/22_SummerVoyage.jpg" />
+              <a href="./package.html">
+                <p>SEASONAL PROMOTION</p>
+                <p class="txt">SUMMER VOYAGE</p>
+                <p class="date">2022.05.13 - 2022.08.31</p>
+                <img src="./images/main_img/22_SummerVoyage.jpg" />
+              </a> 
             </div>
           </div>
         </div>
         <!-- Dining 부분 -->
         <div id="goto-3" class="dining_area content">
-          <!-- <div class="dining_img">
-              <img src="./images/bg_dining.jpg" />
-            </div> -->
           <div class="dining_txt_area">
             <div class="dining_txt">
               <h3>Enriched<br />Gourmet<br />Greeting</h3>
               <h5>다채로운 미식의 세계로의 초대</h5>
               <h6>BUFFET / LOUNGE&BAR / ROOFTOP</h6>
-              <div class="arrow_btn">
-                <a href="#"></a>
-              </div>
+              <a href="#" class="arrow_btn"></a>          
             </div>
           </div>
         </div>
@@ -379,9 +377,7 @@
             <div class="facility_txt">
               <h3>Iconic Facilities</h3>
               <h6>POOL / GX ROOM / KIDS CLUB</h6>
-              <div class="arrow_btn">
-                <a href="#"></a>
-              </div>
+              <a href="#" class="arrow_btn"></a>
             </div>
             
             <!-- TODO: 아코디언 -->
@@ -421,14 +417,7 @@
             <h3>Get Active</h3>
             <h5>몸과 마음에 활력을 더해 줄 다채로운 액티비티</h5>
             <h6>JOSUN JUNIOR / GRAN JOE</h6>
-            <div class="arrow_btn">
-              <a href="#">
-                <img src="화살표(마우스 안올렸을 때)" alt="" />
-              </a>
-              <a href="#">
-                <img src="화살표(마우스 올렸을 때)" alt="" />
-              </a>
-            </div>
+            <a href="./activity.html" class="arrow_btn"></a>
           </div>
           <div class="activity_box">
             <h4>ON GOING</h4>
@@ -488,7 +477,7 @@
                       <div class="thum_p">
                         <img src="./images/main_img/peak.jpg"/>
                         <span class="hoverCont_p" tabindex>
-                          <a href="#" class="btn">자세히 보기</a>
+                          <a href="./package.html" class="btn">자세히 보기</a>
                         </span>
                       </div>
                       <strong>[시즌한정] LET'S PEAK (2박전용)</strong>
@@ -499,7 +488,7 @@
                       <div class="thum_p">
                         <img src="./images/main_img/dine.jpg"/>
                         <span class="hoverCont_p" tabindex>
-                          <a href="#" class="btn">자세히 보기</a>
+                          <a href="./package.html" class="btn">자세히 보기</a>
                         </span>
                       </div>
                       <strong>[Flash Sale] DINE & DREAM</strong>
@@ -510,7 +499,7 @@
                       <div class="thum_p">
                         <img src="./images/main_img/voyage.jpg"/>
                         <span class="hoverCont_p" tabindex>
-                          <a href="#" class="btn">자세히 보기</a>
+                          <a href="./package.html" class="btn">자세히 보기</a>
                         </span>
                       </div>
                       <strong>[시즌한정] SUMMER VOYAGE</strong>
@@ -526,7 +515,7 @@
                 <p class="txt_mem">
                   조선호텔앤리조트의 멤버십 프로그램 클럽조선은 품격있는 라이프스타일과<br>특별한 경험을 제안합니다.<br>
                   클럽조선 회원이 되셔서 다채로운 혜택과 최상의 서비스를 누려보세요.
-                  <a href="" class="joinBtn">가입하기</a>
+                  <a href="./login.html" class="joinBtn">가입하기</a>
                 </p>
               </div>
             </div>
@@ -762,7 +751,6 @@ $(".startDay").click(function () {
 // });
 
 
-
 //달력, 인원 선택시 res_bar 위치 조절, 펼쳐지기 조절
   var body = document.querySelector("body");
   body.addEventListener("click", clickBodyEvent1);
@@ -801,16 +789,16 @@ function clickBodyEvent1(event) {
   var rc_ulTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("ul");
   var rc_liTags = event.currentTarget.querySelector(".roomContainer").querySelectorAll("li");
 
-  console.log(target);
+  console.log('target: ', target);
 //res_bar에서 달력 영역, 인원 영역 클릭 시 res_bar내려가게 함
   if (target == body||target == roomWrap) {
-  console.log("하이1")
+  // console.log("하이1")
 
     resbar.classList.add("top73");
     resbar.classList.remove("top58");
 }
 if (target == btnClose){
-  console.log("하이1/2")
+  // console.log("하이1/2")
   mainRoom.style.height = "0px";
   mainRoom.style.padding = "0px";
   resbar.classList.add("top58");
@@ -819,15 +807,14 @@ if (target == btnClose){
 
 //res_bar에서 달력 영역, 인원 영역이 아닌 곳 클릭 시
  if (target != startDay && target != body && target != roomWrap ) {
-   console.log("하이2")
-   console.log(target);
+  //  console.log("하이2")
   if (target == event.currentTarget.querySelector(".daterangepicker")) return;
   // if (target == event.currentTarget.querySelector(".available")) return;
   if (target == event.currentTarget.querySelector(".calendar-table")) return;
   if (target == event.currentTarget.querySelector(".right")) return;
   if (target == event.currentTarget.querySelector(".left")) return;
-  // if (target == event.currentTarget.querySelector(".prev")) return;
-  // if (target == event.currentTarget.querySelector(".next")) return;
+  if (target == event.currentTarget.querySelector(".prev")) return;
+  if (target == event.currentTarget.querySelector(".next")) return;
 
 
     for(var i=0; i<thTags.length; i++) {
@@ -866,7 +853,7 @@ if (target == btnClose){
      for(var i=0; i<dlTags.length; i++) {
          if( dlTags[i] == target ) return ;
      }
-         // 3. roomWrap 영역 내 dd이면 pass
+    // 3. roomWrap 영역 내 dd이면 pass
      for(var i=0; i<ddTags.length; i++) {
          if( ddTags[i] == target ) return ;
      }
@@ -899,14 +886,19 @@ if (target == btnClose){
 
     // 10. res_bar 영역이면 pass
     if (target == event.currentTarget.querySelector(".res_bar")) return;
+
+    // var cal = $(event.target).parents(".drp-calendar");
+    // if (cal.hasClass("left")){
+    // }
+       
     mainRoom.style.height = "0px";
     mainRoom.style.padding = "0px";
     resbar.classList.add("top58");
     resbar.classList.remove("top73");
+    console.log("달력 바깥");
   }
-
-
 }
+
     </script>
   </body>
   <script>

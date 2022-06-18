@@ -118,9 +118,11 @@ header {
 .top_bar {
   background-color: black;
   width: 100%;
-  height: 50px;
+  height: 50px !important;
   line-height: 50px; /* height와 line-height에 똑같은 값을 주면 세로 중앙 정렬 됨! */
   font-size: 12px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 .top_bar > div > li {
   display: inline-block; /* 텍스트 내용들 한줄에 배치됨! */
@@ -131,6 +133,9 @@ header {
 .left_topbar > li > a {
   margin: 0;
   padding: 15px;
+}
+.hotel_search {
+  border: none !important;
 }
 .hotel_search > span {
   font-size: 12px;
@@ -177,6 +182,7 @@ header {
 .right_topbar {
   padding-right: 50px;
 }
+
 .gnb {
   /* 스크롤시 나오는 헤더, 그냥 헤더 */
   position: relative;
@@ -184,16 +190,20 @@ header {
   padding: 20px 50px;
   height: 30px;
   display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
+  margin-top: 0px;
 }
 .gnb1 {
   /* 메인 헤더 */
   position: relative;
   background: transparent;
   padding: 30px 50px;
-  height: 30px;
+  height: 32px;
   display: flex; /* 네비게이션 바 전부 다 한줄에 배치 */
+  margin-bottom: 0px !important;
 }
-
+.gnb2 {
+  margin-bottom: 10px;
+}
 .dropdown {
   margin-top: 12px;
   font-size: 15px;
@@ -279,6 +289,17 @@ nav ul li {
 .main_roomlist > li {
   display: flex;
   flex-direction: column;
+}
+.main_roomlist,
+.hill_roomlist {
+  padding-inline-start: 0px !important;
+}
+.dc_new {
+  padding-inline-start: 0px !important;
+}
+.main_roomlist_,
+.hill_roomlist_ {
+  padding-inline-start: 0px !important;
 }
 .hill_roomlist > li {
   display: flex;
@@ -414,9 +435,6 @@ nav ul li {
   display: block;
   z-index: 100;
   border-bottom: 1.5px solid lightgray;
-}
-.gnb2 {
-  height: 10%;
 }
 .logo_ {
   margin-right: 20px;

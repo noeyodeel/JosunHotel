@@ -54,17 +54,18 @@ function categoryChange(e) {
   ];
   //포포인츠 서울역
   var place_popo_s = ["장소 선택", "객실", "더이터리", "더바", "기타"];
-
-  var target = document.getElementsByClassName("custom-select-list2");
+  var place_sel = ["장소 선택"];
+  var target = document.getElementById("place");
   console.log(e.value);
   if (e.value == "wes_s") var d = place_wes_s;
   else if (e.value == "wes_b") var d = place_wes_b;
   else if (e.value == "popo_s") var d = place_popo_s;
+  else if (e.value == "01") var d = place_sel;
 
   target.options.length = 0;
 
   for (x in d) {
-    var opt = document.createElement("li");
+    var opt = document.createElement("option");
     opt.value = d[x];
     opt.innerHTML = d[x];
     target.appendChild(opt);

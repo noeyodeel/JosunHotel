@@ -76,6 +76,8 @@ nav:hover .dropdown-menu {
   height: 50px;
   line-height: 50px; /* height와 line-height에 똑같은 값을 주면 세로 중앙 정렬 됨! */
   font-size: 12px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 .top_bar > div > li {
   display: inline-block; /* 텍스트 내용들 한줄에 배치됨! */

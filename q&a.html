@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./css/q&a.css" />
     <!-- <script src="./js/q&a.js"></script> -->
+    <link rel="shortcut icon" href="./images/deluxe_img/favicon.ico" />
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
   </head>
@@ -36,7 +37,7 @@
           <h2>Q&A</h2>
           <div class="gray_area">
             <h4>조선호텔앤리조트 회원이신가요?</h4>
-            <a href="로그인 링크">로그인 하기</a>
+            <a href="./login.html">로그인 하기</a>
           </div>
           <form action="#" class="appForm" method="post">
             <fieldset>
@@ -113,65 +114,11 @@
                   <div class="app_content property_area">
                     <!-- 호텔선택 1번째 selectbox -->
                     <div class="select_hotel selectArea area-custom-select">
-                      <div class="select hotel_sel custom-select1" tabindex="0">
-                        <span class="custom-select-text1">호텔 선택</span>
-                      </div>
-                      <ul
-                        class="custom-select-list1 option"
-                        style="display: none"
+                      <select
+                        title="호텔 선택"
+                        class="select-origin1"
+                        onchange="categoryChange(this)"
                       >
-                        <!-- li의 value와 option의 value를 동일하게 해야 li 선택시 select도 같이 선택 됨 -->
-                        <li
-                          value="01"
-                          class="custom-select-option1"
-                          onchange="categoryChange(this)"
-                        >
-                          <a>호텔 선택</a>
-                        </li>
-                        <li
-                          value="wes_s"
-                          class="custom-select-option1"
-                          onchange="categoryChange(this)"
-                        >
-                          <a>웨스틴 조선 서울</a>
-                        </li>
-                        <li
-                          value="wes_b"
-                          class="custom-select-option1"
-                          onchange="categoryChange(this)"
-                        >
-                          <a>웨스틴 조선 부산</a>
-                        </li>
-                        <li value="popo_s" class="custom-select-option1">
-                          <a>포포인츠 바이 쉐라톤 서울역</a>
-                        </li>
-                        <li value="grand_b" class="custom-select-option1">
-                          <a>그랜드 조선 부산</a>
-                        </li>
-                        <li value="popo_m" class="custom-select-option1">
-                          <a>포포인츠 바이 쉐라톤 명동</a>
-                        </li>
-                        <li value="R&S" class="custom-select-option1">
-                          <a>Retail & Service</a>
-                        </li>
-                        <li value="graviity_s" class="custom-select-option1">
-                          <a>그래비티 서울 판교</a>
-                        </li>
-                        <li value="grand_j" class="custom-select-option1">
-                          <a>그랜드 조선 제주</a>
-                        </li>
-                        <li value="rescape" class="custom-select-option1">
-                          <a>레스케이프</a>
-                        </li>
-                        <li value="josun_g" class="custom-select-option1">
-                          <a>조선 팰리스 강남</a>
-                        </li>
-                        <li value="clubjosun_m" class="custom-select-option1">
-                          <a>클럽조선 멤버쉽</a>
-                        </li>
-                      </ul>
-
-                      <select title="호텔 선택" class="select-origin1">
                         <option value="01" selected="selected">
                           호텔 선택
                         </option>
@@ -180,7 +127,7 @@
                         <option value="popo_s">
                           포포인츠 바이 쉐라톤 서울역
                         </option>
-                        <option value="grand_b">그랜드 조선 부산</option>
+                        <!-- <option value="grand_b">그랜드 조선 부산</option>
                         <option value="popo_m">
                           포포인츠 바이 쉐라톤 명동
                         </option>
@@ -189,34 +136,14 @@
                         <option value="grand_j">그랜드 조선 제주</option>
                         <option value="rescape">레스케이프</option>
                         <option value="josun_g">조선 팰리스 강남</option>
-                        <option value="clubjosun_m">클럽조선 멤버쉽</option>
+                        <option value="clubjosun_m">클럽조선 멤버쉽</option> -->
                       </select>
                     </div>
                     <!-- 호텔선택 2번째 selectbox -->
                     <div class="select_hotel2 selectArea area-custom-select">
-                      <div
-                        class="custom-select select custom-select2 hotel_sel2"
-                        tabindex="0"
-                      >
-                        <span class="custom-select-text2">장소 선택</span>
-                      </div>
                       <select id="place" class="select-origin2">
                         <option value="">장소 선택</option>
                       </select>
-                      <ul
-                        class="custom-select-list2 option"
-                        style="display: none"
-                      >
-                        <!-- <li class="custom-select-option2">
-                          <a>장소 선택</a>
-                        </li> -->
-                        <!-- <li class="custom-select-option2">
-                          <a>웨스틴 조선 서울</a>
-                        </li>
-                        <li class="custom-select-option2">
-                          <a>웨스틴 조선 부산</a>
-                        </li> -->
-                      </ul>
                     </div>
                   </div>
                 </li>
