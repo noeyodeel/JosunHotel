@@ -71,7 +71,8 @@ div,
 button,
 textarea,
 input,
-select {
+select,
+table {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -83,7 +84,10 @@ body,
 button,
 textarea,
 input,
-select {
+select,
+table,
+th,
+td {
   color: black;
   font-family: notokrL, gothamL, playfair;
   font-weight: 400;
@@ -123,6 +127,11 @@ ol::after {
   clear: both;
 }
 
+strong,
+b {
+  font-weight: 500;
+}
+
 a,
 button {
   cursor: pointer;
@@ -138,6 +147,13 @@ textarea {
   font-family: gothamL, notokrL;
   resize: none;
   font-size: 16px;
+}
+.hidden {
+  overflow: hidden;
+  position: absolute;
+  font: notokrL;
+  width: 0;
+  height: 0;
 }
 
 .wrapper {
@@ -638,8 +654,14 @@ textarea {
   margin-top: -5px;
   width: 18px;
   height: 10px;
-  background-image: url(../images/res_button_icon.png);
+  background-image: url(../images/ico_toggle_white.png);
+  background-repeat: no-repeat;
 }
+
+.roomContainer .toggleOn .btnRes:after {
+  background-position: -18px 0;
+}
+
 .noData {
   text-align: center;
   padding: 130px 0;
@@ -713,7 +735,8 @@ textarea {
   width: 28px;
   height: 15px;
   padding: 6px 0 7px 0;
-  background-image: url(../images/res_button_icon.png);
+  background-image: url(../images/button_toggle.png);
+  background-repeat: no-repeat;
 }
 
 .roomRes > li .toggleCont {
@@ -807,7 +830,7 @@ p.textGuide::before,
 
 .resRoomWrap .rightCont {
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
   width: 400px;
 }
@@ -1336,7 +1359,8 @@ input[type="password"] {
   width: 18px;
   height: 10px;
   padding: 5px 0;
-  background-image: url(../images/res_button_icon.png);
+  background-image: url(../images/ico_toggle_18x10.png);
+  background-repeat: no-repeat;
   background-position: 0 5px;
 }
 
@@ -1434,18 +1458,21 @@ input[type="password"] {
   overflow: hidden;
   text-indent: -9999px;
 }
-.rsvList > li .btnToggle:before {
+.rsvList > li .btnToggle::before {
   content: "";
   display: block;
   width: 28px;
   height: 15px;
-  padding: 6px 0 7px;
-  background-image: url(../images/res_button_icon.png);
-  background-position: 0 5px;
+  padding: 6px 0 7px 0;
+  background-image: url(../images/button_toggle.png);
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  background-position-y: 5px;
 }
 
-.rsvList > li.toggleOn .btnToggle:before {
-  background-position: -28px 5px;
+.rsvList > li.toggleOn .btnToggle::before {
+  background-position-x: -28px;
+  background-position-y: 5px;
 }
 
 .toggleList > li .toggleCont .toggleInner {
@@ -1471,6 +1498,249 @@ input[type="password"] {
   margin: 0 13px 0 15px;
 }
 
+/* calendar */
+.toggleList > li .toggleCont {
+  display: none;
+  position: relative;
+}
+
+.toggleList > li .toggleCont .toggleInner {
+  padding: 33px 0;
+}
+.calContainer {
+  position: relative;
+}
+
+.calContainer .calWrap {
+  width: 1030px;
+  margin: 0 auto;
+}
+.calInner {
+  float: left;
+  width: 476px;
+}
+
+.calContainer .btnMonth {
+  display: block;
+  position: absolute;
+  top: 200px;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 37px;
+  height: 72px;
+  background: url(../images/prev_next.png) no-repeat;
+}
+
+.calContainer .prevMonth {
+  left: 0;
+  background-position: 0 0;
+}
+
+.btnMonth.disabled {
+  opacity: 0.3;
+}
+
+.calContainer .calWrap .calMonth {
+  font-family: gothamB;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.calInner .calendar {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  width: 476px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  empty-cells: show;
+  border-spacing: 0;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.calInner .calendar th,
+.calendar td {
+  text-align: center;
+  font-family: gothamL;
+}
+
+.calInner .calendar th {
+  width: 68px;
+  height: 68px;
+  color: #000;
+  font-size: 16px;
+}
+
+.calInner .calendar .dayRed,
+.calInner .calendar .dayRed a {
+  color: red;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.calInner .calendar td {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  font-size: 18px;
+}
+
+.calInner + .calInner {
+  float: right;
+}
+
+.calContainer .nextMonth {
+  right: 0;
+  background-position: -37px 0;
+}
+.calContainer .btnMonth {
+  display: block;
+  position: absolute;
+  top: 200px;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 37px;
+  height: 72px;
+  background: url(../images/prev_next.png) no-repeat;
+}
+
+.calContainer .calWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 객실 및 인원 선택 */
+.rsvList > li:last-child .toggleInner {
+  padding-bottom: 0;
+}
+.roomContainer {
+  position: relative;
+  padding-bottom: 20px;
+}
+.rsvList .roomContainer {
+  padding-top: 5px;
+}
+.roomCol {
+  display: inline-block;
+  width: 405px;
+}
+.roomTit {
+  display: block;
+  text-align: center;
+}
+.rsvList .roomTit {
+  font-family: gothamB;
+  font-size: 22px;
+}
+.numWrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+.numType {
+  float: left;
+  position: relative;
+  width: 190px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+}
+.roomCol.on .numType {
+  border-bottom: 1px solid black;
+}
+.numType + .numType {
+  float: right;
+  margin-left: 25px;
+}
+
+.numType button {
+  display: block;
+  position: absolute;
+  top: 17px;
+  width: 33px;
+  height: 33px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.numType button::before {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 33px;
+}
+.numType button.btnDown {
+  left: 0;
+}
+.numType button.btnDown::before {
+  background: url(../images/ico_down_button.png) no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.roomCol.on span {
+  color: black;
+}
+
+.numType span {
+  display: block;
+  text-align: center;
+  padding: 0 35px;
+  width: 124px;
+  color: #000;
+  margin: 0 auto;
+  font-family: gothamL;
+}
+
+.numType button.btnUp {
+  right: 0;
+}
+.numType button.btnUp::before {
+  background: url(../images/ico_up_button.png) no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+.numWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.roomCol + .roomCol {
+  margin-left: 66px;
+}
+
+.roomContainer .roomWrap + .textGuide {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+.roomContainer .roomWrap + .textGuide li {
+  display: inline-block;
+  margin-left: 15px;
+}
 /* 객실 검색 버튼 */
 
 .btnArea {

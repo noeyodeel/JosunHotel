@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
+    <script src="./js/res_room.js"></script>
   </head>
   <div class="wrapper">
     <header w3-include-html="header.html"></header>
@@ -76,13 +77,13 @@
         <div class="Innertitle2">
           <ul class="tab">
             <li id="tab01" class="on">
-              <a 상품으로 href="#none">상품으로 보기 3</a>
+              <a 상품으로 href="#none" onclick="test1()">상품으로 보기 3</a>
             </li>
             <li id="tab02">
-              <a 상품으로 href="#none">객실로 보기 24</a>
+              <a 상품으로 href="#none" onclick="test2()">객실로 보기 24</a>
             </li>
             <li id="tab03">
-              <a 상품으로 href="#none">회원 전용 0</a>
+              <a 상품으로 href="#none" onclick="test3()">회원 전용 0</a>
             </li>
           </ul>
           <div class="sideoption"></div>
@@ -91,7 +92,7 @@
         <!-- 리스트 박스 부분 -->
 
         <!-- roomContainer01 -->
-        <div class="roomContainer" id="roomcontainer01">
+        <div class="roomContainer" id="roomcontainer01" style="display:block;">
           <div class="banner">
             <div>
               <span class="bannertitle">클럽조선 리워드 혜택</span>
@@ -125,7 +126,6 @@
                 </dd>
                 <button type="button" class="btnRes">RESERVE</button>
               </dl>
-            </li>
             
             <li id="room1">
               <dl class="roomInfo">
@@ -186,7 +186,7 @@
         <!-- //roomContainer01 -->
 
         <!-- roomContainer2 -->
-        <div class="roomContainer" id="roomcontainer02">
+        <div class="roomContainer" id="roomcontainer02" style="display: none;">
           <div class="banner">
             <div>
               <span class="bannertitle">클럽조선 리워드 혜택</span>
@@ -823,7 +823,7 @@
         <!-- //roomContainer02 -->
 
         <!-- roomcontainer03 -->
-        <div class="roomContainer" id="roomcontainer03" >
+        <div class="roomContainer" id="roomcontainer03" style="display: none;" onclick="test3()">
           <div class="banner">
             <div>
               <span class="bannertitle">클럽조선 리워드 혜택</span>

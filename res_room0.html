@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
+    <script src="./js/res_room.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,31 +33,220 @@
             <button type="button" class="btnSC btnProm">프로모션 코드</button>
           </div>
           <ul class="toggleList rsvList checkDate">
-            <li class="toggleOn">
+            <li class="toggleOn" id="toggle1" onclick="toggleClass1()">
               <strong class="listTit">투숙기간 선택</strong>
               <em class="infoValue" id="dateText"
                 >2022.12.24&nbsp;일&nbsp;-&nbsp;2022.12.25&nbsp;월
                 <span>1 박</span>
               </em>
-              <button type="button" class="btnToggle">
-                <span class="hidden">상세내용 닫기</span>
-              </button>
+              <button type="button" class="btnToggle"></button>
               <div class="toggleCont" style="display: block">
-                <div class="toggleInner"></div>
+                <div class="toggleInner">
+                  <div class="calContainer hasDatepicker" id="datepicker">
+                    <div class="calWrap" style="display: block">
+                      <div class="calInner calLeft">
+                        <div class="datepicker-header">
+                          <!-- <button
+                            type="button"
+                            disabled
+                            class="btnMonth prevMonth disabled"
+                            title="Prev"
+                          ></button> -->
+
+                          <strong class="calMonth">
+                            <span class="ui-datepicker-year">2022</span>
+                            <span class="ui-datepicker-month">06</span>
+                          </strong>
+                        </div>
+                        <!-- //header -->
+
+                        <!-- calendar -->
+                        <table class="calendar">
+                          <!-- day -->
+                          <thead>
+                            <tr>
+                              <th scope="col" class="dayRed">
+                                <span title="Sunday">SUN</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Monday">MON</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Tuesday">TUE</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Wednesday">WED</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Thursday">THU</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Friday">FRI</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Saturday">SAT</span>
+                              </th>
+                            </tr>
+                          </thead>
+
+                          <!-- date -->
+                          <tbody></tbody>
+                        </table>
+                      </div>
+
+                      <div class="calInner calRight">
+                        <div class="datepicker-header">
+                          <!-- <button
+                            class="btnMonth nextMonth"
+                            type="button"
+                            title="Next"
+                          ></button> -->
+                          <strong class="calMonth">
+                            <span class="datepicker-year">2022</span>
+                            <span class="datepicker-month">07</span>
+                          </strong>
+                        </div>
+
+                        <table class="calendar">
+                          <!-- day -->
+                          <thead>
+                            <tr>
+                              <th scope="col" class="dayRed">
+                                <span title="Sunday">SUN</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Monday">MON</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Tuesday">TUE</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Wednesday">WED</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Thursday">THU</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Friday">FRI</span>
+                              </th>
+                              <th scope="col">
+                                <span title="Saturday">SAT</span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <!-- date -->
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- //togglecont -->
             </li>
-            <li class>
+            <!-- //toggleOn -->
+
+            <!-- 객실 인원 선택 -->
+            <li class="toggleOn" id="toggle2" onclick="toggleClass2()">
               <strong class="listTit">객실 및 인원 선택</strong>
               <em class="infoValue" id="roomText"
                 >객실 1개
                 <span>성인 2명</span>
               </em>
-              <button type="button" class="btnToggle">
-                <span class="hidden">상세내용 닫기</span>
-              </button>
+              <button type="button" class="btnToggle"></button>
               <div class="toggleCont" style="display: block">
                 <div class="toggleInner">
-                  <div class="roomContainer"></div>
+                  <div class="roomContainer">
+                    <div class="roomWrap">
+                      <div class="roomCol on">
+                        <div class="roomInner">
+                          <strong class="roomTit">객실1</strong>
+                          <div class="numWrap">
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>성인 2</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>어린이 0</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="roomCol">
+                        <div class="roomInner">
+                          <strong class="roomTit">객실2</strong>
+                          <div class="numWrap">
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>성인 0</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>어린이 0</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="roomCol">
+                        <div class="roomInner">
+                          <strong class="roomTit">객실3</strong>
+                          <div class="numWrap">
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>성인 0</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+
+                            <div class="numType">
+                              <button ype="button" class="btnDown">
+                                인원 감소
+                              </button>
+                              <span>어린이 0</span>
+                              <button type="button" class="btnUp">
+                                인원 증가
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //roomWrap -->
+                    <ul class="textGuide">
+                      <li>최대 3개 객실 예약 가능</li>
+                      <li>어린이 기준 : 37개월 ~ 만 12세</li>
+                    </ul>
+                  </div>
+                  <!-- roomContainer -->
+
                   <div class="btnArea">
                     <a href="res_room1.html" class="btnSC btnL active"
                       >객실 검색</a
@@ -65,8 +255,10 @@
                 </div>
               </div>
             </li>
+            <!-- toggleOn -->
           </ul>
         </div>
+        <!-- Inner -->
       </div>
       <!-- //container -->
       <footer w3-include-html="footer.html"></footer>
