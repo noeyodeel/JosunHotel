@@ -64,28 +64,28 @@
                                     <!-- //전체동의 -->
                               </div>
                               <ul class="toggleList agreeCont">
-                                    <li >
+                                    <li>
                                           <span class="frm type02">
                                                 <input type="checkbox" id="frmChk01" name="mberAgreChk"
-                                                      value="T0001"><label for="frmChk01"onclick='is_checked()'>
-                                                            [필수] 클럽조선 리워드 이용 약관
-                                                      </label>
+                                                      value="T0001"><label for="frmChk01" onclick='is_checked()'>
+                                                      [필수] 클럽조선 리워드 이용 약관
+                                                </label>
                                           </span>
                                           <button type="button" class="btnToggle"><span class="hidden">
-                                                상세내용 보기
-                                          </span></button>
+                                                      상세내용 보기
+                                                </span></button>
                                     </li>
                                     <!-- ------------------------------------------------ -->
                                     <li class="toggle">
                                           <span class="frm type02">
                                                 <input type="checkbox" id="frmChk02" name="mberAgreChk"
                                                       value="A0001"><label for="frmChk02">
-                                                            [필수] 개인정보수집 및 이용에 대한 동의
-                                                      </label>
+                                                      [필수] 개인정보수집 및 이용에 대한 동의
+                                                </label>
                                           </span>
                                           <button type="button" class="btnToggle" name="btnToggle">
                                                 <span class="hidden">상세내용 보기</span></button>
-                                          <div class="agree toggleCont"style="display:none">
+                                          <div class="agree toggleCont" style="display:none">
                                                 <div class="box toggleInner">
                                                       <p class="notiTxt">
                                                             조선호텔앤리조트는 클럽조선 회원가입과 관련하여 아래와 같은 개인정보를 수집 및
@@ -114,7 +114,8 @@
                                                                               회원 ID, 비밀번호, 이름,
                                                                               생년월일, 국적, 성별, 휴대폰번호</th>
                                                                         <td>서비스 이용자 식별 및 본인, 14세 이상 여부 확인</td>
-                                                                        <td class="f18" rowspan="3">회원탈퇴 또는 5년간 이용실적 없을 시</td>
+                                                                        <td class="f18" rowspan="3">회원탈퇴 또는 5년간 이용실적 없을
+                                                                              시</td>
                                                                   </tr>
                                                                   <tr>
                                                                         <th scope="row" class="tcenter">휴대폰번호, 이메일주소
@@ -271,8 +272,8 @@
                                           <li class="error">
                                                 <!-- 미입력 일 경우 error 클래스 추가 alertMessage 노출 -->
                                                 <div class="intWrap"><span class="tit">
-                                                      <label for="eName">ENGLISH NAME</label>
-                                                      <span class="essential">필수</span></span>
+                                                            <label for="eName">ENGLISH NAME</label>
+                                                            <span class="essential">필수</span></span>
                                                 </div>
                                                 <div class="intInner duobuleInp">
                                                       <span class="intArea"><input type="text" id="eName1" name="eName1"
@@ -340,39 +341,37 @@
                                                 </div>
                                           </li>
                                           <!-- 국적 -->
-                                          <li>
+                                          <li class="nationalityArea">
                                                 <div class="intWrap">
                                                       <span class="tit">
                                                             <label for="nationCode-button">NATIONALITY</label>
                                                             <span class="essential">필수</span>
                                                       </span>
                                                 </div>
-                                                <div class="intInner">
-                                                      <div class="intArea selectWrap" style="width: 490px" first="true">
-                                                            <select id="nationCode" style="display: none;">
-                                                                  <option value="GH">가나[GH]</option>
-                                                                  <option value="GA">가봉[GA]</option>
-                                                                  <option value="DE">독일[DE]</option>
-                                                                  <option value="LA">라오스[LA]</option>
-                                                            </select>
+                                                <div class="selectArea intInner">
+                                                      <div class="intArea selectWrap" style="width: 490px">
+                                                            <select name="select" id="select" hidden>
+                                                                  <option value="01">가나[GH]</option>
+                                                                  <option value="02">가봉[GA]</option>
+                                                                  <option value="03">가이아나[GY]</option>
+                                                                  <option value="04">감비아[GM]</option>
+                                                                  <option value="05">과들루프[GP]</option>
+                                                                  <option value="00" selected>대한민국[KR]</option>
                                                       </div>
-                                                      <button tabindex="0" id="nationCode-button" role="combobox"
-                                                            aria-expanded="false" aria-autocomplete="list"
-                                                            aria-owns="nationCode-menu" aria-haspopup="true"
-                                                            class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
-                                                            type="button">
-                                                            <span class="ui-selectmenu-text">대한민국[KR]</span>
+                                                      </select>
+                                                      <button type="button" id="selectBtn" class="select">
+                                                            대한민국[KR]
                                                       </button>
-                                                      <div class="ui-selectmenu-menu ui-front">
-                                                            <div class="tweenDiv">
-                                                                  <ul aria-hidden="true"
-                                                                        aria-labelledby="nationCode-button"
-                                                                        id="nationCode-menu" role="listbox" tabindex="0"
-                                                                        class="ui-menu ui-corner-bottom ui-widget ui-widget-content"
-                                                                        style="max-height: 200px;"></ul>
-                                                            </div>
+                                                      <div class="option" id="option">
+                                                            <ul>
+                                                                  <li><a class="optionList">가나[GH]</a></li>
+                                                                  <li><a class="optionList">가봉[GA]</a></li>
+                                                                  <li><a class="optionList">가이아나[GY]</a></li>
+                                                                  <li><a class="optionList">감비아[GM]</a></li>
+                                                                  <li><a class="optionList">과들루프[GP]</a></li>
+                                                                  <li><a class="optionList">대한민국[KR]</a></li>
+                                                            </ul>
                                                       </div>
-                                                      <span class="alertMessage">국적을 선택해주세요.</span>
                                                 </div>
                                           </li>
                                           <!-- 주소 -->
@@ -417,10 +416,13 @@
                                                 </div>
                                           </li>
                                           <!-- 이메일 -->
-                                          <li>
-                                                <div class="intWrap"><span class="tit"><label
-                                                                  for="eMail0">E-MAIL</label><span
-                                                                  class="essential">필수</span></span></div>
+                                          <li class="emailArea">
+                                                <div class="intWrap">
+                                                      <span class="tit">
+                                                            <label for="eMail0">E-MAIL</label>
+                                                            <span class="essential">필수</span>
+                                                      </span>
+                                                </div>
                                                 <div class="intInner emailInp">
                                                       <span class="intArea"><input type="text" id="email1" name="email1"
                                                                   onkeyup="javascript:emailDupInit();"
@@ -431,84 +433,100 @@
                                                                   onkeyup="javascript:emailDupInit();"
                                                                   style="width:261px" aria-required="true"
                                                                   title="이메일주소직접입력"></span>
-                                                      <div class="intArea selectWrap" style="width:261px" first="true">
-
-                                                            <select name="emailType" id="emailType" class="form-control"
+                                                      <div class="selectArea intArea selectWrap" style="width:261px">
+                                                            <select name="select" id="selectEmail" class="form-control"
                                                                   style="display: none;">
-                                                                  <option value="">직접 입력</option>
-                                                                  <option value="naver.com">naver.com</option>
-                                                                  <option value="hanmail.net">hanmail.net</option>
-                                                                  <option value="hotmail.com">hotmail.com</option>
-                                                                  <option value="nate.com">nate.com</option>
-                                                                  <option value="gmail.com">gmail.com</option>
-                                                            </select><button tabindex="0" id="emailType-button"
-                                                                  role="combobox" aria-expanded="false"
-                                                                  aria-autocomplete="list" aria-owns="emailType-menu"
-                                                                  aria-haspopup="true"
-                                                                  class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
-                                                                  type="button"><span class="ui-selectmenu-text">직접
-                                                                        입력</span></button>
-                                                            <div class="ui-selectmenu-menu ui-front">
-                                                                  <div class="tweenDiv">
-                                                                        <ul aria-hidden="true"
-                                                                              aria-labelledby="emailType-button"
-                                                                              id="emailType-menu" role="listbox"
-                                                                              tabindex="0"
-                                                                              class="ui-menu ui-corner-bottom ui-widget ui-widget-content"
-                                                                              style="max-height: 200px;"></ul>
-                                                                  </div>
+                                                                  <option value="01" selected>직접 입력</option>
+                                                                  <option value="02">naver.com</option>
+                                                                  <option value="03">hanmail.net</option>
+                                                                  <option value="04">hotmailcom</option>
+                                                                  <option value="05">nate.com</option>
+                                                                  <option value="06">gmail.com</option>
+                                                            </select>
+                                                            <button type="button" class="select" id="selectEmailBtn">
+                                                                  직접 입력
+                                                            </button>
+                                                            <div class="option" id="optionEmail">
+                                                                  <ul>
+                                                                        <li><a class="optionList">직접 입력</a></li>
+                                                                        <li><a class="optionList">naver.com</a>
+                                                                        </li>
+                                                                        <li><a class="optionList">hanmail.net</a>
+                                                                        </li>
+                                                                        <li><a class="optionList">hotmail.Zxcvcom</a>
+                                                                        </li>
+                                                                        <li><a class="optionList">nate.com</a>
+                                                                        </li>
+                                                                        <li><a class="optionList">gmail.com</a>
+                                                                        </li>
+                                                                  </ul>
                                                             </div>
                                                       </div>
-                                                      <button type="button" class="btnSC btnM"
-                                                            onclick="fncEmlDupChk(); return false;">중복 확인
+                                                      <button type="button" class="btnSC btnM">중복 확인
                                                       </button>
                                                 </div>
                                           </li>
                                           <!-- 추천인 -->
-                                          <li>
+                                          <li class="HotelArea">
                                                 <div class="intWrap"><span class="tit"><label for="">가입
                                                                   경로</label></span></div>
                                                 <div class="intInner duobuleInp">
                                                       <input type="hidden" id="recomdrId" name="recomdrId">
                                                       <div class="intArea selectWrap" style="width:490px" first="true">
-                                                            <select name="referrerHt" id="referrerHt"
-                                                                  class="form-control" style="display: none;">
-                                                                  <option value="">추천 호텔 또는 추천인ID를 입력해주세요.</option>
-                                                                  <option value="JOSUNHOTEL">조선호텔앤리조트</option>
-                                                                  <option value="JPY">조선 팰리스</option>
-                                                                  <option value="WJS">웨스틴 조선 서울</option>
-                                                                  <option value="WJB">웨스틴 조선 부산</option>
-                                                                  <option value="GJB">그랜드 조선 부산</option>
-                                                                  <option value="GJJ">그랜드 조선 제주</option>
-                                                                  <option value="LES">레스케이프 호텔</option>
-                                                                  <option value="GVP">그래비티 서울 판교</option>
-                                                                  <option value="FPS">포포인츠 바이 쉐라톤 조선 서울역</option>
-                                                                  <option value="FPM">포포인츠 바이 쉐라톤 명동</option>
-                                                                  <option value="ID">추천인ID 직접입력</option>
-                                                            </select><button tabindex="0" id="referrerHt-button"
-                                                                  role="combobox" aria-expanded="false"
-                                                                  aria-autocomplete="list" aria-owns="referrerHt-menu"
-                                                                  aria-haspopup="true"
-                                                                  class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
-                                                                  type="button"><span class="ui-selectmenu-text">추천 호텔
-                                                                        또는 추천인ID를 입력해주세요.</span></button>
-                                                            <div class="ui-selectmenu-menu ui-front">
-                                                                  <div class="tweenDiv">
-                                                                        <ul aria-hidden="true"
-                                                                              aria-labelledby="referrerHt-button"
-                                                                              id="referrerHt-menu" role="listbox"
-                                                                              tabindex="0"
-                                                                              class="ui-menu ui-corner-bottom ui-widget ui-widget-content"
-                                                                              style="max-height: 200px;"></ul>
+                                                            <div class="selectArea intArea selectWrap"
+                                                                  style="width:490px">
+                                                                  <select name="select" id="selectHotel"
+                                                                        class="form-control selectWrap ui-selectmenu-button" style="display: none;">
+                                                                        <option value="">추천 호텔 또는 추천인ID를 입력해주세요.
+                                                                        </option>
+                                                                        <option value="JOSUNHOTEL">조선호텔앤리조트</option>
+                                                                        <option value="JPY">조선 팰리스</option>
+                                                                        <option value="WJS">웨스틴 조선 서울</option>
+                                                                        <option value="WJB">웨스틴 조선 부산</option>
+                                                                        <option value="GJB">그랜드 조선 부산</option>
+                                                                        <option value="GJJ">그랜드 조선 제주</option>
+                                                                        <option value="LES">레스케이프 호텔</option>
+                                                                        <option value="GVP">그래비티 서울 판교</option>
+                                                                        <option value="FPS">포포인츠 바이 쉐라톤 조선 서울역</option>
+                                                                        <option value="FPM">포포인츠 바이 쉐라톤 명동</option>
+                                                                        <option value="ID">추천인ID 직접입력</option>
+                                                                  </select>
+                                                                  <button type="button" class="select selectWrap ui-selectmenu-button"
+                                                                        id="selectHotelBtn">
+                                                                        추천 호텔 또는 추천인ID를 입력해주세요.
+                                                                  </button>
+                                                                  <div class="option" id="optionHotel">
+                                                                        <ul>
+                                                                              <li><a class="optionList">추천 호텔 또는 추천인ID를
+                                                                                          입력해주세요.</a></li>
+                                                                              <li><a class="optionList">조선호텔앤리조트</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">웨스틴 조선 서울</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">그랜드 조선 부산</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">그랜드 조선 제주</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">레스케이프 호텔</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">그래비티 서울 판교</a>
+                                                                              </li>
+                                                                              <li><a class="optionList">포포인츠 바이 쉐라톤 조선
+                                                                                          서울역</a></li>
+                                                                              <li><a class="optionList">포포인츠 바이 쉐라톤
+                                                                                          명동</a></li>
+                                                                              <li><a class="optionList">추천인ID 직접입력</a>
+                                                                              </li>
+                                                                        </ul>
                                                                   </div>
                                                             </div>
+                                                            <span class="intArea" style="margin-left: 14px;"><input
+                                                                        type="text" id="recomdrId2" style="width:490px"
+                                                                        title="추천인 ID" maxlength="50"
+                                                                        placeholder="추천 호텔 또는 추천인ID를 입력해주세요"
+                                                                        disabled=""></span>
+                                                            </button>
                                                       </div>
-                                                      <span class="intArea" style="margin-left: 14px;"><input
-                                                                  type="text" id="recomdrId2" style="width:490px"
-                                                                  title="추천인 ID" maxlength="50"
-                                                                  placeholder="추천 호텔 또는 추천인ID를 입력해주세요"
-                                                                  disabled=""></span>
-                                                </div>
                                           </li>
                                           <!-- 프로모션 코드 -->
                                           <li>
@@ -540,8 +558,9 @@
 </body>
 <script>
       w3.includeHTML();
+
       function en_on() {
-      $(".en").toggle();
+            $(".en").toggle();
       }
 </script>
 <script src="./js/login.js"></script>

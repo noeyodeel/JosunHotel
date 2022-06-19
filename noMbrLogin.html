@@ -32,7 +32,7 @@
                   <div class="inner">
                         <ul class="tabType01 tabType02">
                               <li>
-                                    <a href="#" onclick="">아이디 로그인</a>
+                                    <a href="./login.html" onclick="">아이디 로그인</a>
                               </li>
                               <li class="on">
                                     <a href="#">비회원 예약확인</a>
@@ -84,22 +84,31 @@
                                                       <div class="tweenDiv" style="margin-top: 0px;">
                                                             <!-- 호텔선택 열리는 박스 영역 -->
                                                             <ul aria-hidden="true" aria-labelledby="hotlCode-button" id="hotlCode-menu" role="listbox" tabindex="0" class="ui-menu ui-corner-bottom ui-widget ui-widget-content" style="max-height: 150px;" aria-activedescendant="ui-id-1" aria-disabled="false">
-                                                                  <li class="ui-menu-item" style="display: none;">
-                                                                        <a id="ui-id-1" role="option" class="ui-menu-item-wrapper" aria-selected="true">
-                                                                              호텔선택
-                                                                        </a>
-                                                                  </li>
-                                                                  <li class="ui-menu-item">
-                                                                        <a id="ui-id-2" role="option" class="ui-menu-item-wrapper ui-state-active">
-                                                                              그랜드 조선 제주
-                                                                        </a>
-                                                                  </li>
-                                                                  <li class="ui-menu-item">
-                                                                        <a id="ui-id-3" role="option" class="ui-menu-item-wrapper">
-                                                                              그랜드 조선 부산
-                                                                        </a>
-                                                                  </li>
-                                                            </ul>
+                                                                  <li class="HotelArea">
+
+                                                                        <div class="intInner duobuleInp">
+                                                                              <input type="hidden" id="recomdrId" name="recomdrId">
+                                                                              <div class="intArea selectWrap" style="width:490px" first="true">
+                                                                                    <div class="selectArea intArea selectWrap"
+                                                                                          style="width:490px">
+                                                                                          <select name="select" id="selectHotel"
+                                                                                                class="form-control selectWrap ui-selectmenu-button" style="display: none;">
+                                                                                                <option value="GJB">그랜드 조선 부산</option>
+                                                                                                <option value="GJJ">그랜드 조선 제주</option>
+                                                                                          </select>
+                                                                                          <button type="button" class="select selectWrap ui-selectmenu-button"
+                                                                                                id="selectHotelBtn">
+
+                                                                                          </button>
+                                                                                          <div class="option" id="optionHotel">
+                                                                                                <ul>
+                                                                                                      <li><a class="optionList">그랜드 조선 부산</a>
+                                                                                                      </li>
+                                                                                                      <li><a class="optionList">그랜드 조선 제주</a>
+                                                                                                      </li>
+                                                                                                
+                                                                                                </ul>
+                                                                                                </ul>
                                                       </div>
                                                 </div>
                                                 </p>
@@ -124,10 +133,10 @@
                                           </p>
                                           <!-- //예약번호 -->
                                           <!-- 로그인 버튼 -->
-                                          <button type="button" class="btnSC btnL active btnFull" onclick="fncResveConfirm();">예약확인</button>
+                                          <button type="button" class="btnSC btnL active btnFull">예약확인</button>
                                           <!-- //로그인 버튼 -->
                                           <p class="loginGuide">CLUB JOSUN 회원이 되시면 더 많은 혜택이 있습니다.</p>
-                                          <a href="#" class="btnS icoArr">회원가입</a>
+                                          <a href="./joinIntro.html" class="btnS icoArr">회원가입</a>
                                     </form>
 
                               </div>
@@ -161,4 +170,5 @@
       $(".en").toggle();
       }
 </script>
+<script src="./js/login.js"></script>
 </html>

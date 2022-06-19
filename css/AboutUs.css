@@ -580,3 +580,9 @@ table + .txtGuide {
 .login .selectWrap .ui-selectmenu-button::after {
   right: 20px;
 }
+.selectWrap {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  background: #fff;
+}
