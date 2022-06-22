@@ -634,7 +634,6 @@ function count6(type) {
 // $("#datepickerFrom").daterangepicker();
 
 // $(".dates").daterangepicker();
-moment.locale("ko"); //언어를 한국어로 설정함!
 // $(".startDay").daterangepicker({
 //   timePicker: false,
 //   timePicker24Hour: true,
@@ -663,10 +662,12 @@ var week = new Array(
   "금요일",
   "토요일"
 );
+
+locale = moment.locale("ko"); //언어를 한국어로 설정함!
 $('input[name="dates"]').daterangepicker(
   {
     locale: {
-      format: "YYYY.MM.DD E",
+      format: "YYYY.MM.DD dd",
       separator: " - ",
       daysOfWeek: ["S", "M", "T", "W", "T", "F", "S"],
       monthNames: [
@@ -686,8 +687,18 @@ $('input[name="dates"]').daterangepicker(
     },
     endDate: dateString,
     drops: "up",
+    language: "ko",
   },
   function (start, end, label) {
+    var e_s = end.format("YYYYMMDD") - start.format("YYYYMMDD");
+    $(".Day").empty();
+    $(".Day").append(e_s + "박");
+    $(".Day").css("color", "black");
+    $(".Day").css("position", "absolute");
+    $(".Day").css("top", "19px");
+    $(".Day").css("left", "750px");
+    $(".Day").css("font", "700 19px notokrR gothamM");
+
     console.log(
       "New date range selected: " +
         start.format("YYYY-MM-DD") +
@@ -697,10 +708,8 @@ $('input[name="dates"]').daterangepicker(
         label +
         ")"
     );
-    var e_s = end.format("YYYYMMDD") - start.format("YYYYMMDD");
   }
 );
-console.log(e_s);
 $('input[name="dates"]').on("show.daterangepicker", function (ev, picker) {
   $(".yearselect").css("float", "left");
   $(".monthselect").css("float", "right");

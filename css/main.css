@@ -260,7 +260,7 @@ p.txtGuide:before,
   font-size: 14px;
   font: 400 14px/1 gothamM;
   position: absolute;
-  top: 43%;
+  top: 41%;
   z-index: 500;
   left: 260px;
   pointer-events: none; /* 클릭안되게 */
