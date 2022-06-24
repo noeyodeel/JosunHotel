@@ -34,11 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // 아래화살표 클릭시 스크롤이동
   document.querySelector(".scroll_top").addEventListener("click", function () {
     const location = document.querySelector(".scroll").offsetTop;
-    const menuHeight = document.querySelector(".menu_height").offsetHeight;
-    window.scrollTo({
-      top: location - menuHeight,
-      behavior: "smooth",
-    });
+    const menuHeight = document.getElementById("nav_bar").offsetHeight;
+    window.scrollTo({ top: location - menuHeight });
   });
 
   // 객실 어메니티 버튼 클릭시 border
