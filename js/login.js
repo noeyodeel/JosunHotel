@@ -47,8 +47,11 @@ $(document).on("click", ".HotelArea button.select", function () {
 $(".emailArea .optionList").click((e) => {
 	$("#selectEmail").val(e.currentTarget.innerText).prop("selected", true);
 	$("#selectEmailBtn").text(e.currentTarget.innerText);
+	$("#email2").val(e.currentTarget.innerText);
 	document.querySelector("#selectEmailBtn").classList.remove("open");
 	document.querySelector("#optionEmail").classList.remove("openOption");
+
+
 });
 $(".HotelArea .optionList").click((e) => {
 	$("#selectHotel").val(e.currentTarget.innerText).prop("selected", true);

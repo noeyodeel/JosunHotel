@@ -237,7 +237,7 @@ input[type=text],
 input[type=password],
 input[type=tel] {
       height: 60px;
-      padding: 8px 13px 8px 0;
+      /* padding: 8px 13px 8px 0; */
       padding: 7px 13px 9px 0\0IE;
       color: #000;
       border: solid #ccc;
@@ -512,3 +512,6 @@ p.txtGuide:before, .txtGuide li:before {
 /* .active{
       overflow: hidden;
 } */
+.frm input:checked+label:before {
+      background-position: -26px -13px;
+}

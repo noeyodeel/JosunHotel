@@ -336,6 +336,9 @@ table {
 .frm.type02 input:checked +label:before {
     background-position: -18px 0px;
 }
+.frm.idSaveCheck input:checked +label:before {
+    background-position: -18px 0px;
+}
 /* select box */
 .selectWrap .ui-selectmenu-button:after {
     content: '';
@@ -450,3 +453,4 @@ table {
 .selectArea .option li > a:hover {
     background: #f7f7f7;
 }
+
