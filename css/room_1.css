@@ -661,6 +661,48 @@ textarea {
 .roomContainer .toggleOn .btnRes:after {
   background-position: -18px 0;
 }
+.roomContainer .roomList > li .toggleCont .toggleInner {
+  padding: 0;
+}
+.roomContainer .roomDetail {
+  padding-top: 70px;
+}
+
+.roomContainer .optionList li {
+  display: table;
+  width: 100%;
+  position: relative;
+  height: 90px;
+}
+
+.roomContainer .optionList li .btnBook {
+  display: table-cell;
+  vertical-align: middle;
+  width: 233px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.roomContainer .optionList li .roomInfo {
+  display: table-cell;
+  position: relative;
+  width: 1167px;
+  padding: 40px 30px 35px;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.roomContainer .optionList li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.btnBook span {
+  display: block;
+  text-align: center;
+}
 
 .noData {
   text-align: center;

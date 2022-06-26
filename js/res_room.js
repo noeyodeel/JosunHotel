@@ -17,6 +17,8 @@ function toggleClass2() {
   document.getElementById("toggle2").classList.toggle("toggleOn");
 }
 
+// reserve 버튼
+
 $(document).ready(function () {
   $(".btnRes").click(function () {
     var submenu = $(this).next(".toggleCont");
@@ -27,6 +29,10 @@ $(document).ready(function () {
     }
   });
 });
+
+function toggleClass2() {
+  document.getElementById("room2").classList.toggle("toggleOn");
+}
 
 function test1() {
   var con = document.getElementById("roomcontainer01");
@@ -82,7 +88,7 @@ $(document).ready(function () {
       var scrollTop = $(window).scrollTop();
       var obj_position = scrollTop + tmp + "px";
 
-      $(".resRoomWrap > .rightCont.floating").stop().animate(
+      $(".resRoomWrap .rightCont.floating").stop().animate(
         {
           top: obj_position,
         },
