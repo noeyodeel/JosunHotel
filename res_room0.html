@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
-    <script src="./js/res_room.js"></script>
+    <script src="./js/res.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -163,21 +163,40 @@
                           <strong class="roomTit">객실1</strong>
                           <div class="numWrap">
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button
+                                type="button"
+                                class="btnDown"
+                                onclick='count1("minus")'
+                              >
                                 인원 감소
                               </button>
-                              <span>성인 2</span>
-                              <button type="button" class="btnUp">
+                              <span>성인</span>
+                              <span id="result" class="adult">0</span>
+
+                              <button
+                                type="button"
+                                class="btnUp"
+                                onclick="count1('plus')"
+                              >
                                 인원 증가
                               </button>
                             </div>
 
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button
+                                type="button"
+                                class="btnDown"
+                                onclick='count2("minus")'
+                              >
                                 인원 감소
                               </button>
-                              <span>어린이 0</span>
-                              <button type="button" class="btnUp">
+                              <span>어린이</span>
+                              <span id="result" class="child">0</span>
+                              <button
+                                type="button"
+                                class="btnUp"
+                                onclick="count2('plus')"
+                              >
                                 인원 증가
                               </button>
                             </div>
@@ -190,17 +209,25 @@
                           <strong class="roomTit">객실2</strong>
                           <div class="numWrap">
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button
+                                type="button"
+                                class="btnDown"
+                                onclick='count1("minus")'
+                              >
                                 인원 감소
                               </button>
                               <span>성인 0</span>
-                              <button type="button" class="btnUp">
+                              <button
+                                type="button"
+                                class="btnUp"
+                                onclick="count1('plus')"
+                              >
                                 인원 증가
                               </button>
                             </div>
 
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button type="button" class="btnDown">
                                 인원 감소
                               </button>
                               <span>어린이 0</span>
@@ -217,7 +244,7 @@
                           <strong class="roomTit">객실3</strong>
                           <div class="numWrap">
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button type="button" class="btnDown">
                                 인원 감소
                               </button>
                               <span>성인 0</span>
@@ -227,7 +254,7 @@
                             </div>
 
                             <div class="numType">
-                              <button ype="button" class="btnDown">
+                              <button type="button" class="btnDown">
                                 인원 감소
                               </button>
                               <span>어린이 0</span>
@@ -248,9 +275,7 @@
                   <!-- roomContainer -->
 
                   <div class="btnArea">
-                    <a href="res_room1.html" class="btnSC btnL active"
-                      >객실 검색</a
-                    >
+                    <a href="res_room1.html" class="btnSearch">객실 검색</a>
                   </div>
                 </div>
               </div>
@@ -261,10 +286,11 @@
         <!-- Inner -->
       </div>
       <!-- //container -->
-      <footer w3-include-html="footer.html"></footer>
     </div>
     <!-- //Wrapper -->
   </body>
+  <footer w3-include-html="footer.html"></footer>
+  <script src="./js/headerfooter.js"></script>
   <script>
     w3.includeHTML();
   </script>

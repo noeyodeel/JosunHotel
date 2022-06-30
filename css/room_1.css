@@ -148,6 +148,31 @@ textarea {
   resize: none;
   font-size: 16px;
 }
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  empty-cells: show;
+  border-spacing: 0;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
 .hidden {
   overflow: hidden;
   position: absolute;
@@ -627,25 +652,38 @@ textarea {
 
 /* toggle */
 
-.roomContainer .btnRes {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background: black;
-  color: white;
-  font-size: 18px;
-  padding: 20px 132px 20px 25px;
+.btnSC {
+  position: relative;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   box-sizing: border-box;
-  border: 1px solid black;
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+  transition: color 0.5s ease-in-out;
   overflow: hidden;
   z-index: 1;
   font-family: gothamL, notokrL;
 }
+.btnL {
+  min-width: 190px;
+  height: 60px;
+  padding: 0 25px;
+  line-height: 58px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+.roomContainer .btnRsv {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  color: #fff;
+  padding: 13px 132px 13px 25px;
+}
 
-.roomContainer .btnRes::after {
+.roomContainer .btnRsv::after {
   content: "";
   display: block;
   position: absolute;
@@ -658,8 +696,13 @@ textarea {
   background-repeat: no-repeat;
 }
 
-.roomContainer .toggleOn .btnRes:after {
+.roomContainer .toggleOn .btnRsv::after {
   background-position: -18px 0;
+}
+
+.toggleList > li .toggleCont {
+  display: none;
+  position: relative;
 }
 .roomContainer .roomList > li .toggleCont .toggleInner {
   padding: 0;
@@ -675,14 +718,19 @@ textarea {
   height: 90px;
 }
 
-.roomContainer .optionList li .btnBook {
-  display: table-cell;
-  vertical-align: middle;
-  width: 233px;
-  height: 100%;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+.roomContainer .optionList li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: 31px;
+  height: 26px;
+  margin-top: -13px;
+  background-image: url(../images/ico_bed_view.png);
+}
+.roomContainer .optionList li.type02::before {
+  background-position: 0 -26px;
 }
 
 .roomContainer .optionList li .roomInfo {
@@ -693,15 +741,101 @@ textarea {
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
 }
+
+.roomContainer .optionList li .titArea {
+  position: absolute;
+  left: 75px;
+  top: 30px;
+}
+.roomContainer .optionList li .tit {
+  font-family: gothamM;
+}
+.roomContainer .optionList li .titArea > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.roomContainer .optionList li .roomBenefit {
+  width: 730px;
+  max-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 25px;
+  padding-left: 46px;
+}
+.roomContainer .optionList li .price {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-family: gothamL, notokrL;
+  font-size: 16px;
+  width: 170px;
+  text-align: right;
+}
+
+.roomContainer .optionList li .price::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 1px;
+  height: 16px;
+  background: #ccc;
+}
+
+.roomContainer .optionList li .price em {
+  font-size: 20px;
+  vertical-align: -2px;
+  margin-right: 7px;
+}
+
+.roomContainer .optionList li button {
+  position: absolute;
+  right: 300px;
+  top: 38px;
+}
+.btnLine {
+  display: inline-block;
+  line-height: 1.25;
+  font-size: 14px;
+}
+.btnLine::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.roomContainer .optionList li button + button {
+  position: absolute;
+  right: 215px;
+}
+
+.roomContainer .optionList li .btnBook {
+  display: table-cell;
+  vertical-align: middle;
+  width: 233px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.btnBook span {
+  display: block;
+  text-align: center;
+}
+
 .roomContainer .optionList li::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.btnBook span {
-  display: block;
-  text-align: center;
+.roomContainer .optionList li:last-child {
+  border-bottom: 1px solid #ccc;
 }
 
 .noData {
@@ -872,9 +1006,16 @@ p.textGuide::before,
 
 .resRoomWrap .rightCont {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
   width: 400px;
+}
+
+.resRoomWrap .rightCont.on {
+  position: fixed;
+  top: 1600px;
+  right: 100px;
+  bottom: 350px;
 }
 
 .resRoomWrap .rightCont .rContList > li.toggleOn {
@@ -1064,7 +1205,7 @@ p.textGuide::before,
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 200px;
   margin-top: -10px;
   width: 1px;
   height: 20px;
@@ -1168,6 +1309,9 @@ p.textGuide2::before {
 .choice input[type="radio"] + label::before {
   background-position: -52px -13px;
 }
+.choice input[type="radio"]:checked + label:before {
+  background-position: -78px -13px;
+}
 
 .choice label::before {
   content: "";
@@ -1178,6 +1322,7 @@ p.textGuide2::before {
   width: 26px;
   height: 26px;
   background-image: url(../images/button_ico.png);
+  background-repeat: no-repeat;
 }
 
 .infoBox .choice + .choice {
@@ -1189,7 +1334,8 @@ p.textGuide2::before {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"] {
   height: 60px;
   padding: 8px 13px 8px 0;
   color: #000;
@@ -1236,14 +1382,7 @@ input[type="password"] {
   font-family: gothamL, notokrL;
 }
 
-.selectWrap .selectmenu span {
-  display: inline-block;
-  font-family: gothamL, notokrL;
-  color: #333;
-  vertical-align: middle;
-}
-
-.selectWrap .selectmenu::after {
+/* .selectWrap .selectmenu::after {
   content: "";
   display: block;
   position: absolute;
@@ -1252,17 +1391,20 @@ input[type="password"] {
   margin-top: -1px;
   width: 11px;
   height: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-image: url(../images/button_ico.png);
   background-position: 0 -39px;
-}
+} */
 
-.selectWrap .selectmenu-open {
+/* .selectWrap .selectmenu-open {
   background-color: #333;
 }
 
 .selectWrap .selectmenu-open::after {
   background-position: -11px -39px;
-}
+} */
 
 .infoList > li .phone .selectWrap {
   margin-right: 20px;
@@ -1295,6 +1437,10 @@ input[type="password"] {
   display: inline-block;
   margin-left: 18px;
   vertical-align: middle;
+}
+.infoList > li .email .dash {
+  display: inline-block;
+  padding: 0 13px;
 }
 
 .infoList > li .infoWrap + .infoInner {
@@ -1356,6 +1502,18 @@ input[type="password"] {
   opacity: 0;
 }
 
+.form label {
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  padding-left: 35px;
+  font-family: gothamL, notokrL;
+  text-transform: uppercase;
+}
+label {
+  cursor: pointer;
+}
+
 .form.type2 label {
   font-size: 18px;
   padding-left: 33px;
@@ -1372,8 +1530,8 @@ input[type="password"] {
 }
 
 .form.type2 label::before {
-  left: 20px;
-  top: 28px;
+  left: 0;
+  top: 9px;
   width: 18px;
   height: 13px;
 }
@@ -1383,6 +1541,10 @@ input[type="password"] {
 }
 .form.type2 input[type="checkbox"] + label::before {
   background-position: 0px 0px;
+}
+
+.form.type2 input[type="checkbox"]:checked + label::before {
+  background-position: -18px 0;
 }
 
 .toggleList.agreeCont .btnToggle {
@@ -1406,8 +1568,59 @@ input[type="password"] {
   background-position: 0 5px;
 }
 
+.toggleList.agreeCont .toggleOn .btnToggle::before {
+  background-position: -18px 5px;
+}
+
+.toggleList.agreeCont .toggleCont .toggleInner {
+  padding: 25px;
+  background: #f9f9f9;
+}
+
+.agreetable thead tr th:first-child,
+.agreetable tbody tr td:first-child {
+  border-left: none;
+}
+
+.agreetable thead tr th {
+  padding: 16px;
+  font-size: 17px;
+  border-top: 1px solid black;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: gothamM, notokrM;
+  color: black;
+}
+
+.agreetable tbody tr td {
+  padding: 16px;
+  font-size: 17px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.agreetable thead tr th,
+.agreetable tbody tr td {
+  font-family: gothamL, notokrL;
+  text-transform: uppercase;
+  background: white;
+}
+
+.td1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}
 .notiContainer .toggleList + .textGuide {
   margin-top: 20px;
+}
+
+.tit2 {
+  font: 500 30px gothamB, notokrR;
+  margin: 90px 0 15px;
 }
 
 /* room0 */
@@ -1438,33 +1651,31 @@ input[type="password"] {
   font-size: 16px;
 }
 
-.btnSC {
+.btnSearch {
   position: relative;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   box-sizing: border-box;
-  color: #000;
-  border: 1px solid #000;
-  background: #fff;
-  transition: color 0.5s ease-in-out;
+  color: white;
+  border: 1px solid black;
+  background-color: black;
   overflow: hidden;
   z-index: 1;
   font-family: gothamL, notokrL;
-}
-
-.btnL {
   min-width: 190px;
   height: 60px;
   padding: 0 25px;
   line-height: 58px;
   font-size: 18px;
-  letter-spacing: -0.01em;
+  background-image: linear-gradient(70deg, transparent 50%, white 50%);
+  background-size: 250%;
+  transition: all 0.5s ease-in-out;
 }
 
-.active {
-  background: #000 !important;
-  color: #fff !important;
+.btnSearch:hover {
+  background-position: 100%;
+  color: black;
 }
 
 .btnArea a,
@@ -1529,7 +1740,7 @@ input[type="password"] {
   font-family: gothamL, notokrL;
   letter-spacing: -0.04em;
 }
-.rsvList > li .infoValue span::before {
+.rsvList > li .infoValue span:last-child::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -1599,25 +1810,6 @@ input[type="password"] {
   border: 0;
   width: 476px;
   overflow: hidden;
-}
-
-table {
-  width: 100%;
-  border-collapse: separate;
-  empty-cells: show;
-  border-spacing: 0;
-}
-
-thead {
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
 }
 
 .calInner .calendar th,
@@ -1750,10 +1942,28 @@ tbody {
   display: block;
   text-align: center;
   padding: 0 35px;
-  width: 124px;
+  width: 120px;
   color: #000;
   margin: 0 auto;
   font-family: gothamL;
+}
+
+.numType span + span.adult {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  width: 33px;
+  height: 33px;
+}
+
+.numType span + span.child {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 78px;
+  width: 33px;
+  height: 33px;
 }
 
 .numType button.btnUp {
@@ -1792,4 +2002,474 @@ tbody {
 
 .rsvList .roomContainer + .btnArea {
   margin-top: 83px;
+}
+
+.toggleList .designScroll {
+  position: relative;
+}
+
+.toggleList.agreeCont .scrollWrap {
+  color: #666;
+  font: 16px gothamL, notokrL;
+  padding-right: 15px !important;
+  max-height: 250px;
+  overflow: hidden;
+}
+ul.list1 li,
+ul.list2 li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 16px;
+}
+ul.list1 li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2px;
+  height: 2px;
+  background: #000;
+}
+ul.list2 li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 5px;
+  height: 1px;
+  background: #000;
+}
+.list1 li + li,
+.list2,
+.list1 li > .list2 {
+  margin-top: 7px;
+}
+/* dining*/
+.diningCont {
+  position: relative;
+  padding-top: 110px;
+}
+.diningCont .leftCont {
+  float: left;
+  width: 508px;
+}
+.diningCont .infoInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.diningContainer .infoInner {
+  width: 100%;
+}
+.toggleList > li .toggleCont .selectWrap {
+  height: 50px;
+}
+.toggleList > li .toggleCont .selectWrap .selectmenu {
+  border: 1px solid #ccc;
+  padding: 0 15px 0 15px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+.toggleList > li .toggleCont .selectWrap .selectmenu::after {
+  right: 15px;
+}
+
+.diningCont .leftCont .Select > div + div {
+  margin-left: 72px;
+}
+
+.swipeWrapper {
+  position: relative;
+}
+
+.diningCont .swipeWrap {
+  overflow: hidden;
+  width: 508px;
+}
+
+.diningCont .swipeWrap.images .btnPrev {
+  left: 20px;
+}
+.swipeWrap.images .btnSwipe {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  background: url(../images/btn_swipe.png) no-repeat 0 0;
+  z-index: 1;
+}
+
+.swipeWrap .swipeImages {
+  float: none;
+  position: absolute;
+  top: 0px;
+  width: 508px;
+  left: 0px;
+  opacity: 0;
+}
+
+.diningCont .swipeWrap.images .btnNext {
+  right: 20px;
+}
+.swipeWrap.images .btnNext {
+  right: 40px;
+  background-position: -40px 0;
+}
+
+.diningCont .leftCont .indicator {
+  margin-top: 25px;
+}
+.swipeWrapper .indicator {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.swipeWrapper .indicator .num {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+}
+.swipeWrapper .indicator .num::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.swipeWrapper .indicator .on::after {
+  background: black;
+}
+
+.diningCont .rightCont {
+  float: right;
+  width: 777px;
+  min-height: 251px;
+}
+.diningCont .rightCont .roomInfo {
+  position: relative;
+  min-height: 352px;
+}
+.diningCont .rightCont .roomInfo .name {
+  font: 500 36px gothamB;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.diningCont .rightCont .roomInfo .text {
+  margin-top: 18px;
+}
+.diningCont .rightCont .roomInfo .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+}
+
+.diningCont .rightCont .roomInfo .info li {
+  position: relative;
+  padding-left: 63px;
+  font-size: 16px;
+}
+.diningCont .rightCont .roomInfo .info li:first-child {
+  margin-top: 0;
+}
+
+.diningCont .rightCont .roomInfo .info em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 17px;
+}
+
+.diningCont .rightCont .roomInfo .info span {
+  font-family: gothamL;
+  color: #333;
+  font-size: 18px;
+}
+
+.diningCont .rightCont .roomInfo .btnSC {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.diningCont:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* diningCal */
+.diningCont.calCont {
+  padding-top: 20px;
+}
+
+.diningCont.calCont .leftCont {
+  min-height: 645px;
+}
+
+.calContainer {
+  position: relative;
+  float: none;
+  width: auto;
+}
+
+.diningCont .calText {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 40px;
+  padding-left: 13px;
+}
+
+.diningCont .calText::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  background: #b8b8ad;
+  border-radius: 50%;
+}
+
+/* .diningCont.calCont .rightCont.alert {
+  position: relative;
+}
+.diningCont.calCont .rightCont.alert:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.diningCont.calCont .rightCont.alert .alertText {
+  display: block;
+  position: absolute;
+  top: 290px;
+  left: 50%;
+  margin-left: -170px;
+  background: #f9f9f9;
+  font-size: 18px;
+  color: #000;
+  padding: 12px 39px;
+  z-index: 20;
+} */
+
+.diningCont .rightCont .tit {
+  display: block;
+  margin: 60px 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.formList {
+  margin-top: -8px;
+}
+
+.formList .formCheck,
+.formList .formRadio {
+  display: inline-block;
+  position: relative;
+}
+
+.formList > li {
+  margin: 8px 0 0 3px;
+}
+
+.formList .formCheck input[type="checkbox"],
+.formList .formRadio input[type="radio"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  border-color: transparent;
+  z-index: 1;
+}
+
+.formList .formCheck input[type="checkbox"]:checked + label,
+.formList .formRadio input[type="radio"]:checked + label {
+  border: 1px solid #000;
+  color: #000;
+  background: #f9f9f9;
+}
+.resRoomWrap .formList .formCheck label,
+.formList .formRadio label {
+  width: 209px;
+  max-width: 209px;
+  vertical-align: top;
+}
+.formList .formRadio label {
+  width: 219px;
+  max-width: 219px;
+  padding: 11px 9px 13px;
+  text-align: center;
+}
+.formList .formCheck label,
+.formList .formRadio label {
+  display: inline-block;
+  position: relative;
+  width: 165px;
+  max-width: 165px;
+  border: 1px solid #ccc;
+  z-index: 2;
+  box-sizing: border-box;
+  color: #666;
+  background: #fff;
+  padding: 9px 35px 11px 15px;
+  font-size: 16px;
+  font-family: gothamL;
+}
+.diningCont .timeSelect .formList .formRadio label {
+  width: 189px;
+  max-width: 189px;
+  padding: 12px 15px;
+  text-transform: uppercase;
+}
+
+.addOption {
+  position: relative;
+  padding-right: 200px;
+  min-height: 35px;
+}
+.addOption .text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.addOption .price {
+  display: inline-block;
+  position: relative;
+  padding-left: 16px;
+  margin-left: 13px;
+  font-family: gothamL, notokrL;
+  vertical-align: middle;
+}
+
+.addOption .price::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 16px;
+  margin-top: -8px;
+  background: #ccc;
+}
+
+.addOption .numType {
+  position: absolute;
+  right: 0;
+  top: 0;
+  float: none;
+  padding: 0;
+  border-bottom: 0;
+  width: 170px;
+  font-family: gothamB;
+  font-weight: 500;
+}
+.numType.type2 {
+  width: 170px;
+  border-bottom: 0;
+  padding: 0;
+  font-family: gothamB;
+  font-weight: 500;
+}
+
+.numType.type2 button {
+  border: 1px solid #ccc;
+  top: 0;
+}
+
+.addOption .numType span {
+  width: 100px;
+}
+.numType.type2 span {
+  width: 104px;
+  height: 33px;
+  line-height: 33px;
+}
+
+.addOption + .addOption {
+  margin-top: 8px;
+}
+
+.diningCont .textGuide {
+  margin-top: 11px;
+}
+
+.addCont .totalText {
+  padding-top: 35px;
+  margin-top: 26px;
+  border-top: 1px solid #ccc;
+}
+
+.addCont .totalText .txt {
+  float: left;
+  font: 400 24px/40px notokrL;
+  vertical-align: -8px;
+}
+
+.addCont .totalText .price {
+  float: right;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: playfair;
+  font-feature-settings: "lnum", "pnum";
+}
+
+.addCont .totalText::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.addCont .totalText .price em {
+  font-size: 20px;
+  font-family: gothamB;
+  vertical-align: 8px;
+  margin: 0 20px 0 10px;
+}
+
+.toggleList > li .toggleCont input[type="text"],
+.toggleList > li .toggleCont input[type="password"],
+.toggleList > li .toggleCont input[type="tel"] {
+  height: 50px;
+  border-width: 1px 1px 1px 1px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.toggleList > li .toggleCont .infoList > li .phone .dash {
+  width: 35px;
+  vertical-align: middle;
+}
+
+.infoList > li .textGuide {
+  margin-top: 14px;
+}
+
+.diningContainer .infoList > li textarea {
+  width: 100%;
+  height: 160px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
 }

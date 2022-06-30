@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
-    <script src="./js/res_room.js"></script>
+    <script src="./js/res.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -177,12 +177,14 @@
                 </div>
                 <div class="btnArea">
                   <div>
-                    <a href="res_room3(!mem).html" class="btnRsv"
+                    <a href="res_room3(!mem).html" class="btnSearch"
                       >비회원 예약</a
                     >
                   </div>
-                  <div>
-                    <a href="#none" class="btnRsv">회원 예약</a>
+                  <div class="btnArea">
+                    <a href="#none" class="btnSearch" style="left: 95px"
+                      >회원 예약</a
+                    >
                   </div>
                 </div>
                 <p class="textGuide2">
@@ -194,9 +196,10 @@
           </div>
         </div>
       </div>
-      <footer w3-include-html="footer.html"></footer>
     </div>
   </body>
+  <footer w3-include-html="footer.html"></footer>
+  <script src="./js/headerfooter.js"></script>
   <script>
     w3.includeHTML();
   </script>

@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
-    <script src="./js/res_room.js"></script>
+    <script src="./js/res.js"></script>
   </head>
   <div class="wrapper">
     <header w3-include-html="header.html"></header>
@@ -100,8 +100,8 @@
               <a href="" target="_blank" class="btnline">멤버십 가입하기</a>
             </div>
           </div>
-          <ul class="roomlist">
-            <li id="room0">
+          <ul class="roomlist toggleList">
+            <li id="room0" onclick="toggleClass4()">
               <dl class="roomInfo">
                 <dt class="roomName">SMART CHOICE</dt>
                 <dd class="keyword">
@@ -124,42 +124,177 @@
                 <dd class="image">
                   <img src="./images/res_img/res01.jpeg">
                 </dd>
-                <button type="button" class="btnRes btnToggle">RESERVE</button>
+                <button type="button" class="btnToggle btnSC btnRsv">RESERVE
+                  <span class="hidden">상세내용 보기</span>
+                </button>
               </dl>
             <div class="toggleCont">
-              <div class="roomDetail">
-                <ul class="optionList">
-                  <li class="type02">
-                    <div class="roomInfo"></div>
-                    <a href="#none" class="btnBook">
-                      <span>예약하기</span>
-                    </a>
-                  </li>
-                  <li class="type02">
-                    <div class="roomInfo"></div>
-                    <a href="#none" class="btnBook">
-                      <span>예약하기</span>
-                    </a>
-                  </li>
-                  <li class="type02">
-                    <div class="roomInfo"></div>
-                    <a href="#none" class="btnBook">
-                      <span>예약하기</span>
-                    </a>
-                  </li>
-                  <li class="type02">
-                    <div class="roomInfo"></div>
-                    <a href="#none" class="btnBook">
-                      <span>예약하기</span>
-                    </a>
-                  </li>
-                  <li class="type02">
-                    <div class="roomInfo"></div>
-                    <a href="#none" class="btnBook">
-                      <span>예약하기</span>
-                    </a>
-                  </li>
-                </ul>
+              <div class="toggleInner">
+                <div class="roomDetail">
+                  <ul class="optionList">
+                    <li class="type02" id="product_0">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE TWIN, STANDARD VIEW </strong>
+                        </div>
+                        <p class="roomBenefit">Standard View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>570,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="res_room2.html" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type01" id="product_1">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE KING, STANDARD VIEW</strong>
+                        </div>
+                        <p class="roomBenefit">Standard View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>570,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type01" id="product_2">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE KING, GARDEN VIEW
+                          </strong>
+                        </div>
+                        <p class="roomBenefit">Garden View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>620,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type02" id="product_3">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE TWIN, GARDEN VIEW</strong>
+                        </div>
+                        <p class="roomBenefit">Garden View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>620,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type02" id="product_4">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE TWIN, POOLSIDE VIEW</strong>
+                        </div>
+                        <p class="roomBenefit">Poolside View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>670,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type01" id="product_5">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">DELUXE KING, POOLSIDE VIEW</strong>
+                        </div>
+                        <p class="roomBenefit">Poolside View | Size: 46.7㎡</p>
+                        <span class="price">
+                          <em>670,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type01" id="product_6">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">STUDIO SUITE KING</strong>
+                        </div>
+                        <p class="roomBenefit">Garden View | Size: 77.5㎡</p>
+                        <span class="price">
+                          <em>810,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                    <li class="type02" id="product_7">
+                      <div class="roomInfo">
+                        <div class="titArea">
+                          <strong class="tit">STUDIO SUITE TWIN</strong>
+                        </div>
+                        <p class="roomBenefit">Garden View | Size: 77.5㎡</p>
+                        <span class="price">
+                          <em>810,000</em>KRW ~
+                        </span>
+                        <button type="button" class="btnLine">
+                          객실 상세보기
+                        </button>
+                        <button type="button" class="btnComparison btnLine">
+                          비교함 담기
+                        </button>
+                      </div>
+                      <a href="#none" class="btnBook">
+                        <span>예약하기</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             
@@ -185,7 +320,9 @@
                 <dd class="image">
                   <img src="./images/res_img/res02.jpeg">
                 </dd>
-                <button type="button" class="btnRes">RESERVE</button>
+                <button type="button" class="btnToggle btnSC btnRsv">RESERVE
+                  <span class="hidden">상세내용 보기</span>
+                </button>              
               </dl>
             </li>
 
@@ -214,7 +351,9 @@
                 <dd class="image">
                   <img src="./images/res_img/res03.jpeg">
                 </dd>
-                <button type="button" class="btnToggle btnRes">RESERVE</button>
+                <button type="button" class="btnToggle btnSC btnRsv">RESERVE
+                  <span class="hidden">상세내용 보기</span>
+                </button>              
               </dl>
             </li>
           </ul>
@@ -253,7 +392,9 @@
                 <dd class="image">
                   <img src="./images/res_img/res04.jpeg">
                 </dd>
-                <button type="button" class="btnRes">RESERVE</button>
+                <button type="button" class="btnToggle btnSC btnRsv">RESERVE
+                  <span class="hidden">상세내용 보기</span>
+                </button>
               </dl> 
             </li>
 
@@ -884,8 +1025,10 @@
     <!-- container -->
   </div>
   <!-- //wrapper -->
-  <footer w3-include-html="footer.html"></footer>
+  
   </body>
+  <footer w3-include-html="footer.html"></footer>
+  <script src="./js/headerfooter.js"></script>
   <script>
     w3.includeHTML();
   </script>
