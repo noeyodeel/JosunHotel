@@ -82,6 +82,52 @@ $(".agree1 > div > button").click(() => {
   console.log("dk");
 });
 
+$("input:checkbox[id='agree1']").on("change", function () {
+  if ($("input:checkbox[id='agree1']").prop("checked")) {
+    $("input:checkbox[id='4-1']").prop("checked", true);
+    $("input:checkbox[id='4-2']").prop("checked", true);
+    $("input:checkbox[id='4-3']").prop("checked", true);
+    $("input:checkbox[id='4-4']").prop("checked", true);
+  } else {
+    $("input:checkbox[id='4-1']").prop("checked", false);
+    $("input:checkbox[id='4-2']").prop("checked", false);
+    $("input:checkbox[id='4-3']").prop("checked", false);
+    $("input:checkbox[id='4-4']").prop("checked", false);
+  }
+});
+
+$("input:checkbox[id='4-1']").on("change", function () {
+  if ($("input:checkbox[id='4-1']").prop("checked")) {
+    $("input:checkbox[id='agree1']").prop("checked", true);
+  } else {
+    $("input:checkbox[id='agree1']").prop("checked", false);
+  }
+});
+
+$("input:checkbox[id='4-2']").on("change", function () {
+  if ($("input:checkbox[id='4-2']").prop("checked")) {
+    $("input:checkbox[id='agree1']").prop("checked", true);
+  } else {
+    $("input:checkbox[id='agree1']").prop("checked", false);
+  }
+});
+
+$("input:checkbox[id='4-3']").on("change", function () {
+  if ($("input:checkbox[id='4-3']").prop("checked")) {
+    $("input:checkbox[id='agree1']").prop("checked", true);
+  } else {
+    $("input:checkbox[id='agree1']").prop("checked", false);
+  }
+});
+
+$("input:checkbox[id='4-4']").on("change", function () {
+  if ($("input:checkbox[id='4-4']").prop("checked")) {
+    $("input:checkbox[id='agree1']").prop("checked", true);
+  } else {
+    $("input:checkbox[id='agree1']").prop("checked", false);
+  }
+});
+
 // header/footer
 function en_on() {
   $(".en").toggle();

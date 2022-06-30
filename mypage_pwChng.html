@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원탈퇴</title>
+    <title>비밀번호 변경</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
-    <script src="./js/mypage_removeAccount.js"></script>
+    <script src="./js/mypage_pwChng.js"></script>
     <link rel="stylesheet" href="./css/mypage.css" />
-    <link rel="stylesheet" href="./css/mypage_removeAccount.css" />
+    <link rel="stylesheet" href="./css/mypage_pwChng.css" />
   </head>
   <body>
     <header w3-include-html="header.html"></header>
@@ -56,62 +56,70 @@
           </li>
           <li>
             관심 리스트
-            <p><a href="#">객실 리스트</a></p>
+            <p><a href="./mypage_roomList.html">객실 리스트</a></p>
             <p><a href="#">패키지 리스트</a></p>
           </li>
           <li>
             개인정보관리
             <p><a href="./mypage_changeInfo.html">회원 정보 수정</a></p>
-            <p><a href="#">비밀번호 변경</a></p>
+            <p><a href="./mypage_pwChng.html">비밀번호 변경</a></p>
             <p><a href="./mypage_ withdrawal.html">회원 탈퇴</a></p>
           </li>
         </ul>
       </div>
       <div class="myContents">
-        <!-- 회원탈퇴부분 시작 -->
+        <!-- 비밀번호 변경 시작 -->
         <div class="pageInfoArea">
-          <h3 class="title">회원 탈퇴</h3>
+          <h3 class="title">비밀번호 변경</h3>
           <p class="guide">
-            정보를 안전하게 보호하기 위해 비밀번호를 다시 한 번 확인합니다.
+            현재 비밀번호를 올바르게 입력해야만 비밀번호 변경이 가능합니다.
           </p>
         </div>
         <div class="mainArea">
           <div class="pwCheckArea">
-            <form action="#비밀번호확인" method="post">
+            <form action="#비밀번호변경" method="post">
               <div class="inputArea">
-                <label>PASSWORD</label><span class="essential">필수</span>
-                <input
-                  type="password"
-                  name="pwCheck"
-                  id="pwCheck"
-                  placeholder="비밀번호를 입력해주세요."
-                />
+                <div>
+                  <label>CURRENT PASSWORD</label
+                  ><span class="essential">필수</span>
+                  <input
+                    type="password"
+                    name="nowPw"
+                    id="nowPw"
+                    placeholder="현재 비밀번호를 입력해주세요."
+                  />
+                </div>
+                <div class="newPwArea">
+                  <label>NEW PASSWORD</label><span class="essential">필수</span>
+                  <input
+                    type="password"
+                    name="newPw"
+                    id="newPw"
+                    placeholder="영문, 숫자, 특수문자 조합 8~12자리를 입력해주세요."
+                  />
+                </div>
+                <div class="confirmPwArea">
+                  <label>CONFIRM PASSWORD</label
+                  ><span class="essential">필수</span>
+                  <input
+                    type="password"
+                    name="confirmPw"
+                    id="confirmPw"
+                    placeholder="동일한 비밀번호를 입력해주세요."
+                  />
+                </div>
+                <p class="txtGuide">
+                  비밀번호 내 ID가 포함되거나, 연속되는 문자 또는 숫자는 3자리
+                  이상 사용할 수 없습니다.
+                </p>
               </div>
               <div class="btnArea">
-                <input type="button" value="다음" class="btnL btnStyle1 btn" />
+                <button type="submit" class="btnL btnStyle2">확인</button>
               </div>
             </form>
           </div>
         </div>
-        <div class="subArea">
-          <div class="cautionArea">
-            <p class="title">신세계면세점 동시가입 고객 안내</p>
-            <ul class="cautions">
-              <li>
-                회원가입 동의철회 :
-                <a href="https://www.ssgdfm.com">www.ssgdfm.com</a>
-                접속 > 로그인 > 회원탈퇴
-              </li>
-              <li>
-                광고 / 마케팅 동의철회 :
-                <a href="https://www.ssgdfm.com">www.ssgdfm.com</a>
-                접속 > 로그인 > 회원정보수정 > 동의철회
-              </li>
-              <li>문의번호 : 1611-8778 ( 09:00~18:00 연중무휴 )</li>
-            </ul>
-          </div>
-        </div>
-        <!-- 회원탈퇴부분 끝 -->
+        <!-- 비밀번호 변경 끝 -->
       </div>
     </div>
     <footer w3-include-html="footer.html"></footer>

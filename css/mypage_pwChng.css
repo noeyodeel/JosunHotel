@@ -27,8 +27,7 @@ a,
   font-size: 18px;
   letter-spacing: -0.01em;
   margin: 0 10px;
-  display: inline-block;
-  vertical-align: middle;
+  font-weight: 400;
 }
 .btnStyle1 {
   text-align: center;
@@ -37,6 +36,38 @@ a,
   border: 1px solid #000;
   background: #fff;
   font-family: gothamL, notokrL;
+}
+.btnStyle2 {
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid #000;
+  transition: color 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  font-family: gothamL, notokrL;
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+}
+.btnStyle2::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  background: #fff;
+  width: 130%;
+  height: 100%;
+  transform: skewX(-16deg);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.btnStyle2:hover {
+  color: #000;
+}
+.btnStyle2:hover:before {
+  left: -10%;
 }
 
 .pageInfoArea {
@@ -68,9 +99,9 @@ a,
   text-transform: uppercase;
 }
 .mainArea .inputArea input {
-  width: 100%;
+  width: 480px;
   display: block;
-  margin: 11px 13px 8px 0;
+  margin: 11px 19px 8px 0;
   height: 60px;
   color: #000;
   border: solid #ccc;
@@ -82,6 +113,33 @@ a,
 }
 .mainArea input:focus {
   outline: none;
+}
+.mainArea input:focus:focus-visible {
+  border-color: #000;
+}
+.mainArea .newPwArea,
+.mainArea .confirmPwArea {
+  margin-top: 30px;
+  display: inline-block;
+}
+.mainArea .txtGuide {
+  margin-top: 14px;
+  padding-left: 16px;
+  color: #888;
+  font: 16px gothamL, notokrL, playfair;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+.mainArea .txtGuide::before {
+  content: "＊";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font: 600 15px gothamL;
+}
+
+.mainArea .confirmPwArea input {
+  margin-right: 0;
 }
 .mainArea .btnArea {
   text-align: center;

@@ -218,6 +218,9 @@ label {
   background-clip: padding-box;
   border-top: solid 10px #fff;
   border-bottom: solid 10px #fff;
+  border: 3px solid transparent;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
 }
 .mainArea .selectArea .option::-webkit-scrollbar-track {
   background-color: #fff;
