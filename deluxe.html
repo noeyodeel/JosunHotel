@@ -30,7 +30,7 @@
   <body>
     <div class="div_modaal html_modal"></div>
     <header w3-include-html="header.html"></header>
-    <div w3-include-html="header_scroll.html"></div>
+    <div w3-include-html="header_scroll.html" class="hd_display_none"></div>
     <!-- 상단 이미지 시작 -->
     <div class="topViewCont">
       <div class="img_top">
@@ -171,8 +171,20 @@
 
       <!-- 도면보기 버튼 시작 -->
       <div class="btn_area">
-        <a href="#" class="btn_see" onclick="return false">도면보기</a>
+        <a href="#" class="btn_see floor_plan" onclick="return false"
+          >도면보기</a
+        >
       </div>
+      <!-- 공유하기 버튼 모달창 시작 -->
+      <div class="modal2 hidden">
+        <div class="modal__overlay2"></div>
+        <div class="modal__content2">
+          <h2 id="modal_share_tit2">도면보기</h2>
+          <img src="./images//deluxe_img/DELUXE_floorPlan.jpeg" alt="" />
+          <a class="modal_closeBtn2"></a>
+        </div>
+      </div>
+      <!-- 공유하기 버튼 모달창 끝 -->
       <!-- 도면보기 버튼 끝 -->
 
       <!-- 객실 어메니티 제목 시작 -->
@@ -460,6 +472,9 @@
           <span>유선<a href="#">1811-0511</a></span>
           <span>이메일 문의<a href="#">rsvnjeju@grandjosun.com</a></span>
         </div>
+      </div>
+      <div class="d_rs_btn">
+        <a href="./rooms.html" class="d_rs_list" onclick="return false">목록</a>
       </div>
     </div>
     <footer w3-include-html="footer.html"></footer>

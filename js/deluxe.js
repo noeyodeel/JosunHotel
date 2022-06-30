@@ -34,13 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  // 공유하기 버튼 클릭시 모달창
+  // 공유하기 모달창
+  const hdDisplayNone = document.querySelector(".hd_display_none");
   const shareBtn = document.querySelector(".share-btn");
   const modal = document.querySelector(".modal");
   const closeBtn = document.querySelector(".modal_closeBtn");
 
   const openModal = () => {
     modal.classList.remove("hidden");
+    hdDisplayNone.style.display = "none";
   };
   const closeModal = () => {
     modal.classList.add("hidden");
@@ -48,6 +50,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   shareBtn.addEventListener("click", openModal);
   closeBtn.addEventListener("click", closeModal);
+
+  // 도면보기 모달창
+  const floorPlan = document.querySelector(".floor_plan");
+  const modal2 = document.querySelector(".modal2");
+  const closeBtn2 = document.querySelector(".modal_closeBtn2");
+
+  const openModal2 = () => {
+    modal2.classList.remove("hidden");
+    hdDisplayNone.style.display = "none";
+  };
+  const closeModal2 = () => {
+    modal2.classList.add("hidden");
+  };
+
+  floorPlan.addEventListener("click", openModal2);
+  closeBtn2.addEventListener("click", closeModal2);
 
   // 관심상품 담기 클릭시 하트 이미지 이동
   const loveBtnWrap = document.getElementById("love_btn");
