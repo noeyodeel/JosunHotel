@@ -1773,99 +1773,10 @@ label {
   width: 476px;
 }
 
-.calContainer .btnMonth {
-  display: block;
-  position: absolute;
-  top: 200px;
-  text-indent: -9999px;
-  overflow: hidden;
-  width: 37px;
-  height: 72px;
-  background: url(../images/prev_next.png) no-repeat;
-}
-
-.calContainer .prevMonth {
-  left: 0;
-  background-position: 0 0;
-}
-
-.btnMonth.disabled {
-  opacity: 0.3;
-}
-
-.calContainer .calWrap .calMonth {
-  font-family: gothamB;
-  font-weight: 600;
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  color: #000;
-  margin-bottom: 10px;
-  letter-spacing: -1px;
-}
-
-.calInner .calendar {
-  margin: 0 auto;
-  padding: 0;
-  border: 0;
-  width: 476px;
-  overflow: hidden;
-}
-
-.calInner .calendar th,
-.calendar td {
-  text-align: center;
-  font-family: gothamL;
-}
-
-.calInner .calendar th {
-  width: 68px;
-  height: 68px;
-  color: #000;
-  font-size: 16px;
-}
-
-.calInner .calendar .dayRed,
-.calInner .calendar .dayRed a {
-  color: red;
-}
-
 tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
-}
-
-.calInner .calendar td {
-  position: relative;
-  width: 68px;
-  height: 68px;
-  font-size: 18px;
-}
-
-.calInner + .calInner {
-  float: right;
-}
-
-.calContainer .nextMonth {
-  right: 0;
-  background-position: -37px 0;
-}
-.calContainer .btnMonth {
-  display: block;
-  position: absolute;
-  top: 200px;
-  text-indent: -9999px;
-  overflow: hidden;
-  width: 37px;
-  height: 72px;
-  background: url(../images/prev_next.png) no-repeat;
-}
-
-.calContainer .calWrap::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 /* 객실 및 인원 선택 */
@@ -2212,19 +2123,10 @@ ul.list2 li:before {
   clear: both;
 }
 
-/* diningCal */
-.diningCont.calCont {
-  padding-top: 20px;
-}
-
-.diningCont.calCont .leftCont {
-  min-height: 645px;
-}
-
-.calContainer {
-  position: relative;
-  float: none;
-  width: auto;
+/* 버튼 */
+.diningContainer .calContainer.calSingle .prevMonth,
+.diningContainer .calContainer.calSingle .nextMonth {
+  top: 19px;
 }
 
 .diningCont .calText {
@@ -2247,10 +2149,10 @@ ul.list2 li:before {
   border-radius: 50%;
 }
 
-/* .diningCont.calCont .rightCont.alert {
+.diningCont.calCont .rightCont.alert {
   position: relative;
 }
-.diningCont.calCont .rightCont.alert:before {
+.diningCont.calCont .rightCont.alert::before {
   content: "";
   position: absolute;
   display: block;
@@ -2271,7 +2173,7 @@ ul.list2 li:before {
   color: #000;
   padding: 12px 39px;
   z-index: 20;
-} */
+}
 
 .diningCont .rightCont .tit {
   display: block;
@@ -2472,4 +2374,14 @@ ul.list2 li:before {
   height: 160px;
   padding: 10px 15px;
   border: 1px solid #ccc;
+}
+
+/* calendar */
+.calContainer .calWrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.diningCont.calCont {
+  padding-top: 20px;
 }

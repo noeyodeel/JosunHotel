@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/room_1.css" />
+    <link rel="stylesheet" href="./css/res_calendar.css" />
     <link rel="stylesheet" href="./css/headerfooter.css" />
     <title>res_room1</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
     <script src="./js/res.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
   <body>
     <header w3-include-html="header.html"></header>
@@ -245,17 +248,17 @@
                     <div class="diningCont calCont">
                       <div class="leftCont">
                         <div
-                          class="calContainer hasDatepicker"
+                          class="calContainer calSingle"
                           id="diningCal"
                         ></div>
                         <span class="calText"
                           >표시된 해당일의 경우 예약금 발생</span
                         >
                       </div>
-                      <div class="rightCont alert">
-                        <!-- <p class="alertText">
+                      <div class="rightCont alert" id="alert">
+                        <p class="alertText" onclick="off()">
                           예약하실 날짜를 먼저 선택해주세요
-                        </p> -->
+                        </p>
                         <strong class="tit">런치/디너 선택</strong>
                         <div class="timeSelect">
                           <ul class="formList">
