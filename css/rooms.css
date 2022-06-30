@@ -54,10 +54,10 @@
   src: url("../fonts/PlayfairDisplaySC-Regular.otf") format("opentype");
 }
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 /* body { */
 /* color: #000; */
 /* font-family: notokrL, gothamL, playfair; */

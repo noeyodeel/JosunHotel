@@ -1,4 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // const divNext = document.createElement("div");
+
+  document.querySelector(".div_modaal").classList.remove("html_modal");
+  document
+    .querySelector(".res_fullWidth")
+    .addEventListener("click", function () {
+      document.querySelector(".div_modaal").classList.add("html_modal");
+    });
+  document.querySelector(".div_modaal").addEventListener("click", function () {
+    if (
+      document.querySelector(".div_modaal").classList.contains("html_modal")
+    ) {
+      document.querySelector(".daterangepicker").style.display = "none";
+      document.querySelector(".div_modaal").classList.remove("html_modal");
+    }
+  });
+
+  $(".res_fullWidth").daterangepicker(
+    {
+      opens: "left",
+      locale: {
+        applyLabel: "적용",
+        cancelLabel: "취소",
+      },
+    },
+    function (start, end, label) {
+      console.log(
+        "A new date selection was made: " +
+          start.format("YYYY-MM-DD") +
+          " to " +
+          end.format("YYYY-MM-DD")
+      );
+    }
+  );
+
   // 공유하기 버튼 클릭시 모달창
   const shareBtn = document.querySelector(".share-btn");
   const modal = document.querySelector(".modal");
