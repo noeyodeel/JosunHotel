@@ -1,4 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const mBuilding = document.querySelector(".main_building");
+  const mbNone = document.querySelectorAll(".mb_none");
+
+  const hSBuilding = document.querySelector(".hill_suite_building");
+  const hsbNone = document.querySelectorAll(".hsb_none");
+
+  const all = document.querySelector(".all");
+
+  mBuilding.addEventListener("click", function () {
+    for (let i = 0; i < mbNone.length; i++) {
+      mbNone[i].style.display = "none";
+    }
+    for (let i = 0; i < hsbNone.length; i++) {
+      hsbNone[i].style.display = "block";
+    }
+  });
+
+  hSBuilding.addEventListener("click", function () {
+    for (let i = 0; i < hsbNone.length; i++) {
+      hsbNone[i].style.display = "none";
+    }
+    for (let i = 0; i < mbNone.length; i++) {
+      mbNone[i].style.display = "block";
+    }
+  });
+
+  all.addEventListener("click", function () {
+    for (let i = 0; i < hsbNone.length; i++) {
+      hsbNone[i].style.display = "block";
+    }
+    for (let i = 0; i < mbNone.length; i++) {
+      mbNone[i].style.display = "block";
+    }
+  });
+
   // css 변수로 줘서 love_inner버튼 포지션 현재위치잡음.
   document.documentElement.style.setProperty("--main-bg-position", "-48px");
   document.documentElement.style.setProperty("--main-bg-position2", "0px");
