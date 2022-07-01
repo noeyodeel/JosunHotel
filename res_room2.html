@@ -79,19 +79,59 @@
               <h2 class="Conttitle">SMART CHOICE</h2>
               <p class="Conttext">DELUX / 2DOUBLE / STANDARD VIEW</p>
               <ul class="roomRes" id="roomOpt">
-                <li class="toggleOn">
+                <li class="toggleOn" id="roomOptionChoice">
                   <strong class="listTitle">객실1</strong>
-                  <button type="button" class="btnToggle"></button>
+                  <button
+                    type="button"
+                    class="btnToggle"
+                    onclick="toggleClass9()"
+                  ></button>
                   <div class="toggleCont" style="display: block">
                     <div class="toggleInner">
                       <h3 class="OptionTitle">Breakfast</h3>
                       <div class="addOption">
                         <span class="txt">성인 조식 추가</span>
                         <span class="price">KRW 45,000</span>
+                        <div class="numType type2">
+                          <button
+                            type="button"
+                            class="btnDown"
+                            onclick='count1("minus")'
+                          >
+                            인원 수 감소
+                          </button>
+
+                          <span id="result" class="adult">1</span>
+
+                          <button
+                            type="button"
+                            class="btnUp"
+                            onclick="count1('plus')"
+                          >
+                            인원 수 증가
+                          </button>
+                        </div>
                       </div>
                       <div class="addOption">
                         <span class="txt">어린이 조식 추가</span>
                         <span class="price">KRW 27,000</span>
+                        <div class="numType type2">
+                          <button
+                            type="button"
+                            class="btnDown"
+                            onclick='count2("minus")'
+                          >
+                            인원 수 감소
+                          </button>
+                          <span id="result" class="child">0</span>
+                          <button
+                            type="button"
+                            class="btnUp"
+                            onclick="count2('plus')"
+                          >
+                            인원 수 증가
+                          </button>
+                        </div>
                       </div>
                       <ul class="textGuide">
                         <li>
@@ -116,6 +156,29 @@
                           수 있습니다.
                         </li>
                       </ul>
+
+                      <h3 class="OptionTitle">Breakfast</h3>
+                      <div class="addOption">
+                        <span class="txt">엑스트라 베드 추가</span>
+                        <span class="price">KRW 44,000</span>
+                        <div class="numType type2">
+                          <button
+                            type="button"
+                            class="btnDown"
+                            onclick='count3("minus")'
+                          >
+                            인원 수 감소
+                          </button>
+                          <span id="result" class="bed">0</span>
+                          <button
+                            type="button"
+                            class="btnUp"
+                            onclick="count3('plus')"
+                          >
+                            인원 수 증가
+                          </button>
+                        </div>
+                      </div>
                       <h3 class="OptionTitle">Requests</h3>
                       <textarea
                         name="Request"

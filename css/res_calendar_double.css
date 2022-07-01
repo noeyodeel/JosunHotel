@@ -1,6 +1,5 @@
 .ui-datepicker {
   font: 9pt;
-  padding-top: 20px;
   position: relative;
   float: none;
   width: 508px;
@@ -46,24 +45,21 @@
   top: 200px;
   text-indent: -9999px;
   overflow: hidden;
-  width: 10px;
-  height: 18px;
-  background: url(../images/ico_calendar_single.png) no-repeat;
+  width: 37px;
+  height: 72px;
+  background: url(../images/prev_next.png) no-repeat;
 }
+/* .btnMonth.ui-state-disabled {
+  opacity: 0.3;
+} */
 
 .ui-datepicker-prev {
-  float: left;
-  top: 16px;
-  left: 50%;
-  margin-left: -110px;
+  left: -400px;
   background-position: 0 0;
 }
 .ui-datepicker-next {
-  float: right;
-  top: 16px;
-  right: 50%;
-  margin-right: -110px;
-  background-position: -10px 0;
+  right: -400px;
+  background-position: -37px 0;
 }
 
 .ui-datepicker thead {
@@ -82,7 +78,8 @@
   text-transform: uppercase;
 }
 
-.ui-datepicker thead th:first-child {
+.ui-datepicker thead th:first-child,
+.ui-datepicker tbody td:first-child {
   color: red;
 }
 

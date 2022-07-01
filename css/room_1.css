@@ -876,14 +876,18 @@ tr {
   margin-bottom: 30px;
 }
 
-.roomRes > li.toggleOn {
-  border-bottom: 0;
+.roomRes > li:last-child.toggleOn {
+  border-bottom: transparent;
   border-top: 1px solid #000;
 }
 
 .roomRes > li {
-  padding: 21px 20px 22px 20px;
+  padding: 28px 20px 22px 20px;
+  border-top: 1px solid #ccc;
   position: relative;
+}
+.roomRes > li:last-child {
+  border-bottom: 1px solid #ccc;
 }
 
 .roomRes > li .listTitle {
@@ -895,7 +899,7 @@ tr {
 .roomRes > li .btnToggle {
   position: absolute;
   right: 18px;
-  top: 24px;
+  top: 35px;
   width: 28px;
   height: 28px;
   text-indent: -9999px;
@@ -1778,6 +1782,10 @@ label {
 .calInner {
   float: left;
   width: 476px;
+}
+
+.calInner + .calInner {
+  float: right;
 }
 
 tbody {

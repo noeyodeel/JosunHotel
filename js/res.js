@@ -1,3 +1,4 @@
+// toggleContent 보이기------------------
 $(document).ready(function () {
   $(".btnToggle").click(function () {
     var submenu = $(this).next(".toggleCont");
@@ -9,6 +10,7 @@ $(document).ready(function () {
   });
 });
 
+// toggleOn 클래스 추가--------------------------------------------
 function toggleClass1() {
   document.getElementById("toggle1").classList.toggle("toggleOn");
 }
@@ -17,10 +19,38 @@ function toggleClass2() {
   document.getElementById("toggle2").classList.toggle("toggleOn");
 }
 
-function toggleClass2() {
-  document.getElementById("room2").classList.toggle("toggleOn");
+// function toggleClass2() {
+//   document.getElementById("room2").classList.toggle("toggleOn");
+// }
+
+function toggleClass4() {
+  document.getElementById("room0").classList.toggle("toggleOn");
 }
 
+function toggleClass5() {
+  document.getElementById("agreeCont").classList.toggle("toggleOn");
+}
+
+function toggleClass6() {
+  document.getElementById("Step1").classList.toggle("toggleOn");
+}
+function toggleClass7() {
+  document.getElementById("Step2").classList.toggle("toggleOn");
+}
+function toggleClass8() {
+  document.getElementById("Step3").classList.toggle("toggleOn");
+}
+function toggleClass9() {
+  document.getElementById("roomOptionChoice").classList.toggle("toggleOn");
+}
+function toggleClass10() {
+  document.getElementById("agree01").classList.toggle("toggleOn");
+}
+function toggleClass11() {
+  document.getElementById("agree03").classList.toggle("toggleOn");
+}
+
+// 페이지 블록 선택--------------------------------------------
 function test1() {
   var con = document.getElementById("roomcontainer01");
   con.style.display = "block";
@@ -66,7 +96,7 @@ function test3() {
   con.className = "on";
 }
 
-// 플로팅 버튼
+// 플로팅 버튼-----------------------------------------------
 $(document).ready(function () {
   // 기존 css에서 플로팅 배너 위치(top)값을 가져와 저장한다.
   var floatPosition = parseInt($(".rightCont").css("top")),
@@ -88,8 +118,7 @@ $(document).ready(function () {
     .scroll();
 });
 
-// reserve 버튼
-
+// reserve 버튼(예약하기)?????-------------------------------------
 $(document).ready(function () {
   $(".roomContainer .btnToggle").click(function () {
     var submenu = $(".roomContainer .toggleCont");
@@ -101,25 +130,7 @@ $(document).ready(function () {
   });
 });
 
-function toggleClass4() {
-  document.getElementById("room0").classList.toggle("toggleOn");
-}
-
-function toggleClass5() {
-  document.getElementById("agreeCont").classList.toggle("toggleOn");
-}
-
-function toggleClass6() {
-  document.getElementById("Step1").classList.toggle("toggleOn");
-}
-function toggleClass7() {
-  document.getElementById("Step2").classList.toggle("toggleOn");
-}
-function toggleClass8() {
-  document.getElementById("Step3").classList.toggle("toggleOn");
-}
-
-// 카운트
+// 카운트----------------------------------------------------
 function count1(type) {
   // 결과를 표시할 element
   const resultElement = document.querySelector(".adult");
@@ -156,8 +167,25 @@ function count2(type) {
   resultElement.innerText = number;
 }
 
-// 이미지 슬라이드
+function count3(type) {
+  // 결과를 표시할 element
+  const resultElement = document.querySelector(".bed");
 
+  // 현재 화면에 표시된 값
+  let number = resultElement.innerText;
+
+  // 더하기/빼기
+  if (type === "plus") {
+    number = parseInt(number) + 1;
+  } else if (type === "minus") {
+    number = parseInt(number) - 1;
+  }
+
+  // 결과 출력
+  resultElement.innerText = number;
+}
+
+// 이미지 슬라이드---------------------------------------------
 $(function () {
   var $slider = $(".swipeCont"),
     $firstSlide = $slider
@@ -212,9 +240,7 @@ $(function () {
   });
 });
 
-// EOF
-
-// datepicker
+// datepicker_single----------------------------------------------
 $(function () {
   $("#diningCal").datepicker({
     inline: true,
@@ -235,6 +261,10 @@ $(function () {
       ". 12",
     ],
     showMonthAfterYear: true,
+    onSelect: function (dateText, inst) {
+      $(".rightCont.alert .alertText").hide();
+      $(".rightCont.alert").toggleClass("alert");
+    },
     beforeShowDay: function (date) {
       var day = date.getDay();
       /* 주말 선택 불가 */
@@ -243,14 +273,37 @@ $(function () {
   });
 });
 
-$(
-  ".ui-datepicker-calendar .ui-datepicker-current-day > a.ui-state-active"
-).click(function () {
-  $(".rightCont.alert .alertText").hide();
-  $(".rightCont.alert").toggleClass("alert");
+// datepicker_double-------------------------------------------
+$(function () {
+  $("#roomCal").datepicker({
+    inline: true,
+    showOtherMonths: true,
+    dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    monthNames: [
+      ". 01",
+      ". 02",
+      ". 03",
+      ". 04",
+      ". 05",
+      ". 06",
+      ". 07",
+      ". 08",
+      ". 09",
+      ". 10",
+      ". 11",
+      ". 12",
+    ],
+    showMonthAfterYear: true,
+    onSelect: function (dateText, inst) {
+      $(".toggle1").toggleClass("toggleOn");
+      $("#cal").css("display", "none");
+      $(".toggle2").toggleClass("toggleOn");
+      $("#people").css("display", "block");
+    },
+  });
 });
 
-// 다음 버튼
+// 다음 버튼-------------------------------------------------------
 function daum() {
   var con = document.getElementById("step1");
   con.style.display = "none";
