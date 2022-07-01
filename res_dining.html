@@ -32,16 +32,21 @@
         <div class="Inner">
           <div class="diningContainer">
             <ul class="toggleList rsvList">
-              <li class="toggleOn" id="diningStep1" onclick="toggleClass6()">
+              <li id="Step1" class="toggleOn">
                 <strong class="listTit">호텔 &amp; 다이닝 선택</strong>
                 <em class="infoValue">
                   <span id="HotelInfo">그랜드 조선 제주</span>
                   <span id="DiningInfo">ARIA</span>
                 </em>
-                <button type="button" id="step1btnToggle" class="btnToggle">
+                <button
+                  type="button"
+                  id="step1btnToggle"
+                  class="btnToggle"
+                  onclick="toggleClass6()"
+                >
                   <span class="hidden">상세내용 보기</span>
                 </button>
-                <div class="toggleCont" id="step1">
+                <div class="toggleCont" id="step1" style="display: block">
                   <div class="toggleInner">
                     <div class="diningCont">
                       <div class="leftCont">
@@ -54,7 +59,7 @@
                               <select
                                 id="hotelSelect"
                                 name="searchCode"
-                                style="display: none"
+                                class="selectmenu"
                               >
                                 <option value="JP">조선 팰리스</option>
                                 <option value="GJJ" selected="selected">
@@ -73,14 +78,6 @@
                                 </option>
                                 <option value="JH">조선호텔앤리조트</option>
                               </select>
-                              <button
-                                id="hotelselect-button"
-                                class="selectmenu"
-                              >
-                                <span class="selectmenu-text"
-                                  >그랜드 조선 제주</span
-                                >
-                              </button>
                             </div>
 
                             <div
@@ -90,19 +87,13 @@
                               <select
                                 id="diningSelect"
                                 name="searchDiningCode"
-                                style="display: none"
+                                class="selectmenu"
                               >
                                 <option value="001" selected="selected">
                                   ARIA
                                 </option>
                                 <option value="002">RUBRICA</option>
                               </select>
-                              <button
-                                id="diningselect-button"
-                                class="selectmenu"
-                              >
-                                <span class="selectmenu-text">ARIA</span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -221,10 +212,10 @@
                             </dd>
                           </dl>
                           <a
-                            href="#"
                             class="btnSC btnL"
                             id="step1btn"
                             style="text-decoration: none"
+                            onclick="daum()"
                             >다음</a
                           >
                         </div>
@@ -236,10 +227,14 @@
               </li>
               <!-- step1 -->
 
-              <li id="step2">
+              <li id="Step2">
                 <strong class="listTit">날짜 &amp; 시간 &amp; 인원 선택</strong>
-                <em class="infoValue" id="step2"></em>
-                <button type="button" class="btnToggle" id="step2btnToggle">
+                <button
+                  type="button"
+                  class="btnToggle"
+                  id="step2btnToggle"
+                  onclick="toggleClass7()"
+                >
                   <span class="hidden">상세내용 보기</span>
                 </button>
 
@@ -256,7 +251,7 @@
                         >
                       </div>
                       <div class="rightCont alert" id="alert">
-                        <p class="alertText" onclick="off()">
+                        <p class="alertText">
                           예약하실 날짜를 먼저 선택해주세요
                         </p>
                         <strong class="tit">런치/디너 선택</strong>
@@ -361,6 +356,7 @@
                             class="btnSC btnL"
                             id="step1btn"
                             style="text-decoration: none"
+                            onclick="daum2()"
                             >다음</a
                           >
                         </div>
@@ -371,12 +367,17 @@
               </li>
               <!-- //step2 -->
 
-              <li id="step3">
+              <li id="Step3">
                 <strong class="listTit">예약자 정보 입력</strong>
-                <button type="button" class="btnToggle" id="step3btnToggle">
+                <button
+                  type="button"
+                  class="btnToggle"
+                  id="step3btnToggle"
+                  onclick="toggleClass8()"
+                >
                   <span class="hidden">상세내용 닫기</span>
                 </button>
-                <div class="toggleCont" id="step3Cont" style="display: block">
+                <div class="toggleCont" id="step3">
                   <div class="toggleInner">
                     <ul class="infoList">
                       <li id="nameArea">
@@ -524,7 +525,7 @@
               <!--비회원일때만!-->
               <h3 class="notiTit">개인 정보 수집 · 이용 동의</h3>
               <ul class="toggleList agreeCont">
-                <li id="agreeCont" onclick="toggleClass5()">
+                <li id="agreeCont">
                   <span class="form type2">
                     <input
                       type="checkbox"
@@ -536,7 +537,11 @@
                       >[필수] 개인정보 수집 · 이용에 동의합니다.</label
                     >
                   </span>
-                  <button type="button" class="btnToggle">
+                  <button
+                    type="button"
+                    class="btnToggle"
+                    onclick="toggleClass5()"
+                  >
                     <span class="hidden">상세내용 보기</span>
                   </button>
                   <div class="toggleCont" style="display: none">

@@ -110,7 +110,13 @@ function toggleClass5() {
 }
 
 function toggleClass6() {
-  document.getElementById("diningStep1").classList.toggle("toggleOn");
+  document.getElementById("Step1").classList.toggle("toggleOn");
+}
+function toggleClass7() {
+  document.getElementById("Step2").classList.toggle("toggleOn");
+}
+function toggleClass8() {
+  document.getElementById("Step3").classList.toggle("toggleOn");
 }
 
 // 카운트
@@ -160,22 +166,6 @@ $(function () {
       .stop(true)
       .animate({ opacity: 1 }, 200); // 첫번째 슬라이드만 보이게 하기
 
-  // var indicator = $slider.find(".indicator");
-
-  // indicator.html(indicatorHtml);
-
-  // // 슬라이드 이동 함수
-  // function goToSlide(index) {
-  //   slideGroup.animate({ left: -100 * index + "%" }, duration, easing);
-  //   currentIndex = index;
-  // }
-
-  // // indicator 이동
-  // indicator.find("button").click(function () {
-  //   var idx = $(this).index();
-  //   goToSlide(idx);
-  // });
-
   function PrevSlide() {
     // 이전버튼 함수
     var $lastSlide = $slider
@@ -222,6 +212,8 @@ $(function () {
   });
 });
 
+// EOF
+
 // datepicker
 $(function () {
   $("#diningCal").datepicker({
@@ -243,14 +235,40 @@ $(function () {
       ". 12",
     ],
     showMonthAfterYear: true,
+    beforeShowDay: function (date) {
+      var day = date.getDay();
+      /* 주말 선택 불가 */
+      return [day != 0 && day != 6];
+    },
   });
 });
 
-function off() {
+$(
+  ".ui-datepicker-calendar .ui-datepicker-current-day > a.ui-state-active"
+).click(function () {
   $(".rightCont.alert .alertText").hide();
-  document.getElementById("alert").classList.remove("alert");
+  $(".rightCont.alert").toggleClass("alert");
+});
+
+// 다음 버튼
+function daum() {
+  var con = document.getElementById("step1");
+  con.style.display = "none";
+  var con = document.getElementById("Step1");
+  con.className = "";
+  var con = document.getElementById("step2");
+  con.style.display = "block";
+  var con = document.getElementById("Step2");
+  con.className = "toggleOn";
 }
 
-$("").click(function () {
-  var id_check = $(this).attr("id");
-});
+function daum2() {
+  var con = document.getElementById("step2");
+  con.style.display = "none";
+  var con = document.getElementById("Step2");
+  con.className = "";
+  var con = document.getElementById("step3");
+  con.style.display = "block";
+  var con = document.getElementById("Step3");
+  con.className = "toggleOn";
+}

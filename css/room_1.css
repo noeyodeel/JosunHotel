@@ -1030,6 +1030,9 @@ p.textGuide::before,
 .rContList > li:last-child.toggleOn {
   border-bottom: 0;
 }
+.toggleList > li:last-child.toggleOn {
+  border-bottom: 0;
+}
 
 .rContList > li.toggleOn {
   border-top: 1px solid #000;
@@ -1474,6 +1477,10 @@ input[type="tel"] {
 
 .toggleList > li {
   position: relative;
+}
+
+.toggleList > li:last-child {
+  border-bottom: 1px solid #ccc;
 }
 
 .toggleList.agreeCont > li {

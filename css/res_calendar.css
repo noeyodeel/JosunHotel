@@ -99,8 +99,8 @@
   text-align: center;
 }
 
-.ui-datepicker-th,
-.ui-datepicker-td {
+.ui-datepicker th,
+.ui-datepicker td {
   text-align: center;
   font-family: gothamL;
 }
@@ -110,16 +110,31 @@
   border-radius: 100%;
 }
 
-.ui-datepicker-unselectable {
-  background: transparent;
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #666666;
+}
+
+.ui-datepicker-other-month.ui-datepicker-unselectable .ui-state-default {
   color: transparent;
 }
+
 .ui-datepicker-current-day {
-  background: #72715c;
   border-radius: 100%;
+  background-color: #72715c;
   z-index: 11;
 }
 
 .ui-datepicker-current-day .ui-state-active {
-  color: #f0f0f0;
+  color: white;
+}
+
+.ui-state-disabled .ui-state-default {
+  color: lightgray;
 }
