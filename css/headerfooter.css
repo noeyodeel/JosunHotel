@@ -749,12 +749,12 @@ select:focus {
 .hotelFindPop .hotelSelect {
   margin-top: -10px;
 }
-ul:after,
+/* ul:after,
 ol:after {
   content: "";
   display: block;
   clear: both;
-}
+} */
 .hotelSelect > li {
   float: left;
   width: 33.3%;
