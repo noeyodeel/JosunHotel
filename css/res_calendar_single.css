@@ -15,6 +15,7 @@
 }
 
 .ui-datepicker-header {
+  position: relative;
   color: black;
   line-height: 30px;
   border-width: 0 0 0 0;
@@ -30,6 +31,8 @@
 
 .ui-datepicker-year,
 .ui-datepicker-month {
+  position: relative;
+  top: 20px;
   font-family: gothamB;
   font-weight: 600;
 }

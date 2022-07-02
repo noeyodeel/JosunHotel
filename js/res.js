@@ -19,12 +19,8 @@ function toggleClass2() {
   document.getElementById("toggle2").classList.toggle("toggleOn");
 }
 
-// function toggleClass2() {
-//   document.getElementById("room2").classList.toggle("toggleOn");
-// }
-
 function toggleClass4() {
-  document.getElementById("room0").classList.toggle("toggleOn");
+  document.getElementById("rC01_room0").classList.toggle("toggleOn");
 }
 
 function toggleClass5() {
@@ -218,7 +214,7 @@ $(function () {
       .find("li")
       .first() // 첫 번째 슬라이드
       .appendTo($slider); // 맨 마지막으로 보내기
-    var $lastSlide = $slider
+    $lastSlide = $slider
       .find("li")
       .last() // 맨 마지막으로 보낸 슬라이드
       .stop(true)
@@ -273,7 +269,7 @@ $(function () {
   });
 });
 
-// datepicker_double-------------------------------------------
+// // datepicker_double-------------------------------------------
 $(function () {
   $("#roomCal").datepicker({
     inline: true,
@@ -294,14 +290,54 @@ $(function () {
       ". 12",
     ],
     showMonthAfterYear: true,
+    numberOfMonths: [1, 2],
+    selectMultiple: true,
+    selectMax: 2,
     onSelect: function (dateText, inst) {
-      $(".toggle1").toggleClass("toggleOn");
-      $("#cal").css("display", "none");
-      $(".toggle2").toggleClass("toggleOn");
-      $("#people").css("display", "block");
+      $(".ui-datepicker-calendar > tbody td").addClass("revOn");
     },
   });
 });
+
+$("td a").click(function () {
+  if ($(".ui-datepicker tbody td").hasClass("ui-datepicker-current-day")) {
+    $("td").removeClass("ui-datepicker-current-day");
+  } else {
+    $("td").addClass("revOn");
+  }
+});
+
+// $(function () {
+//   $('input[name="roomCal"]').daterangepicker({
+//     autoApply: true,
+//     locale: {
+//       format: "YYYY.MM.DD",
+//       monthNames: [
+//         ". 01",
+//         ". 02",
+//         ". 03",
+//         ". 04",
+//         ". 05",
+//         ". 06",
+//         ". 07",
+//         ". 08",
+//         ". 09",
+//         ". 10",
+//         ". 11",
+//         ". 12",
+//       ],
+//       daysOfWeek: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+//       alwaysShowCalendars: true,
+//       showCustomRangeLabel: true,
+//     },
+//   });
+// });
+
+// onSelect: function (dateText, inst) {
+//   $(".toggle1").toggleClass("toggleOn");
+//   $("#cal").css("display", "none");
+//   $(".toggle2").toggleClass("toggleOn");
+//   $("#people").css("display", "block");
 
 // 다음 버튼-------------------------------------------------------
 function daum() {
@@ -324,4 +360,34 @@ function daum2() {
   con.style.display = "block";
   var con = document.getElementById("Step3");
   con.className = "toggleOn";
+}
+
+// 프로모션 코드
+function toggleBtn1() {
+  // 토글 할 버튼 선택 (btn1)
+  const btn1 = document.getElementById("prom2");
+
+  // btn1 숨기기 (display: none)
+  if (btn1.style.display !== "none") {
+    btn1.style.display = "none";
+  }
+  // btn` 보이기 (display: block)
+  else {
+    btn1.style.display = "block";
+  }
+}
+
+function closeBtn() {
+  const con = document.getElementById("prom2");
+  con.style.display = "none";
+}
+
+// 모달창---------------------------------------------
+function displayModal() {
+  const modal = document.querySelector(".modal");
+  modal.classList.toggle("hidden");
+}
+
+function en_on() {
+  $(".en").toggle();
 }

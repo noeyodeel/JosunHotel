@@ -14,7 +14,9 @@
     <script src="./js/res.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    ></script>
   </head>
+
   <body>
     <div class="wrapper">
       <header w3-include-html="header.html"></header>
@@ -34,15 +36,47 @@
 
         <div class="Inner">
           <div class="promCode">
-            <button type="button" class="btnSC btnProm">프로모션 코드</button>
-          </div>
-          <ul class="toggleList rsvList checkDate">
-            <li class="toggleOn" id="toggle1">
-              <strong class="listTit">투숙기간 선택</strong>
-              <div class="infoValue" id="startDate">
-                -
-                <span>1 박</span>
+            <button
+              type="button"
+              class="btnSC btnProm"
+              id="prom1"
+              function
+              onclick="toggleBtn1()"
+            >
+              프로모션 코드
+            </button>
+            <div
+              class="promInfo"
+              style="width: 450px; display: none"
+              id="prom2"
+            >
+              <div class="selectWrap" style="width: 160px">
+                <select name="promType" id="promType" class="selectmenu">
+                  <option value="codetype" hidden selected>Code Type</option>
+                  <option value="promotionCode">Promotion</option>
+                  <option value="companyCode">Company</option>
+                </select>
               </div>
+              <input
+                type="text"
+                id="promCode"
+                placeholder="프로모션 코드 입력"
+                style="width: 210px"
+                onkeyup="this.value=this.value.replace(/[^a-z]/gi, '').toUpperCase();"
+              />
+              <button type="button" class="btnLine" onclick="closeBtn()">
+                닫기
+              </button>
+            </div>
+          </div>
+
+          <ul class="toggleList rsvList checkDate">
+            <li class="toggleOn" id="toggle1" style="display: block">
+              <strong class="listTit">투숙기간 선택</strong>
+              <em class="infoValue">
+                2022.12.24&nbsp;일&nbsp;-&nbsp;2022.12.25&nbsp;월
+                <span>1 박</span>
+              </em>
               <button
                 type="button"
                 class="btnToggle"
@@ -51,16 +85,7 @@
               <div class="toggleCont" style="display: block" id="cal">
                 <div class="toggleInner">
                   <div class="calContainer" id="roomCal">
-                    <div class="calWrap" style="display: block">
-                      <div class="calInner calLeft">
-                        <div>
-                          <button class="btnMonth prevMonth"></button>
-                          <strong class="calMonth"></strong>
-                        </div>
-                        <table class="calendar"></table>
-                      </div>
-                      <div class="calInner calRight"></div>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
@@ -201,7 +226,7 @@
                   <!-- roomContainer -->
 
                   <div class="btnArea">
-                    <a href="res_room1.html" class="btnSearch">객실 검색</a>
+                    <a href="res_room1.html" class="btnSearch"> 객실 검색 </a>
                   </div>
                 </div>
               </div>
@@ -212,9 +237,9 @@
         <!-- Inner -->
       </div>
       <!-- //container -->
-      <footer w3-include-html="footer.html"></footer>
     </div>
     <!-- //Wrapper -->
+    <footer w3-include-html="footer.html"></footer>
   </body>
   <script src="./js/headerfooter.js"></script>
   <script>
