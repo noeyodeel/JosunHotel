@@ -12,8 +12,10 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="./js/headerfooter.js"></script>
     <script src="./js/res.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
     ></script>
   </head>
 
@@ -74,7 +76,7 @@
             <li class="toggleOn" id="toggle1" style="display: block">
               <strong class="listTit">투숙기간 선택</strong>
               <em class="infoValue">
-                2022.12.24&nbsp;일&nbsp;-&nbsp;2022.12.25&nbsp;월
+                <input type="text" id="roomCal">
                 <span>1 박</span>
               </em>
               <button
@@ -84,7 +86,9 @@
               ></button>
               <div class="toggleCont" style="display: block" id="cal">
                 <div class="toggleInner">
-                  <div class="calContainer" id="roomCal">
+                  <div class="calContainer">
+                    
+                    <div style="height:500px"></div>
                    
                   </div>
                 </div>

@@ -141,6 +141,10 @@ function count1(type) {
     number = parseInt(number) - 1;
   }
 
+  if (number < 0) {
+    return;
+  }
+
   // 결과 출력
   resultElement.innerText = number;
 }
@@ -159,6 +163,10 @@ function count2(type) {
     number = parseInt(number) - 1;
   }
 
+  if (number < 0) {
+    return;
+  }
+
   // 결과 출력
   resultElement.innerText = number;
 }
@@ -175,6 +183,10 @@ function count3(type) {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
     number = parseInt(number) - 1;
+  }
+
+  if (number < 0) {
+    return;
   }
 
   // 결과 출력
@@ -269,69 +281,39 @@ $(function () {
   });
 });
 
-// // datepicker_double-------------------------------------------
+// calendar_Double----------------------------
+
 $(function () {
-  $("#roomCal").datepicker({
-    inline: true,
-    showOtherMonths: true,
-    dayNamesMin: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    monthNames: [
-      ". 01",
-      ". 02",
-      ". 03",
-      ". 04",
-      ". 05",
-      ". 06",
-      ". 07",
-      ". 08",
-      ". 09",
-      ". 10",
-      ". 11",
-      ". 12",
-    ],
-    showMonthAfterYear: true,
-    numberOfMonths: [1, 2],
-    selectMultiple: true,
-    selectMax: 2,
-    onSelect: function (dateText, inst) {
-      $(".ui-datepicker-calendar > tbody td").addClass("revOn");
+  $("#roomCal").daterangepicker({
+    autoApply: true,
+    alwaysShowCalendars: true,
+    locale: {
+      format: "YYYY.MM.DD",
+      daysOfWeek: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+      monthNames: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
     },
   });
+  $("#roomCal").focus();
+  $("#roomCal").on("apply.daterangepicker", function (ev, picker) {
+    $(".toggle1").toggleClass("toggleOn");
+    $("#cal").css("display", "none");
+    $(".toggle2").toggleClass("toggleOn");
+    $("#people").css("display", "block");
+  });
 });
-
-$("td a").click(function () {
-  if ($(".ui-datepicker tbody td").hasClass("ui-datepicker-current-day")) {
-    $("td").removeClass("ui-datepicker-current-day");
-  } else {
-    $("td").addClass("revOn");
-  }
-});
-
-// $(function () {
-//   $('input[name="roomCal"]').daterangepicker({
-//     autoApply: true,
-//     locale: {
-//       format: "YYYY.MM.DD",
-//       monthNames: [
-//         ". 01",
-//         ". 02",
-//         ". 03",
-//         ". 04",
-//         ". 05",
-//         ". 06",
-//         ". 07",
-//         ". 08",
-//         ". 09",
-//         ". 10",
-//         ". 11",
-//         ". 12",
-//       ],
-//       daysOfWeek: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-//       alwaysShowCalendars: true,
-//       showCustomRangeLabel: true,
-//     },
-//   });
-// });
 
 // onSelect: function (dateText, inst) {
 //   $(".toggle1").toggleClass("toggleOn");

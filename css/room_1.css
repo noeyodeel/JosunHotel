@@ -2008,8 +2008,8 @@ tbody {
 .toggleList.agreeCont .scrollWrap {
   color: #666;
   font: 16px gothamL, notokrL;
-  padding-right: 15px !important;
-  max-height: 250px;
+  padding-right: 15px;
+  max-height: 150px;
   overflow: hidden;
 }
 ul.list1 li,
@@ -2828,4 +2828,21 @@ ul.list2 li:before {
   width: 1px;
   height: 16px;
   background: #ccc;
+}
+
+input#roomCal {
+  border: transparent;
+  position: relative;
+  width: 260px;
+  top: -2px;
+  left: 12px;
+  font-size: 22px;
+  font-family: gothamL, notokrL;
+  letter-spacing: -0.04em;
+}
+
+input.member,
+input.member[type="text"][disabled] {
+  color: #000;
+  border: none;
 }
