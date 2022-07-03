@@ -1,21 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // const divNext = document.createElement("div");
-
-  document.querySelector(".div_modaal").classList.remove("html_modal");
-  document
-    .querySelector(".res_fullWidth")
-    .addEventListener("click", function () {
-      document.querySelector(".div_modaal").classList.add("html_modal");
-    });
-  document.querySelector(".div_modaal").addEventListener("click", function () {
-    if (
-      document.querySelector(".div_modaal").classList.contains("html_modal")
-    ) {
-      document.querySelector(".daterangepicker").style.display = "none";
-      document.querySelector(".div_modaal").classList.remove("html_modal");
-    }
+  // 인원추가
+  document.querySelector(".people_btn").addEventListener("click", function () {
+    document.querySelector(".people_modal").style.display = "flex";
   });
 
+  document
+    .querySelector(".modal_closeBtn_p")
+    .addEventListener("click", function () {
+      document.querySelector(".people_modal").style.display = "none";
+    });
+
+  // 예약하기
   $(".res_fullWidth").daterangepicker(
     {
       opens: "left",
@@ -24,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cancelLabel: "취소",
       },
     },
+
     function (start, end, label) {
       console.log(
         "A new date selection was made: " +
@@ -46,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   const closeModal = () => {
     modal.classList.add("hidden");
+    hdDisplayNone.style.display = "block";
   };
 
   shareBtn.addEventListener("click", openModal);

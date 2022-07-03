@@ -28,10 +28,10 @@
     <link rel="stylesheet" href="./css/deluxe_calender.css" />
   </head>
   <body>
-    <div class="div_modaal html_modal"></div>
     <header w3-include-html="header.html"></header>
     <div w3-include-html="header_scroll.html" class="hd_display_none"></div>
     <!-- 상단 이미지 시작 -->
+    <div class="default_Cont_modal1black"></div>
     <div class="topViewCont">
       <div class="img_top">
         <img
@@ -51,7 +51,7 @@
       </div>
       <button type="button" class="scroll_top">
         <span class="scroll_hidden">
-          <a href="#">자세히 보기</a>
+          <a href="#" onclick="return false">자세히 보기</a>
         </span>
       </button>
     </div>
@@ -69,6 +69,49 @@
       <a href="#" class="btn-box btn menu_height" onclick="return false">
         <span class="res_fullWidth">예약하기</span>
       </a>
+      <a
+        href="#"
+        class="btn-box btn menu_height people_btn"
+        onclick="return false"
+      >
+        <dl class="res_dl_list">
+          <dt>ROOM</dt>
+          <dd>1</dd>
+          <dt>ADULT</dt>
+          <dd>2</dd>
+          <dt>CHILDREN</dt>
+          <dd>0</dd>
+        </dl>
+      </a>
+
+      <!-- 인원 모달창 -->
+      <div class="people_modal">
+        <a class="modal_closeBtn_p"></a>
+        <div>
+          <div class="people_modal_box">
+            <strong>객실 1</strong>
+            <ul>
+              <li class="people_modal_add">성인 0</li>
+              <li>어린이 0</li>
+            </ul>
+          </div>
+          <div class="people_modal_box">
+            <strong>객실 2</strong>
+            <ul>
+              <li class="people_modal_add">성인 0</li>
+              <li>어린이 0</li>
+            </ul>
+          </div>
+          <div class="people_modal_box">
+            <strong>객실 3</strong>
+            <ul>
+              <li class="people_modal_add">성인 0</li>
+              <li>어린이 0</li>
+            </ul>
+          </div>
+        </div>
+        <button>검색</button>
+      </div>
 
       <!-- 공유하기 버튼 모달창 시작 -->
       <div class="modal hidden">
@@ -272,7 +315,7 @@
           <div>
             <p>
               호텔에서 제공하는 다양한 서비스를<br />
-              받아보세요.<a href="#">자세히 보기</a>
+              받아보세요.<a href="#" onclick="return false">자세히 보기</a>
             </p>
           </div>
         </li>
@@ -281,7 +324,9 @@
           <div>
             <p>
               유아용품, 객실 관련 필요 물품을 무료로<br />
-              대여하실 수 있습니다.<a href="#">자세히 보기</a>
+              대여하실 수 있습니다.<a href="#" onclick="return false"
+                >자세히 보기</a
+              >
             </p>
           </div>
         </li>
@@ -290,7 +335,9 @@
           <div>
             <p>
               객실에서 즐기실 수 있는 다양한 룸 서비스<br />
-              메뉴가 준비되어 있습니다. (24시)<a href="#">자세히 보기</a>
+              메뉴가 준비되어 있습니다. (24시)<a href="#" onclick="return false"
+                >자세히 보기</a
+              >
             </p>
           </div>
         </li>
@@ -474,7 +521,7 @@
         </div>
       </div>
       <div class="d_rs_btn">
-        <a href="./rooms.html" class="d_rs_list" onclick="return false">목록</a>
+        <a href="./rooms.html" class="d_rs_list">목록</a>
       </div>
     </div>
     <footer w3-include-html="footer.html"></footer>
