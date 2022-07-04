@@ -84,17 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelector(".modal");
   const closeBtn = document.querySelector(".modal_closeBtn");
   const reservationArea = document.getElementById("reservationArea");
-  // const nav = document.getElementById("nav_bar");
+  const nav = document.getElementById("header_scroll");
+  const header = document.getElementById("header");
 
   const openModal = () => {
     modal.classList.remove("hidden");
     reservationArea.classList.add("hidden");
-    // nav.classList.add("navZIndex");
+    console.log(nav);
+    nav.classList.add("nav_modal_adj");
+    header.classList.add("nav_modal_adj");
   };
   const closeModal = () => {
     modal.classList.add("hidden");
     reservationArea.classList.remove("hidden");
-    // nav.classList.remove("navZIndex");
+    nav.classList.remove("nav_modal_adj");
+    header.classList.remove("nav_modal_adj");
   };
 
   shareBtn.addEventListener("click", openModal);
